@@ -1,0 +1,46 @@
+# --- KiCad ---
+*.lck
+*-backups/
+_autosave-*
+*.kicad_prl
+fp-info-cache
+*.bak
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*-rescue.*
+*.dsn.bak
+
+# --- STM32CubeIDE / Eclipse ---
+.settings/
+Debug/
+Release/
+build/
+*.o
+*.d
+*.elf
+*.map
+*.su
+*.cyclo
+*.list
+*.launch.bak
+
+# --- clangd / Projectile / Emacs ---
+.cache/
+compile_commands.json
+.projectile-cache.eld
+*~
+\#*\#
+.#*
+
+# --- LTspice ---
+*.raw
+*.op.raw
+*.log
+
+# --- FreeCAD ---
+*.FCStd1
+*.FCBak
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db

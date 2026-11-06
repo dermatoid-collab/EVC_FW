@@ -1,0 +1,43 @@
+(version 1)
+(rule U22-FANOUT
+	(constraint clearance (min 0.15mm))
+	(condition "A.intersectsCourtyard('U22')"))
+(rule R53-FANOUT
+	(constraint clearance (min 0.15mm))
+	(condition "A.intersectsCourtyard('R53')"))
+(rule U21-FANOUT
+	(constraint clearance (min 0.15mm))
+	(condition "A.intersectsCourtyard('U21')"))
+(rule R48-FANOUT
+	(constraint clearance (min 0.15mm))
+	(condition "A.intersectsCourtyard('R48')"))
+(rule U19-FANOUT
+	(constraint clearance (min 0.15mm))
+	(condition "A.intersectsCourtyard('U19')"))
+(rule X12-FANOUT
+	(constraint clearance (min 0.15mm))
+	(condition "A.intersectsCourtyard('X12')"))
+
+(rule SDIO-SKEW
+	(constraint length (min 300ps) (opt 350ps) (max 500ps))
+	(condition "A.hasNetclass('SDDATA')"))
+(rule QSPI-SKEW
+	(constraint length (min 350ps) (opt 400ps) (max 500ps))
+	(condition "A.hasNetclass('QSPI')"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

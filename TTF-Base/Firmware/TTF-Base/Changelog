@@ -1,0 +1,158 @@
+2026-11-05    <lorenzo.marcantonio@liftingitalia.com>
+
+	* Core/Src/run_mode.c (run_mode_check_overload): il sovraccarico
+	deve essere controllato anche durante i cicli di apertura
+	e chiusura delle porte, non solo a cabina ferma, altrimenti, di
+	fatto, non funziona più nel momento in cui forza la riapertura
+	delle porte.
+
+	* Core/Src/door.c: Distinto nel ciclo porte gli stati “stopped
+	a porta aperta” e “stopped a porta chiusa”. Nel primo caso la
+	serratura deve rimanere aperta, per permettere l'accostamento
+	manuale. Nel secondo caso invece la porta rimane bloccata.
+	La distinzione viene fatta guardando le linee delle sicurezze, se
+	non è già noto dalla transizione di stato.
+	(door_locked): Quando la porta è chiusa e bloccata ma si rileva
+	una variazione di stato rivaluta lo stato porta (che in pratica
+	passerà sempre a aperta ferma).
+	(door_unlocking): Per come funzionano queste porte non
+	è necessario spingere in battuta le ante per facilitare lo
+	sblocco, anzi tendono a rimbalzare.
+	(door_loop): fuori dalle zone sblocco il ciclo porta viene
+	inibito. Dato che non è possibile sbloccare la serratura
+	è impossibile effettuare qualunque tipo di manovra.
+	(door_closing): aggiunto un ritardo dall'accostamento al comando
+	del blocco porta. Le porte tonde vanno in accostamento molto prima
+	della zona di blocco (circa mezzo secondo prima) quindi spesso lo
+	scrocco non riesce ad entrare in posizione.
+
+	* Core/Src/battery.c (npb_chrg_enter_charge): in caso di batteria
+	scarica rilevata forza il float_cycle_counter al massimo in modo
+	da continuare la ricarica in boost fino al completamento. In caso
+	contrario se il contatore di cariche non è ancora allineato si
+	rischia di oscillare in continuazione intorno al punto di
+	batteria scarica.
+	(battery_charge): in caso di batteria scarica si forza il
+	contatore di carica ad un valore nominale di 'batteria scarica' in
+	modo di aiutare i cicli di carica parziale intermedi.
+	(battery_scan): colossale errore di sbagliamento, mancava uno zero
+	all'offset del contatore di cariche. Quindi non funzionava nulla.
+
+	* Core/Inc/battery.h (BAT_BOOST_START_CHARGE): Ridotta la soglia
+	di avvio della ricarica completa a -2 Ah, se il cavo è lungo la
+	resistenza interna diventa eccessiva.
+
+	* Core/Src/can.c (can_tx_push_fullframe_ext): Constificato
+	parametro data (cppcheck)
+
+	* Core/Inc/application_inl.h (is_at_P0): rimosso il requisito di
+	avere i magneti per riconoscere il piano (non ha alcun senso e può
+	dar problemi se sono leggermente corti)
+
+2026-11-04    <lorenzo.marcantonio@liftingitalia.com>
+	* Core/Src/door.c (door_loop): Rework macchina a stati ciclo
+	porte. Mancano ancora gestione in timeout e in mancanza di
+	sicurezze a monte.
+
+	* Core/Inc/udec_c_inl.h (door_is_closed): Rimosso predicato
+	ambiguo, la porta se non è chiusa potrebbe essere aperta ma non
+	necessariamente del tutto aperta (non c'è feedback su questo)
+
+2026-11-04    <lorenzo.marcantonio@liftingitalia.com>
+	* Core/Src/door.c (door_loop): Refactoring in funzioni di stato.
+	Nuovi identificatori nella enum di stato macchina.
+
+	* Core/Src/vfd.c (vfd_rpdo1): Parametrizzazione più aggressiva del
+	timeout di stop; con quella precedente più conservativa tende
+	a mancare la fermata e ad andare in allentamento.
+
+2026-11-03    <lorenzo.marcantonio@liftingitalia.com>
+	* Core/Inc/door.h (enum door_status): Fusi stati DOOR_STOP
+	e DOOR_INIT in quanto DOOR_STOP confluiva in modo completamente
+	equivalente in DOOR_INIT.
+
+	* Core/Src/vfd.c (vfd_timed_out): Workaround per malfunzionamento
+	VFD: se dopo un tempo ragionevole non si è fermato rimanda il
+	comando. Se ancora non risponde manda un riavvio. Problema: in
+	questo modo si perde la fermata!
+
+	* Core/Src/run_mode.c (run_mode_init_seq): Inizializzate uscite
+	UDEC.C fuori ciclo. Ma funziona quel ciclo?
+
+	* Core/Src/pmode.c (pmode_relay_set): Per scrupolo in caso di trip
+	di sicurezza forza a false l'attivazione dell'OTR.
+	(pmode_scan_to_drive): confermato, un reset non è sufficiente per
+	eliminare gli errore, serve il reboot.
+
+	* Core/Src/l2d_param_setup.c (l2d_param_setup): le L2D devono
+	essere presenti entrambe, non ne basta solo una. (inizializzazione
+	al momento non in uso)
+
+	* Core/Src/application.c (main_loop): Prima di controllare le
+	sicurezze e gli errori, oltre ad aspettare la fine
+	dell'inizializzazione, aspetta anche qualche secondo per
+	permettere alle altre schede (specialmente la UDEC.C)
+	di inizializzarsi.
+
+	* Core/Src/application.c (read_inputs): Errore di sbagliamento:
+	veniva letto lo stato del relè di abilitazione sblocco freni
+	invece del segnale di attivazione del freno.
+
+	* Core/Inc/traptray_inl.h (is_trap_ok, is_tray_ok)
+	(traptray_in_position): vengono ignorate in caso di manovra di
+	emergenza (tanto le sicurezze sono già tutte escluse).
+
+	* Core/Src/run_mode.c (run_mode_brake_release): per evitare
+	sobbalzi dovuti al freno lento ad aprire, si comanda prima di
+	tutto un movimento in salita a 11 rpm (il minimo gestibile
+	dall'azionamento). Quando è confermata la richiesta apertura freno
+	si passa all'accelerazione di lavoro dopo qualche centinaio di
+	millisecondi. Dato che il motore è già in trazione a 11 rpm non
+	c'è rischio di caduta e allo stesso modo è una velocità troppo
+	bassa da creare sobbalzi.
+
+	* Core/Src/run_mode.c (run_mode_wait_for_call_release): stato
+	aggiuntivo per aspettare il rilascio della chiamata in caso di
+	blocco causato da trap/tray
+
+	* Core/Inc/udec_cx.h: scambiati campi relativi a trap/tray (svista).
+
+	* Core/Inc/trip_list.h: corretta lista degli errori. Mancava il
+	trip per oltrecorsa quindi era tutto disallineato.
+
+2026-11-02    <lorenzo.marcantonio@liftingitalia.com>
+
+	* (udec_c, udec_cx): il flag di offline non è corretto per
+	stabilire se utilizzare i dati. Talvolta arriva il beat prima del
+	primo blocco dati quindi è necessario utilizzare
+	quella segnalazione (in_good).
+
+2026-10-30    <lorenzo.marcantonio@liftingitalia.com>
+
+	* (udec_c, udec_cx): vincolato l'utilizzo degli ingressi di udec_c
+	e udec_cx ai flag di offline per non usare dati vecchi.
+
+	* (vari): rinominate strutture _info in quanto fuori namespace dei
+	tipi di dato (e quindi basta scrivere meno!)
+
+2026-10-27    <lorenzo.marcantonio@liftingitalia.com>
+
+	* (bat_reset_charge_counter, npb_chrg_enter_charge): rese non
+	static per permettere la forzatura, per esempio, da menu.
+
+2026-10-26    <lorenzo.marcantonio@liftingitalia.com>
+
+	* npb_inl.h (npb_in_fault): modificata la condizione di fault; il
+	caricabatteria è usato solo come alimentatore programmabile al
+	momento quindi il registro di stato della carica non
+	è significativo. È però da escludere lo stato NPB_FLT_OP_OFF in
+	quanto segue semplicemente lo stato del disable (è un non-errore)
+
+	* application.c (abilitation_check): Non è corretto usare
+	vfd_is_ready per il consenso al movimento; viene abilitato dopo la
+	richiesta di movimento; La condizione corretta è che non sia in fault.
+
+	* trips_inl.h (is_new_trip_active):
+	Nuovo predicato; lo stato di defaulti di trips_new_trip
+	è TRIP_ID_NONE che non è zero, quindi non è possibile usare, per
+	esempio, if (trips_new_trip)

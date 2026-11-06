@@ -1,0 +1,6698 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "2bdc0b78-04b6-422e-b590-0adac5d0b320")
+	(paper "A3")
+	(title_block
+		(title "Elevance")
+		(date "2026-06-15")
+		(rev "2")
+		(company "Lifting Italia")
+		(comment 1 "0")
+		(comment 2 "Foglio di giunzione e catena sicurezze")
+		(comment 4 "Lorenzo Marcantonio")
+		(comment 5 " ")
+	)
+	(lib_symbols
+		(symbol "automation:Contact-Removable"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "KnS"
+				(at -0.635 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Value" "Contact-Removable"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Removable Positive Contact"
+				(at 0 -9.525 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Contact-Removable_0_1"
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 1.27 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 1.27 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 1.9023 1.905)
+					(mid 1.27 2.54)
+					(end 1.9023 3.175)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 1.9023 -3.175)
+					(mid 1.27 -2.54)
+					(end 1.9023 -1.905)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 3.81 2.54) (xy 3.81 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Contact-Removable_1_1"
+				(rectangle
+					(start 1.905 2.667)
+					(end 2.921 2.413)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 1.905 -2.413)
+					(end 2.921 -2.667)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at 0 -6.35 90)
+					(length 3.81)
+					(name ".1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ".1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 6.35 270)
+					(length 3.81)
+					(name ".2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ".2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "automation:Flexible-Connection"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "X"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Flexible-Connection"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -3.302 -0.762 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at -3.302 -0.762 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Flexible connection wiring"
+				(at 0 -4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Flexible-Connection_0_1"
+				(arc
+					(start -1.27 0)
+					(mid -2.54 -1.2645)
+					(end -3.81 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Flexible-Connection_1_1"
+				(arc
+					(start -1.27 0)
+					(mid 0 1.2645)
+					(end 1.27 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 3.81 0)
+					(mid 2.54 -1.2645)
+					(end 1.27 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "automation:Switch-Emergency-P"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "S"
+				(at -10.795 0 90)
+				(show_name no)
+				(do_not_autoplace yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Switch-Emergency-P"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Switch, Emergency"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Switch-Emergency-P_0_1"
+				(polyline
+					(pts
+						(xy -5.08 0) (xy -3.81 -1.905) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.445 1.905) (xy -3.175 1.905)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 2.54) (xy -3.175 1.905) (xy -3.81 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -3.81 1.905)
+					(radius 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Switch-Emergency-P_1_1"
+				(polyline
+					(pts
+						(xy -8.89 1.27) (xy -8.89 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -8.89 -1.27)
+					(mid -9.6749 0)
+					(end -8.89 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 0) (xy -8.89 0)
+					)
+					(stroke
+						(width 0)
+						(type dash)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 3.175 3.175)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.397 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type dash)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.175 2.54) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 -6.35 90)
+					(length 3.81)
+					(name "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 6.35 270)
+					(length 3.81)
+					(name "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "automation:Switch-Limit-P"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "S"
+				(at -0.635 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify right)
+				)
+			)
+			(property "Value" "Switch-Limit-P"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Switch, Limit, P form"
+				(at 0 -10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Switch-Limit-P_0_0"
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 3.302 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 3.048 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Switch-Limit-P_0_1"
+				(polyline
+					(pts
+						(xy -3.175 -3.81) (xy -1.905 -3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -3.175) (xy -1.905 -3.81) (xy -2.54 -4.445)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -2.54 -3.81)
+					(radius 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.016) (xy 1.016 1.524) (xy 2.032 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Switch-Limit-P_1_1"
+				(pin passive line
+					(at 0 -6.35 90)
+					(length 3.81)
+					(name "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 6.35 270)
+					(length 3.81)
+					(name "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "connect:Conn-4-Socket"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "X"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn-4-Socket"
+				(at 1.905 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Socket, 4p"
+				(at 0 -5.715 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn-4-Socket_0_1"
+				(arc
+					(start 0.635 3.175)
+					(mid 0.0027 3.81)
+					(end 0.635 4.445)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0.635 0.635)
+					(mid 0.0027 1.27)
+					(end 0.635 1.905)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0.635 -1.905)
+					(mid 0.0027 -1.27)
+					(end 0.635 -0.635)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0.635 -4.445)
+					(mid 0.0027 -3.81)
+					(end 0.635 -3.175)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Conn-4-Socket_1_1"
+				(pin passive line
+					(at -3.81 3.81 0)
+					(length 3.81)
+					(name "P1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 1.27 0)
+					(length 3.81)
+					(name "P2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -1.27 0)
+					(length 3.81)
+					(name "P3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -3.81 0)
+					(length 3.81)
+					(name "P4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "fet:NUD3160D"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 5.08 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "NUD3160D"
+				(at 6.985 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "Footprint" "dfp:MO193AA"
+				(at 8.255 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at -2.54 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "2×Industrial Inductive Load Driver"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manuf" "ON Semi"
+				(at 9.525 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(symbol "NUD3160D_0_0"
+				(polyline
+					(pts
+						(xy -7.239 -2.54) (xy -6.35 -2.54) (xy -6.35 -3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -6.35 -2.54) (xy -3.175 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -6.35 -4.064) (xy -6.35 -4.572) (xy 2.54 -4.572)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -0.254) (xy -4.826 0) (xy -4.064 0) (xy -3.81 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 -1.27) (xy -3.81 -1.27) (xy -5.08 1.27) (xy -3.81 1.27) (xy -5.08 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.699 -3.048) (xy -4.191 -4.064) (xy -4.699 -4.064) (xy -4.191 -3.048) (xy -4.699 -3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.699 -3.683) (xy -4.572 -3.556) (xy -4.318 -3.556) (xy -4.191 -3.429)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.445 1.27) (xy -4.445 4.572) (xy 2.54 4.572)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.445 -1.27) (xy -4.445 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.445 -2.54) (xy -4.445 -3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.445 -4.064) (xy -4.445 -4.572)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "NUD3160D_0_1"
+				(rectangle
+					(start -8.255 -2.286)
+					(end -7.239 -2.794)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -6.604 -3.048)
+					(end -6.096 -4.064)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 -2.54) (xy -3.175 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 3.556) (xy -2.54 1.524) (xy -2.54 1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 1.016) (xy -2.54 -1.016) (xy -2.54 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -1.524) (xy -2.54 -3.556) (xy -2.54 -3.556)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -2.54) (xy 0 -2.54) (xy 0 0) (xy -2.54 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 0.635) (xy -1.905 0) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0.762) (xy 1.27 1.27) (xy 3.81 1.27) (xy 3.81 1.778) (xy 3.81 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy -2.54 2.54) (xy -2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 -2.54) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy 1.27 -1.27) (xy 3.81 -1.27) (xy 2.54 1.27) (xy 2.54 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 0 -2.54) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "NUD3160D_1_1"
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -2.54 0)
+					(length 1.905)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "NUD3160D_2_1"
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -10.16 -2.54 0)
+					(length 1.905)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "finder-relay:50.12.9.024.x000"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "K"
+				(at -6.35 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "50.12.9.024.x000"
+				(at 6.35 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "Footprint" "finder:50.12"
+				(at 7.62 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "24V 8A Safety Relay, GL form"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manuf" "Finder"
+				(at 8.89 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "50.12.9.024.x000_1_1"
+				(rectangle
+					(start -5.08 2.54)
+					(end 5.08 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 6.35 270)
+					(length 3.81)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -6.35 90)
+					(length 3.81)
+					(name "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "50.12.9.024.x000_2_0"
+				(circle
+					(center 3.175 3.302)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "50.12.9.024.x000_2_1"
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 3.302 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 3.048 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 6.35 270)
+					(length 3.81)
+					(name "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -6.35 90)
+					(length 3.81)
+					(name "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -1.27 0 0)
+					(length 3.81)
+					(hide yes)
+					(name "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "50.12.9.024.x000_3_0"
+				(circle
+					(center -1.397 0)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "50.12.9.024.x000_3_1"
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy -3.175 3.175)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 6.35 270)
+					(length 3.81)
+					(name "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -3.81 0 0)
+					(length 3.81)
+					(hide yes)
+					(name "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -6.35 90)
+					(length 3.81)
+					(name "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "littelfuse-polyswitch:Fuse"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "F"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Fuse"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Fuse"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Fuse_0_1"
+				(polyline
+					(pts
+						(xy -3.81 0) (xy 3.81 0) (xy 3.81 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 -1.27)
+					(end -3.81 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.524 1.524)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "panasonic-relay:AHES4192"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "K"
+				(at -6.35 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "AHES4192"
+				(at 6.35 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "relay:Panasonic-AHES4x9xx"
+				(at 7.62 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "40A Power Relay, AAM form, 24V coil"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manuf" "Panasonic"
+				(at 8.89 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "AHES4192_1_1"
+				(rectangle
+					(start -5.08 2.54)
+					(end 5.08 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 6.35 270)
+					(length 3.81)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -6.35 90)
+					(length 3.81)
+					(name "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "A2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "AHES4192_2_1"
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy -3.175 3.175)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 6.35 270)
+					(length 3.81)
+					(name "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -6.35 90)
+					(length 3.81)
+					(name "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "AHES4192_3_1"
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy -3.175 3.175)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 6.35 270)
+					(length 3.81)
+					(name "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -6.35 90)
+					(length 3.81)
+					(name "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "AHES4192_4_0"
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 3.302 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy 3.048 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 3.048 3.048)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+			(symbol "AHES4192_4_1"
+				(pin passive line
+					(at 0 6.35 270)
+					(length 3.81)
+					(name "31"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "31"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -6.35 90)
+					(length 3.81)
+					(name "32"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "32"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "pcb-feature:Solder-Jumper-2-Closed-03"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "P"
+				(at 0 1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Solder"
+				(at 0 -1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "pcb-feature:Solder-Jumper-Closed-03"
+				(at 0 -3.302 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 0.762 0.762)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Solder Jumper, to cut (0.3mm)"
+				(at 0 -4.826 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SolderJumper*Bridged*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Solder-Jumper-2-Closed-03_0_1"
+				(arc
+					(start -0.635 -0.635)
+					(mid -1.27 0)
+					(end -0.635 0.635)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0.635 0.635)
+					(mid 1.27 0)
+					(end 0.635 -0.635)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Solder-Jumper-2-Closed-03_1_1"
+				(rectangle
+					(start -1.27 0.254)
+					(end 1.27 -0.254)
+					(stroke
+						(width -0.0001)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:+24V"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 4.445 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Value" "+24V"
+				(at 0 2.794 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Supply, +24V"
+				(at 0 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+24V_0_1"
+				(circle
+					(center 0 1.27)
+					(radius 0.635)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+24V_1_0"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0.635)
+					(name "+24V"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Ground, Unspecified"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_0"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.016 -0.635) (xy 1.016 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.635 -1.27) (xy 0.635 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "GND"
+						(effects
+							(font
+								(size 0.762 0.762)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 0.762 0.762)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(rectangle
+		(start 257.81 58.42)
+		(end 331.47 71.12)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "255652c8-b838-4313-b4c1-e65295e65941")
+	)
+	(rectangle
+		(start 19.05 15.24)
+		(end 34.29 86.36)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "9cf472cb-55f8-48f8-bd9b-22c9352d558b")
+	)
+	(rectangle
+		(start 130.81 21.59)
+		(end 334.01 73.66)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "bd399389-1612-4af4-903a-f8beb4d6a3b2")
+	)
+	(rectangle
+		(start 359.41 33.02)
+		(end 400.05 86.36)
+		(stroke
+			(width 0)
+			(type dash_dot)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "ff4b7743-064f-4baa-a92b-5ed9ee446542")
+	)
+	(text "U3/X3"
+		(exclude_from_sim no)
+		(at 309.88 30.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "08ad293b-f6f1-4438-91cc-ebfa5f9723ad")
+	)
+	(text "U3/X2"
+		(exclude_from_sim no)
+		(at 276.86 30.48 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "0aab83b6-fa9a-44ee-ace0-1ba5152f70d0")
+	)
+	(text "U1/X19"
+		(exclude_from_sim no)
+		(at 71.12 33.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "2b892ca0-62d9-469f-b72a-281e7fd70659")
+	)
+	(text "Sicurezze cabina"
+		(exclude_from_sim no)
+		(at 130.81 21.59 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2cea2161-fac9-4358-97f1-d08e94d3a722")
+	)
+	(text "U1"
+		(exclude_from_sim no)
+		(at 29.21 13.97 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2dd2949e-56c7-4062-ba19-59dcb7d658ca")
+	)
+	(text "Rappresentazione semplificata"
+		(exclude_from_sim no)
+		(at 277.495 33.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "526d5273-7841-4132-b4ee-87f775a45a0c")
+	)
+	(text "..."
+		(exclude_from_sim no)
+		(at 309.88 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "5533e0b4-43da-4cd3-b81f-eb606194dfb8")
+	)
+	(text "U1/X17"
+		(exclude_from_sim no)
+		(at 103.505 33.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "619d6dfa-11bd-45c0-83a1-de44097b3592")
+	)
+	(text "U5/P62"
+		(exclude_from_sim no)
+		(at 193.04 36.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "627c09e7-b98d-4ba1-bb46-f4c8d42c5c02")
+	)
+	(text "Rappresentazione semplificata"
+		(exclude_from_sim no)
+		(at 309.88 33.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "78a2a164-1648-4541-b676-54459e6ed569")
+	)
+	(text "Bypass emergenza"
+		(exclude_from_sim no)
+		(at 27.94 87.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "7d1f9af5-8654-4c68-b119-971df1b398ba")
+	)
+	(text "Ponte:\nU3/X15"
+		(exclude_from_sim no)
+		(at 254 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify top)
+		)
+		(uuid "821bc62a-71a6-4155-bb03-4cf88d74d6a8")
+	)
+	(text "U5/P63"
+		(exclude_from_sim no)
+		(at 218.44 33.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "8510037b-f1ff-4470-bbc7-045753bb00ef")
+	)
+	(text "U1"
+		(exclude_from_sim no)
+		(at 400.05 31.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "872a69c3-194e-44c7-95de-77739598a642")
+	)
+	(text "U1/X23"
+		(exclude_from_sim no)
+		(at 45.72 33.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "996ed9f3-9569-4078-994b-767869982b9b")
+	)
+	(text "..."
+		(exclude_from_sim no)
+		(at 276.86 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "9b07f40b-feae-4be9-92b6-6ed37035475a")
+	)
+	(text "Ponti:\nU5/P64\nU5/P65\nU5/P66"
+		(exclude_from_sim no)
+		(at 238.76 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify top)
+		)
+		(uuid "9d5c3400-ef03-49af-ba2f-837aeeb14df1")
+	)
+	(text "U3"
+		(exclude_from_sim no)
+		(at 331.47 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ccde065b-c534-4358-a087-c5fa095a2853")
+	)
+	(text "U5/P61"
+		(exclude_from_sim no)
+		(at 175.26 24.765 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "d350de97-248a-4073-8f2e-7ecc5f0776bd")
+	)
+	(text "U1/X15"
+		(exclude_from_sim no)
+		(at 347.98 25.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ea3f48fc-0f53-4e6d-8124-826c73cb0d5f")
+	)
+	(text "U5/P60"
+		(exclude_from_sim no)
+		(at 148.5439 32.9813 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ef5d9201-ca72-4e03-a62d-81559583dcd2")
+	)
+	(text_box "Promemoria catena sicurezze:\n\nS1 (24V)\n- X23 Extracorsa superiore\nS2\n- X17+X19 Allentamenti\nTTF X20/S3	=> UDEC.CX X6/S3\n	UDEC.CX X4/S3 => UDEC.C P0/S3-FOS\n		- P60 Paracadute\n		S3.1-PAR\n		- P61 E-stop cabina\n		S3.2-PEC\n		- P62 Accostamento\n		S3.3-PET\n		- P63 Sblocco porta\n		S3.4-COL\n		- P64 xxx\n		S3.5-TC\n		- P65+P66 xxx\n		S3.6-FT\n	UDEC.CX X4/S3A <= UDEC.C P0/S4-CAB\n	- X15 Inverter (ponte)\n	S3B\n	- X2 Trap (tetto) + bypass\n	S3C\n	- X3 Tray (fondo) + bypass\n	TTF X20/S4 <= UDEC.CX X6/S4\nS4\n- X15 E-stop quadro\nS5\nS8"
+		(exclude_from_sim no)
+		(at 346.71 177.9943 0)
+		(size 55.88 73.4657)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "c9e5f268-e9cd-4f52-a5c1-eb630ccfb177")
+	)
+	(junction
+		(at 326.39 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0e9746de-0c98-41cd-b9ea-26e8ef5c2d93")
+	)
+	(junction
+		(at 260.35 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2fc5fbb4-54e0-4d25-8dba-b81aa7cca276")
+	)
+	(junction
+		(at 339.09 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3eecb280-ac91-4597-9373-4fe3270dbef3")
+	)
+	(junction
+		(at 293.37 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "730a606e-60df-4202-bb15-bb578329b851")
+	)
+	(junction
+		(at 24.13 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "948918b2-8e59-48f9-afb7-22cda5f21287")
+	)
+	(junction
+		(at 293.37 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a25cacd1-0ed6-4389-b81c-6ca028c527d4")
+	)
+	(junction
+		(at 374.65 38.1)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d71aba2f-0e68-4a2c-9966-78b837adee14")
+	)
+	(wire
+		(pts
+			(xy 293.37 66.04) (xy 303.53 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ea6aae0-8b3e-4cf2-a10f-7731e97a5c9d")
+	)
+	(polyline
+		(pts
+			(xy 153.035 33.02) (xy 165.1 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14eff155-6330-4921-a16e-c0b79d1fe34a")
+	)
+	(polyline
+		(pts
+			(xy 75.565 33.02) (xy 86.36 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a44d838-7be0-4582-a306-bb6c9acbdaa5")
+	)
+	(polyline
+		(pts
+			(xy 55.88 33.02) (xy 66.675 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c54eb9a-dbf7-442f-a625-d4b2292d740e")
+	)
+	(wire
+		(pts
+			(xy 199.39 38.1) (xy 204.47 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e131462-8122-4489-91e2-6b84c3f98b51")
+	)
+	(wire
+		(pts
+			(xy 24.13 33.02) (xy 24.13 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21795319-da30-4be4-9d3f-b97d9a4d2423")
+	)
+	(polyline
+		(pts
+			(xy 201.93 33.02) (xy 213.995 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2caf763a-1ec7-4b4d-9512-a983ace8230c")
+	)
+	(wire
+		(pts
+			(xy 374.65 68.58) (xy 374.65 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "371addfc-8798-4134-a694-b05bc37f2378")
+	)
+	(wire
+		(pts
+			(xy 257.81 38.1) (xy 260.35 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37dbf23e-7dab-4974-8f2a-7cf48773c1c1")
+	)
+	(wire
+		(pts
+			(xy 69.85 38.1) (xy 72.39 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b69222c-2875-411c-a2bc-923069ad48c4")
+	)
+	(wire
+		(pts
+			(xy 374.65 38.1) (xy 392.43 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46aa6a41-a51f-43ad-8583-e9dcec494864")
+	)
+	(polyline
+		(pts
+			(xy 234.95 36.83) (xy 234.95 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47a0b665-2073-4291-850a-bc690ff9c7d6")
+	)
+	(wire
+		(pts
+			(xy 323.85 38.1) (xy 326.39 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47baac72-e16f-4c26-99ed-801b5e7d57f3")
+	)
+	(wire
+		(pts
+			(xy 118.11 38.1) (xy 120.65 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b888d51-bfe7-4c0c-9b27-313114d9771c")
+	)
+	(wire
+		(pts
+			(xy 181.61 38.1) (xy 186.69 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ec3eaaa-4963-4b2a-8b13-bc1d99347bbb")
+	)
+	(polyline
+		(pts
+			(xy 119.38 36.83) (xy 119.38 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "53fb076d-a6da-47f2-b3f1-9a99a26f9eeb")
+	)
+	(wire
+		(pts
+			(xy 392.43 78.74) (xy 392.43 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "58640eb1-ea46-478a-926e-7d99607c754a")
+	)
+	(wire
+		(pts
+			(xy 260.35 38.1) (xy 262.89 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b4287db-665b-4a62-bad6-d14f3e39ed0c")
+	)
+	(wire
+		(pts
+			(xy 232.41 38.1) (xy 237.49 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "668343fd-5edd-46f5-b69e-1934916a1037")
+	)
+	(wire
+		(pts
+			(xy 326.39 38.1) (xy 326.39 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ce4d73a-3c6e-4d0c-844a-11ebbec31805")
+	)
+	(wire
+		(pts
+			(xy 392.43 38.1) (xy 392.43 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6cf3ab84-16a8-48f1-93da-63e1a439b581")
+	)
+	(wire
+		(pts
+			(xy 316.23 66.04) (xy 326.39 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d49b8b8-dd45-44f8-97ca-3cabb04f7508")
+	)
+	(wire
+		(pts
+			(xy 24.13 38.1) (xy 39.37 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7454e13c-90c9-4573-bba8-50ecf4348f5d")
+	)
+	(polyline
+		(pts
+			(xy 87.63 33.02) (xy 99.06 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7644d944-8af6-49bb-99eb-1ee18af0df9b")
+	)
+	(wire
+		(pts
+			(xy 293.37 38.1) (xy 295.91 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7775cfe1-b474-4844-ab24-7d207da181ab")
+	)
+	(wire
+		(pts
+			(xy 29.21 76.2) (xy 29.21 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7fa26ad6-1e76-4fe4-a559-f307d521f41e")
+	)
+	(polyline
+		(pts
+			(xy 86.36 36.83) (xy 86.36 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "800abd14-3e38-44d6-ae43-f9b706e68778")
+	)
+	(polyline
+		(pts
+			(xy 87.63 36.83) (xy 87.63 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82d78aa2-800e-41cc-8589-97bf45e9db2b")
+	)
+	(wire
+		(pts
+			(xy 245.11 38.1) (xy 250.19 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "891136ca-299d-45ea-97a8-02844a98646f")
+	)
+	(wire
+		(pts
+			(xy 374.65 55.88) (xy 374.65 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a5085c9-573f-4a5a-af32-a7cad06b03c6")
+	)
+	(wire
+		(pts
+			(xy 217.17 38.1) (xy 219.71 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f8a5900-da4d-41a9-a933-76a4bdbd0dcc")
+	)
+	(wire
+		(pts
+			(xy 52.07 38.1) (xy 57.15 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "916cbd9a-91c3-4e0e-90d4-1bc50f26825c")
+	)
+	(wire
+		(pts
+			(xy 290.83 38.1) (xy 293.37 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "944a302e-a3ce-4dbc-b77d-178fcaebf9f0")
+	)
+	(wire
+		(pts
+			(xy 163.83 38.1) (xy 168.91 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9892809c-dce7-46ef-95c0-5068a425a9bb")
+	)
+	(wire
+		(pts
+			(xy 146.05 38.1) (xy 151.13 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9fef3f87-4be8-4774-acc6-da4375c55064")
+	)
+	(wire
+		(pts
+			(xy 374.65 38.1) (xy 374.65 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2689168-b80c-4a47-b742-500dda40c986")
+	)
+	(wire
+		(pts
+			(xy 24.13 20.32) (xy 24.13 22.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a57c1338-f933-417d-9f66-7dacd23eb8f3")
+	)
+	(wire
+		(pts
+			(xy 260.35 38.1) (xy 260.35 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8190504-0019-4e3a-bbd0-dcc2798381ba")
+	)
+	(wire
+		(pts
+			(xy 101.6 38.1) (xy 105.41 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa5ea471-5480-4fe0-89ed-572c0b5b6194")
+	)
+	(wire
+		(pts
+			(xy 326.39 38.1) (xy 330.2 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aaabf5b1-681e-4f07-aa51-0de6a9178b2d")
+	)
+	(wire
+		(pts
+			(xy 293.37 66.04) (xy 283.21 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af48a54f-da0b-46ad-a7fc-6e237e473541")
+	)
+	(polyline
+		(pts
+			(xy 222.885 33.02) (xy 234.95 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b39ab77e-4199-4288-9a34-a779daeeef48")
+	)
+	(polyline
+		(pts
+			(xy 132.08 33.02) (xy 144.145 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6994f29-e08b-4108-9eb2-d3b51407b041")
+	)
+	(wire
+		(pts
+			(xy 293.37 38.1) (xy 293.37 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7f80d37-3678-49cc-b0b9-57d47701c009")
+	)
+	(polyline
+		(pts
+			(xy 165.1 36.83) (xy 165.1 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8a42dcf-16fc-443e-956d-ef62226183e5")
+	)
+	(wire
+		(pts
+			(xy 392.43 55.88) (xy 392.43 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c22965fa-11dc-4a4e-85ff-cb2a87cc4bf0")
+	)
+	(wire
+		(pts
+			(xy 339.09 38.1) (xy 339.09 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c43ff262-d24c-4d2d-8e48-d244165c5bff")
+	)
+	(wire
+		(pts
+			(xy 260.35 66.04) (xy 270.51 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c79f06ae-06d6-49e7-850a-4a8346bc167b")
+	)
+	(wire
+		(pts
+			(xy 85.09 38.1) (xy 88.9 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb20d436-25b7-4b8d-9b02-5c53354f6f84")
+	)
+	(polyline
+		(pts
+			(xy 201.93 36.83) (xy 201.93 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cdd10349-7a5f-46ff-8e90-a1d82b14b09c")
+	)
+	(wire
+		(pts
+			(xy 24.13 38.1) (xy 24.13 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5947eef-fd47-4a4f-b93e-5a67e6d0d146")
+	)
+	(wire
+		(pts
+			(xy 339.09 76.2) (xy 29.21 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d76a8eae-c221-4cc8-a7a7-c788aaf9e695")
+	)
+	(polyline
+		(pts
+			(xy 107.95 33.02) (xy 119.38 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbf55b9c-ae07-439e-a8e0-f786b03c9c2c")
+	)
+	(polyline
+		(pts
+			(xy 132.08 36.83) (xy 132.08 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df0fef78-86e8-4119-a963-928e0649bb6b")
+	)
+	(wire
+		(pts
+			(xy 339.09 38.1) (xy 341.63 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e478f28a-fe38-4539-9d8b-4afddda93d88")
+	)
+	(polyline
+		(pts
+			(xy 55.88 36.83) (xy 55.88 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7bb35a4-e27a-43a9-8c91-762db399a871")
+	)
+	(wire
+		(pts
+			(xy 128.27 38.1) (xy 133.35 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eda99daf-ace6-4577-b9bd-4e6b36b2b425")
+	)
+	(wire
+		(pts
+			(xy 354.33 38.1) (xy 374.65 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f32f4ab8-80d8-4c0c-a9d1-ecae26e9374b")
+	)
+	(wire
+		(pts
+			(xy 337.82 38.1) (xy 339.09 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc3c7442-c56b-448c-a40d-caed7419d958")
+	)
+	(symbol
+		(lib_id "automation:Switch-Limit-P")
+		(at 78.74 38.1 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0b1fbf2f-bca3-4dda-a85f-91de52e13e1b")
+		(property "Reference" "S4"
+			(at 78.74 35.56 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Switch-Limit-P"
+			(at 86.36 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 78.74 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, Limit, P form"
+			(at 88.9 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "11"
+			(uuid "fd835029-ba82-4c6c-8014-af1d0edc7383")
+		)
+		(pin "12"
+			(uuid "d3d02018-58f7-4094-8b80-87b6f3e55a17")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "S4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "automation:Switch-Limit-P")
+		(at 157.48 38.1 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "29b1ca0c-0f7a-4000-9508-a303a4147330")
+		(property "Reference" "S16"
+			(at 157.48 35.56 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Switch-Limit-P"
+			(at 165.1 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 157.48 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, Limit, P form"
+			(at 167.64 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Italian" "Paracadute"
+			(at 157.48 45.72 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "English" "Overspeed"
+			(at 157.48 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "11"
+			(uuid "63ad55de-0a72-4846-8ec1-b87d9592f773")
+		)
+		(pin "12"
+			(uuid "c23a13ea-8ec1-4c5f-8b9e-22645190b38f")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "S16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "pcb-feature:Solder-Jumper-2-Closed-03")
+		(at 254 38.1 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2b862c8c-d615-46ed-8771-658112c175ea")
+		(property "Reference" "P2"
+			(at 254 36.195 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Solder"
+			(at 254 40.005 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "pcb-feature:Solder-Jumper-Closed-03"
+			(at 254 41.402 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 254 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Solder Jumper, to cut (0.3mm)"
+			(at 254 42.926 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dc7f1c3b-d025-4aa1-8cd4-1709d4f36de4")
+		)
+		(pin "2"
+			(uuid "78a0a7b3-570a-46d3-912b-18f2799dc3ed")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "P2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 374.65 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3c4240ba-dd73-4f01-909d-f11c512da1d5")
+		(property "Reference" "#PWR093"
+			(at 374.65 67.945 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 374.65 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 374.65 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 374.65 71.12 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Ground, Unspecified"
+			(at 374.65 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "185c24bd-4b05-4b24-8a30-67c45f925397")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "#PWR093")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "finder-relay:50.12.9.024.x000")
+		(at 276.86 66.04 90)
+		(mirror x)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "497ab981-0d87-4fbd-9736-9078da5e53a5")
+		(property "Reference" "K1"
+			(at 276.86 62.23 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "50.12.9.024.x000"
+			(at 276.86 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" "finder:50.12"
+			(at 276.86 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 276.86 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "24V 8A Safety Relay, GL form"
+			(at 284.48 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manuf" "Finder"
+			(at 276.86 74.93 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(pin "A1"
+			(uuid "080365a2-177a-47fe-b939-77fe0b82eeb4")
+		)
+		(pin "24"
+			(uuid "adb54025-3a04-48fb-817a-aa93e51eabd0")
+		)
+		(pin "A2"
+			(uuid "a83584f5-4f11-4174-9f16-f6cf5e7c9037")
+		)
+		(pin "11"
+			(uuid "ecea3c33-77f8-4bcf-b385-10bb7edf6b2d")
+		)
+		(pin "12"
+			(uuid "d1ec9144-4623-489a-b2d4-ecee3f2ec681")
+		)
+		(pin "14"
+			(uuid "8bc44a53-9a4f-4cc9-a557-ed10f937a24c")
+		)
+		(pin "21"
+			(uuid "3ac19b1a-31f0-440b-a9d4-1aebb92377c0")
+		)
+		(pin "22"
+			(uuid "499692e3-7e4f-4b7a-b460-5498d262ab38")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "K1")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "finder-relay:50.12.9.024.x000")
+		(at 309.88 66.04 90)
+		(mirror x)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4a8a69ff-2f97-47d8-a0f8-903938da8595")
+		(property "Reference" "K2"
+			(at 309.88 62.23 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "50.12.9.024.x000"
+			(at 309.88 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" "finder:50.12"
+			(at 309.88 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 309.88 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "24V 8A Safety Relay, GL form"
+			(at 317.5 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manuf" "Finder"
+			(at 309.88 74.93 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(pin "A1"
+			(uuid "080365a2-177a-47fe-b939-77fe0b82eeb2")
+		)
+		(pin "24"
+			(uuid "23d0ee9d-bbbc-4976-a0ca-91920fb82ec7")
+		)
+		(pin "A2"
+			(uuid "a83584f5-4f11-4174-9f16-f6cf5e7c9035")
+		)
+		(pin "11"
+			(uuid "ecea3c33-77f8-4bcf-b385-10bb7edf6b2c")
+		)
+		(pin "12"
+			(uuid "d1ec9144-4623-489a-b2d4-ecee3f2ec680")
+		)
+		(pin "14"
+			(uuid "8bc44a53-9a4f-4cc9-a557-ed10f937a24b")
+		)
+		(pin "21"
+			(uuid "ef34eefb-19a8-49b7-b370-ccbbf45d5e97")
+		)
+		(pin "22"
+			(uuid "6c6749ee-61b4-42a0-a6ed-04905f0353ac")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "K2")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "automation:Contact-Removable")
+		(at 193.04 38.1 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4c5918c7-1b8e-410d-a001-16c88463eca2")
+		(property "Reference" "U4"
+			(at 193.04 35.56 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Contact-Removable"
+			(at 200.66 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 193.04 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 193.04 38.1 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Removable Positive Contact"
+			(at 202.565 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Italian" "Door approach"
+			(at 193.675 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "English" "Accostamento porta"
+			(at 193.675 45.72 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ".2"
+			(uuid "38a0291c-7962-45a9-a3ef-316d05d6202c")
+		)
+		(pin ".1"
+			(uuid "5070d8f7-86d2-453d-83d4-9dd88848d740")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "panasonic-relay:AHES4192")
+		(at 374.65 49.53 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5a2980d5-bc09-444c-ae0f-08e402843ea4")
+		(property "Reference" "K3"
+			(at 368.3 49.53 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AHES4192"
+			(at 381 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "relay:Panasonic-AHES4x9xx"
+			(at 382.27 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 374.65 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "40A Power Relay, AAM form, 24V coil"
+			(at 374.65 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manuf" "Panasonic"
+			(at 383.54 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(pin "23"
+			(uuid "533d666d-3e05-44ee-958f-f0a3413c2fc0")
+		)
+		(pin "A1"
+			(uuid "13cd4c7d-5971-42fa-b7dc-ad17252cb44e")
+		)
+		(pin "24"
+			(uuid "1a5a58ec-06c5-47ae-84e1-25ef0c30fe11")
+		)
+		(pin "A2"
+			(uuid "808bf235-9ff9-4c3c-a8f8-067cd0161376")
+		)
+		(pin "14"
+			(uuid "d9492bde-2dc2-4449-9a57-a7c5ddf9088c")
+		)
+		(pin "13"
+			(uuid "6b46290e-2bbf-45e6-99c8-97b1b9e62bab")
+		)
+		(pin "31"
+			(uuid "fb7da07e-8d70-4062-ab21-064856d29d7a")
+		)
+		(pin "32"
+			(uuid "0a5ccd36-447c-4241-8b91-dd5e3061fb81")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "K3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "automation:Switch-Limit-P")
+		(at 317.5 38.1 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5be1e79c-8096-48c6-9d59-550f6bb1d09b")
+		(property "Reference" "S14"
+			(at 317.5 35.56 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Switch-Limit-P"
+			(at 325.12 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 317.5 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 317.5 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, Limit, P form"
+			(at 327.66 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "11"
+			(uuid "b0e6b411-b188-4948-9dae-98f1bd85ab62")
+		)
+		(pin "12"
+			(uuid "ef7477bb-4b47-4ee9-abcd-d0d018c70049")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "S14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "automation:Switch-Emergency-P")
+		(at 347.98 38.1 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5dcb76fe-e4e7-42bb-8b24-f7fccdc71640")
+		(property "Reference" "S9"
+			(at 347.98 27.305 90)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Switch-Emergency-P"
+			(at 355.6 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 347.98 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 347.98 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, Emergency"
+			(at 358.14 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Italian" "E-stop quadro"
+			(at 347.98 45.72 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "English" "Panel e-stop"
+			(at 347.98 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "11"
+			(uuid "bee1c336-f58a-4f53-9b48-53d0f386198c")
+		)
+		(pin "12"
+			(uuid "32212c5a-e359-4ae5-9a76-bbb0aecfa1ed")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "S9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "automation:Switch-Limit-P")
+		(at 45.72 38.1 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "630e485d-548b-47dd-9b0f-ae87cfed2bfd")
+		(property "Reference" "S8"
+			(at 45.72 35.56 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Switch-Limit-P"
+			(at 53.34 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, Limit, P form"
+			(at 55.88 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Italian" "Oltrecorsa superiore"
+			(at 45.72 45.72 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Englis" "Upper overtravel"
+			(at 45.72 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "11"
+			(uuid "c070d19e-c4a6-49ff-be49-5fb6169bc814")
+		)
+		(pin "12"
+			(uuid "6f6e89df-12fb-4fc0-93b9-494cabe7a215")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "S8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "connect:Conn-4-Socket")
+		(at 27.94 82.55 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "68fbe439-0cc2-4f1d-b5e1-11d342033400")
+		(property "Reference" "X8"
+			(at 27.94 84.455 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn-4-Socket"
+			(at 27.94 84.455 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 27.94 87.63 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 27.94 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Socket, 4p"
+			(at 33.655 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "72ab0db2-b44b-4328-9b74-b3c6f69c0ccc")
+		)
+		(pin "3"
+			(uuid "df1bd631-73c4-4466-b4d3-95c2350f825f")
+		)
+		(pin "2"
+			(uuid "339a2b62-d33c-4795-b7cc-84150531ce39")
+		)
+		(pin "1"
+			(uuid "7d38723e-7baa-48af-bb99-45c245da1059")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "X8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "automation:Flexible-Connection")
+		(at 124.46 38.1 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "698aca62-d289-40eb-b2bb-52416d553132")
+		(property "Reference" "X3"
+			(at 124.46 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Flexible-Connection"
+			(at 124.46 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 121.158 38.862 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 121.158 38.862 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Flexible connection wiring"
+			(at 124.46 42.545 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "X3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "automation:Switch-Limit-P")
+		(at 284.48 38.1 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "791ec3a4-d1f7-4075-af7c-845fab477099")
+		(property "Reference" "S12"
+			(at 284.48 35.56 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Switch-Limit-P"
+			(at 292.1 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 284.48 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 284.48 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, Limit, P form"
+			(at 294.64 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "English" "Roof obstacle"
+			(at 276.86 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Italian" "Ostacolo tetto"
+			(at 276.86 45.72 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "11"
+			(uuid "786c642d-0862-427b-98a6-401ed35d7b1b")
+		)
+		(pin "12"
+			(uuid "05ad7df5-e6f5-46b0-a6d5-27a1d38df798")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "S12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "automation:Switch-Limit-P")
+		(at 95.25 38.1 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7ac78624-44e8-49c6-888b-642fd4d6f4e6")
+		(property "Reference" "S5"
+			(at 95.25 35.56 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Switch-Limit-P"
+			(at 102.87 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 95.25 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.25 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, Limit, P form"
+			(at 105.41 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Italian" "Allentamento cinghie contrappesi"
+			(at 102.87 45.72 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "English" "Balance weight belts slack"
+			(at 102.87 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "11"
+			(uuid "aee7e14b-7ba5-45a3-91b3-e30c27e55f16")
+		)
+		(pin "12"
+			(uuid "b97eddef-53a7-4753-9741-0318b369bff5")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "S5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "automation:Switch-Limit-P")
+		(at 63.5 38.1 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "885f9ee9-8c92-48f4-bbb9-ef9a281c380c")
+		(property "Reference" "S3"
+			(at 63.5 35.56 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Switch-Limit-P"
+			(at 71.12 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 63.5 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, Limit, P form"
+			(at 73.66 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Italian" "Allentamento cinghe cabina"
+			(at 71.12 45.72 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "English" "Car belts slack"
+			(at 71.12 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "11"
+			(uuid "3166861a-06e1-4a67-9463-f43d5cc9856f")
+		)
+		(pin "12"
+			(uuid "8447fb3e-36c3-4b49-826c-d21510248b35")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "S3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "automation:Switch-Limit-P")
+		(at 269.24 38.1 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8c906069-c6b7-4dc8-b782-fb5f004c99b9")
+		(property "Reference" "S11"
+			(at 269.24 35.56 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Switch-Limit-P"
+			(at 276.86 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 269.24 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 269.24 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, Limit, P form"
+			(at 279.4 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "11"
+			(uuid "6562c8e4-2a39-4da7-86d2-3d75bf838664")
+		)
+		(pin "12"
+			(uuid "2985cdd6-f343-4df3-9279-f9f9c9212d5d")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "S11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "panasonic-relay:AHES4192")
+		(at 392.43 49.53 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "98e222c7-d696-47fe-8895-380a38b1f7fa")
+		(property "Reference" "K5"
+			(at 386.08 49.53 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AHES4192"
+			(at 398.78 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "relay:Panasonic-AHES4x9xx"
+			(at 400.05 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 392.43 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "40A Power Relay, AAM form, 24V coil"
+			(at 392.43 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manuf" "Panasonic"
+			(at 401.32 49.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(pin "24"
+			(uuid "a89c7540-be84-4d9b-8ae7-1b46d8849a66")
+		)
+		(pin "13"
+			(uuid "6e5eaa94-80a2-48f3-a6f0-e40103b425a5")
+		)
+		(pin "A1"
+			(uuid "e668647a-b18d-4c96-8c9b-5e957d9064c0")
+		)
+		(pin "14"
+			(uuid "a1cda25b-7ba4-4994-a30a-9771bb7e93df")
+		)
+		(pin "32"
+			(uuid "558da651-1093-4511-b26d-ec1fa0d7230c")
+		)
+		(pin "23"
+			(uuid "af93c072-7b99-4ca0-a59d-3c7e227d8fed")
+		)
+		(pin "A2"
+			(uuid "bcead898-d8be-46ba-a47f-2f9788651225")
+		)
+		(pin "31"
+			(uuid "b9d85736-600d-4425-8ef4-39f743284d3d")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "K5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "automation:Switch-Emergency-P")
+		(at 175.26 38.1 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "991276be-45c8-4572-ba37-d41843a041c1")
+		(property "Reference" "S17"
+			(at 175.26 27.305 90)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Switch-Emergency-P"
+			(at 182.88 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 175.26 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 175.26 38.1 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, Emergency"
+			(at 185.42 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Italian" "Stop cabina"
+			(at 175.26 45.72 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "English" "Car e-stop"
+			(at 175.26 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "12"
+			(uuid "3f2ce868-88e7-41e8-b5a0-bf3655f7d396")
+		)
+		(pin "11"
+			(uuid "75af9dfc-eb50-4004-a506-33e9c897d668")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "S17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "automation:Switch-Limit-P")
+		(at 111.76 38.1 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a873361f-e7a1-48a1-a67c-755218427f7b")
+		(property "Reference" "S6"
+			(at 111.76 35.56 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Switch-Limit-P"
+			(at 119.38 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 111.76 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, Limit, P form"
+			(at 121.92 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "11"
+			(uuid "64627d76-2fab-4e26-bad7-db095eee5cce")
+		)
+		(pin "12"
+			(uuid "fad078b3-9a9f-485d-a1fa-4694a8c07bbc")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "S6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "automation:Flexible-Connection")
+		(at 334.01 38.1 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a87c27d4-5657-4669-8370-1d28997b40f2")
+		(property "Reference" "X2"
+			(at 334.01 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Flexible-Connection"
+			(at 334.01 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 330.708 38.862 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 330.708 38.862 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Flexible connection wiring"
+			(at 334.01 42.545 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "X2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "automation:Switch-Limit-P")
+		(at 302.26 38.1 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ba565ac3-8c7e-4bcd-b4a1-65d1ca60cca6")
+		(property "Reference" "S13"
+			(at 302.26 35.56 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Switch-Limit-P"
+			(at 309.88 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 302.26 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 302.26 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, Limit, P form"
+			(at 312.42 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Italian" "Ostacolo pavimento"
+			(at 309.88 45.72 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "English" "Floor obstacle"
+			(at 309.88 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "11"
+			(uuid "d8dc43b2-de9f-4042-83b2-95d6e0523513")
+		)
+		(pin "12"
+			(uuid "37304e10-cec4-4b9b-954d-90868000070c")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "S13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "fet:NUD3160D")
+		(at 372.11 63.5 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "be1dcd7f-2048-47b4-ba63-8a0ee9b96e29")
+		(property "Reference" "Q15"
+			(at 377.19 63.5 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NUD3160D"
+			(at 379.095 63.5 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" "dfp:MO193AA"
+			(at 380.365 63.5 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 369.57 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "2×Industrial Inductive Load Driver"
+			(at 372.11 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manuf" "ON Semi"
+			(at 381.635 63.5 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "0f63de80-29e0-4887-b3f5-84cecbf7ec95")
+		)
+		(pin "1"
+			(uuid "a0d6bbfd-5a9e-4843-9e9b-6ecf777dd7cf")
+		)
+		(pin "2"
+			(uuid "9e61c2cc-0f46-49e2-a39c-bf60057d711d")
+		)
+		(pin "3"
+			(uuid "30623854-aa74-44a1-9d76-c65b2b29f938")
+		)
+		(pin "6"
+			(uuid "32690254-af0a-4a52-ada4-5a31192908b9")
+		)
+		(pin "4"
+			(uuid "0e9a6599-3456-4787-8bd1-15ea3554ff5c")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "Q15")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "automation:Switch-Limit-P")
+		(at 139.7 38.1 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cf321915-48ea-498a-abbc-0ba66cda451d")
+		(property "Reference" "S15"
+			(at 139.7 35.56 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Switch-Limit-P"
+			(at 147.32 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 38.1 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Switch, Limit, P form"
+			(at 149.86 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Italian" "Paracadute"
+			(at 139.7 45.72 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "English" "Overspeed"
+			(at 139.7 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "11"
+			(uuid "0b4892ae-e6ff-447e-8fd5-2e42737dd41c")
+		)
+		(pin "12"
+			(uuid "9340265d-24aa-4591-9482-935784f55ea7")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "S15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "littelfuse-polyswitch:Fuse")
+		(at 24.13 27.94 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d0f430c1-0a14-49f2-a997-6bb2cf7be2b6")
+		(property "Reference" "F1"
+			(at 21.59 27.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1A MINI"
+			(at 26.67 27.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 24.13 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 24.13 27.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 24.13 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "d64c6149-5cf2-4c4b-8805-0f1ff8cbc2a0")
+		)
+		(pin "1"
+			(uuid "bfe58eca-05ed-4010-8236-dac1633cd6c2")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "F1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "pcb-feature:Solder-Jumper-2-Closed-03")
+		(at 241.3 38.1 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dc077900-84c4-45f3-b952-22fb98f9b794")
+		(property "Reference" "P1"
+			(at 241.3 36.195 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Solder"
+			(at 241.3 40.005 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "pcb-feature:Solder-Jumper-Closed-03"
+			(at 241.3 41.402 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 241.3 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Solder Jumper, to cut (0.3mm)"
+			(at 241.3 42.926 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d56a362f-9a6d-416f-9130-0d08509608c8")
+		)
+		(pin "2"
+			(uuid "5927d79e-570b-4b23-8f7d-62e6a415c7cd")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "P1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "automation:Contact-Removable")
+		(at 226.06 38.1 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e3269791-2f8f-4802-9340-ef7dcfca9db2")
+		(property "Reference" "U4"
+			(at 226.06 35.56 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Contact-Removable"
+			(at 233.68 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 226.06 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 38.1 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Removable Positive Contact"
+			(at 235.585 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Italian" "Blocco porta"
+			(at 226.06 45.72 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "English" "Door lock"
+			(at 226.06 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ".2"
+			(uuid "08e00e2e-5558-43c0-8b04-3ec65e8f8f44")
+		)
+		(pin ".1"
+			(uuid "99bde766-bfaa-48e8-a7cf-3a24fd78d91e")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 392.43 81.28 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e63755ac-e975-443c-b30e-11846fc7687e")
+		(property "Reference" "#PWR044"
+			(at 392.43 78.105 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 392.43 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 392.43 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 392.43 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Ground, Unspecified"
+			(at 392.43 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "6cb77b81-3b95-4429-b785-59f10da0c3cc")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "#PWR044")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "automation:Contact-Removable")
+		(at 210.82 38.1 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ece02f93-52d4-4fba-8798-41a56cc727a2")
+		(property "Reference" "U10"
+			(at 210.82 35.56 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Contact-Removable"
+			(at 218.44 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 210.82 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 210.82 38.1 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Removable Positive Contact"
+			(at 220.345 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Italian" "Blocco porta"
+			(at 210.82 45.72 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "English" "Door lock"
+			(at 210.82 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ".2"
+			(uuid "67484158-5bf8-40cb-96ed-b470e495a712")
+		)
+		(pin ".1"
+			(uuid "c9d6bb57-6e8b-401a-b196-8dddbd2479b0")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "U10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "fet:NUD3160D")
+		(at 389.89 73.66 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f6113b7f-5ceb-4da6-b582-e5d00056f1a9")
+		(property "Reference" "Q16"
+			(at 394.97 73.66 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "NUD3160D"
+			(at 396.875 73.66 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Footprint" "dfp:MO193AA"
+			(at 398.145 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 387.35 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "2×Industrial Inductive Load Driver"
+			(at 389.89 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manuf" "ON Semi"
+			(at 399.415 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "2fd3e3a6-a822-42f2-8a92-b1159e1c1031")
+		)
+		(pin "1"
+			(uuid "a0d6bbfd-5a9e-4843-9e9b-6ecf777dd7d0")
+		)
+		(pin "2"
+			(uuid "9e61c2cc-0f46-49e2-a39c-bf60057d711e")
+		)
+		(pin "3"
+			(uuid "6c8eca25-bedd-4ec9-9734-84be10914438")
+		)
+		(pin "6"
+			(uuid "32690254-af0a-4a52-ada4-5a31192908ba")
+		)
+		(pin "4"
+			(uuid "428fff8d-8fa9-4cbf-9f64-5b486f3be6dc")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "Q16")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+24V")
+		(at 24.13 20.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fce343ae-e065-4f8a-a61d-422567a2dde2")
+		(property "Reference" "#PWR02"
+			(at 24.13 15.875 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "+24V"
+			(at 24.13 17.526 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 24.13 20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 24.13 20.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Supply, +24V"
+			(at 24.13 21.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "d3030956-8bd9-4c33-8994-6b1d0459b7e8")
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 346.71 170.18)
+		(size 12.7 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "6cbd9555-48c0-409b-8502-8d69e8931f75")
+		(property "Sheetname" "Cappello"
+			(at 346.71 169.4684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Cappello.kicad_sch"
+			(at 346.71 175.8446 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 377.19 170.18)
+		(size 12.7 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "742bc2d2-c1b3-415c-bf5d-0e34ade90981")
+		(property "Sheetname" "Servizi"
+			(at 377.19 169.4684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Servizi.kicad_sch"
+			(at 377.19 175.8446 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 361.95 170.18)
+		(size 12.7 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "c4455b97-cd69-4aa8-b479-cd24443d5973")
+		(property "Sheetname" "Cabina"
+			(at 361.95 169.4684 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Cabina.kicad_sch"
+			(at 361.95 175.8446 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "TTF"
+				(path "/2bdc0b78-04b6-422e-b590-0adac5d0b320"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+	(embedded_files
+		(file
+			(name "LayoutLI-ISO.kicad_wks")
+			(type worksheet)
+			(data |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
+				GOEDjPAPXOV8emvnO2ZGK1AZ|
+			)
+			(checksum "23AFC49FEB3572A2219553F1346F4707")
+		)
+	)
+)
