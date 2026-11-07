@@ -6,7 +6,7 @@ Uso:  python3 docs/gen_diagramma_energia.py docs/diagrammi/04.diagramma_energia_
 Per il dipartimento commerciale: linguaggio semplice, nessun riferimento a codice o issue.
 Tutti i numeri di consumo sono un ESEMPIO con ipotesi dichiarate nel diagramma (non misure).
 Il recupero di energia in discesa non è dichiarato finché non è misurato (vedi DOC-11).
-Capacità della batteria: 12 Ah nello schema, 7,5 Ah nel firmware: da riconciliare (DOC-12).
+Capacità della batteria: 12 Ah, confermata dall'utente il 07/11/2026 (DOC-12).
 Quando arrivano le misure sostituire gli esempi con i valori misurati (DOC-11).
 """
 import html
@@ -148,7 +148,7 @@ SECTION(124, '1 · Il percorso dell\'energia')
 flow = [
     ('Rete domestica', ORA, '#fff6ee', '230 V monofase, 2 A, 0,5 kW'),
     ('Caricabatteria', ORA, '#fff6ee', 'Ricarica la batteria solo a macchina ferma'),
-    ('Batteria 48 V', GRN, '#effaf3', 'AGM sigillata, senza manutenzione (capacità da confermare)'),
+    ('Batteria 48 V', GRN, '#effaf3', '12 Ah, AGM sigillata, senza manutenzione'),
     ('Quadro e azionamento', NAV, '#eef2f8', 'Decide e comanda il motore'),
     ('Motoriduttore', ORA, '#fff6ee', 'Brushless 48 V, con doppio freno a molle'),
     ('Cinghie dentate', GRY, '#f3f4f6', 'Due cinghie, una per ogni contrappeso'),
@@ -303,7 +303,7 @@ yy = 1550
 for t in [
     'Dato di prodotto (CP.TEC.025): 10 corse di emergenza garantite a batteria. Il manuale d\'uso parla di «numero limitato di corse».',
     f'Esempio peggiore: salita di 4,5 m con 200 kg, con contrappesi: circa {it(worst, 1)} Wh dalla batteria per corsa, quindi {it(worst * 10, 0)} Wh per 10 corse (rendimento ipotizzato).',
-    f'Rispetto all\'energia nominale sono il {it(worst * 10 / BAT_WH * 100, 0)}% se la batteria è 12 Ah (576 Wh) e il {it(worst * 10 / (7.5 * 48) * 100, 0)}% se è 7,5 Ah (360 Wh): la capacità reale è da confermare e cala con l\'età.',
+    f'Rispetto all\'energia nominale della batteria (576 Wh = 12 Ah × 48 V) sono circa il {it(worst * 10 / BAT_WH * 100, 0)}%; la capacità utile cala con l\'età.',
     'A carica insufficiente l\'impianto va fuori servizio e consente solo il completamento della corsa e l\'apertura della porta (manuale d\'uso 4.06).',
     'Luce di emergenza di cabina: almeno 5 lux per 1 ora (analisi dei rischi). Al ritorno della rete la ricarica parte da sola.',
 ]:
@@ -372,7 +372,7 @@ for t in [
     f'Corsa {it(CORSA)} m (la corsa va da 2,5 a 4,5 m), velocità 0,10 m/s, una persona da {it(M_PERS, 0)} kg, cabina {it(M_CAB, 0)} kg, contrappesi {it(M_CW, 0)} kg in tutto.',
     f'Rendimento complessivo batteria → cinghia {it(ETA_TRAZ * 100, 0)}% e rete → batteria {it(ETA_CARICA * 100, 0)}%; consumo di trazione in discesa trascurato.',
     f'{SALITE_DIE} salite e {SALITE_DIE} discese al giorno; stand-by {it(STANDBY_W, 0)} W tutto il giorno (da certificare); energia a {it(PREZZO, 2)} €/kWh.',
-    'Capacità batteria da confermare: 12 Ah nello schema elettrico, circa 7,5 Ah nelle costanti del firmware. Il recupero in discesa non è considerato.',
+    'Capacità batteria 12 Ah × 48 V = 576 Wh nominali (confermata). Il recupero in discesa non è considerato.',
     'Le misure reali (Wh per corsa, stand-by, autonomia in blackout, tempi di ricarica) sostituiranno questi valori.',
 ]:
     yy = BUL(1228, yy, t, 1130, AMB)

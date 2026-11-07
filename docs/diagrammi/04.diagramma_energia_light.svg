@@ -38,8 +38,8 @@
 <rect x="704" y="166" width="308" height="118" rx="10" fill="#effaf3" stroke="#2e8b57" stroke-width="2"/>
 <rect x="704" y="166" width="308" height="36" rx="10" fill="#2e8b57" stroke="#2e8b57" stroke-width="0"/>
 <text x="718" y="191" font-size="17" text-anchor="start" font-weight="bold" fill="#fff">Batteria 48 V</text>
-<text x="718" y="228.0" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">AGM sigillata, senza manutenzione</text>
-<text x="718" y="246.9" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">(capacità da confermare)</text>
+<text x="718" y="228.0" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">12 Ah, AGM sigillata, senza</text>
+<text x="718" y="246.9" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">manutenzione</text>
 <line x1="1015" y1="225" x2="1043" y2="225" stroke="#2a3b55" stroke-width="3.5" marker-end="url(#ar2a3b55)"/>
 <rect x="1046" y="166" width="308" height="118" rx="10" fill="#eef2f8" stroke="#2a3b55" stroke-width="2"/>
 <rect x="1046" y="166" width="308" height="36" rx="10" fill="#2a3b55" stroke="#2a3b55" stroke-width="0"/>
@@ -216,8 +216,8 @@
 <text x="54" y="1591.45" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Esempio peggiore: salita di 4,5 m con 200 kg, con contrappesi: circa 6,1 Wh dalla batteria</text>
 <text x="54" y="1609.675" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">per corsa, quindi 61 Wh per 10 corse (rendimento ipotizzato).</text>
 <circle cx="43" cy="1628.9" r="3.2" fill="#2563eb"/>
-<text x="54" y="1632.9" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Rispetto all&#x27;energia nominale sono il 11% se la batteria è 12 Ah (576 Wh) e il 17% se è</text>
-<text x="54" y="1651.125" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">7,5 Ah (360 Wh): la capacità reale è da confermare e cala con l&#x27;età.</text>
+<text x="54" y="1632.9" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Rispetto all&#x27;energia nominale della batteria (576 Wh = 12 Ah × 48 V) sono circa il 11%; la</text>
+<text x="54" y="1651.125" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">capacità utile cala con l&#x27;età.</text>
 <circle cx="43" cy="1670.3500000000001" r="3.2" fill="#2563eb"/>
 <text x="54" y="1674.3500000000001" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">A carica insufficiente l&#x27;impianto va fuori servizio e consente solo il completamento della</text>
 <text x="54" y="1692.575" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">corsa e l&#x27;apertura della porta (manuale d&#x27;uso 4.06).</text>
@@ -301,9 +301,8 @@
 <circle cx="1233" cy="1992.4499999999998" r="3.2" fill="#c27c0e"/>
 <text x="1244" y="1996.4499999999998" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">5 salite e 5 discese al giorno; stand-by 1 W tutto il giorno (da certificare); energia a 0,25 €/kWh.</text>
 <circle cx="1233" cy="2015.6749999999997" r="3.2" fill="#c27c0e"/>
-<text x="1244" y="2019.6749999999997" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Capacità batteria da confermare: 12 Ah nello schema elettrico, circa 7,5 Ah nelle costanti del firmware. Il recupero in discesa non è</text>
-<text x="1244" y="2037.8999999999996" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">considerato.</text>
-<circle cx="1233" cy="2057.1249999999995" r="3.2" fill="#c27c0e"/>
-<text x="1244" y="2061.1249999999995" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Le misure reali (Wh per corsa, stand-by, autonomia in blackout, tempi di ricarica) sostituiranno questi valori.</text>
+<text x="1244" y="2019.6749999999997" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Capacità batteria 12 Ah × 48 V = 576 Wh nominali (confermata). Il recupero in discesa non è considerato.</text>
+<circle cx="1233" cy="2038.8999999999996" r="3.2" fill="#c27c0e"/>
+<text x="1244" y="2042.8999999999996" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Le misure reali (Wh per corsa, stand-by, autonomia in blackout, tempi di ricarica) sostituiranno questi valori.</text>
 <text x="20" y="2142" font-size="12.5" text-anchor="start" font-weight="normal" fill="#4b5563">Per il diagramma complessivo vedere diagramma_funzionale_light; dettagli tecnici e stato delle correzioni in docs/registro_issue.md.</text>
 </svg>

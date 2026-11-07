@@ -84,7 +84,7 @@
 | DOC-09 | Velocità lineare della cinghia nei calcoli Megadyne (0,2 m/s) contro 0,15 m/s di progetto | Bassa | Da verificare | Documentazione |
 | DOC-10 | Diagramma funzionale commerciale: voci da aggiornare quando cambiano le funzioni descritte | Bassa | Aperta | Documentazione |
 | DOC-11 | Diagramma energia e batterie: numeri di esempio da sostituire con misure | Bassa | Aperta | Documentazione |
-| DOC-12 | Capacità della batteria discordante: 12 Ah, 7,5 Ah, 7,2 Ah | Media | Da verificare | Documentazione |
+| DOC-12 | Capacità della batteria discordante: 12 Ah, 7,5 Ah, 7,2 Ah | Media | Chiarita | Documentazione |
 | PRV-01 | Precisione di fermata ±10 mm | Media | Da verificare | Prove |
 | PRV-02 | Velocità ≤ 0,15 m/s misurata e conversione giri → m/s | Bassa | Da verificare | Prove |
 | PRV-03 | Sblocco della serratura con cabina appena in oltrecorsa | Media | Da verificare | Prove |
@@ -603,18 +603,18 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 ### DOC-11 · Diagramma energia e batterie: numeri di esempio da sostituire con misure
 **Gravità:** Bassa · **Stato:** Aperta · **Fonte:** richiesta del 2026-11-07
 - **Dove:** `docs/diagrammi/04.diagramma_energia_light.svg` e `.png`, generati da `docs/gen_diagramma_energia.py`.
-- **Problema:** il diagramma per il commerciale spiega ciclo della batteria, contrappesi, autonomia, giornata tipica e costi. I consumi sono un ESEMPIO calcolato dalle masse (cabina 160 kg, contrappesi 2×30 kg) con ipotesi dichiarate: corsa 3 m, 0,10 m/s, rendimenti 60% e 80%, 5 salite e 5 discese al giorno, stand-by 1 W, 0,25 €/kWh. Il recupero di energia in discesa è volutamente omesso. Verifica del 2026-11-07: dati di prodotto (10 corse di emergenza, 230 V 2 A 0,5 kW, 0,10/0,15 m/s, 160 kg, 2×30 kg, 3 anni/6 mesi) confermati da CP.TEC.025 Rev.5 e ST.TEC.068. Incerti: stand-by 1 W «da certificare» (non include l'elettronica a batteria, comunicazione, luci); rendimenti 60% e 80% ipotizzati; consumi di freno, VFD, porte non inclusi (costi = limite inferiore); tempi di rabbocco e carica completa calcolati, non misurati; 10 corse di emergenza non verificate da prova (il manuale d'uso dice «numero limitato»); comportamento in discesa non valutato (i commenti del firmware prevedono assorbimento di energia rigenerata e c'è una protezione a 63 V). Rimossi dal diagramma il «fusibile 100 A» e la protezione da inversione di polarità, non trovati nei documenti.
+- **Problema:** il diagramma per il commerciale spiega ciclo della batteria, contrappesi, autonomia, giornata tipica e costi. I consumi sono un ESEMPIO calcolato dalle masse (cabina 160 kg, contrappesi 2×30 kg) con ipotesi dichiarate: corsa 3 m, 0,10 m/s, rendimenti 60% e 80%, 5 salite e 5 discese al giorno, stand-by 1 W, 0,25 €/kWh. Il recupero di energia in discesa è volutamente omesso. Verifica del 2026-11-07: dati di prodotto (10 corse di emergenza, 230 V 2 A 0,5 kW, 0,10/0,15 m/s, 160 kg, 2×30 kg, 3 anni/6 mesi) confermati da CP.TEC.025 Rev.5 e ST.TEC.068. Capacità batteria 12 Ah confermata (DOC-12). Incerti: stand-by 1 W «da certificare» (non include l'elettronica a batteria, comunicazione, luci); rendimenti 60% e 80% ipotizzati; consumi di freno, VFD, porte non inclusi (costi = limite inferiore); tempi di rabbocco e carica completa calcolati, non misurati; 10 corse di emergenza non verificate da prova (il manuale d'uso dice «numero limitato»); comportamento in discesa non valutato (i commenti del firmware prevedono assorbimento di energia rigenerata e c'è una protezione a 63 V). Rimossi dal diagramma il «fusibile 100 A» e la protezione da inversione di polarità, non trovati nei documenti.
 - **Proposta:** misurare Wh per corsa (salita/discesa, vuota/carico) e stand-by, verificare il tempo di rabbocco e di carica completa, confermare la capacità della batteria; poi sostituire gli esempi con misure, togliere le diciture «stima» e allinearlo al calcolo ufficiale di classe energetica se esiste. Rivedere con R&D prima di diffonderlo.
 - **Chiusura:** valori misurati e diagramma allineato; revisione R&D registrata.
 - **Storia:** 2026-11-07 aperta con la prima versione del diagramma.
 
 ### DOC-12 · Capacità della batteria discordante: 12 Ah, 7,5 Ah, 7,2 Ah
-**Gravità:** Media · **Stato:** Da verificare · **Fonte:** schema `Schema Macchina/Cappello.kicad_sch`, `battery.h`, `battery.c`
+**Gravità:** Media · **Stato:** Chiarita · **Fonte:** schema `Schema Macchina/Cappello.kicad_sch`, `battery.h`, `battery.c`
 - **Dove:** schema elettrico, simbolo batteria «48V 12Ah»; `battery.h` `BATTERY_DISCHARGED_MAH = 7500` («capacità nominale»); commento in `battery.c` (`battery_charge_wait_discharge`): «sotto il 50% (3.6 Ah consumati)» che implica circa 7,2 Ah. Massa batterie 18 kg (ST.TEC.068). CP.TEC.025 non indica la capacità.
 - **Problema:** tre valori diversi. Se la capacità reale è 12 Ah il contatore viene azzerato su «scarica» a 7,5 Ah consumati (circa 62%), se è 7,5 Ah il margine è nullo. Cambia l'autonomia in blackout e le soglie di ricarica.
 - **Proposta:** leggere modello e capacità sulla batteria installata e sul datasheet; allineare schema, costante e commento; verificare l'autonomia con la prova delle 10 corse di emergenza.
 - **Chiusura:** capacità confermata e documenti allineati.
-- **Storia:** 2026-11-07 aperta durante la verifica dei dati del diagramma energia.
+- **Storia:** 2026-11-07 aperta durante la verifica dei dati del diagramma energia. 2026-11-07 chiarita: l'utente conferma 12 Ah (valore dello schema). Restano da allineare `BATTERY_DISCHARGED_MAH = 7500` (è circa il 62% di 12 Ah: verificare che sia la scelta voluta per il reset del contatore a batteria scarica) e il commento obsoleto (FW-32); nessuna modifica al firmware senza richiesta.
 
 ---
 
@@ -727,3 +727,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-07 | Diagrammi spostati in `docs/diagrammi/` con numerazione 01-04 nel nome file. |
 | 2026-11-07 | Verifica dei dati del diagramma energia: corretti testi non supportati dai documenti; aggiunte DOC-12 (capacità batteria discordante) e FW-32 (commento obsoleto). Totale 77 voci. |
 | 2026-11-07 | Corretto DOC-08: la portata 200 kg su cabina Ø1000 mm (0,785 m²) rispetta 250 kg/m² di EN 81-41; nessuna deroga. |
+| 2026-11-07 | Confermata la capacità della batteria a 12 Ah: DOC-12 chiarita, diagramma energia aggiornato. |
