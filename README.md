@@ -26,6 +26,11 @@ Super-loop con timer software e macchina a stati, in C (STM32CubeIDE/HAL). Modul
 
 Le modifiche recenti sono descritte in `TTF-Base/Firmware/TTF-Base/Changelog`.
 
+## Documentazione
+
+- `docs/analisi.md`: analisi del progetto, revisione del codice di sicurezza, catena delle sicurezze e confronto con i manuali.
+- `docs/schema_funzionale.svg` (e `.png`): schema funzionale elettrico con la catena delle sicurezze. Si rigenera con `python3 docs/gen_schema_funzionale.py docs/schema_funzionale.svg`.
+
 ## Strumenti
 
 - Schemi e PCB: KiCad.
