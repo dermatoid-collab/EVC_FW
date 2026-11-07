@@ -4,7 +4,7 @@
 
 - Posizione: `docs/registro_issue.md` (questo file).
 - Analisi di partenza (narrativa, non aggiornata): [`analisi.md`](analisi.md).
-- Diagrammi: [`schema_funzionale.svg`](schema_funzionale.svg) (elettrico, catena delle sicurezze), [`diagramma_funzionale.svg`](diagramma_funzionale.svg) (funzionale della macchina, con i riquadri rossi che rimandano agli ID di questo registro) e [`diagramma_funzionale_light.svg`](diagramma_funzionale_light.svg) (versione per il dipartimento commerciale, in linguaggio semplice, senza riferimenti alle issue).
+- Diagrammi: [`docs/diagrammi/01.schema_funzionale.svg`](diagrammi/01.schema_funzionale.svg) (elettrico, catena delle sicurezze), [`docs/diagrammi/02.diagramma_funzionale.svg`](diagrammi/02.diagramma_funzionale.svg) (funzionale della macchina, con i riquadri rossi che rimandano agli ID di questo registro) e [`docs/diagrammi/03.diagramma_funzionale_light.svg`](diagrammi/03.diagramma_funzionale_light.svg) (versione per il dipartimento commerciale, in linguaggio semplice, senza riferimenti alle issue).
 - Stato di partenza: commit di import `180b04b`; nessuna correzione al firmware applicata alla data di creazione (2026-11-07).
 
 ## Come si usa e come si aggiorna
@@ -584,7 +584,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 
 ### DOC-10 · Diagramma funzionale commerciale: voci da aggiornare quando cambiano le funzioni descritte
 **Gravità:** Bassa · **Stato:** Aperta · **Fonte:** richiesta del 2026-11-07
-- **Dove:** `docs/diagramma_funzionale_light.svg` e `.png`, generati da `docs/gen_diagramma_light.py`.
+- **Dove:** `docs/diagrammi/03.diagramma_funzionale_light.svg` e `.png`, generati da `docs/gen_diagramma_light.py`.
 - **Problema:** il diagramma per il dipartimento commerciale descrive la macchina in linguaggio semplice e non cita le issue. Alcune funzioni sono descritte come «prevista» o «in definizione» (modalità manutenzione, ripartenza in discesa dopo il tetto sensibile, funzioni di servizio dell'analisi dei rischi): diventano vere o false in base a FW-06, FW-12, FW-26 e FW-27. Altre voci (servizi connessi, dati di prodotto) vengono dalla configurazione CP.TEC.025 Rev.5 e non dal firmware.
 - **Proposta:** a ogni chiusura di FW-06, FW-12, FW-26, FW-27 aggiornare il riquadro «In sviluppo» e gli stati «Fermata per ostacolo» e «Blocco di sicurezza»; far rivedere il documento a R&D prima di diffonderlo.
 - **Chiusura:** revisione di R&D registrata e diagramma allineato alle funzioni correnti.
@@ -592,7 +592,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 
 ### DOC-11 · Diagramma energia e batterie: numeri di esempio da sostituire con misure
 **Gravità:** Bassa · **Stato:** Aperta · **Fonte:** richiesta del 2026-11-07
-- **Dove:** `docs/diagramma_energia_light.svg` e `.png`, generati da `docs/gen_diagramma_energia.py`.
+- **Dove:** `docs/diagrammi/04.diagramma_energia_light.svg` e `.png`, generati da `docs/gen_diagramma_energia.py`.
 - **Problema:** il diagramma per il commerciale spiega ciclo della batteria, contrappesi, autonomia, giornata tipica e costi. I consumi sono un ESEMPIO calcolato dalle masse (cabina 160 kg, contrappesi 2×30 kg) con ipotesi dichiarate: corsa 3 m, 0,10 m/s, rendimenti 60% e 80%, 5 salite e 5 discese al giorno, stand-by 1 W, 0,25 €/kWh. Il recupero di energia in discesa è volutamente omesso. Dati da riconciliare: capacità batteria 12 Ah (documenti) contro `BATTERY_DISCHARGED_MAH` nel firmware; stand-by 1 W «da certificare»; tempi di ricarica «stima»; fusibile 100 A e sezionatori dallo schema da riverificare.
 - **Proposta:** misurare Wh per corsa (salita/discesa, vuota/carico) e stand-by, verificare il tempo di rabbocco e di carica completa, confermare la capacità della batteria; poi sostituire gli esempi con misure, togliere le diciture «stima» e allinearlo al calcolo ufficiale di classe energetica se esiste. Rivedere con R&D prima di diffonderlo.
 - **Chiusura:** valori misurati e diagramma allineato; revisione R&D registrata.
@@ -706,3 +706,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-07 | Letti i nuovi documenti del fascicolo (Analisi dei rischi Rev.7, ST.TEC.068, CP.TEC.025 Rev.5, Cap.6). Aggiunte 15 voci (FW-26…FW-31, NOR-05, NOR-06, DOC-07…DOC-09, PRV-08…PRV-10, CHI-08); chiuse NOR-01 e NOR-02; chiarite FW-14, HW-02, HW-07; FW-03 scende a Media e FW-09 passa ad Aperta. Totale 73 voci. |
 | 2026-11-07 | Aggiunta la versione «light» del diagramma funzionale per il dipartimento commerciale e la voce DOC-10 per tenerla allineata. Totale 74 voci. |
 | 2026-11-07 | Aggiunto il diagramma light su energia, batterie e contrappesi e la voce DOC-11 (numeri di esempio da misurare). Totale 75 voci. |
+| 2026-11-07 | Diagrammi spostati in `docs/diagrammi/` con numerazione 01-04 nel nome file. |

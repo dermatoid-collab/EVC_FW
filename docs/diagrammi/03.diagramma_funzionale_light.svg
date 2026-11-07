@@ -347,5 +347,5 @@
 <circle cx="1236" cy="1949.35" r="3.2" fill="#c27c0e"/>
 <text x="1250" y="1953.35" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Consumo in stand-by di 1 W: da certificare. Certificazioni e conformità: vedere il fascicolo tecnico.</text>
 <text x="20" y="2038" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">Colori degli stati: verde = funzionamento normale · giallo = attenzione o attesa · blu = alimentazione di emergenza · rosso = blocco di sicurezza · grigio = solo tecnici.</text>
-<text x="20" y="2058" font-size="12.5" text-anchor="start" font-weight="normal" fill="#4b5563">Per dettagli tecnici, anomalie note e stato delle correzioni: docs/registro_issue.md e docs/diagramma_funzionale.svg (versione completa).</text>
+<text x="20" y="2058" font-size="12.5" text-anchor="start" font-weight="normal" fill="#4b5563">Per dettagli tecnici, anomalie note e stato delle correzioni: docs/registro_issue.md e docs/diagrammi/02.diagramma_funzionale.svg (versione completa).</text>
 </svg>

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Genera il diagramma funzionale «light» di Elevance per il dipartimento commerciale (SVG).
 
-Uso:  python3 docs/gen_diagramma_light.py docs/diagramma_funzionale_light.svg
+Uso:  python3 docs/gen_diagramma_light.py docs/diagrammi/03.diagramma_funzionale_light.svg
 
 Linguaggio semplice, senza nomi di codice né riferimenti alle issue. Descrive solo ciò che
 il firmware TTF-Base e i manuali (CP.TEC.025 Rev.5, IM.TEC.158-161, Analisi dei rischi Rev.7)
@@ -272,11 +272,11 @@ for d in dev:
 # ------------------------------------------------------------------ legenda stati
 T(20, 2038, 'Colori degli stati: verde = funzionamento normale · giallo = attenzione o attesa · blu = alimentazione di emergenza · '
             'rosso = blocco di sicurezza · grigio = solo tecnici.', 13, 'start', 'normal', SUB)
-T(20, 2058, 'Per dettagli tecnici, anomalie note e stato delle correzioni: docs/registro_issue.md e docs/diagramma_funzionale.svg (versione completa).',
+T(20, 2058, 'Per dettagli tecnici, anomalie note e stato delle correzioni: docs/registro_issue.md e docs/diagrammi/02.diagramma_funzionale.svg (versione completa).',
   12.5, 'start', 'normal', SUB)
 
 o.append('</svg>')
-out = sys.argv[1] if len(sys.argv) > 1 else 'diagramma_funzionale_light.svg'
+out = sys.argv[1] if len(sys.argv) > 1 else 'docs/diagrammi/03.diagramma_funzionale_light.svg'
 with open(out, 'w', encoding='utf-8') as f:
     f.write('\n'.join(o))
 print('scritto', out)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Genera il diagramma funzionale completo di Elevance / TTF (SVG).
 
-Uso:  python3 docs/gen_diagramma_funzionale.py docs/diagramma_funzionale.svg
+Uso:  python3 docs/gen_diagramma_funzionale.py docs/diagrammi/02.diagramma_funzionale.svg
 
 Il diagramma è ricostruito dal firmware TTF-Base (run_mode.c, door.c, pmode.c,
 vfd.c, battery.c, application.c, trips.c) e dai manuali IM.TEC.158/159/160/161.
@@ -392,7 +392,7 @@ ML(1560, 1923, ['FW = firmware · HW = hardware/architettura · NOR = normativa/
 T(1560, 1975, 'Incertezze: punti marcati «(?)» negli schemi. Analisi dei rischi Rev.7 letta: le voci derivate sono nel registro.', 10.5, fill='#7a4b00')
 
 o.append('</svg>')
-out = sys.argv[1] if len(sys.argv) > 1 else 'diagramma_funzionale.svg'
+out = sys.argv[1] if len(sys.argv) > 1 else 'docs/diagrammi/02.diagramma_funzionale.svg'
 with open(out, 'w', encoding='utf-8') as f:
     f.write('\n'.join(o))
 print('scritto', out)

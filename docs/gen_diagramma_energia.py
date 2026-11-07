@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Genera il diagramma «light» su energia, batterie e contrappesi di Elevance (SVG).
 
-Uso:  python3 docs/gen_diagramma_energia.py docs/diagramma_energia_light.svg
+Uso:  python3 docs/gen_diagramma_energia.py docs/diagrammi/04.diagramma_energia_light.svg
 
 Per il dipartimento commerciale: linguaggio semplice, nessun riferimento a codice o issue.
 Tutti i numeri di consumo sono un ESEMPIO con ipotesi dichiarate nel diagramma (non misure).
@@ -380,7 +380,7 @@ for t in [
 T(20, 2142, 'Per il diagramma complessivo vedere diagramma_funzionale_light; dettagli tecnici e stato delle correzioni in docs/registro_issue.md.', 12.5, 'start', 'normal', SUB)
 
 o.append('</svg>')
-out = sys.argv[1] if len(sys.argv) > 1 else 'diagramma_energia_light.svg'
+out = sys.argv[1] if len(sys.argv) > 1 else 'docs/diagrammi/04.diagramma_energia_light.svg'
 with open(out, 'w', encoding='utf-8') as f:
     f.write('\n'.join(o))
 print('scritto', out)
