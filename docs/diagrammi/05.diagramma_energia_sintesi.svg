@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1466" viewBox="0 0 2000 1466" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">
+<defs>
+<marker id="a6b7280" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/></marker>
+<marker id="s6b7280" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/></marker>
+<marker id="a2e8b57" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e8b57"/></marker>
+<marker id="s2e8b57" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2e8b57"/></marker>
+<marker id="a2a3b55" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2a3b55"/></marker>
+<marker id="s2a3b55" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2a3b55"/></marker>
+<marker id="ac0392b" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="sc0392b" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="a2563eb" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker>
+<marker id="s2563eb" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker>
+<marker id="ad35400" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+<marker id="sd35400" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#d35400"/></marker>
+<marker id="ac27c0e" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c27c0e"/></marker>
+<marker id="sc27c0e" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c27c0e"/></marker>
+<marker id="a7b3fa0" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7b3fa0"/></marker>
+<marker id="s7b3fa0" markerWidth="10" markerHeight="10" refX="1" refY="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7b3fa0"/></marker>
+</defs>
+<rect width="2000" height="1466" fill="#f7f8fa"/>
+<rect x="0" y="0" width="2000" height="92" rx="0" fill="#2a3b55" stroke="#2a3b55" stroke-width="0"/>
+<text x="30" y="44" font-size="32" text-anchor="start" font-weight="bold" fill="#fff">ELEVANCE — Energia in una pagina</text>
+<text x="30" y="72" font-size="17" text-anchor="start" font-weight="normal" fill="#dbe4f0">Batteria, ricarica e contrappesi · sintesi visuale per il commerciale</text>
+<text x="1970" y="40" font-size="16" text-anchor="end" font-weight="bold" fill="#fff">Aggiornata al 07/11/2026 · non contrattuale</text>
+<text x="1970" y="66" font-size="14" text-anchor="end" font-weight="normal" fill="#dbe4f0">I numeri contrassegnati ESEMPIO sono calcolati con ipotesi dichiarate in basso, non misure.</text>
+<circle cx="46" cy="130" r="20" fill="#2a3b55"/>
+<text x="46" y="137" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">1</text>
+<text x="78" y="138" font-size="24" text-anchor="start" font-weight="bold" fill="#2a3b55">Da dove arriva l&#x27;energia</text>
+<rect x="60" y="165" width="380" height="170" rx="14" fill="#fff" stroke="#d35400" stroke-width="2.5"/>
+<text x="250" y="296" font-size="22" text-anchor="middle" font-weight="bold" fill="#d35400">Rete di casa</text>
+<text x="250" y="322" font-size="14" text-anchor="middle" font-weight="normal" fill="#4b5563">230 V · 2 A · 0,5 kW</text>
+<line x1="452" y1="250" x2="548" y2="250" stroke="#2a3b55" stroke-width="5" marker-end="url(#a2a3b55)"/>
+<rect x="560" y="165" width="380" height="170" rx="14" fill="#fff" stroke="#2e8b57" stroke-width="2.5"/>
+<text x="750" y="296" font-size="22" text-anchor="middle" font-weight="bold" fill="#2e8b57">Batteria</text>
+<text x="750" y="322" font-size="14" text-anchor="middle" font-weight="normal" fill="#4b5563">48 V · 12 Ah · senza manutenzione</text>
+<line x1="952" y1="250" x2="1048" y2="250" stroke="#2a3b55" stroke-width="5" marker-end="url(#a2a3b55)"/>
+<rect x="1060" y="165" width="380" height="170" rx="14" fill="#fff" stroke="#2a3b55" stroke-width="2.5"/>
+<text x="1250" y="296" font-size="22" text-anchor="middle" font-weight="bold" fill="#2a3b55">Motore a 48 V</text>
+<text x="1250" y="322" font-size="14" text-anchor="middle" font-weight="normal" fill="#4b5563">Brushless con doppio freno</text>
+<line x1="1452" y1="250" x2="1548" y2="250" stroke="#2a3b55" stroke-width="5" marker-end="url(#a2a3b55)"/>
+<rect x="1560" y="165" width="380" height="170" rx="14" fill="#fff" stroke="#7b3fa0" stroke-width="2.5"/>
+<text x="1750" y="296" font-size="22" text-anchor="middle" font-weight="bold" fill="#7b3fa0">Cabina + contrappesi</text>
+<text x="1750" y="322" font-size="14" text-anchor="middle" font-weight="normal" fill="#4b5563">160 kg + 2 × 30 kg</text>
+<rect x="210" y="190" width="80" height="60" rx="10" fill="#d35400"/>
+<rect x="226" y="170" width="10" height="26" fill="#6b7280"/><rect x="264" y="170" width="10" height="26" fill="#6b7280"/>
+<path d="M250,250 L250,270 L300,270" stroke="#6b7280" stroke-width="6" fill="none"/>
+<rect x="690" y="185" width="120" height="75" rx="8" fill="#fff" stroke="#2e8b57" stroke-width="5"/>
+<rect x="810" y="210" width="12" height="26" rx="3" fill="#2e8b57"/>
+<rect x="698" y="193" width="100" height="59" rx="4" fill="#2e8b57"/>
+<text x="750" y="235" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">48 V</text>
+<circle cx="1250" cy="225" r="42" fill="#fff" stroke="#2a3b55" stroke-width="5"/>
+<line x1="1292" y1="225" x2="1304" y2="225" stroke="#2a3b55" stroke-width="8"/>
+<line x1="1280" y1="255" x2="1288" y2="263" stroke="#2a3b55" stroke-width="8"/>
+<line x1="1250" y1="267" x2="1250" y2="279" stroke="#2a3b55" stroke-width="8"/>
+<line x1="1220" y1="255" x2="1212" y2="263" stroke="#2a3b55" stroke-width="8"/>
+<line x1="1208" y1="225" x2="1196" y2="225" stroke="#2a3b55" stroke-width="8"/>
+<line x1="1220" y1="195" x2="1212" y2="187" stroke="#2a3b55" stroke-width="8"/>
+<line x1="1250" y1="183" x2="1250" y2="171" stroke="#2a3b55" stroke-width="8"/>
+<line x1="1280" y1="195" x2="1288" y2="187" stroke="#2a3b55" stroke-width="8"/>
+<circle cx="1250" cy="225" r="12" fill="#2a3b55"/>
+<line x1="1690" y1="176" x2="1810" y2="176" stroke="#6b7280" stroke-width="5"/>
+<line x1="1710" y1="176" x2="1710" y2="200" stroke="#6b7280" stroke-width="4"/><line x1="1790" y1="176" x2="1790" y2="200" stroke="#6b7280" stroke-width="4"/>
+<rect x="1680" y="200" width="60" height="62" rx="14" fill="#f6f0fa" stroke="#7b3fa0" stroke-width="4"/>
+<rect x="1770" y="200" width="40" height="22" rx="4" fill="#fff6ee" stroke="#d35400" stroke-width="3"/>
+<rect x="1770" y="226" width="40" height="22" rx="4" fill="#fff6ee" stroke="#d35400" stroke-width="3"/>
+<text x="750" y="150" font-size="1" text-anchor="start" font-weight="normal" fill="#1f2937"></text>
+<text x="1000" y="362" font-size="17" text-anchor="middle" font-weight="normal" fill="#4b5563">Se manca la rete la macchina continua a batteria: 10 corse di emergenza (dato di prodotto) e luce di emergenza in cabina.</text>
+<circle cx="46" cy="412" r="20" fill="#2e8b57"/>
+<text x="46" y="419" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">2</text>
+<text x="78" y="420" font-size="24" text-anchor="start" font-weight="bold" fill="#2e8b57">Il ciclo della batteria</text>
+<rect x="30" y="440" width="1060" height="440" rx="14" fill="#fff" stroke="#d5dbe3" stroke-width="1.5"/>
+<circle cx="560" cy="620" r="90" fill="#effaf3" stroke="#2e8b57" stroke-width="4"/>
+<text x="560" y="614" font-size="21" text-anchor="middle" font-weight="bold" fill="#2e8b57">A riposo</text>
+<text x="560" y="640" font-size="14" text-anchor="middle" font-weight="normal" fill="#4b5563">il quadro conta</text>
+<text x="560" y="658" font-size="14" text-anchor="middle" font-weight="normal" fill="#4b5563">la carica usata</text>
+<rect x="40" y="508" width="280" height="104" rx="14" fill="#fff6ee" stroke="#d35400" stroke-width="3"/>
+<text x="180" y="546" font-size="21" text-anchor="middle" font-weight="bold" fill="#d35400">In uso</text>
+<text x="180" y="574" font-size="14" text-anchor="middle" font-weight="normal" fill="#1f2937">scarica: va a batteria,</text>
+<text x="180" y="595" font-size="14" text-anchor="middle" font-weight="normal" fill="#1f2937">caricabatteria staccato</text>
+<rect x="740" y="488" width="280" height="104" rx="14" fill="#eef5ff" stroke="#2563eb" stroke-width="3"/>
+<text x="880" y="526" font-size="21" text-anchor="middle" font-weight="bold" fill="#2563eb">Rabbocco</text>
+<text x="880" y="554" font-size="14" text-anchor="middle" font-weight="normal" fill="#1f2937">54 V · circa 3 A</text>
+<text x="880" y="575" font-size="14" text-anchor="middle" font-weight="normal" fill="#1f2937">circa 15 min (stima)</text>
+<rect x="560" y="753" width="280" height="104" rx="14" fill="#eef5ff" stroke="#2563eb" stroke-width="3"/>
+<text x="700" y="791" font-size="21" text-anchor="middle" font-weight="bold" fill="#2563eb">Carica completa</text>
+<text x="700" y="819" font-size="14" text-anchor="middle" font-weight="normal" fill="#1f2937">58 V fino a corrente &lt; 1,2 A</text>
+<text x="700" y="840" font-size="14" text-anchor="middle" font-weight="normal" fill="#1f2937">1 ora o più (stima)</text>
+<line x1="470" y1="610" x2="324" y2="585" stroke="#d35400" stroke-width="4" marker-start="url(#sd35400)" marker-end="url(#ad35400)"/>
+<line x1="640" y1="580" x2="745" y2="570" stroke="#2563eb" stroke-width="4" marker-start="url(#s2563eb)" marker-end="url(#a2563eb)"/>
+<line x1="590" y1="706" x2="650" y2="752" stroke="#2563eb" stroke-width="4" marker-start="url(#s2563eb)" marker-end="url(#a2563eb)"/>
+<text x="330" y="628" font-size="14" text-anchor="start" font-weight="bold" fill="#d35400">ogni corsa</text>
+<text x="745" y="628" font-size="14" text-anchor="start" font-weight="bold" fill="#2563eb">mancano circa 0,7 Ah</text>
+<text x="850" y="790" font-size="14" text-anchor="start" font-weight="bold" fill="#2563eb">mancano più di 2 Ah</text>
+<text x="850" y="808" font-size="14" text-anchor="start" font-weight="bold" fill="#2563eb">o dopo 10 rabbocchi</text>
+<rect x="60" y="790" width="340" height="70" rx="14" fill="#fdf1ef" stroke="#c0392b" stroke-width="2.5"/>
+<text x="230" y="818" font-size="15" text-anchor="middle" font-weight="bold" fill="#c0392b">Sotto 38,4 V sotto carico:</text>
+<text x="230" y="842" font-size="14" text-anchor="middle" font-weight="normal" fill="#1f2937">fuori servizio al piano, riparte ricaricata</text>
+<text x="1300" y="478" font-size="19" text-anchor="middle" font-weight="bold" fill="#2e8b57">Quando si ricarica</text>
+<rect x="1110" y="510" width="90" height="70" fill="#bfe6cc" stroke="#fff" stroke-width="2"/>
+<text x="1215" y="550.0" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">Piena: nessuna ricarica</text>
+<rect x="1110" y="580" width="90" height="120" fill="#cfe0ff" stroke="#fff" stroke-width="2"/>
+<text x="1215" y="645.0" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">Mancano 0,7 Ah: rabbocco</text>
+<rect x="1110" y="700" width="90" height="90" fill="#8fb4ff" stroke="#fff" stroke-width="2"/>
+<text x="1215" y="750.0" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">Mancano 2 Ah: carica completa</text>
+<rect x="1110" y="790" width="90" height="50" fill="#f2b8b0" stroke="#fff" stroke-width="2"/>
+<text x="1215" y="820.0" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">Batteria scarica</text>
+<rect x="1110" y="510" width="90" height="330" rx="8" fill="none" stroke="#2a3b55" stroke-width="4"/>
+<text x="1155" y="866" font-size="13" text-anchor="middle" font-weight="normal" fill="#4b5563">scala non proporzionale</text>
+<text x="1560" y="560" font-size="1" text-anchor="start" font-weight="normal" fill="#1f2937"></text>
+<rect x="1500" y="440" width="470" height="440" rx="14" fill="#fff" stroke="#d5dbe3" stroke-width="1.5"/>
+<text x="1520" y="480" font-size="20" text-anchor="start" font-weight="bold" fill="#2e8b57">In breve</text>
+<text x="1520" y="520" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">Il caricabatteria resta al minimo finché non serve:</text>
+<text x="1520" y="548" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">la ricarica parte solo dopo diverse corse.</text>
+<text x="1520" y="576" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937"></text>
+<text x="1520" y="604" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">Ogni 10 rabbocchi una carica completa</text>
+<text x="1520" y="632" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">ricalibra il contatore di carica.</text>
+<text x="1520" y="660" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937"></text>
+<text x="1520" y="688" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">Rete e batteria hanno sezionatori separati:</text>
+<text x="1520" y="716" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">spenta del tutto solo con entrambi aperti.</text>
+<text x="1520" y="744" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937"></text>
+<text x="1520" y="772" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">Protezione a 63 V in marcia: apre l&#x27;uscita</text>
+<text x="1520" y="800" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">del motore e blocca la macchina.</text>
+<circle cx="46" cy="930" r="20" fill="#7b3fa0"/>
+<text x="46" y="937" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">3</text>
+<text x="78" y="938" font-size="24" text-anchor="start" font-weight="bold" fill="#7b3fa0">I contrappesi riducono l&#x27;energia di sollevamento (calcolo dalle masse, senza perdite)</text>
+<rect x="30" y="960" width="1180" height="266" rx="14" fill="#fff" stroke="#d9cde4" stroke-width="1.5"/>
+<text x="220" y="996" font-size="17" text-anchor="middle" font-weight="bold" fill="#1f2937">Cabina vuota</text>
+<rect x="90" y="1130" width="100" height="40" rx="6" fill="#9ca3af"/>
+<rect x="230" y="1145" width="100" height="25" rx="6" fill="#2e8b57"/>
+<text x="140" y="1190" font-size="13" text-anchor="middle" font-weight="normal" fill="#4b5563">senza</text>
+<text x="280" y="1190" font-size="13" text-anchor="middle" font-weight="bold" fill="#2e8b57">con contrappesi</text>
+<text x="140" y="1116.0" font-size="14" text-anchor="middle" font-weight="normal" fill="#4b5563">1,3 Wh</text>
+<text x="280" y="1131.0" font-size="14" text-anchor="middle" font-weight="bold" fill="#2e8b57">0,8 Wh</text>
+<text x="220" y="1046" font-size="34" text-anchor="middle" font-weight="bold" fill="#7b3fa0">−38%</text>
+<text x="600" y="996" font-size="17" text-anchor="middle" font-weight="bold" fill="#1f2937">Cabina 1 persona</text>
+<rect x="470" y="1111" width="100" height="59" rx="6" fill="#9ca3af"/>
+<rect x="610" y="1126" width="100" height="44" rx="6" fill="#2e8b57"/>
+<text x="520" y="1190" font-size="13" text-anchor="middle" font-weight="normal" fill="#4b5563">senza</text>
+<text x="660" y="1190" font-size="13" text-anchor="middle" font-weight="bold" fill="#2e8b57">con contrappesi</text>
+<text x="520" y="1097.25" font-size="14" text-anchor="middle" font-weight="normal" fill="#4b5563">1,9 Wh</text>
+<text x="660" y="1112.25" font-size="14" text-anchor="middle" font-weight="bold" fill="#2e8b57">1,4 Wh</text>
+<text x="600" y="1046" font-size="34" text-anchor="middle" font-weight="bold" fill="#7b3fa0">−26%</text>
+<text x="980" y="996" font-size="17" text-anchor="middle" font-weight="bold" fill="#1f2937">Cabina 200 kg</text>
+<rect x="850" y="1080" width="100" height="90" rx="6" fill="#9ca3af"/>
+<rect x="990" y="1095" width="100" height="75" rx="6" fill="#2e8b57"/>
+<text x="900" y="1190" font-size="13" text-anchor="middle" font-weight="normal" fill="#4b5563">senza</text>
+<text x="1040" y="1190" font-size="13" text-anchor="middle" font-weight="bold" fill="#2e8b57">con contrappesi</text>
+<text x="900" y="1066.0" font-size="14" text-anchor="middle" font-weight="normal" fill="#4b5563">2,9 Wh</text>
+<text x="1040" y="1081.0" font-size="14" text-anchor="middle" font-weight="bold" fill="#2e8b57">2,5 Wh</text>
+<text x="980" y="1046" font-size="34" text-anchor="middle" font-weight="bold" fill="#7b3fa0">−17%</text>
+<text x="70" y="1216" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">Una salita di 3,0 m. Il motore solleva solo la differenza fra cabina e contrappesi. Discesa non valutata.</text>
+<rect x="1230" y="960" width="740" height="266" rx="14" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+<text x="1250" y="996" font-size="20" text-anchor="start" font-weight="bold" fill="#2563eb">Senza rete: 10 corse di emergenza</text>
+<rect x="1260" y="1030" width="400" height="70" rx="10" fill="#fff" stroke="#2e8b57" stroke-width="5"/>
+<rect x="1660" y="1051" width="14" height="28" rx="3" fill="#2e8b57"/>
+<rect x="1264" y="1034" width="42" height="62" rx="6" fill="#d35400"/>
+<text x="1460" y="1070" font-size="17" text-anchor="middle" font-weight="bold" fill="#1f2937">576 Wh = 12 Ah × 48 V</text>
+<text x="1700" y="1062" font-size="36" text-anchor="start" font-weight="bold" fill="#d35400">11%</text>
+<text x="1700" y="1086" font-size="13" text-anchor="start" font-weight="bold" fill="#d35400">ESEMPIO</text>
+<text x="1250" y="1128" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">Caso peggiore (4,5 m, 200 kg): circa 61 Wh per 10 corse (rendimento ipotizzato).</text>
+<text x="1250" y="1152" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">A carica insufficiente: fuori servizio, solo fine corsa e apertura porta.</text>
+<text x="1250" y="1176" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">Luce di emergenza: almeno 5 lux per 1 ora (analisi dei rischi).</text>
+<text x="1250" y="1200" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">La capacità utile cala con l&#x27;età.</text>
+<circle cx="46" cy="1262" r="20" fill="#c27c0e"/>
+<text x="46" y="1269" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">4</text>
+<text x="78" y="1270" font-size="24" text-anchor="start" font-weight="bold" fill="#c27c0e">In bolletta e in manutenzione</text>
+<rect x="30" y="1284" width="372" height="92" rx="14" fill="#fff" stroke="#d35400" stroke-width="2.5"/>
+<text x="216.0" y="1328" font-size="30" text-anchor="middle" font-weight="bold" fill="#d35400">14 kWh/anno</text>
+<text x="216.0" y="1358" font-size="13.5" text-anchor="middle" font-weight="normal" fill="#4b5563">ESEMPIO · con contrappesi (16 senza)</text>
+<rect x="422" y="1284" width="372" height="92" rx="14" fill="#fff" stroke="#d35400" stroke-width="2.5"/>
+<text x="608.0" y="1328" font-size="30" text-anchor="middle" font-weight="bold" fill="#d35400">≈ 3,5 €/anno</text>
+<text x="608.0" y="1358" font-size="13.5" text-anchor="middle" font-weight="normal" fill="#4b5563">ESEMPIO · limite inferiore a 0,25 €/kWh</text>
+<rect x="814" y="1284" width="372" height="92" rx="14" fill="#fff" stroke="#c27c0e" stroke-width="2.5"/>
+<text x="1000.0" y="1328" font-size="30" text-anchor="middle" font-weight="bold" fill="#c27c0e">+2,2 €/anno</text>
+<text x="1000.0" y="1358" font-size="13.5" text-anchor="middle" font-weight="normal" fill="#4b5563">per ogni watt in più di stand-by</text>
+<rect x="1206" y="1284" width="372" height="92" rx="14" fill="#fff" stroke="#2e8b57" stroke-width="2.5"/>
+<text x="1392.0" y="1328" font-size="30" text-anchor="middle" font-weight="bold" fill="#2e8b57">3 anni</text>
+<text x="1392.0" y="1358" font-size="13.5" text-anchor="middle" font-weight="normal" fill="#4b5563">sostituzione batterie consigliata</text>
+<rect x="1598" y="1284" width="372" height="92" rx="14" fill="#fff" stroke="#2e8b57" stroke-width="2.5"/>
+<text x="1784.0" y="1328" font-size="30" text-anchor="middle" font-weight="bold" fill="#2e8b57">6 mesi</text>
+<text x="1784.0" y="1358" font-size="13.5" text-anchor="middle" font-weight="normal" fill="#4b5563">manutenzione della macchina</text>
+<rect x="30" y="1396" width="1940" height="54" rx="14" fill="#fffaf0" stroke="#c27c0e" stroke-width="1.5"/>
+<text x="48" y="1419" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Ipotesi dell&#x27;esempio: corsa 3,0 m a 0,10 m/s, una persona da 75 kg, rendimenti 60% (batteria→cinghia) e 80% (rete→batteria), 5 salite + 5 discese al giorno (circa 300 corse/mese), stand-by 1 W (da certificare), 0,25 €/kWh.</text>
+<text x="48" y="1440" font-size="13.5" text-anchor="start" font-weight="normal" fill="#4b5563">Non inclusi: consumi di freno, azionamento, porte, luci e comunicazione; recupero in discesa. Fonti: CP.TEC.025 Rev.5, ST.TEC.068, manuali IM.TEC, analisi dei rischi Rev.7, firmware.</text>
+</svg>
