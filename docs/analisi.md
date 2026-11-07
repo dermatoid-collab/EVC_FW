@@ -1,5 +1,7 @@
 # Analisi del progetto TTF / UDEC.CX
 
+> **Documento di analisi (narrativo).** Lo stato aggiornato delle osservazioni, le proposte di correzione e la loro chiusura sono in [`registro_issue.md`](registro_issue.md), che è il documento base del lavoro. Questo file resta come descrizione di partenza e non viene più aggiornato issue per issue.
+
 Documento redatto a partire dal contenuto del repo (stato del commit di import). Raccoglie tre analisi:
 
 1. [Panoramica del progetto](#1-panoramica-del-progetto)

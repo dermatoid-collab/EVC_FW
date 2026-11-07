@@ -28,8 +28,11 @@ Le modifiche recenti sono descritte in `TTF-Base/Firmware/TTF-Base/Changelog`.
 
 ## Documentazione
 
-- `docs/analisi.md`: analisi del progetto, revisione del codice di sicurezza, catena delle sicurezze e confronto con i manuali.
+- **`docs/registro_issue.md`: documento base del lavoro.** Tutte le osservazioni, le proposte di correzione, le verifiche e il loro stato. Si aggiorna a ogni issue risolta; il controllo di coerenza è `python3 docs/check_registro.py`.
+- `docs/analisi.md`: analisi di partenza (panoramica, revisione del codice di sicurezza, catena delle sicurezze, confronto con i manuali).
+- `docs/diagramma_funzionale.svg` (e `.png`): diagramma funzionale della macchina (stati del movimento, ciclo porta, alimentazione, batteria, sicurezze, comunicazioni), con i riquadri rossi che rimandano agli ID del registro. Si rigenera con `python3 docs/gen_diagramma_funzionale.py docs/diagramma_funzionale.svg`.
 - `docs/schema_funzionale.svg` (e `.png`): schema funzionale elettrico con la catena delle sicurezze. Si rigenera con `python3 docs/gen_schema_funzionale.py docs/schema_funzionale.svg`.
+- `CLAUDE.md`: regole di lavoro per questo repository.
 
 ## Strumenti
 

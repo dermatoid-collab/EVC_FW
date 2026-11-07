@@ -1,0 +1,477 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="2060" viewBox="0 0 2400 2060" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">
+<defs>
+<marker id="ac0392b" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#c0392b"/></marker>
+<marker id="ad35400" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#d35400"/></marker>
+<marker id="a2563eb" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#2563eb"/></marker>
+<marker id="a6b7280" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#6b7280"/></marker>
+<marker id="a2e8b57" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#2e8b57"/></marker>
+<marker id="a7b3fa0" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#7b3fa0"/></marker>
+<marker id="a2a3b55" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#2a3b55"/></marker>
+</defs>
+<rect width="2400" height="2060" fill="#f6f7f9"/>
+<text x="30" y="34" font-size="22" text-anchor="start" font-weight="bold" fill="#1f2937">ELEVANCE / TTF — Diagramma funzionale della macchina</text>
+<text x="30" y="54" font-size="11.5" text-anchor="start" font-weight="normal" fill="#555">Ricostruito dal firmware TTF-Base e dai manuali IM.TEC.158–161. I riquadri rossi rimandano alle issue di docs/registro_issue.md. Stato del firmware: commit di import, nessuna correzione applicata.</text>
+<rect x="20" y="70" width="1500" height="960" rx="12" fill="#ffffff" stroke="#2a3b55" stroke-width="1.4"/>
+<text x="34" y="92" font-size="14" text-anchor="start" font-weight="bold" fill="#2a3b55">1 · Macchina a stati del movimento (run_mode.c) — scansione ciclica, 1 passo per giro di main_loop</text>
+<rect x="50" y="120" width="240" height="100" rx="10" fill="#f4f6fa" stroke="#2a3b55" stroke-width="1.8"/>
+<text x="60" y="138" font-size="12.5" text-anchor="start" font-weight="bold" fill="#2a3b55">INIT_SEQ</text>
+<text x="60" y="154" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">door_reset · abilita TLC e uscite P71</text>
+<text x="60" y="168" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">vfd_stop · NPB: modo PSU, EEPROM off</text>
+<text x="60" y="182" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">VFD: SDO timeout comunicazione</text>
+<text x="60" y="196" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">L2D_PARAM saltato (debug)</text>
+<rect x="239.0" y="106" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="244.0" y="117" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-25</text>
+<rect x="190.0" y="106" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="195.0" y="117" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-04</text>
+<rect x="50" y="330" width="240" height="100" rx="10" fill="#fff7ec" stroke="#d35400" stroke-width="1.8"/>
+<text x="60" y="348" font-size="12.5" text-anchor="start" font-weight="bold" fill="#d35400">FALL_TEST (collaudo paracadute)</text>
+<text x="60" y="364" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">relè ON; freno aperto da tasto 2 o IN4</text>
+<text x="60" y="378" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">se s8; senza tasti: vfd_halt</text>
+<text x="60" y="392" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">esce dopo 20 s senza tasti/chiamate</text>
+<rect x="239.0" y="316" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="244.0" y="327" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-19</text>
+<rect x="190.0" y="316" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="195.0" y="327" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-01</text>
+<rect x="560" y="330" width="240" height="100" rx="10" fill="#eef6ff" stroke="#2563eb" stroke-width="1.8"/>
+<text x="570" y="348" font-size="12.5" text-anchor="start" font-weight="bold" fill="#2563eb">NORMAL (fermo)</text>
+<text x="570" y="364" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">traptray NO_BYPASS · vfd_stop 1 s</text>
+<text x="570" y="378" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">scansione chiamate P0/P1, riapri</text>
+<text x="570" y="392" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">batteria scarica al piano → carica</text>
+<text x="570" y="406" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">reset da quadro/COP 3 s → reboot</text>
+<rect x="749.0" y="316" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="754.0" y="327" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-22</text>
+<rect x="1130" y="120" width="240" height="100" rx="10" fill="#eef9f1" stroke="#2e8b57" stroke-width="1.8"/>
+<text x="1140" y="138" font-size="12.5" text-anchor="start" font-weight="bold" fill="#2e8b57">UP</text>
+<text x="1140" y="154" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">traptray TRAY_BYPASS</text>
+<text x="1140" y="168" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">wait_enable(trap ok) → brake_release</text>
+<text x="1140" y="182" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">→ go_up 0,10 m/s (0,05 con magnete</text>
+<text x="1140" y="196" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">o in bypass); porta aperta → CLOSE</text>
+<rect x="1130" y="520" width="240" height="100" rx="10" fill="#eef9f1" stroke="#2e8b57" stroke-width="1.8"/>
+<text x="1140" y="538" font-size="12.5" text-anchor="start" font-weight="bold" fill="#2e8b57">DOWN</text>
+<text x="1140" y="554" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">traptray NO_BYPASS</text>
+<text x="1140" y="568" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">wait_enable(trap ∧ tray) → brake_release</text>
+<text x="1140" y="582" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">(marcia SU a 11 rpm) → go_down</text>
+<text x="1140" y="596" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">tetto premuto: nessun bypass trap</text>
+<rect x="1319.0" y="506" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="1324.0" y="517" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-06</text>
+<rect x="1270.0" y="506" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="1275.0" y="517" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-02</text>
+<rect x="1130" y="790" width="240" height="100" rx="10" fill="#fdf3f2" stroke="#c0392b" stroke-width="1.8"/>
+<text x="1140" y="808" font-size="12.5" text-anchor="start" font-weight="bold" fill="#c0392b">STUCK_UP</text>
+<text x="1140" y="824" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">porta ferma · NO_BYPASS</text>
+<text x="1140" y="838" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">wait_for_enable = 1</text>
+<text x="1140" y="852" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">attende rilascio ostacolo</text>
+<rect x="1319.0" y="776" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="1324.0" y="787" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-21</text>
+<rect x="760" y="840" width="240" height="100" rx="10" fill="#fdf3f2" stroke="#c0392b" stroke-width="1.8"/>
+<text x="770" y="858" font-size="12.5" text-anchor="start" font-weight="bold" fill="#c0392b">WAIT_FOR_CALL_RELEASE</text>
+<text x="770" y="874" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">occupato acceso · NO_BYPASS</text>
+<text x="770" y="888" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">porta ferma, VFD in halt</text>
+<text x="770" y="902" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">riparte solo dopo rilascio tasti</text>
+<rect x="200" y="600" width="240" height="100" rx="10" fill="#f4f4fb" stroke="#7b3fa0" stroke-width="1.8"/>
+<text x="210" y="618" font-size="12.5" text-anchor="start" font-weight="bold" fill="#7b3fa0">OPEN_DOOR (al piano)</text>
+<text x="210" y="634" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">controllo sovraccarico: porta aperta,</text>
+<text x="210" y="648" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">luce + cicalino · door_loop(OPEN)</text>
+<text x="210" y="662" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">parcheggio 20 s · sblocco subito dopo stop</text>
+<rect x="389.0" y="586" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="394.0" y="597" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-12</text>
+<rect x="340.0" y="586" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="345.0" y="597" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-03</text>
+<rect x="200" y="840" width="240" height="100" rx="10" fill="#f4f4fb" stroke="#7b3fa0" stroke-width="1.8"/>
+<text x="210" y="858" font-size="12.5" text-anchor="start" font-weight="bold" fill="#7b3fa0">CLOSE_DOOR</text>
+<text x="210" y="874" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">sovraccarico → riapre · S3 assente →</text>
+<text x="210" y="888" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">reset porta · door_loop(CLOSE)</text>
+<text x="210" y="902" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">riapri/PAP/chiamata al piano → OPEN</text>
+<rect x="389.0" y="826" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="394.0" y="837" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-07</text>
+<polyline points="290,150 680,150 680,330" fill="none" stroke="#2a3b55" stroke-width="1.8" marker-end="url(#a2a3b55)" stroke-linejoin="round"/>
+<circle cx="500" cy="150" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="500" y="153.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">1</text>
+<polyline points="800,355 980,355 980,150 1130,150" fill="none" stroke="#2e8b57" stroke-width="1.8" marker-end="url(#a2e8b57)" stroke-linejoin="round"/>
+<circle cx="980" cy="250" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="980" y="253.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">2</text>
+<polyline points="1130,200 1040,200 1040,385 800,385" fill="none" stroke="#2e8b57" stroke-width="1.8" marker-end="url(#a2e8b57)" stroke-linejoin="round"/>
+<circle cx="1040" cy="290" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="1040" y="293.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">9</text>
+<polyline points="800,410 920,410 920,545 1130,545" fill="none" stroke="#2e8b57" stroke-width="1.8" marker-end="url(#a2e8b57)" stroke-linejoin="round"/>
+<circle cx="920" cy="480" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="920" y="483.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">3</text>
+<polyline points="1130,590 1000,590 1000,428 800,428" fill="none" stroke="#2e8b57" stroke-width="1.8" marker-end="url(#a2e8b57)" stroke-linejoin="round"/>
+<circle cx="1000" cy="520" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="1000" y="523.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">9</text>
+<polyline points="590,430 590,650 440,650" fill="none" stroke="#7b3fa0" stroke-width="1.8" marker-end="url(#a7b3fa0)" stroke-linejoin="round"/>
+<circle cx="590" cy="540" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="590" y="543.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">4</text>
+<polyline points="700,430 700,905 440,905" fill="none" stroke="#7b3fa0" stroke-width="1.8" marker-end="url(#a7b3fa0)" stroke-linejoin="round"/>
+<circle cx="700" cy="700" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="700" y="703.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">5</text>
+<polyline points="440,870 640,870 640,430" fill="none" stroke="#7b3fa0" stroke-width="1.8" marker-end="url(#a7b3fa0)" stroke-linejoin="round"/>
+<circle cx="640" cy="760" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="640" y="763.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">15</text>
+<polyline points="380,700 380,840" fill="none" stroke="#7b3fa0" stroke-width="1.8" marker-end="url(#a7b3fa0)" stroke-linejoin="round"/>
+<circle cx="380" cy="770" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="380" y="773.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">13</text>
+<polyline points="270,840 270,700" fill="none" stroke="#7b3fa0" stroke-width="1.8" marker-end="url(#a7b3fa0)" stroke-linejoin="round"/>
+<circle cx="270" cy="770" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="270" y="773.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">14</text>
+<polyline points="560,360 290,360" fill="none" stroke="#d35400" stroke-width="1.8" marker-end="url(#ad35400)" stroke-linejoin="round"/>
+<circle cx="425" cy="360" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="425" y="363.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">16</text>
+<polyline points="290,405 560,405" fill="none" stroke="#d35400" stroke-width="1.8" marker-end="url(#ad35400)" stroke-linejoin="round"/>
+<circle cx="425" cy="405" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="425" y="408.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">17</text>
+<polyline points="1250,620 1250,790" fill="none" stroke="#c0392b" stroke-width="1.8" marker-end="url(#ac0392b)" stroke-linejoin="round"/>
+<circle cx="1250" cy="705" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="1250" y="708.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">10</text>
+<polyline points="1130,870 1000,870" fill="none" stroke="#c0392b" stroke-width="1.8" marker-end="url(#ac0392b)" stroke-linejoin="round"/>
+<circle cx="1065" cy="870" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="1065" y="873.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">11</text>
+<polyline points="780,840 780,430" fill="none" stroke="#2a3b55" stroke-width="1.8" marker-end="url(#a2a3b55)" stroke-linejoin="round"/>
+<circle cx="780" cy="640" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="780" y="643.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">12</text>
+<polyline points="1370,140 1400,140" fill="none" stroke="#7b3fa0" stroke-width="1.8" marker-end="url(#a7b3fa0)" stroke-linejoin="round"/>
+<text x="1404" y="144" font-size="10" text-anchor="start" font-weight="bold" fill="#7b3fa0">6 → OPEN_DOOR</text>
+<polyline points="1370,165 1400,165" fill="none" stroke="#7b3fa0" stroke-width="1.8" marker-end="url(#a7b3fa0)" stroke-linejoin="round"/>
+<text x="1404" y="169" font-size="10" text-anchor="start" font-weight="bold" fill="#7b3fa0">7 → CLOSE_DOOR</text>
+<polyline points="1370,190 1400,190" fill="none" stroke="#c0392b" stroke-width="1.8" marker-end="url(#ac0392b)" stroke-linejoin="round"/>
+<text x="1404" y="194" font-size="10" text-anchor="start" font-weight="bold" fill="#c0392b">8 → WAIT</text>
+<polyline points="1370,540 1400,540" fill="none" stroke="#7b3fa0" stroke-width="1.8" marker-end="url(#a7b3fa0)" stroke-linejoin="round"/>
+<text x="1404" y="544" font-size="10" text-anchor="start" font-weight="bold" fill="#7b3fa0">6 → OPEN_DOOR</text>
+<polyline points="1370,565 1400,565" fill="none" stroke="#c0392b" stroke-width="1.8" marker-end="url(#ac0392b)" stroke-linejoin="round"/>
+<text x="1404" y="569" font-size="10" text-anchor="start" font-weight="bold" fill="#c0392b">8 → WAIT</text>
+<rect x="1130" y="250" width="240" height="120" rx="8" fill="#fffdf3" stroke="#b48a00" stroke-width="1.2"/>
+<text x="1140" y="268" font-size="11.5" text-anchor="start" font-weight="bold" fill="#7a5a00">enable (abilitation_check)</text>
+<text x="1140" y="284" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">s8 ∧ ¬fault VFD ∧ ¬fault pmode</text>
+<text x="1140" y="297" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">e, fuori bypass: ¬sovratensione ∧</text>
+<text x="1140" y="310" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">UDEC.C/CX online ∧ ¬TRIP_SAFETY</text>
+<text x="1140" y="323" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">il VFD offline non toglie enable</text>
+<rect x="1316" y="239" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="1321" y="250" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-04</text>
+<text x="50" y="1000" font-size="10.5" text-anchor="start" font-weight="normal" fill="#555">Colori: azzurro = fermo · verde = marcia · viola = ciclo porta · rosso = arresto/ostacolo · arancio = collaudo.  Il numero nel cerchio rimanda alla tabella delle condizioni (riquadro 7).</text>
+<rect x="1540" y="70" width="840" height="450" rx="12" fill="#ffffff" stroke="#7b3fa0" stroke-width="1.4"/>
+<text x="1554" y="92" font-size="14" text-anchor="start" font-weight="bold" fill="#7b3fa0">2 · Ciclo porta e serratura (door.c)</text>
+<rect x="1565" y="120" width="210" height="72" rx="10" fill="#f4f4fb" stroke="#7b3fa0" stroke-width="1.8"/>
+<text x="1575" y="138" font-size="12.5" text-anchor="start" font-weight="bold" fill="#7b3fa0">LOCKED</text>
+<text x="1575" y="154" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">chiusa e bloccata (ELT = 0)</text>
+<text x="1575" y="168" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">se si muove → door_reset</text>
+<rect x="1865" y="120" width="210" height="72" rx="10" fill="#f4f4fb" stroke="#7b3fa0" stroke-width="1.8"/>
+<text x="1875" y="138" font-size="12.5" text-anchor="start" font-weight="bold" fill="#7b3fa0">UNLOCKING</text>
+<text x="1875" y="154" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">ELT = 1 (sblocco), lampada riapri</text>
+<text x="1875" y="168" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">serratura libera → OPENING</text>
+<rect x="2145" y="120" width="210" height="72" rx="10" fill="#f4f4fb" stroke="#7b3fa0" stroke-width="1.8"/>
+<text x="2155" y="138" font-size="12.5" text-anchor="start" font-weight="bold" fill="#7b3fa0">OPENING</text>
+<text x="2155" y="154" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">operatori apri, a tempo 10 s</text>
+<text x="2155" y="168" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">nessun fine corsa</text>
+<rect x="1565" y="300" width="210" height="72" rx="10" fill="#f4f4fb" stroke="#7b3fa0" stroke-width="1.8"/>
+<text x="1575" y="318" font-size="12.5" text-anchor="start" font-weight="bold" fill="#7b3fa0">LOCKING</text>
+<text x="1575" y="334" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">ELT = 0 (blocco), operatori chiudi</text>
+<text x="1575" y="348" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">chiusa ∧ bloccata → LOCKED</text>
+<rect x="1724.0" y="286" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="1729.0" y="297" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-07</text>
+<rect x="1865" y="300" width="210" height="72" rx="10" fill="#f4f4fb" stroke="#7b3fa0" stroke-width="1.8"/>
+<text x="1875" y="318" font-size="12.5" text-anchor="start" font-weight="bold" fill="#7b3fa0">CLOSING</text>
+<text x="1875" y="334" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">ELT = 1, operatori chiudi</text>
+<text x="1875" y="348" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">accostata 0,5 s → LOCKING</text>
+<rect x="2024.0" y="286" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="2029.0" y="297" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-07</text>
+<rect x="2145" y="300" width="210" height="72" rx="10" fill="#f4f4fb" stroke="#7b3fa0" stroke-width="1.8"/>
+<text x="2155" y="318" font-size="12.5" text-anchor="start" font-weight="bold" fill="#7b3fa0">STOPPED</text>
+<text x="2155" y="334" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">porta ferma non chiusa, ELT = 1</text>
+<text x="2155" y="348" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">comando CLOSE → CLOSING</text>
+<polyline points="1775,150 1865,150" fill="none" stroke="#7b3fa0" stroke-width="1.8" marker-end="url(#a7b3fa0)" stroke-linejoin="round"/>
+<text x="1783" y="143" font-size="10" text-anchor="start" font-weight="normal" fill="#7b3fa0">OPEN</text>
+<polyline points="2075,150 2145,150" fill="none" stroke="#7b3fa0" stroke-width="1.8" marker-end="url(#a7b3fa0)" stroke-linejoin="round"/>
+<text x="2084" y="143" font-size="10" text-anchor="start" font-weight="normal" fill="#7b3fa0">libera</text>
+<polyline points="2250,192 2250,300" fill="none" stroke="#7b3fa0" stroke-width="1.8" marker-end="url(#a7b3fa0)" stroke-linejoin="round"/>
+<text x="2258" y="250" font-size="10" text-anchor="start" font-weight="normal" fill="#7b3fa0">10 s</text>
+<polyline points="2145,340 2075,340" fill="none" stroke="#7b3fa0" stroke-width="1.8" marker-end="url(#a7b3fa0)" stroke-linejoin="round"/>
+<text x="2086" y="333" font-size="10" text-anchor="start" font-weight="normal" fill="#7b3fa0">CLOSE</text>
+<polyline points="1865,340 1775,340" fill="none" stroke="#7b3fa0" stroke-width="1.8" marker-end="url(#a7b3fa0)" stroke-linejoin="round"/>
+<text x="1790" y="333" font-size="10" text-anchor="start" font-weight="normal" fill="#7b3fa0">accost.</text>
+<polyline points="1670,300 1670,192" fill="none" stroke="#7b3fa0" stroke-width="1.8" marker-end="url(#a7b3fa0)" stroke-linejoin="round"/>
+<text x="1678" y="250" font-size="10" text-anchor="start" font-weight="normal" fill="#7b3fa0">chiusa+bloccata</text>
+<polyline points="1990,192 1990,300" fill="none" stroke="#7b3fa0" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#a7b3fa0)" stroke-linejoin="round"/>
+<text x="1998" y="250" font-size="9.5" text-anchor="start" font-weight="normal" fill="#7b3fa0">CLOSE (da UNLOCKING)</text>
+<text x="1565" y="396" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Altre transizioni: STOPPED + OPEN (porta chiusa o bloccata) → UNLOCKING · CLOSING + OPEN → OPENING (retromarcia)</text>
+<text x="1565" y="411" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">LOCKING + OPEN → UNLOCKING · OPENING + CLOSE → CLOSING · LOCKED + OPEN → UNLOCKING.</text>
+<text x="1565" y="426" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Fuori da qualsiasi zona di sblocco: door_reset (ma ELT resta alimentata se porta non chiusa: FW-11).</text>
+<text x="1565" y="441" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Timeout LOCKING/UNLOCKING 5 s → STOPPED, TRIP_DOOR commentato; CLOSING non ha timeout: FW-07.</text>
+<text x="1565" y="456" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Comando dall’alto: OPEN_DOOR/CLOSE_DOOR/RESET (run_mode). Richiesta riapertura forzata: open_door_request.</text>
+<text x="1565" y="471" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">In bypass (spina X8) door_is_closed/locked = vero e il ciclo porta non viene comandato.</text>
+<rect x="2300" y="415" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="2305" y="426" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-11</text>
+<rect x="20" y="1040" width="880" height="560" rx="12" fill="#ffffff" stroke="#d35400" stroke-width="1.4"/>
+<text x="34" y="1062" font-size="14" text-anchor="start" font-weight="bold" fill="#d35400">3 · Alimentazione, marcia e freno (pmode.c, vfd.c)</text>
+<rect x="45" y="1085" width="190" height="82" rx="10" fill="#fff8f0" stroke="#d35400" stroke-width="1.8"/>
+<text x="55" y="1103" font-size="12.5" text-anchor="start" font-weight="bold" fill="#d35400">ST_CHARGER</text>
+<text x="55" y="1119" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">K3/K4 diseccitati, NPB attivo</text>
+<text x="55" y="1133" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">ricarica (§5)</text>
+<rect x="330" y="1085" width="190" height="82" rx="10" fill="#fff8f0" stroke="#d35400" stroke-width="1.8"/>
+<text x="340" y="1103" font-size="12.5" text-anchor="start" font-weight="bold" fill="#d35400">ST_TO_DRIVE</text>
+<text x="340" y="1119" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">K3/K4 eccitati</text>
+<text x="340" y="1133" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">attende VFD pronto (≤ 5 s)</text>
+<rect x="469.0" y="1071" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="474.0" y="1082" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-08</text>
+<rect x="610" y="1085" width="235" height="82" rx="10" fill="#fff8f0" stroke="#d35400" stroke-width="1.8"/>
+<text x="620" y="1103" font-size="12.5" text-anchor="start" font-weight="bold" fill="#d35400">ST_DRIVE</text>
+<text x="620" y="1119" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">VFD pronto (DC link &gt; 38 V, OTR ok)</text>
+<text x="620" y="1133" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">marcia consentita</text>
+<rect x="610" y="1230" width="235" height="82" rx="10" fill="#fff8f0" stroke="#d35400" stroke-width="1.8"/>
+<text x="620" y="1248" font-size="12.5" text-anchor="start" font-weight="bold" fill="#d35400">ST_WAIT_TO_CHARGER</text>
+<text x="620" y="1264" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">K3/K4 ancora eccitati: 30 s</text>
+<text x="620" y="1278" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">dopo lo stop</text>
+<rect x="794.0" y="1216" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="799.0" y="1227" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-14</text>
+<rect x="45" y="1230" width="190" height="82" rx="10" fill="#fff8f0" stroke="#d35400" stroke-width="1.8"/>
+<text x="55" y="1248" font-size="12.5" text-anchor="start" font-weight="bold" fill="#d35400">ST_TO_CHARGER</text>
+<text x="55" y="1264" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">K3/K4 diseccitati</text>
+<text x="55" y="1278" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">attende VFD fermo (≤ 5 s)</text>
+<polyline points="235,1126 330,1126" fill="none" stroke="#d35400" stroke-width="1.8" marker-end="url(#ad35400)" stroke-linejoin="round"/>
+<text x="244" y="1119" font-size="10" text-anchor="start" font-weight="normal" fill="#d35400">marcia</text>
+<polyline points="520,1126 610,1126" fill="none" stroke="#d35400" stroke-width="1.8" marker-end="url(#ad35400)" stroke-linejoin="round"/>
+<text x="525" y="1119" font-size="10" text-anchor="start" font-weight="normal" fill="#d35400">VFD ok</text>
+<polyline points="727,1167 727,1230" fill="none" stroke="#d35400" stroke-width="1.8" marker-end="url(#ad35400)" stroke-linejoin="round"/>
+<text x="735" y="1203" font-size="10" text-anchor="start" font-weight="normal" fill="#d35400">fine marcia</text>
+<polyline points="610,1290 235,1290" fill="none" stroke="#d35400" stroke-width="1.8" marker-end="url(#ad35400)" stroke-linejoin="round"/>
+<text x="420" y="1283" font-size="10" text-anchor="start" font-weight="normal" fill="#d35400">30 s o trip</text>
+<polyline points="140,1230 140,1167" fill="none" stroke="#d35400" stroke-width="1.8" marker-end="url(#ad35400)" stroke-linejoin="round"/>
+<text x="148" y="1203" font-size="10" text-anchor="start" font-weight="normal" fill="#d35400">VFD fermo</text>
+<polyline points="845,1167 880,1167 880,1330 140,1330 140,1312" fill="none" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#ac0392b)" stroke-linejoin="round"/>
+<text x="420" y="1346" font-size="10" text-anchor="start" font-weight="normal" fill="#c0392b">TRIP_SAFETY → CHARGER_NOW (immediato)</text>
+<text x="45" y="1368" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">pmode_relay_set(s): POWER-EN PD10, OTR-EN PE1, NPB-DIS PE0, BRK-EN PC9 = s; forzato a 0 con TRIP_SAFETY.</text>
+<text x="45" y="1382" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">Il NPB è staccato in marcia: il VFD va solo a batteria.</text>
+<text x="45" y="1415" font-size="12" text-anchor="start" font-weight="bold" fill="#d35400">Sequenza di una corsa (UP o DOWN)</text>
+<rect x="45" y="1428" width="112" height="54" rx="6" fill="#fff8f0" stroke="#d35400" stroke-width="1.2"/>
+<text x="101" y="1450" font-size="10" text-anchor="middle" font-weight="normal" fill="#1f2937">richiesta</text>
+<text x="101" y="1464" font-size="10" text-anchor="middle" font-weight="normal" fill="#1f2937">di corsa</text>
+<polyline points="157,1455 167,1455" fill="none" stroke="#d35400" stroke-width="1.6" marker-end="url(#ad35400)" stroke-linejoin="round"/>
+<rect x="167" y="1428" width="112" height="54" rx="6" fill="#fff8f0" stroke="#d35400" stroke-width="1.2"/>
+<text x="223" y="1450" font-size="10" text-anchor="middle" font-weight="normal" fill="#1f2937">pmode → DRIVE</text>
+<text x="223" y="1464" font-size="10" text-anchor="middle" font-weight="normal" fill="#1f2937">(≤ 5 s)</text>
+<polyline points="279,1455 289,1455" fill="none" stroke="#d35400" stroke-width="1.6" marker-end="url(#ad35400)" stroke-linejoin="round"/>
+<rect x="289" y="1428" width="112" height="54" rx="6" fill="#fff8f0" stroke="#d35400" stroke-width="1.2"/>
+<text x="345" y="1450" font-size="10" text-anchor="middle" font-weight="normal" fill="#1f2937">enable ↑ e</text>
+<text x="345" y="1464" font-size="10" text-anchor="middle" font-weight="normal" fill="#1f2937">traptray in pos.</text>
+<polyline points="401,1455 411,1455" fill="none" stroke="#d35400" stroke-width="1.6" marker-end="url(#ad35400)" stroke-linejoin="round"/>
+<rect x="411" y="1428" width="112" height="54" rx="6" fill="#fff8f0" stroke="#d35400" stroke-width="1.2"/>
+<text x="467" y="1450" font-size="10" text-anchor="middle" font-weight="normal" fill="#1f2937">jog SU 11 rpm</text>
+<text x="467" y="1464" font-size="10" text-anchor="middle" font-weight="normal" fill="#1f2937">(brake_release)</text>
+<polyline points="523,1455 533,1455" fill="none" stroke="#d35400" stroke-width="1.6" marker-end="url(#ad35400)" stroke-linejoin="round"/>
+<rect x="533" y="1428" width="112" height="54" rx="6" fill="#fff8f0" stroke="#d35400" stroke-width="1.2"/>
+<text x="589" y="1450" font-size="10" text-anchor="middle" font-weight="normal" fill="#1f2937">brk_fb attivo</text>
+<text x="589" y="1464" font-size="10" text-anchor="middle" font-weight="normal" fill="#1f2937">100 ms</text>
+<polyline points="645,1455 655,1455" fill="none" stroke="#d35400" stroke-width="1.6" marker-end="url(#ad35400)" stroke-linejoin="round"/>
+<rect x="655" y="1428" width="112" height="54" rx="6" fill="#fff8f0" stroke="#d35400" stroke-width="1.2"/>
+<text x="711" y="1450" font-size="10" text-anchor="middle" font-weight="normal" fill="#1f2937">velocità lavoro</text>
+<text x="711" y="1464" font-size="10" text-anchor="middle" font-weight="normal" fill="#1f2937">0,10 / 0,05 m/s</text>
+<polyline points="767,1455 777,1455" fill="none" stroke="#d35400" stroke-width="1.6" marker-end="url(#ad35400)" stroke-linejoin="round"/>
+<rect x="777" y="1428" width="112" height="54" rx="6" fill="#fff8f0" stroke="#d35400" stroke-width="1.2"/>
+<text x="833" y="1450" font-size="10" text-anchor="middle" font-weight="normal" fill="#1f2937">vfd_stop 1 s</text>
+<text x="833" y="1464" font-size="10" text-anchor="middle" font-weight="normal" fill="#1f2937">+ WAIT 30 s</text>
+<rect x="430" y="1413" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="435" y="1424" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-02</text>
+<rect x="805" y="1413" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="810" y="1424" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-14</text>
+<text x="45" y="1506" font-size="12" text-anchor="start" font-weight="bold" fill="#d35400">Relè di uscita S22 e comandi VFD</text>
+<rect x="300" y="1495" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="305" y="1506" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">HW-07</text>
+<rect x="352" y="1495" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="357" y="1506" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-04</text>
+<text x="45" y="1524" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">S22 (OUT3_1): OPEN → CLOSING → CLOSED → OPENING, ~100 ms; si apre dopo ≥ 10 s da stop/fault;</text>
+<text x="45" y="1538" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">apertura immediata per sovratensione (latch fino al riavvio). Non fa parte della catena di sicurezza.</text>
+<text x="45" y="1552" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">VFD: RPDO1 (velocità, direzione, rampe), TPDO1-3 (stato, fault, posizione), heartbeat NMT 100 ms su entrambi i bus;</text>
+<text x="45" y="1566" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">timeout arresto: se non si ferma entro rampa+0,2 s (≥ 0,5 s) ripete il comando, poi CHARGER_NOW + reboot VFD.</text>
+<rect x="920" y="1040" width="740" height="560" rx="12" fill="#ffffff" stroke="#2e8b57" stroke-width="1.4"/>
+<text x="934" y="1062" font-size="14" text-anchor="start" font-weight="bold" fill="#2e8b57">4 · Carica batteria 48 V (battery.c, npb.c) — solo in ST_CHARGER, tick 1 Hz</text>
+<rect x="950" y="1085" width="230" height="92" rx="10" fill="#eef9f1" stroke="#2e8b57" stroke-width="1.8"/>
+<text x="960" y="1103" font-size="12.5" text-anchor="start" font-weight="bold" fill="#2e8b57">WAIT_DISCH</text>
+<text x="960" y="1119" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">NPB a potenza minima (42 V, 1,5 A)</text>
+<text x="960" y="1133" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">la batteria assorbe la rigenerazione</text>
+<rect x="1300" y="1085" width="230" height="92" rx="10" fill="#eef9f1" stroke="#2e8b57" stroke-width="1.8"/>
+<text x="1310" y="1103" font-size="12.5" text-anchor="start" font-weight="bold" fill="#2e8b57">FLOAT (54,0 V)</text>
+<text x="1310" y="1119" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">regolazione corrente 3,0 A (±0,1)</text>
+<text x="1310" y="1133" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">rabbocco: fine a contatore ≥ 0</text>
+<rect x="1300" y="1250" width="230" height="92" rx="10" fill="#eef9f1" stroke="#2e8b57" stroke-width="1.8"/>
+<text x="1310" y="1268" font-size="12.5" text-anchor="start" font-weight="bold" fill="#2e8b57">BOOST (58,0 V)</text>
+<text x="1310" y="1284" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">fine: I ≤ 1,2 A per 10 s</text>
+<text x="1310" y="1298" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">oppure timeout 10 h = «carica»</text>
+<rect x="1479.0" y="1236" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="1484.0" y="1247" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-17</text>
+<polyline points="1180,1110 1300,1110" fill="none" stroke="#2e8b57" stroke-width="1.8" marker-end="url(#a2e8b57)" stroke-linejoin="round"/>
+<circle cx="1240" cy="1110" r="10" fill="#fff" stroke="#2e8b57" stroke-width="1.5"/>
+<text x="1240" y="1113.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2e8b57">a</text>
+<polyline points="1300,1150 1180,1150" fill="none" stroke="#2e8b57" stroke-width="1.8" marker-end="url(#a2e8b57)" stroke-linejoin="round"/>
+<circle cx="1240" cy="1150" r="10" fill="#fff" stroke="#2e8b57" stroke-width="1.5"/>
+<text x="1240" y="1153.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2e8b57">d</text>
+<polyline points="1100,1177 1100,1280 1300,1280" fill="none" stroke="#2e8b57" stroke-width="1.8" marker-end="url(#a2e8b57)" stroke-linejoin="round"/>
+<circle cx="1100" cy="1230" r="10" fill="#fff" stroke="#2e8b57" stroke-width="1.5"/>
+<text x="1100" y="1233.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2e8b57">b</text>
+<polyline points="1300,1320 1010,1320 1010,1177" fill="none" stroke="#2e8b57" stroke-width="1.8" marker-end="url(#a2e8b57)" stroke-linejoin="round"/>
+<circle cx="1150" cy="1320" r="10" fill="#fff" stroke="#2e8b57" stroke-width="1.5"/>
+<text x="1150" y="1323.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2e8b57">c</text>
+<text x="950" y="1368" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">a: Q &lt; −0,72 Ah ∨ Vdc &lt; 48 V → FLOAT (BOOST se già 10 cicli float)       b: Q &lt; −2,0 Ah ∨ low_battery ∨ 10 float → BOOST</text>
+<text x="950" y="1383" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">c: BOOST completo → contatore carica pieno, cicli float = 0, → WAIT_DISCH      d: FLOAT con Q ≥ 0 → cicli float + 1 → WAIT_DISCH</text>
+<text x="950" y="1420" font-size="12" text-anchor="start" font-weight="bold" fill="#2e8b57">Soglie e protezioni</text>
+<rect x="1112" y="1409" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="1117" y="1420" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-16</text>
+<rect x="1164" y="1409" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="1169" y="1420" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-15</text>
+<text x="950" y="1440" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">In marcia: NPB al minimo; se Vdc ≤ 38,4 V → low_battery e contatore carica azzerato a −7,5 Ah</text>
+<text x="950" y="1455" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">(senza filtro, scrittura LTC2959 a ogni scansione). low_battery si cancella con I ≤ 2,8 A in boost.</text>
+<text x="950" y="1470" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">Con low_battery al piano: fuori servizio, solo riapertura porta (run_mode_normal).</text>
+<text x="950" y="1485" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">Sovratensione: Vdc &gt; 63 V in ST_DRIVE → apertura S22 + reboot VFD + TRIP_OVERVOLTAGE,</text>
+<text x="950" y="1500" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">latch fino al riavvio; la soglia è vicina alla tensione di boost 58 V.</text>
+<text x="950" y="1515" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">Contatore Ah: LTC2959 alimentato dalla batteria, sopravvive ai reset (centro scala 0x80000000).</text>
+<text x="950" y="1530" font-size="10" text-anchor="start" font-weight="normal" fill="#1f2937">Carica: NPB 450 (Meanwell) su CAN250, polling 200 ms, comandi V/I scritti solo se cambiano.</text>
+<rect x="1680" y="1040" width="700" height="560" rx="12" fill="#ffffff" stroke="#c0392b" stroke-width="1.4"/>
+<text x="1694" y="1062" font-size="14" text-anchor="start" font-weight="bold" fill="#c0392b">5 · Sicurezze, trip e reset (application.c, trips.c)</text>
+<rect x="1700" y="1080" width="660" height="50" rx="8" fill="#fdf3f2" stroke="#c0392b" stroke-width="1.4"/>
+<text x="1712" y="1100" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2937">Ingressi: catena S1…S5 · UDEC.C s31…s36 · UDEC.CX s3a/s3c/s4 · feedback OTR, K1/K2</text>
+<text x="1712" y="1116" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2937">frame di beat e dati dalle schede (online / in_good)</text>
+<polyline points="2030,1130 2030,1150" fill="none" stroke="#c0392b" stroke-width="1.8" marker-end="url(#ac0392b)" stroke-linejoin="round"/>
+<rect x="1700" y="1150" width="660" height="36" rx="8" fill="#fdf3f2" stroke="#c0392b" stroke-width="1.4"/>
+<text x="1712" y="1172" font-size="11" text-anchor="start" font-weight="normal" fill="#1f2937">check_safety(): dopo 5 s dall’avvio, fuori bypass (spina X8)</text>
+<rect x="2205" y="1157" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="2210" y="1168" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-05</text>
+<polyline points="2030,1186 2030,1206" fill="none" stroke="#c0392b" stroke-width="1.8" marker-end="url(#ac0392b)" stroke-linejoin="round"/>
+<rect x="1700" y="1206" width="660" height="74" rx="8" fill="#fdf3f2" stroke="#c0392b" stroke-width="1.4"/>
+<text x="1712" y="1224" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">trip memorizzati fino al reboot: S1 fusibile · S2 extracorsa · S3 cinghie · S31 paracadute ·</text>
+<text x="1712" y="1239" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">CHAIN_CABLE · TTF_CX_CABLE · UZONE · OTR_FB · TRAY_FB · TRAP_FB · TRAPTRAY  ⇒  TRIP_SAFETY</text>
+<text x="1712" y="1254" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">non bloccanti (si ripristinano): S32 stop cabina · UDEC.C/CX offline · NPB</text>
+<polyline points="2030,1280 2030,1300" fill="none" stroke="#c0392b" stroke-width="1.8" marker-end="url(#ac0392b)" stroke-linejoin="round"/>
+<rect x="1700" y="1300" width="660" height="54" rx="8" fill="#fdf3f2" stroke="#c0392b" stroke-width="1.4"/>
+<text x="1712" y="1318" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">pmode_request(CHARGER_NOW) · pmode_relay_set(0) → K3/K4 a 0 · run_mode.enable = 0</text>
+<text x="1712" y="1333" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">macchina a stati: halt → WAIT_FOR_CALL_RELEASE (richiede rilascio dei tasti)</text>
+<polyline points="2030,1354 2030,1374" fill="none" stroke="#c0392b" stroke-width="1.8" marker-end="url(#ac0392b)" stroke-linejoin="round"/>
+<rect x="1700" y="1374" width="660" height="70" rx="8" fill="#fff" stroke="#2a3b55" stroke-width="1.4"/>
+<text x="1712" y="1392" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Reset: UP+DN al quadro (3 s) o pc0+pc1 in cabina (3 s) → vfd_reset → +100 ms → NVIC_SystemReset</text>
+<text x="1712" y="1407" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">IWDG ≈ 0,5 s (rifornito a ogni giro di main_loop). Con la catena aperta K3/K4 cadono in hardware</text>
+<text x="1712" y="1422" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">indipendentemente dal firmware.</text>
+<text x="1700" y="1470" font-size="12" text-anchor="start" font-weight="bold" fill="#c0392b">Eccezioni e rilievi</text>
+<rect x="1830" y="1459" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="1835" y="1470" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-13</text>
+<rect x="1882" y="1459" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="1887" y="1470" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-04</text>
+<rect x="1934" y="1459" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="1939" y="1470" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-05</text>
+<rect x="1986" y="1459" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="1991" y="1470" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">HW-01</text>
+<text x="1700" y="1490" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">• Il manuale IM.TEC.160 2.03.15 prevede il ripristino automatico dopo il corto sulla catena (FW-13).</text>
+<text x="1700" y="1505" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">• Il VFD offline non è un trip né toglie enable (FW-04).</text>
+<text x="1700" y="1520" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">• Controllo cablaggio di tetto inattivo per timer condiviso (FW-05).</text>
+<text x="1700" y="1535" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">• Spina X8: nessun controllo, 0,05 m/s, a uomo presente (HW-01).</text>
+<rect x="1540" y="540" width="840" height="490" rx="12" fill="#ffffff" stroke="#2a3b55" stroke-width="1.4"/>
+<text x="1554" y="562" font-size="14" text-anchor="start" font-weight="bold" fill="#2a3b55">6 · Modi di funzionamento</text>
+<rect x="1560" y="566" width="800" height="84" rx="8" fill="#fff" stroke="#2e8b57" stroke-width="1.4"/>
+<text x="1572" y="584" font-size="12.5" text-anchor="start" font-weight="bold" fill="#2e8b57">Normale</text>
+<text x="1572" y="600" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Comandi a uomo presente da cabina, piani, radiocomando.</text>
+<text x="1572" y="615" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Arresto automatico al piano (zona di sblocco).</text>
+<text x="1572" y="630" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Velocità 0,10 m/s, 0,05 m/s con magnete di piano.</text>
+<text x="1572" y="645" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Controlli di sicurezza attivi (check_safety).</text>
+<rect x="1560" y="660" width="800" height="84" rx="8" fill="#fff" stroke="#d35400" stroke-width="1.4"/>
+<text x="1572" y="678" font-size="12.5" text-anchor="start" font-weight="bold" fill="#d35400">Emergenza / spina X8</text>
+<rect x="1750.0" y="667" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="1755.0" y="678" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-09</text>
+<rect x="1799.0" y="667" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="1804.0" y="678" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">HW-01</text>
+<text x="1572" y="694" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Spina nel quadro: esclude catena tranne e-stop quadro.</text>
+<text x="1572" y="709" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Velocità 0,05 m/s, solo pulsanti del pannello (IM.158);</text>
+<text x="1572" y="724" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">nel firmware anche UDEC.C e radiocomando (FW-09).</text>
+<text x="1572" y="739" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Porte non comandate; paracadute ripristinabile.</text>
+<rect x="1560" y="754" width="800" height="84" rx="8" fill="#fff" stroke="#c0392b" stroke-width="1.4"/>
+<text x="1572" y="772" font-size="12.5" text-anchor="start" font-weight="bold" fill="#c0392b">Collaudo paracadute</text>
+<rect x="1741.8" y="761" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="1746.8" y="772" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-01</text>
+<text x="1572" y="788" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Menu del quadro, a cabina al piano alto, a pieno carico.</text>
+<text x="1572" y="803" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Apre il freno a mano (tasto 2 / IN4), prova di caduta.</text>
+<text x="1572" y="818" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Poi: sicurezze aperte, ripristino con spina X8 (SU).</text>
+<text x="1572" y="833" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Oggi parte da qualsiasi voce di menu (FW-01).</text>
+<rect x="1560" y="848" width="800" height="69" rx="8" fill="#fff" stroke="#6b7280" stroke-width="1.4"/>
+<text x="1572" y="866" font-size="12.5" text-anchor="start" font-weight="bold" fill="#6b7280">Manutenzione dal quadro</text>
+<rect x="1774.6" y="855" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="1779.6" y="866" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-12</text>
+<text x="1572" y="882" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Prevista da IM.158/160 (solo al piano basso,</text>
+<text x="1572" y="897" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">cicalino se fuori piano). Non implementata:</text>
+<text x="1572" y="912" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">voce MANUALE del menu senza funzione (FW-12).</text>
+<rect x="1560" y="927" width="800" height="69" rx="8" fill="#fff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="1572" y="945" font-size="12.5" text-anchor="start" font-weight="bold" fill="#2563eb">Batteria scarica / rete assente</text>
+<text x="1572" y="961" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Rete assente: va a batteria (10 corse di emergenza).</text>
+<text x="1572" y="976" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Batteria scarica: ferma al piano, solo riapertura porta.</text>
+<text x="1572" y="991" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Ripresa a carica minima (I ≤ 2,8 A in boost).</text>
+<rect x="20" y="1620" width="1500" height="420" rx="12" fill="#fff" stroke="#2a3b55" stroke-width="1.4"/>
+<text x="34" y="1642" font-size="14" text-anchor="start" font-weight="bold" fill="#2a3b55">7 · Condizioni delle transizioni del riquadro 1</text>
+<circle cx="46" cy="1660" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="46" y="1663.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">1</text>
+<text x="64" y="1664" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">fine sequenza di inizializzazione → NORMAL</text>
+<circle cx="46" cy="1680.5" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="46" y="1684.0" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">2</text>
+<text x="64" y="1684.5" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">chiamata P1 ∧ porta chiusa e bloccata ∧ trap ok → UP</text>
+<circle cx="46" cy="1701.0" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="46" y="1704.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">3</text>
+<text x="64" y="1705.0" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">chiamata P0 ∧ porta chiusa e bloccata ∧ tray ok → DOWN</text>
+<circle cx="46" cy="1721.5" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="46" y="1725.0" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">4</text>
+<text x="64" y="1725.5" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">al piano (zona di sblocco) ∧ ¬bypass ∧ (chiamata dello stesso piano ∨ tasto riapri ∨ batteria scarica con tasto) → OPEN_DOOR</text>
+<circle cx="46" cy="1742.0" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="46" y="1745.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">5</text>
+<text x="64" y="1746.0" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">chiamata ∧ porta non chiusa/bloccata (o al piano con porta aperta, senza PAP) → CLOSE_DOOR</text>
+<circle cx="46" cy="1762.5" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="46" y="1766.0" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">6</text>
+<text x="64" y="1766.5" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">UP/DOWN: arrivo alla zona di sblocco del piano → vfd_stop (1 s) → OPEN_DOOR; l’apertura può cominciare prima dello stop (FW-03)</text>
+<circle cx="46" cy="1783.0" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="46" y="1786.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">7</text>
+<text x="64" y="1787.0" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">UP: porta non chiusa o non bloccata → CLOSE_DOOR</text>
+<circle cx="46" cy="1803.5" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="46" y="1807.0" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">8</text>
+<text x="64" y="1807.5" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">UP/DOWN: trap premuto o enable perso → vfd_halt → WAIT_FOR_CALL_RELEASE</text>
+<circle cx="46" cy="1824.0" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="46" y="1827.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">9</text>
+<text x="64" y="1828.0" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">UP/DOWN: chiamata rilasciata → vfd_stop → NORMAL</text>
+<circle cx="46" cy="1844.5" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="46" y="1848.0" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">10</text>
+<text x="64" y="1848.5" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">DOWN: tray non ok (fondo premuto) → vfd_halt → STUCK_UP</text>
+<circle cx="46" cy="1865.0" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="46" y="1868.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">11</text>
+<text x="64" y="1869.0" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">STUCK_UP: traptray in posizione ∧ trap ok → WAIT_FOR_CALL_RELEASE</text>
+<circle cx="46" cy="1885.5" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="46" y="1889.0" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">12</text>
+<text x="64" y="1889.5" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">WAIT_FOR_CALL_RELEASE: nessuna chiamata → NORMAL</text>
+<circle cx="46" cy="1906.0" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="46" y="1909.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">13</text>
+<text x="64" y="1910.0" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">OPEN_DOOR: parcheggio 20 s con porta aperta, o chiamata per l’altro piano ∧ ¬sovraccarico → CLOSE_DOOR</text>
+<circle cx="46" cy="1926.5" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="46" y="1930.0" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">14</text>
+<text x="64" y="1930.5" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">CLOSE_DOOR: sovraccarico, tasto riapri/PAP, chiamata al piano corrente → OPEN_DOOR</text>
+<circle cx="46" cy="1947.0" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="46" y="1950.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">15</text>
+<text x="64" y="1951.0" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">CLOSE_DOOR: porta chiusa e bloccata, o S3 assente (reset porta) → NORMAL</text>
+<circle cx="46" cy="1967.5" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="46" y="1971.0" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">16</text>
+<text x="64" y="1971.5" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">NORMAL: OK nel menu del quadro → FALL_TEST (indipendentemente dalla voce scelta: FW-01)</text>
+<circle cx="46" cy="1988.0" r="10" fill="#fff" stroke="#2a3b55" stroke-width="1.5"/>
+<text x="46" y="1991.5" font-size="10" text-anchor="middle" font-weight="bold" fill="#2a3b55">17</text>
+<text x="64" y="1992.0" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">FALL_TEST: 20 s senza tasti né chiamate → NORMAL</text>
+<rect x="1540" y="1620" width="840" height="420" rx="12" fill="#ffffff" stroke="#2563eb" stroke-width="1.4"/>
+<text x="1554" y="1642" font-size="14" text-anchor="start" font-weight="bold" fill="#2563eb">8 · Comunicazioni, heartbeat e tempi</text>
+<text x="1560" y="1665" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">CAN250 (cappello): VFD 7BL00099 (CANopen), NPB 450 (frame estesi, polling 200 ms).</text>
+<text x="1560" y="1680" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">CAN125 (cabina): UDEC.C, UDEC.CX, operatori porta L2D (frame estesi UDEC_CAN_ID).</text>
+<text x="1560" y="1695" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Heartbeat TTF → entrambi i bus ogni 100 ms; il CX stacca bypass e serratura se manca per 0,5 s.</text>
+<text x="1560" y="1710" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Timeout offline: UDEC.C 1,5 s · UDEC.CX 0,5 s · VFD 0,2 s · L2D 2 s.</text>
+<text x="1560" y="1725" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Il frame CAN_STATUS di UDEC.C è trattato come status word (FW-10).</text>
+<text x="1560" y="1740" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Frame estesi sconosciuti vengono ritrasmessi su CAN125; DLC non controllato (FW-23).</text>
+<text x="1560" y="1755" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937"></text>
+<text x="1560" y="1770" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">Tempi del ciclo macchina (application.h):</text>
+<text x="1560" y="1785" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">  parcheggio a porta aperta 20 s · manovra porta 10 s · sblocco/blocco 5 s (timer) / 1,5 s (ritardo)</text>
+<text x="1560" y="1800" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">  accostamento→blocco 0,5 s · rilascio freno 100 ms · luce occupato +10 s</text>
+<text x="1560" y="1815" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">  avvio: controlli di sicurezza dopo 5 s · reset da quadro/COP 3 s</text>
+<text x="1560" y="1830" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">  commutazione carica↔marcia ≤ 5 s ciascuna · attesa prima dello spegnimento VFD 30 s</text>
+<text x="1560" y="1845" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">  S22: contatti 200 ms · apertura dopo 10 s da stop · relè OTR 200 ms · feedback bypass 2 s</text>
+<rect x="1941.6" y="1714" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="1946.6" y="1725" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-10</text>
+<rect x="2076.0" y="1729" width="45" height="15" rx="4" fill="#fdecea" stroke="#c0392b" stroke-width="1"/>
+<text x="2081.0" y="1740" font-size="9.5" text-anchor="start" font-weight="bold" fill="#c0392b">FW-23</text>
+<text x="1560" y="1905" font-size="11" text-anchor="start" font-weight="bold" fill="#1f2937">Legenda riquadri rossi</text>
+<text x="1560" y="1923" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">FW = firmware · HW = hardware/architettura · NOR = normativa/rischi · DOC = documentazione ·</text>
+<text x="1560" y="1938" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937">PRV = verifica in prova. Dettagli, proposte e stato: docs/registro_issue.md.</text>
+<text x="1560" y="1975" font-size="10.5" text-anchor="start" font-weight="normal" fill="#7a4b00">Incertezze: punti marcati «(?)» negli schemi; Analisi dei rischi Rev.5 non letta (NOR-01).</text>
+</svg>

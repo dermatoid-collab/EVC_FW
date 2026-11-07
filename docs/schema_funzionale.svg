@@ -488,7 +488,7 @@
 <circle cx="680" cy="1518" r="5" fill="#7b3fa0"/>
 <text x="692" y="1522" font-size="10.5" text-anchor="start" font-weight="normal" fill="#1f2937" >su UDEC.CX</text>
 <text x="820" y="1482" font-size="10.5" text-anchor="start" font-weight="normal" fill="#7a4b00" >Incertezze:  S3B non letto da TTF · STO VFD sul nodo S4 (dal disegno) · percorso celle di carico → ftc3 ·</text>
-<text x="820" y="1498" font-size="10.5" text-anchor="start" font-weight="normal" fill="#7a4b00" >relè K1/K2/K3/K4 non dichiarati a contatti guidati sugli schemi (la scheda Notion «Bypass trap/tray» dice di sì) ·</text>
-<text x="820" y="1514" font-size="10.5" text-anchor="start" font-weight="normal" fill="#7a4b00" >quale bus CAN porti NPB e L2D da verificare sul codice (CAN125/CAN250 dedotti da vfd.c e udec_*.c).</text>
-<text x="820" y="1530" font-size="10.5" text-anchor="start" font-weight="normal" fill="#7a4b00" >Analisi dei rischi Rev.5 non letta (file su \\SRV01).  Sorgente: docs/gen_schema_funzionale.py.</text>
+<text x="820" y="1498" font-size="10.5" text-anchor="start" font-weight="normal" fill="#7a4b00" >relè K1/K2/K3/K4 non dichiarati a contatti guidati sugli schemi, la scheda Notion «Bypass trap/tray» dice di sì (HW-03) ·</text>
+<text x="820" y="1514" font-size="10.5" text-anchor="start" font-weight="normal" fill="#7a4b00" >Bus CAN confermati dal codice: CAN250 = VFD e NPB; CAN125 = UDEC.C, UDEC.CX e operatori porta L2D. Issue: docs/registro_issue.md.</text>
+<text x="820" y="1530" font-size="10.5" text-anchor="start" font-weight="normal" fill="#7a4b00" >Analisi dei rischi Rev.5 non letta (NOR-01).  Sorgente: docs/gen_schema_funzionale.py.</text>
 </svg>
