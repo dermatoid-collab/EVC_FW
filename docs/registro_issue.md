@@ -82,6 +82,7 @@
 | DOC-08 | Valori di carico non uniformi: 200, 260 e 275 kg | Media | Da verificare | Documentazione |
 | DOC-09 | Velocità lineare della cinghia nei calcoli Megadyne (0,2 m/s) contro 0,15 m/s di progetto | Bassa | Da verificare | Documentazione |
 | DOC-10 | Diagramma funzionale commerciale: voci da aggiornare quando cambiano le funzioni descritte | Bassa | Aperta | Documentazione |
+| DOC-11 | Diagramma energia e batterie: numeri di esempio da sostituire con misure | Bassa | Aperta | Documentazione |
 | PRV-01 | Precisione di fermata ±10 mm | Media | Da verificare | Prove |
 | PRV-02 | Velocità ≤ 0,15 m/s misurata e conversione giri → m/s | Bassa | Da verificare | Prove |
 | PRV-03 | Sblocco della serratura con cabina appena in oltrecorsa | Media | Da verificare | Prove |
@@ -589,6 +590,14 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Chiusura:** revisione di R&D registrata e diagramma allineato alle funzioni correnti.
 - **Storia:** 2026-11-07 aperta con la prima versione del diagramma.
 
+### DOC-11 · Diagramma energia e batterie: numeri di esempio da sostituire con misure
+**Gravità:** Bassa · **Stato:** Aperta · **Fonte:** richiesta del 2026-11-07
+- **Dove:** `docs/diagramma_energia_light.svg` e `.png`, generati da `docs/gen_diagramma_energia.py`.
+- **Problema:** il diagramma per il commerciale spiega ciclo della batteria, contrappesi, autonomia, giornata tipica e costi. I consumi sono un ESEMPIO calcolato dalle masse (cabina 160 kg, contrappesi 2×30 kg) con ipotesi dichiarate: corsa 3 m, 0,10 m/s, rendimenti 60% e 80%, 5 salite e 5 discese al giorno, stand-by 1 W, 0,25 €/kWh. Il recupero di energia in discesa è volutamente omesso. Dati da riconciliare: capacità batteria 12 Ah (documenti) contro `BATTERY_DISCHARGED_MAH` nel firmware; stand-by 1 W «da certificare»; tempi di ricarica «stima»; fusibile 100 A e sezionatori dallo schema da riverificare.
+- **Proposta:** misurare Wh per corsa (salita/discesa, vuota/carico) e stand-by, verificare il tempo di rabbocco e di carica completa, confermare la capacità della batteria; poi sostituire gli esempi con misure, togliere le diciture «stima» e allinearlo al calcolo ufficiale di classe energetica se esiste. Rivedere con R&D prima di diffonderlo.
+- **Chiusura:** valori misurati e diagramma allineato; revisione R&D registrata.
+- **Storia:** 2026-11-07 aperta con la prima versione del diagramma.
+
 ---
 
 ## Prove da eseguire
@@ -696,3 +705,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-07 | Creazione del registro: 25 issue firmware, 9 hardware, 4 normative, 6 documentazione, 7 prove, 7 chiarimenti. Aggiunti il diagramma funzionale e lo script di controllo. |
 | 2026-11-07 | Letti i nuovi documenti del fascicolo (Analisi dei rischi Rev.7, ST.TEC.068, CP.TEC.025 Rev.5, Cap.6). Aggiunte 15 voci (FW-26…FW-31, NOR-05, NOR-06, DOC-07…DOC-09, PRV-08…PRV-10, CHI-08); chiuse NOR-01 e NOR-02; chiarite FW-14, HW-02, HW-07; FW-03 scende a Media e FW-09 passa ad Aperta. Totale 73 voci. |
 | 2026-11-07 | Aggiunta la versione «light» del diagramma funzionale per il dipartimento commerciale e la voce DOC-10 per tenerla allineata. Totale 74 voci. |
+| 2026-11-07 | Aggiunto il diagramma light su energia, batterie e contrappesi e la voce DOC-11 (numeri di esempio da misurare). Totale 75 voci. |
