@@ -1,0 +1,351 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="2070" viewBox="0 0 2400 2070" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">
+<defs>
+<marker id="ar6b7280" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/></marker>
+<marker id="ar2e8b57" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2e8b57"/></marker>
+<marker id="ar2a3b55" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2a3b55"/></marker>
+<marker id="arc0392b" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/></marker>
+<marker id="ar2563eb" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker>
+</defs>
+<rect width="2400" height="2070" fill="#f7f8fa"/>
+<rect x="0" y="0" width="2400" height="104" rx="0" fill="#2a3b55" stroke="#2a3b55" stroke-width="0"/>
+<text x="30" y="46" font-size="32" text-anchor="start" font-weight="bold" fill="#fff">ELEVANCE — Come funziona</text>
+<text x="30" y="78" font-size="17" text-anchor="start" font-weight="normal" fill="#dbe4f0">Panoramica funzionale della macchina per il dipartimento commerciale</text>
+<text x="2370" y="46" font-size="16" text-anchor="end" font-weight="bold" fill="#fff">Versione light · aggiornata al 07/11/2026</text>
+<text x="2370" y="72" font-size="14" text-anchor="end" font-weight="normal" fill="#dbe4f0">Documento descrittivo, non contrattuale né certificativo.</text>
+<text x="2370" y="92" font-size="12" text-anchor="end" font-weight="normal" fill="#c3d0e2">Fonti: configurazione di prodotto CP.TEC.025 Rev.5, manuali IM.TEC.158-161, analisi dei rischi Rev.7, firmware del quadro.</text>
+<rect x="20" y="124" width="8" height="30" rx="3" fill="#2a3b55"/>
+<text x="40" y="148" font-size="21" text-anchor="start" font-weight="bold" fill="#2a3b55">1 · I blocchi della macchina</text>
+<rect x="20" y="164" width="320" height="262" rx="10" fill="#fff6ee" stroke="#d35400" stroke-width="2"/>
+<rect x="20" y="164" width="320" height="40" rx="10" fill="#d35400" stroke="#d35400" stroke-width="0"/>
+<text x="34" y="191" font-size="18" text-anchor="start" font-weight="bold" fill="#fff">Energia</text>
+<text x="34" y="230.0" font-size="14" text-anchor="start" font-weight="bold" fill="#d35400">Rete domestica 230 V e batterie a</text>
+<text x="34" y="248.9" font-size="14" text-anchor="start" font-weight="bold" fill="#d35400">48 V.</text>
+<circle cx="40" cy="269.8" r="3.2" fill="#d35400"/>
+<text x="52" y="273.8" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Il caricabatterie ricarica le</text>
+<text x="52" y="291.35" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">batterie quando la macchina è ferma.</text>
+<circle cx="40" cy="310.90000000000003" r="3.2" fill="#d35400"/>
+<text x="52" y="314.90000000000003" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">La macchina funziona sempre a</text>
+<text x="52" y="332.45000000000005" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">batteria: si muove anche in assenza</text>
+<text x="52" y="350.00000000000006" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">di rete (10 corse di emergenza).</text>
+<circle cx="40" cy="369.55000000000007" r="3.2" fill="#d35400"/>
+<text x="52" y="373.55000000000007" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Due sezionatori (rete e batteria)</text>
+<text x="52" y="391.1000000000001" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">per lavorare in sicurezza.</text>
+<rect x="360" y="164" width="320" height="262" rx="10" fill="#effaf3" stroke="#2e8b57" stroke-width="2"/>
+<rect x="360" y="164" width="320" height="40" rx="10" fill="#2e8b57" stroke="#2e8b57" stroke-width="0"/>
+<text x="374" y="191" font-size="18" text-anchor="start" font-weight="bold" fill="#fff">Comandi</text>
+<text x="374" y="230.0" font-size="14" text-anchor="start" font-weight="bold" fill="#2e8b57">Come l&#x27;utente chiede il movimento.</text>
+<circle cx="380" cy="250.9" r="3.2" fill="#2e8b57"/>
+<text x="392" y="254.9" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Pulsanti in cabina.</text>
+<circle cx="380" cy="274.45" r="3.2" fill="#2e8b57"/>
+<text x="392" y="278.45" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Chiamate ai piani senza fili e</text>
+<text x="392" y="296.0" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">radiocomando.</text>
+<circle cx="380" cy="315.55" r="3.2" fill="#2e8b57"/>
+<text x="392" y="319.55" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Pannello di servizio nel cappello</text>
+<text x="392" y="337.1" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">(solo tecnici).</text>
+<circle cx="380" cy="356.65000000000003" r="3.2" fill="#2e8b57"/>
+<text x="392" y="360.65000000000003" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Si comanda tenendo premuto il tasto.</text>
+<rect x="700" y="164" width="320" height="262" rx="10" fill="#eef2f8" stroke="#2a3b55" stroke-width="2"/>
+<rect x="700" y="164" width="320" height="40" rx="10" fill="#2a3b55" stroke="#2a3b55" stroke-width="0"/>
+<text x="714" y="191" font-size="18" text-anchor="start" font-weight="bold" fill="#fff">Quadro di controllo</text>
+<text x="714" y="230.0" font-size="14" text-anchor="start" font-weight="bold" fill="#2a3b55">Il «cervello», nel cappello sopra</text>
+<text x="714" y="248.9" font-size="14" text-anchor="start" font-weight="bold" fill="#2a3b55">la cabina.</text>
+<circle cx="720" cy="269.8" r="3.2" fill="#2a3b55"/>
+<text x="732" y="273.8" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Decide quando partire, fermarsi,</text>
+<text x="732" y="291.35" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">aprire le porte.</text>
+<circle cx="720" cy="310.90000000000003" r="3.2" fill="#2a3b55"/>
+<text x="732" y="314.90000000000003" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Controlla le sicurezze e la</text>
+<text x="732" y="332.45000000000005" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">batteria.</text>
+<circle cx="720" cy="352.00000000000006" r="3.2" fill="#2a3b55"/>
+<text x="732" y="356.00000000000006" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Mostra gli allarmi sul display e</text>
+<text x="732" y="373.55000000000007" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">permette il reset ai tecnici.</text>
+<rect x="1040" y="164" width="320" height="262" rx="10" fill="#fff6ee" stroke="#d35400" stroke-width="2"/>
+<rect x="1040" y="164" width="320" height="40" rx="10" fill="#d35400" stroke="#d35400" stroke-width="0"/>
+<text x="1054" y="191" font-size="18" text-anchor="start" font-weight="bold" fill="#fff">Trazione</text>
+<text x="1054" y="230.0" font-size="14" text-anchor="start" font-weight="bold" fill="#d35400">Ciò che muove e ferma la cabina.</text>
+<circle cx="1060" cy="250.9" r="3.2" fill="#d35400"/>
+<text x="1072" y="254.9" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Motoriduttore elettrico a 48 V e due</text>
+<text x="1072" y="272.45" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">cinghie dentate con contrappesi.</text>
+<circle cx="1060" cy="292.0" r="3.2" fill="#d35400"/>
+<text x="1072" y="296.0" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Doppio freno a molle: tiene la</text>
+<text x="1072" y="313.55" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">cabina ferma anche senza corrente.</text>
+<circle cx="1060" cy="333.1" r="3.2" fill="#d35400"/>
+<text x="1072" y="337.1" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Paracadute meccanico di sicurezza</text>
+<text x="1072" y="354.65000000000003" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">sulle guide.</text>
+<rect x="1380" y="164" width="320" height="262" rx="10" fill="#f6f0fa" stroke="#7b3fa0" stroke-width="2"/>
+<rect x="1380" y="164" width="320" height="40" rx="10" fill="#7b3fa0" stroke="#7b3fa0" stroke-width="0"/>
+<text x="1394" y="191" font-size="18" text-anchor="start" font-weight="bold" fill="#fff">Cabina e porte</text>
+<text x="1394" y="230.0" font-size="14" text-anchor="start" font-weight="bold" fill="#7b3fa0">Dove viaggiano le persone.</text>
+<circle cx="1400" cy="250.9" r="3.2" fill="#7b3fa0"/>
+<text x="1412" y="254.9" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Cabina tonda panoramica, senza vano</text>
+<text x="1412" y="272.45" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">murario.</text>
+<circle cx="1400" cy="292.0" r="3.2" fill="#7b3fa0"/>
+<text x="1412" y="296.0" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Porta automatica con serratura</text>
+<text x="1412" y="313.55" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">elettrica.</text>
+<circle cx="1400" cy="333.1" r="3.2" fill="#7b3fa0"/>
+<text x="1412" y="337.1" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Luce LED, pulsante di allarme e stop</text>
+<text x="1412" y="354.65000000000003" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">di emergenza, pesacarico, corrimano;</text>
+<text x="1412" y="372.20000000000005" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">sedile opzionale.</text>
+<rect x="1720" y="164" width="320" height="262" rx="10" fill="#fdf1ef" stroke="#c0392b" stroke-width="2"/>
+<rect x="1720" y="164" width="320" height="40" rx="10" fill="#c0392b" stroke="#c0392b" stroke-width="0"/>
+<text x="1734" y="191" font-size="18" text-anchor="start" font-weight="bold" fill="#fff">Sicurezze</text>
+<text x="1734" y="230.0" font-size="14" text-anchor="start" font-weight="bold" fill="#c0392b">Protezioni che possono fermare</text>
+<text x="1734" y="248.9" font-size="14" text-anchor="start" font-weight="bold" fill="#c0392b">tutto.</text>
+<circle cx="1740" cy="269.8" r="3.2" fill="#c0392b"/>
+<text x="1752" y="273.8" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Una catena di contatti in serie: se</text>
+<text x="1752" y="291.35" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">uno si apre, motore e freno perdono</text>
+<text x="1752" y="308.90000000000003" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">alimentazione.</text>
+<circle cx="1740" cy="328.45000000000005" r="3.2" fill="#c0392b"/>
+<text x="1752" y="332.45000000000005" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">È realizzata in logica cablata, non</text>
+<text x="1752" y="350.00000000000006" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">dipende dal software.</text>
+<rect x="2060" y="164" width="320" height="262" rx="10" fill="#eff4fe" stroke="#2563eb" stroke-width="2"/>
+<rect x="2060" y="164" width="320" height="40" rx="10" fill="#2563eb" stroke="#2563eb" stroke-width="0"/>
+<text x="2074" y="191" font-size="18" text-anchor="start" font-weight="bold" fill="#fff">Servizi connessi</text>
+<text x="2074" y="230.0" font-size="14" text-anchor="start" font-weight="bold" fill="#2563eb">Assistenza e monitoraggio (da</text>
+<text x="2074" y="248.9" font-size="14" text-anchor="start" font-weight="bold" fill="#2563eb">configurazione di prodotto).</text>
+<circle cx="2080" cy="269.8" r="3.2" fill="#2563eb"/>
+<text x="2092" y="273.8" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Telesoccorso GSM.</text>
+<circle cx="2080" cy="293.35" r="3.2" fill="#2563eb"/>
+<text x="2092" y="297.35" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Collegamento Sentinel per il</text>
+<text x="2092" y="314.90000000000003" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">monitoraggio da remoto.</text>
+<circle cx="2080" cy="334.45000000000005" r="3.2" fill="#2563eb"/>
+<text x="2092" y="338.45000000000005" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Allarme sonoro locale e combinatore</text>
+<text x="2092" y="356.00000000000006" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">telefonico per chiamare i soccorsi.</text>
+<line x1="681" y1="184" x2="699" y2="184" stroke="#2a3b55" stroke-width="3" marker-end="url(#ar2a3b55)"/>
+<line x1="1021" y1="184" x2="1039" y2="184" stroke="#2a3b55" stroke-width="3" marker-end="url(#ar2a3b55)"/>
+<line x1="1361" y1="184" x2="1379" y2="184" stroke="#2a3b55" stroke-width="3" marker-end="url(#ar2a3b55)"/>
+<text x="20" y="450" font-size="14" text-anchor="start" font-weight="normal" fill="#4b5563">Il flusso principale è: Comandi → Quadro di controllo → Trazione → Cabina. L&#x27;Energia alimenta tutti i blocchi; le Sicurezze possono fermare la macchina in qualsiasi momento.</text>
+<rect x="20" y="480" width="8" height="30" rx="3" fill="#2a3b55"/>
+<text x="40" y="504" font-size="21" text-anchor="start" font-weight="bold" fill="#2a3b55">2 · Una corsa passo per passo</text>
+<rect x="17" y="522" width="280" height="188" rx="10" fill="#fff" stroke="#2a3b55" stroke-width="1.8"/>
+<circle cx="47" cy="554" r="18" fill="#2a3b55"/>
+<text x="47" y="561" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">1</text>
+<text x="75" y="561" font-size="19" text-anchor="start" font-weight="bold" fill="#2a3b55">Chiamata</text>
+<text x="31" y="600.0" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">L&#x27;utente tiene premuto il</text>
+<text x="31" y="618.9" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">tasto di destinazione, in</text>
+<text x="31" y="637.8" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">cabina, al piano o dal</text>
+<text x="31" y="656.7" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">radiocomando. Se lo rilascia,</text>
+<text x="31" y="675.6" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">la cabina si ferma.</text>
+<line x1="298" y1="554" x2="314" y2="554" stroke="#2a3b55" stroke-width="3" marker-end="url(#ar2a3b55)"/>
+<rect x="315" y="522" width="280" height="188" rx="10" fill="#fff" stroke="#2a3b55" stroke-width="1.8"/>
+<circle cx="345" cy="554" r="18" fill="#2a3b55"/>
+<text x="345" y="561" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">2</text>
+<text x="373" y="561" font-size="19" text-anchor="start" font-weight="bold" fill="#2a3b55">Porta</text>
+<text x="329" y="600.0" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">Se la porta è aperta si</text>
+<text x="329" y="618.9" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">richiude da sola e la</text>
+<text x="329" y="637.8" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">serratura la blocca. Si parte</text>
+<text x="329" y="656.7" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">solo a porta chiusa e</text>
+<text x="329" y="675.6" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">bloccata.</text>
+<line x1="596" y1="554" x2="612" y2="554" stroke="#2a3b55" stroke-width="3" marker-end="url(#ar2a3b55)"/>
+<rect x="613" y="522" width="280" height="188" rx="10" fill="#fff" stroke="#2a3b55" stroke-width="1.8"/>
+<circle cx="643" cy="554" r="18" fill="#2a3b55"/>
+<text x="643" y="561" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">3</text>
+<text x="671" y="561" font-size="19" text-anchor="start" font-weight="bold" fill="#2a3b55">Verifiche</text>
+<text x="627" y="600.0" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">Il quadro controlla che le</text>
+<text x="627" y="618.9" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">sicurezze siano chiuse, che</text>
+<text x="627" y="637.8" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">non ci sia sovraccarico e che</text>
+<text x="627" y="656.7" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">batteria e azionamento siano</text>
+<text x="627" y="675.6" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">pronti.</text>
+<line x1="894" y1="554" x2="910" y2="554" stroke="#2a3b55" stroke-width="3" marker-end="url(#ar2a3b55)"/>
+<rect x="911" y="522" width="280" height="188" rx="10" fill="#fff" stroke="#2a3b55" stroke-width="1.8"/>
+<circle cx="941" cy="554" r="18" fill="#2a3b55"/>
+<text x="941" y="561" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">4</text>
+<text x="969" y="561" font-size="19" text-anchor="start" font-weight="bold" fill="#2a3b55">Partenza</text>
+<text x="925" y="600.0" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">Il freno si rilascia e la</text>
+<text x="925" y="618.9" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">cabina accelera in modo</text>
+<text x="925" y="637.8" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">graduale.</text>
+<line x1="1192" y1="554" x2="1208" y2="554" stroke="#2a3b55" stroke-width="3" marker-end="url(#ar2a3b55)"/>
+<rect x="1209" y="522" width="280" height="188" rx="10" fill="#fff" stroke="#2a3b55" stroke-width="1.8"/>
+<circle cx="1239" cy="554" r="18" fill="#2a3b55"/>
+<text x="1239" y="561" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">5</text>
+<text x="1267" y="561" font-size="19" text-anchor="start" font-weight="bold" fill="#2a3b55">Viaggio</text>
+<text x="1223" y="600.0" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">Velocità nominale di 0,10 m/s</text>
+<text x="1223" y="618.9" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">(massima 0,15). Vicino al</text>
+<text x="1223" y="637.8" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">piano la cabina rallenta.</text>
+<line x1="1490" y1="554" x2="1506" y2="554" stroke="#2a3b55" stroke-width="3" marker-end="url(#ar2a3b55)"/>
+<rect x="1507" y="522" width="280" height="188" rx="10" fill="#fff" stroke="#2a3b55" stroke-width="1.8"/>
+<circle cx="1537" cy="554" r="18" fill="#2a3b55"/>
+<text x="1537" y="561" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">6</text>
+<text x="1565" y="561" font-size="19" text-anchor="start" font-weight="bold" fill="#2a3b55">Arrivo</text>
+<text x="1521" y="600.0" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">La cabina si ferma da sola al</text>
+<text x="1521" y="618.9" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">piano. Il freno si richiude e</text>
+<text x="1521" y="637.8" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">tiene la posizione.</text>
+<line x1="1788" y1="554" x2="1804" y2="554" stroke="#2a3b55" stroke-width="3" marker-end="url(#ar2a3b55)"/>
+<rect x="1805" y="522" width="280" height="188" rx="10" fill="#fff" stroke="#2a3b55" stroke-width="1.8"/>
+<circle cx="1835" cy="554" r="18" fill="#2a3b55"/>
+<text x="1835" y="561" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">7</text>
+<text x="1863" y="561" font-size="19" text-anchor="start" font-weight="bold" fill="#2a3b55">Apertura</text>
+<text x="1819" y="600.0" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">La serratura si sblocca e la</text>
+<text x="1819" y="618.9" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">porta si apre automaticamente.</text>
+<text x="1819" y="637.8" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">La luce di cabina si accende.</text>
+<line x1="2086" y1="554" x2="2102" y2="554" stroke="#2a3b55" stroke-width="3" marker-end="url(#ar2a3b55)"/>
+<rect x="2103" y="522" width="280" height="188" rx="10" fill="#fff" stroke="#2a3b55" stroke-width="1.8"/>
+<circle cx="2133" cy="554" r="18" fill="#2a3b55"/>
+<text x="2133" y="561" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">8</text>
+<text x="2161" y="561" font-size="19" text-anchor="start" font-weight="bold" fill="#2a3b55">Attesa</text>
+<text x="2117" y="600.0" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">Dopo circa 20 secondi la porta</text>
+<text x="2117" y="618.9" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">si richiude. Se si preme il</text>
+<text x="2117" y="637.8" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">tasto del piano dove ci si</text>
+<text x="2117" y="656.7" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">trova, la porta si riapre.</text>
+<text x="20" y="736" font-size="14" text-anchor="start" font-weight="normal" fill="#4b5563">La macchina funziona sempre ad azione mantenuta: il movimento dura finché il tasto è premuto. Dopo un arresto di protezione bisogna rilasciare e premere di nuovo il tasto per ripartire.</text>
+<rect x="20" y="766" width="8" height="30" rx="3" fill="#2a3b55"/>
+<text x="40" y="790" font-size="21" text-anchor="start" font-weight="bold" fill="#2a3b55">3 · Gli stati della macchina</text>
+<rect x="20" y="808" width="575" height="132" rx="10" fill="#fff" stroke="#2e8b57" stroke-width="2"/>
+<rect x="20" y="808" width="10" height="132" rx="4" fill="#2e8b57"/>
+<text x="44" y="836" font-size="18" text-anchor="start" font-weight="bold" fill="#2e8b57">A riposo</text>
+<text x="44" y="862.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Cabina ferma al piano, freno chiuso. Le batterie si ricaricano</text>
+<text x="44" y="880.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">quando serve. Luce spenta dopo l&#x27;uso.</text>
+<text x="44" y="906.45" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">Come si riparte: Esce con la pressione di un tasto di chiamata.</text>
+<rect x="615" y="808" width="575" height="132" rx="10" fill="#fff" stroke="#2e8b57" stroke-width="2"/>
+<rect x="615" y="808" width="10" height="132" rx="4" fill="#2e8b57"/>
+<text x="639" y="836" font-size="18" text-anchor="start" font-weight="bold" fill="#2e8b57">In viaggio</text>
+<text x="639" y="862.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Salita o discesa a uomo presente, con rallentamento vicino al</text>
+<text x="639" y="880.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">piano.</text>
+<text x="639" y="906.45" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">Come si riparte: Si ferma al piano o quando si rilascia il tasto.</text>
+<rect x="1210" y="808" width="575" height="132" rx="10" fill="#fff" stroke="#2e8b57" stroke-width="2"/>
+<rect x="1210" y="808" width="10" height="132" rx="4" fill="#2e8b57"/>
+<text x="1234" y="836" font-size="18" text-anchor="start" font-weight="bold" fill="#2e8b57">Porta in manovra</text>
+<text x="1234" y="862.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Chiusura con blocco, oppure sblocco e apertura. Segnalazione di</text>
+<text x="1234" y="880.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">riapertura accesa.</text>
+<text x="1234" y="906.45" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">Come si riparte: Termina a porta chiusa e bloccata o aperta.</text>
+<rect x="1805" y="808" width="575" height="132" rx="10" fill="#fff" stroke="#c27c0e" stroke-width="2"/>
+<rect x="1805" y="808" width="10" height="132" rx="4" fill="#c27c0e"/>
+<text x="1829" y="836" font-size="18" text-anchor="start" font-weight="bold" fill="#c27c0e">Sovraccarico</text>
+<text x="1829" y="862.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Si accendono lampada e segnale acustico; la porta resta aperta e la</text>
+<text x="1829" y="880.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">macchina non risponde ai comandi.</text>
+<text x="1829" y="906.45" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">Come si riparte: Si riprende da soli togliendo il carico in eccesso.</text>
+<rect x="20" y="954" width="575" height="132" rx="10" fill="#fff" stroke="#c27c0e" stroke-width="2"/>
+<rect x="20" y="954" width="10" height="132" rx="4" fill="#c27c0e"/>
+<text x="44" y="982" font-size="18" text-anchor="start" font-weight="bold" fill="#c27c0e">Fermata per ostacolo</text>
+<text x="44" y="1008.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Il fondo sensibile ferma la discesa e il tetto sensibile ferma la</text>
+<text x="44" y="1026.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">salita. Il fondo consente di risalire per liberare l&#x27;ostacolo.</text>
+<text x="44" y="1052.45" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">Come si riparte: Si libera l&#x27;ostacolo e si preme di nuovo il tasto.</text>
+<rect x="615" y="954" width="575" height="132" rx="10" fill="#fff" stroke="#c27c0e" stroke-width="2"/>
+<rect x="615" y="954" width="10" height="132" rx="4" fill="#c27c0e"/>
+<text x="639" y="982" font-size="18" text-anchor="start" font-weight="bold" fill="#c27c0e">Attesa rilascio tasto</text>
+<text x="639" y="1008.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Dopo un arresto di protezione la macchina aspetta che l&#x27;utente</text>
+<text x="639" y="1026.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">lasci il tasto, per evitare ripartenze involontarie.</text>
+<text x="639" y="1052.45" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">Come si riparte: Si rilascia e si preme di nuovo.</text>
+<rect x="1210" y="954" width="575" height="132" rx="10" fill="#fff" stroke="#c27c0e" stroke-width="2"/>
+<rect x="1210" y="954" width="10" height="132" rx="4" fill="#c27c0e"/>
+<text x="1234" y="982" font-size="18" text-anchor="start" font-weight="bold" fill="#c27c0e">Stop di emergenza premuto</text>
+<text x="1234" y="1008.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Il fungo rosso in cabina ferma tutto e resta bloccato. La macchina</text>
+<text x="1234" y="1026.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">non risponde ai comandi.</text>
+<text x="1234" y="1052.45" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">Come si riparte: Si sblocca ruotando il fungo e si preme di nuovo il</text>
+<text x="1234" y="1070.0" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">tasto.</text>
+<rect x="1805" y="954" width="575" height="132" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+<rect x="1805" y="954" width="10" height="132" rx="4" fill="#2563eb"/>
+<text x="1829" y="982" font-size="18" text-anchor="start" font-weight="bold" fill="#2563eb">Mancanza di rete</text>
+<text x="1829" y="1008.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">La macchina continua a funzionare a batteria, con luce e allarme:</text>
+<text x="1829" y="1026.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">10 corse di emergenza garantite.</text>
+<text x="1829" y="1052.45" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">Come si riparte: Torna normale al ritorno della rete.</text>
+<rect x="20" y="1100" width="575" height="132" rx="10" fill="#fff" stroke="#c27c0e" stroke-width="2"/>
+<rect x="20" y="1100" width="10" height="132" rx="4" fill="#c27c0e"/>
+<text x="44" y="1128" font-size="18" text-anchor="start" font-weight="bold" fill="#c27c0e">Batteria scarica</text>
+<text x="44" y="1154.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">La macchina va fuori servizio al piano e consente solo la</text>
+<text x="44" y="1172.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">riapertura della porta per uscire.</text>
+<text x="44" y="1198.45" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">Come si riparte: Riprende quando la batteria si è ricaricata a</text>
+<text x="44" y="1216.0" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">sufficienza.</text>
+<rect x="615" y="1100" width="575" height="132" rx="10" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+<rect x="615" y="1100" width="10" height="132" rx="4" fill="#c0392b"/>
+<text x="639" y="1128" font-size="18" text-anchor="start" font-weight="bold" fill="#c0392b">Blocco di sicurezza</text>
+<text x="639" y="1154.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Si è aperta una sicurezza (paracadute, cinghie, finecorsa</text>
+<text x="639" y="1172.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">superiore, fusibile). La macchina resta ferma e sul display compare</text>
+<text x="639" y="1190.45" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">l&#x27;errore.</text>
+<text x="639" y="1216.675" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">Come si riparte: Reset e verifica da parte di un tecnico.</text>
+<rect x="1210" y="1100" width="575" height="132" rx="10" fill="#fff" stroke="#6b7280" stroke-width="2"/>
+<rect x="1210" y="1100" width="10" height="132" rx="4" fill="#6b7280"/>
+<text x="1234" y="1128" font-size="18" text-anchor="start" font-weight="bold" fill="#6b7280">Emergenza con spina</text>
+<text x="1234" y="1154.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Solo per tecnici: una spina nel quadro esclude le sicurezze e</text>
+<text x="1234" y="1172.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">permette movimenti lenti a uomo presente (circa 0,05 m/s).</text>
+<text x="1234" y="1198.45" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">Come si riparte: Si toglie la spina e si riporta la macchina in</text>
+<text x="1234" y="1216.0" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">servizio.</text>
+<rect x="1805" y="1100" width="575" height="132" rx="10" fill="#fff" stroke="#6b7280" stroke-width="2"/>
+<rect x="1805" y="1100" width="10" height="132" rx="4" fill="#6b7280"/>
+<text x="1829" y="1128" font-size="18" text-anchor="start" font-weight="bold" fill="#6b7280">Collaudo paracadute</text>
+<text x="1829" y="1154.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Solo per tecnici: prova di caduta a pieno carico dal piano alto, da</text>
+<text x="1829" y="1172.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">menu del quadro.</text>
+<text x="1829" y="1198.45" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">Come si riparte: Poi la macchina è bloccata finché non viene</text>
+<text x="1829" y="1216.0" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">ripristinata con la spina.</text>
+<rect x="20" y="1270" width="8" height="30" rx="3" fill="#c0392b"/>
+<text x="40" y="1294" font-size="21" text-anchor="start" font-weight="bold" fill="#c0392b">4 · Le sicurezze: cosa protegge chi</text>
+<rect x="20" y="1312" width="775" height="82" rx="10" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+<text x="36" y="1340" font-size="16.5" text-anchor="start" font-weight="bold" fill="#c0392b">Comando a uomo presente</text>
+<text x="36" y="1362.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">La cabina si muove solo finché si tiene premuto il tasto; al rilascio si ferma.</text>
+<rect x="20" y="1406" width="775" height="82" rx="10" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+<text x="36" y="1434" font-size="16.5" text-anchor="start" font-weight="bold" fill="#c0392b">Stop di emergenza in cabina</text>
+<text x="36" y="1456.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Ferma la macchina e toglie l&#x27;alimentazione agli attuatori; resta bloccato fino allo sblocco</text>
+<text x="36" y="1474.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">volontario.</text>
+<rect x="20" y="1500" width="775" height="82" rx="10" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+<text x="36" y="1528" font-size="16.5" text-anchor="start" font-weight="bold" fill="#c0392b">Fondo sensibile</text>
+<text x="36" y="1550.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Se tocca un ostacolo sotto la pedana ferma la discesa; permette di risalire per liberarlo.</text>
+<rect x="20" y="1594" width="775" height="82" rx="10" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+<text x="36" y="1622" font-size="16.5" text-anchor="start" font-weight="bold" fill="#c0392b">Tetto sensibile</text>
+<text x="36" y="1644.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Se rileva un&#x27;ostruzione in alto ferma la salita.</text>
+<rect x="815" y="1312" width="775" height="82" rx="10" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+<text x="831" y="1340" font-size="16.5" text-anchor="start" font-weight="bold" fill="#c0392b">Sensori di allentamento cinghie</text>
+<text x="831" y="1362.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Quattro sensori fermano la macchina se una cinghia perde tensione; coprono anche l&#x27;intervento</text>
+<text x="831" y="1380.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">del paracadute del contrappeso.</text>
+<rect x="815" y="1406" width="775" height="82" rx="10" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+<text x="831" y="1434" font-size="16.5" text-anchor="start" font-weight="bold" fill="#c0392b">Paracadute di cabina</text>
+<text x="831" y="1456.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Dispositivo meccanico brevettato che blocca la cabina sulle guide in caso di velocità</text>
+<text x="831" y="1474.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">eccessiva; un contatto ferma anche la macchina.</text>
+<rect x="815" y="1500" width="775" height="82" rx="10" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+<text x="831" y="1528" font-size="16.5" text-anchor="start" font-weight="bold" fill="#c0392b">Finecorsa superiore</text>
+<text x="831" y="1550.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Impedisce di superare il piano alto.</text>
+<rect x="815" y="1594" width="775" height="82" rx="10" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+<text x="831" y="1622" font-size="16.5" text-anchor="start" font-weight="bold" fill="#c0392b">Blocco delle porte</text>
+<text x="831" y="1644.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">La macchina si muove solo a porte chiuse e bloccate; la porta si sblocca soltanto in</text>
+<text x="831" y="1662.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">prossimità del piano.</text>
+<rect x="1610" y="1312" width="775" height="82" rx="10" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+<text x="1626" y="1340" font-size="16.5" text-anchor="start" font-weight="bold" fill="#c0392b">Controllo del carico</text>
+<text x="1626" y="1362.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Se la cabina è sovraccarica non parte e avvisa con luce e suono.</text>
+<rect x="1610" y="1406" width="775" height="82" rx="10" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+<text x="1626" y="1434" font-size="16.5" text-anchor="start" font-weight="bold" fill="#c0392b">Doppio freno a molle</text>
+<text x="1626" y="1456.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Tiene la cabina ferma anche in assenza di energia e si chiude quando la catena delle sicurezze</text>
+<text x="1626" y="1474.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">si apre.</text>
+<rect x="1610" y="1500" width="775" height="82" rx="10" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+<text x="1626" y="1528" font-size="16.5" text-anchor="start" font-weight="bold" fill="#c0392b">Funzionamento a batteria</text>
+<text x="1626" y="1550.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">In assenza di rete la macchina continua a funzionare a batteria e consente di completare la</text>
+<text x="1626" y="1568.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">corsa e uscire.</text>
+<rect x="1610" y="1594" width="775" height="82" rx="10" fill="#fff" stroke="#c0392b" stroke-width="1.6"/>
+<text x="1626" y="1622" font-size="16.5" text-anchor="start" font-weight="bold" fill="#c0392b">Sezionatori lucchettabili</text>
+<text x="1626" y="1644.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Rete e batteria si sezionano separatamente per lavorare in sicurezza.</text>
+<rect x="20" y="1720" width="8" height="30" rx="3" fill="#2a3b55"/>
+<text x="40" y="1744" font-size="21" text-anchor="start" font-weight="bold" fill="#2a3b55">5 · Dati di prodotto e funzioni in sviluppo</text>
+<rect x="20" y="1766" width="1170" height="250" rx="10" fill="#fff" stroke="#2a3b55" stroke-width="1.6"/>
+<text x="36" y="1794" font-size="17" text-anchor="start" font-weight="bold" fill="#2a3b55">Dati di prodotto (configurazione CP.TEC.025 Rev.5)</text>
+<text x="36" y="1820" font-size="13.5" text-anchor="start" font-weight="bold" fill="#4b5563">Tipo</text>
+<text x="240" y="1820" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Homelift a pianta tonda, senza vano, 2 fermate</text>
+<text x="36" y="1841" font-size="13.5" text-anchor="start" font-weight="bold" fill="#4b5563">Portata</text>
+<text x="240" y="1841" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">200 kg, 2 persone</text>
+<text x="36" y="1862" font-size="13.5" text-anchor="start" font-weight="bold" fill="#4b5563">Velocità</text>
+<text x="240" y="1862" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">0,10 m/s nominale, 0,15 m/s massima</text>
+<text x="36" y="1883" font-size="13.5" text-anchor="start" font-weight="bold" fill="#4b5563">Corsa</text>
+<text x="240" y="1883" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Da 2500 a 4500 mm, senza fossa</text>
+<text x="36" y="1904" font-size="13.5" text-anchor="start" font-weight="bold" fill="#4b5563">Cabina</text>
+<text x="240" y="1904" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Ø interno 1000 mm, altezza 2000 mm, policarbonato panoramico</text>
+<text x="36" y="1925" font-size="13.5" text-anchor="start" font-weight="bold" fill="#4b5563">Trazione</text>
+<text x="240" y="1925" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Motoriduttore brushless 48 Vdc, cinghie dentate e contrappesi</text>
+<text x="36" y="1946" font-size="13.5" text-anchor="start" font-weight="bold" fill="#4b5563">Alimentazione</text>
+<text x="240" y="1946" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">230 Vac monofase 2 A (0,5 kW); batterie 48 V; 10 corse di emergenza</text>
+<text x="36" y="1967" font-size="13.5" text-anchor="start" font-weight="bold" fill="#4b5563">Uso</text>
+<text x="240" y="1967" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">10 corse all&#x27;ora garantite</text>
+<text x="36" y="1988" font-size="13.5" text-anchor="start" font-weight="bold" fill="#4b5563">Installazione e garanzia</text>
+<text x="240" y="1988" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">2 installatori, 2 giorni; manutenzione semestrale; garanzia 5 anni</text>
+<rect x="1210" y="1766" width="1170" height="250" rx="10" fill="#fffaf0" stroke="#c27c0e" stroke-width="1.8"/>
+<text x="1226" y="1794" font-size="17" text-anchor="start" font-weight="bold" fill="#c27c0e">In sviluppo o da confermare</text>
+<circle cx="1236" cy="1816" r="3.2" fill="#c27c0e"/>
+<text x="1250" y="1820.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Modalità manutenzione dal quadro di servizio, consentita solo con la cabina al piano basso e con segnale acustico se è fuori piano:</text>
+<text x="1250" y="1838.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">prevista.</text>
+<circle cx="1236" cy="1858.45" r="3.2" fill="#c27c0e"/>
+<text x="1250" y="1862.45" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Ripartenza in discesa dopo l&#x27;intervento del tetto sensibile: in definizione.</text>
+<circle cx="1236" cy="1882.675" r="3.2" fill="#c27c0e"/>
+<text x="1250" y="1886.675" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Funzioni di servizio previste dall&#x27;analisi dei rischi (tempo limite in emergenza, controllo della presenza di persone con sicurezze</text>
+<text x="1250" y="1904.8999999999999" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">escluse): in sviluppo.</text>
+<circle cx="1236" cy="1925.125" r="3.2" fill="#c27c0e"/>
+<text x="1250" y="1929.125" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Sensore a infrarossi sulla porta di cabina: sviluppo futuro. Display touch: opzione.</text>
+<circle cx="1236" cy="1949.35" r="3.2" fill="#c27c0e"/>
+<text x="1250" y="1953.35" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Consumo in stand-by di 1 W: da certificare. Certificazioni e conformità: vedere il fascicolo tecnico.</text>
+<text x="20" y="2038" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">Colori degli stati: verde = funzionamento normale · giallo = attenzione o attesa · blu = alimentazione di emergenza · rosso = blocco di sicurezza · grigio = solo tecnici.</text>
+<text x="20" y="2058" font-size="12.5" text-anchor="start" font-weight="normal" fill="#4b5563">Per dettagli tecnici, anomalie note e stato delle correzioni: docs/registro_issue.md e docs/diagramma_funzionale.svg (versione completa).</text>
+</svg>
