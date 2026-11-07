@@ -5,6 +5,7 @@ Documento redatto a partire dal contenuto del repo (stato del commit di import).
 1. [Panoramica del progetto](#1-panoramica-del-progetto)
 2. [Revisione del codice di sicurezza](#2-revisione-del-codice-di-sicurezza)
 3. [Analisi della catena delle sicurezze](#3-analisi-della-catena-delle-sicurezze)
+4. [Confronto con la documentazione di prodotto (Notion)](#4-confronto-con-la-documentazione-di-prodotto-notion)
 
 **Limiti.** Sono analisi di lettura: nessun codice è stato eseguito o modificato. Non sono stati esaminati layout PCB, datasheet dei componenti, firmware di UDEC.CX né i modelli FreeCAD. Non è una valutazione di conformità alle norme di prodotto. I riferimenti a file e righe del firmware sono relativi a `TTF-Base/Firmware/TTF-Base/Core/`.
 
@@ -158,3 +159,42 @@ Tutti i trip legati a `TRIP_SAFETY` sono memorizzati fino al riavvio; con `TRIP_
 - Quale "inverter" è collegato al connettore X15 della UDEC.CX (il connettore ha anche i pin `STO`, `S3A`, `S3B`).
 - Datasheet dei relè (punti 3 e 5 della sezione 3.3).
 - Layout PCB: instradamento della catena, distanze di isolamento, protezioni dei nodi.
+
+---
+
+## 4. Confronto con la documentazione di prodotto (Notion)
+
+Fonti: workspace Notion "AreaLifting R&D", sezione Elevance. Pagine lette: `ST.TEC.062` (preliminare TTF), `CP.TEC.025.IT_4` (configurazione di prodotto), `IM.TEC.158` (equipaggiamento elettrico, versione Notion), note "Sicurezze + sensori Elevance", note per il collaudo di certificazione (giugno 2026), schede "Bypass trap/tray" ed "Extracorsa superiore", "Requisiti del freno elettromeccanico (da EN 81-41)", "FOCUS: Sistemi UCM per ascensori", "Controllo dei contattori di OTR/FRS su UDEC.M", "Necessità di contatto di sicurezza su paracadute". PDF letti: `IM.TEC.159` (manutenzione), `IM.TEC.160` rev. 0.1 (controlli finali), `IM.TEC.161` (uso utente) e le due targhe di pericolo schiacciamento. L'**Analisi dei rischi Rev.5** (Cap.2 del fascicolo) non è su Notion: la pagina contiene solo il percorso `\\SRV01\db_disegni\F510 - ELEVANCE\FASCICOLO TECNICO\Cap.2 - Analisi dei rischi`, quindi **non è stata letta**. Non sono stati letti il manuale di montaggio (`IM.TEC.157`) e il GAD (`IM.TEC.164`).
+
+### 4.1 Prove dei manuali che il firmware non supera
+
+1. **Tetto sensibile: manca il bypass trap in discesa.** `IM.TEC.158` (modalità normale) e `IM.TEC.160` 2.03.21 prevedono che, con il tetto premuto, la cabina si fermi e possa solo scendere. In `Src/run_mode.c` `TRAPTRAY_TRAP_BYPASS` non viene mai richiesto (`run_mode_down` usa `TRAPTRAY_NO_BYPASS`). Con il tetto aperto sono falsi sia `is_trap_ok()` sia `is_tray_ok()` (S4 sta dopo il trap nella catena), quindi non partono né salita né discesa. Il fondo funziona come descritto: in salita richiede `TRAPTRAY_TRAY_BYPASS`. Anche `IM.TEC.161` 4.09 descrive solo il fondo sensibile.
+2. **Modalità manutenzione dal quadro assente.** `IM.TEC.160` 2.03.01 prevede una manutenzione abilitabile dal quadro, con segnalatore acustico di "pedana fuori piano" finché la cabina non è al piano basso. Nel firmware esiste solo la spina (`DIn.bypass`); `hl_buz_ft` è definito ma non viene mai impostato; il menu mostra una voce MANUALE senza implementazione (vedi anche sezione 2, punto 1).
+3. **Ripristino dopo corto sulla catena.** `IM.TEC.160` 2.03.15 dice "l'impianto si ripristina in automatico" dopo l'eliminazione del cortocircuito. `TRIP_S1_FUSE` e `TRIP_SAFETY` sono memorizzati e richiedono il riavvio. Anche `IM.TEC.158` lascia il punto aperto ("da decidere").
+
+### 4.2 Da verificare in prova
+
+- **Precisione di fermata.** `IM.TEC.159` ammette ±20 mm, `IM.TEC.160` ±10 mm. Il firmware si ferma al primo bordo della zona di sblocco con decelerazione `VFD_ATIME_SLOW`: se il valore è in decimi di secondo (come indica `vfd.c`), a 0,05 m/s servono circa 25 mm per fermarsi. Stima da misurare.
+- **Rilascio anticipato del tasto.** I manuali dicono "si ferma immediatamente"; il firmware esegue una fermata a rampa di circa 1 s (`vfd_stop`), non `vfd_halt`.
+- **Velocità.** I manuali chiedono ≤ 0,15 m/s. `RPM_SPEED_5` = 227 rpm e `RPM_SPEED_10` = 455 rpm sono coerenti con 0,05 e 0,10 m/s per nome; il rapporto giri/velocità va confermato.
+- **Sblocco in oltrecorsa** (`IM.TEC.160` 2.03.12 b): la serratura deve essere sbloccabile anche a cabina appena entrata in oltrecorsa; dal firmware non si può stabilire, dipende dalla zona meccanica.
+- **Modo di emergenza.** `IM.TEC.158` dice che con la spina restano attivi solo i comandi del pannello principale. `set_prenotation` non è condizionato al bypass: con UDEC.C online anche i tasti di cabina e il radiocomando possono muovere la macchina.
+
+### 4.3 Conferme
+
+Comando a uomo presente, richiusura porta alla pressione del tasto, riapertura con il tasto al piano, STOP in cabina con ripresa dopo il rilascio (`WAIT_FOR_CALL_RELEASE`), sovraccarico (porta aperta, lampada, cicalino, macchina ferma: prova da 275 kg), funzionamento a batteria senza rete, collaudo paracadute dal quadro con ripristino tramite spina, prova allentamento cinghie (spina, discesa fino allo scatto, rimozione spina e blocco), velocità nominale 0,10 m/s e massima 0,15 m/s. I nodi S1, S2, S3, S4 coincidono con quelli del firmware, e il test point `P14` "Lettura sicurezze S8" è la rete S5 dello schema: il nome `S8` del firmware coincide con `S5` sullo schema.
+
+Questo chiarisce due punti della sezione 3: la spina esclude il contatto paracadute per scelta di progetto (`IM.TEC.159`, prova 20 D la usa per disinserire il paracadute) e il ponte su X15 sostituisce un contatto del VFD "non presente" (H6, "S3B da VFD").
+
+### 4.4 Rischio di alimentazione residua dopo lo stop
+
+La pagina "Controllo dei contattori di OTR/FRS su UDEC.M" descrive per la scheda precedente il rischio di movimento non comandato con contattori eccitati dopo lo stop, citando EN 81-41 5.5.7.3 (alimentazione a motore e freno da interrompere alla fine del comando) e proponendo di limitare l'attivazione a pochi secondi. In TTF-Base, dopo lo stop `pmode` passa a `PMODE_ST_WAIT_TO_CHARGER` e tiene K3 e K4 eccitati per `TIMEOUT_PMODE_WAIT_TO_CHARGER = 30000` ms (30 s), mentre il commento in `Inc/pmode.h` parla di "una decina di secondi". Il periodo serve a decelerare senza scossoni; è lo stesso rischio già individuato per UDEC.M e va trattato nell'analisi dei rischi.
+
+### 4.5 Incoerenze nei documenti
+
+- `IM.TEC.159` §9 (messa fuori servizio) richiede le porte di cabina "chiuse e sbloccate"; il firmware le tiene chiuse e bloccate, e la chiave di emergenza (`IM.TEC.159` §12) richiede i due sezionatori aperti.
+- `IM.TEC.161` 4.10 (discesa di emergenza) elenca inserimento della spina e uscita dei passeggeri ma non spiega come muovere la cabina né come aprire la porta; con la spina il firmware non comanda le porte.
+- `IM.TEC.160` duplica prove (2.03.04/06 e 2.03.05/08) e ha refusi: in 2.03.21 i punti III e IV dicono "verso l'alto" e "fondo sensibile" per il tetto; in `IM.TEC.159` la prova 4 dice "fondo sensibile" per il tetto.
+- Le note di certificazione scrivono "su allentamento cade S2"; manuale elettrico, schemi e firmware dicono S3. Il fusibile della catena è F1 nello schema macchina e F7 in `IM.TEC.158`.
+- `run_mode_stuck_up` ha il commento "per specifica non è possibile muoversi in nessuna direzione", mentre `IM.TEC.160` 2.03.20 prevede la salita dopo l'intervento del fondo.
+- I tempi dei manuali (richiusura porta "dopo un tempo configurato", accelerazioni "impostate originariamente") presuppongono parametri configurabili; nel firmware sono costanti (`TIMEOUT_MACH_PARK_TIME`, `VFD_ATIME_*`).
