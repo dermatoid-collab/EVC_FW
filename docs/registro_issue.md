@@ -578,11 +578,11 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 
 ### DOC-08 · Valori di carico non uniformi: 200, 260 e 275 kg
 **Gravità:** Media · **Stato:** Da verificare · **Fonte:** CP.TEC.025 Rev.5, ST.TEC.068, IM.160 2.03.07, MFC 20260211-1
-- **Dove:** portata 200 kg (CP.TEC.025, EN 81-41 5.1.6: minimo 250 kg, deroga dichiarata); carico statico massimo con sovraccarico 260 kg (ST.TEC.068); prova di sovraccarico a 275 kg (IM.160) e «massa persone 275 kg» nel calcolo Megadyne.
+- **Dove:** portata 200 kg (CP.TEC.025): conforme al carico unitario minimo di 250 kg/m² di EN 81-41, perché la cabina Ø1000 mm ha 0,785 m² e 250 × 0,785 = 196 kg (ST.TEC.068: «portata nominale max 200 kg»; la nota «minimo 250 kg, deroga dichiarata» scritta all'apertura era un mio errore); carico statico massimo con sovraccarico 260 kg (ST.TEC.068); prova di sovraccarico a 275 kg (IM.160) e «massa persone 275 kg» nel calcolo Megadyne.
 - **Problema:** la prova non discrimina la soglia di intervento del pesacarico; la soglia effettiva non è scritta nei documenti letti.
 - **Proposta:** definire la soglia di intervento in kg e allineare prova e calcoli.
 - **Chiusura:** documenti coerenti; prova di sovraccarico alla soglia definita.
-- **Storia:** 2026-11-07 aperta.
+- **Storia:** 2026-11-07 aperta. 2026-11-07 corretta la lettura della portata: 200 kg su 0,785 m² sono conformi a 250 kg/m² (segnalazione dell'utente); restano da allineare soglia del pesacarico, prova a 275 kg e calcolo Megadyne.
 
 ### DOC-09 · Velocità lineare della cinghia nei calcoli Megadyne (0,2 m/s) contro 0,15 m/s di progetto
 **Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** MFC 20260211-1-Rev0
@@ -726,3 +726,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-07 | Aggiunto il diagramma light su energia, batterie e contrappesi e la voce DOC-11 (numeri di esempio da misurare). Totale 75 voci. |
 | 2026-11-07 | Diagrammi spostati in `docs/diagrammi/` con numerazione 01-04 nel nome file. |
 | 2026-11-07 | Verifica dei dati del diagramma energia: corretti testi non supportati dai documenti; aggiunte DOC-12 (capacità batteria discordante) e FW-32 (commento obsoleto). Totale 77 voci. |
+| 2026-11-07 | Corretto DOC-08: la portata 200 kg su cabina Ø1000 mm (0,785 m²) rispetta 250 kg/m² di EN 81-41; nessuna deroga. |
