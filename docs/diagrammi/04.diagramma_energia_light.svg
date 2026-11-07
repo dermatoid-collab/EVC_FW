@@ -21,7 +21,7 @@
 <text x="30" y="78" font-size="17" text-anchor="start" font-weight="normal" fill="#dbe4f0">Come la macchina si alimenta, si ricarica e risparmia energia · per il dipartimento commerciale</text>
 <text x="2370" y="46" font-size="16" text-anchor="end" font-weight="bold" fill="#fff">Versione light · aggiornata al 07/11/2026</text>
 <text x="2370" y="72" font-size="14" text-anchor="end" font-weight="normal" fill="#dbe4f0">Documento descrittivo, non contrattuale. I numeri di consumo sono un ESEMPIO con ipotesi dichiarate, non misure.</text>
-<text x="2370" y="92" font-size="12" text-anchor="end" font-weight="normal" fill="#c3d0e2">Fonti: CP.TEC.025 Rev.5, ST.TEC.068, IM.TEC.158 e 161, analisi dei rischi Rev.7, firmware del quadro.</text>
+<text x="2370" y="92" font-size="12" text-anchor="end" font-weight="normal" fill="#c3d0e2">Fonti: CP.TEC.025 Rev.5, ST.TEC.068, manuali IM.TEC, analisi dei rischi Rev.7, firmware. Dati di prodotto = documenti; «esempio» e «stima» = da confermare.</text>
 <rect x="20" y="124" width="8" height="30" rx="3" fill="#2a3b55"/>
 <text x="40" y="148" font-size="21" text-anchor="start" font-weight="bold" fill="#2a3b55">1 · Il percorso dell&#x27;energia</text>
 <rect x="20" y="166" width="308" height="118" rx="10" fill="#fff6ee" stroke="#d35400" stroke-width="2"/>
@@ -38,8 +38,8 @@
 <rect x="704" y="166" width="308" height="118" rx="10" fill="#effaf3" stroke="#2e8b57" stroke-width="2"/>
 <rect x="704" y="166" width="308" height="36" rx="10" fill="#2e8b57" stroke="#2e8b57" stroke-width="0"/>
 <text x="718" y="191" font-size="17" text-anchor="start" font-weight="bold" fill="#fff">Batteria 48 V</text>
-<text x="718" y="228.0" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">12 Ah, AGM sigillata, senza</text>
-<text x="718" y="246.9" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">manutenzione</text>
+<text x="718" y="228.0" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">AGM sigillata, senza manutenzione</text>
+<text x="718" y="246.9" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">(capacità da confermare)</text>
 <line x1="1015" y1="225" x2="1043" y2="225" stroke="#2a3b55" stroke-width="3.5" marker-end="url(#ar2a3b55)"/>
 <rect x="1046" y="166" width="308" height="118" rx="10" fill="#eef2f8" stroke="#2a3b55" stroke-width="2"/>
 <rect x="1046" y="166" width="308" height="36" rx="10" fill="#2a3b55" stroke="#2a3b55" stroke-width="0"/>
@@ -66,8 +66,8 @@
 <rect x="20" y="312" width="773" height="104" rx="10" fill="#fff" stroke="#2e8b57" stroke-width="2"/>
 <rect x="20" y="312" width="10" height="104" rx="4" fill="#2e8b57"/>
 <text x="44" y="340" font-size="18" text-anchor="start" font-weight="bold" fill="#2e8b57">A macchina ferma</text>
-<text x="44" y="364.0" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">Il caricabatteria ricarica la batteria e alimenta il quadro, la luce e i servizi. Quando</text>
-<text x="44" y="382.9" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">serve, la porta si apre e la macchina è pronta.</text>
+<text x="44" y="364.0" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">La batteria alimenta l&#x27;elettronica e il caricabatteria resta al minimo; quando la carica</text>
+<text x="44" y="382.9" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">consumata supera una soglia, ricarica la batteria.</text>
 <rect x="813" y="312" width="773" height="104" rx="10" fill="#fff" stroke="#d35400" stroke-width="2"/>
 <rect x="813" y="312" width="10" height="104" rx="4" fill="#d35400"/>
 <text x="837" y="340" font-size="18" text-anchor="start" font-weight="bold" fill="#d35400">In marcia</text>
@@ -76,8 +76,8 @@
 <rect x="1606" y="312" width="773" height="104" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
 <rect x="1606" y="312" width="10" height="104" rx="4" fill="#2563eb"/>
 <text x="1630" y="340" font-size="18" text-anchor="start" font-weight="bold" fill="#2563eb">Senza rete (blackout)</text>
-<text x="1630" y="364.0" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">La batteria alimenta tutto: la macchina si muove, la luce e l&#x27;allarme restano attivi.</text>
-<text x="1630" y="382.9" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">Alla ripresa della rete la batteria si ricarica da sola.</text>
+<text x="1630" y="364.0" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">La batteria alimenta la macchina per un numero limitato di corse; la luce di emergenza</text>
+<text x="1630" y="382.9" font-size="14" text-anchor="start" font-weight="normal" fill="#1f2937">resta accesa. Alla ripresa della rete la batteria si ricarica da sola.</text>
 <rect x="20" y="444" width="8" height="30" rx="3" fill="#2e8b57"/>
 <text x="40" y="468" font-size="21" text-anchor="start" font-weight="bold" fill="#2e8b57">2 · Il ciclo della batteria: carica, scarica e ricarica</text>
 <rect x="20" y="484" width="1260" height="470" rx="10" fill="#fff" stroke="#c9d3cf" stroke-width="1.2"/>
@@ -98,8 +98,8 @@
 <text x="976" y="538" font-size="18" text-anchor="start" font-weight="bold" fill="#2563eb">Rabbocco (ricarica leggera)</text>
 <text x="976" y="562.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Ricarica a 54,0 V, circa 3 A,</text>
 <text x="976" y="580.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">finché la carica consumata è</text>
-<text x="976" y="598.45" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">recuperata. Dopo un uso normale</text>
-<text x="976" y="616.675" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">richiede circa 15 minuti (stima).</text>
+<text x="976" y="598.45" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">recuperata: circa 15 minuti per</text>
+<text x="976" y="616.675" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">0,7 Ah (stima).</text>
 <rect x="960" y="740" width="300" height="190" rx="10" fill="#eef5ff" stroke="#2563eb" stroke-width="2.5"/>
 <text x="976" y="768" font-size="19" text-anchor="start" font-weight="bold" fill="#2563eb">Carica completa</text>
 <text x="976" y="792.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">58,0 V fino a quando la corrente</text>
@@ -133,7 +133,7 @@
 <circle cx="1325" cy="561.225" r="3.2" fill="#2e8b57"/>
 <text x="1336" y="565.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Ricarica a due livelli: rabbocco leggero a 54,0 V per le piccole scariche, carica completa a 58,0 V quando serve.</text>
 <circle cx="1325" cy="584.45" r="3.2" fill="#2e8b57"/>
-<text x="1336" y="588.45" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Ogni 10 rabbocchi esegue una carica completa, per ricalibrare il contatore e tenere sana la batteria.</text>
+<text x="1336" y="588.45" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Ogni 10 rabbocchi esegue una carica completa, per ricalibrare il contatore di carica.</text>
 <circle cx="1325" cy="607.6750000000001" r="3.2" fill="#2e8b57"/>
 <text x="1336" y="611.6750000000001" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">La corrente di ricarica è regolata attorno a 3 A, per non stressare la batteria.</text>
 <circle cx="1325" cy="630.9000000000001" r="3.2" fill="#2e8b57"/>
@@ -142,7 +142,7 @@
 <text x="1336" y="658.1250000000001" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Durante la marcia il caricabatteria resta al minimo e la ricarica riprende a macchina ferma.</text>
 <text x="1320" y="693.3500000000001" font-size="19" text-anchor="start" font-weight="bold" fill="#c0392b">Protezioni</text>
 <circle cx="1325" cy="717.3500000000001" r="3.2" fill="#c0392b"/>
-<text x="1336" y="721.3500000000001" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Fusibile di sicurezza sul positivo della batteria (100 A) e protezione contro l&#x27;inversione di polarità.</text>
+<text x="1336" y="721.3500000000001" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Fusibile di backup sulla batteria contro i cortocircuiti (dato dell&#x27;analisi dei rischi).</text>
 <circle cx="1325" cy="740.5750000000002" r="3.2" fill="#c0392b"/>
 <text x="1336" y="744.5750000000002" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Soglia di tensione minima a 38,4 V: sotto questo valore la macchina si ferma al piano per non scaricare la batteria.</text>
 <circle cx="1325" cy="763.8000000000002" r="3.2" fill="#c0392b"/>
@@ -168,7 +168,7 @@
 <line x1="395" y1="1090" x2="395" y2="1160" stroke="#6b7280" stroke-width="3"/>
 <text x="290" y="1390" font-size="14" text-anchor="middle" font-weight="bold" fill="#7b3fa0">Il motore solleva solo la differenza</text>
 <text x="290" y="1408" font-size="14" text-anchor="middle" font-weight="normal" fill="#7b3fa0">fra cabina e contrappesi.</text>
-<text x="520" y="1058" font-size="17" text-anchor="start" font-weight="bold" fill="#7b3fa0">Energia meccanica per una salita di 3,0 m (calcolo dalle masse)</text>
+<text x="520" y="1058" font-size="17" text-anchor="start" font-weight="bold" fill="#7b3fa0">Energia meccanica per una salita di 3,0 m (calcolo dalle masse, senza perdite)</text>
 <text x="520" y="1080" font-size="13" text-anchor="start" font-weight="normal" fill="#4b5563">Con i contrappesi (verde) e senza (grigio): stessa cabina, stesso carico.</text>
 <text x="520" y="1122" font-size="15" text-anchor="start" font-weight="bold" fill="#1f2937">Cabina vuota</text>
 <rect x="520" y="1132" width="94" height="22" rx="4" fill="#2e8b57"/>
@@ -198,29 +198,32 @@
 <text x="1346" y="1111.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Meno potenza di picco: a 0,10 m/s la salita richiede circa 172 W meccanici invece di 231 W, cioè circa 6,0 A dalla batteria</text>
 <text x="1346" y="1129.4499999999998" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">invece di 8,0 A (ipotesi di rendimento).</text>
 <circle cx="1335" cy="1148.675" r="3.2" fill="#7b3fa0"/>
-<text x="1346" y="1152.675" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Più salite con la stessa batteria: a parità di carica, con una persona si fanno circa 1,34 volte le salite possibili senza</text>
-<text x="1346" y="1170.8999999999999" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">contrappesi.</text>
+<text x="1346" y="1152.675" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Contando solo il sollevamento, con una persona la stessa energia dà circa 1,34 volte le salite possibili senza contrappesi</text>
+<text x="1346" y="1170.8999999999999" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">(esclusi i consumi fissi di quadro, freno e porte).</text>
 <circle cx="1335" cy="1190.125" r="3.2" fill="#7b3fa0"/>
-<text x="1346" y="1194.125" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Motore, freno e batteria possono essere dimensionati più piccoli: è il vantaggio principale in termini di costo e di ingombro.</text>
-<circle cx="1335" cy="1213.35" r="3.2" fill="#7b3fa0"/>
-<text x="1346" y="1217.35" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">In discesa la cabina scende per gravità e il motore la trattiene: il consumo di trazione è minimo. Il recupero di energia verso</text>
-<text x="1346" y="1235.5749999999998" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">la batteria non è dichiarato in questo documento.</text>
+<text x="1346" y="1194.125" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">A parità di prestazioni, meno energia e meno potenza di picco permettono in generale motore e batteria più piccoli (valutazione</text>
+<text x="1346" y="1212.35" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">di progetto, non quantificata qui).</text>
+<circle cx="1335" cy="1231.575" r="3.2" fill="#7b3fa0"/>
+<text x="1346" y="1235.575" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Il comportamento in discesa (consumo ed eventuale recupero) non è valutato in questo documento.</text>
 <rect x="20" y="1454" width="8" height="30" rx="3" fill="#2563eb"/>
 <text x="40" y="1478" font-size="21" text-anchor="start" font-weight="bold" fill="#2563eb">4 · Senza rete, una giornata tipica e costi di esercizio (esempio)</text>
 <rect x="20" y="1494" width="773" height="330" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
 <text x="38" y="1524" font-size="19" text-anchor="start" font-weight="bold" fill="#2563eb">Senza rete: l&#x27;autonomia</text>
 <circle cx="43" cy="1546" r="3.2" fill="#2563eb"/>
-<text x="54" y="1550.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Dato di prodotto: 10 corse di emergenza garantite a batteria.</text>
-<circle cx="43" cy="1569.225" r="3.2" fill="#2563eb"/>
-<text x="54" y="1573.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Esempio peggiore: salita di 4,5 m con 200 kg, con contrappesi: circa 6,1 Wh dalla batteria</text>
-<text x="54" y="1591.4499999999998" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">per corsa, quindi 61 Wh per 10 corse.</text>
-<circle cx="43" cy="1610.675" r="3.2" fill="#2563eb"/>
-<text x="54" y="1614.675" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Sono circa il 11% dell&#x27;energia nominale della batteria (576 Wh = 12 Ah × 48 V): il valore</text>
-<text x="54" y="1632.8999999999999" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">dichiarato è prudenziale.</text>
-<circle cx="43" cy="1652.125" r="3.2" fill="#2563eb"/>
-<text x="54" y="1656.125" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Prima di scaricarsi la macchina completa la corsa, riapre la porta e si ferma al piano.</text>
-<circle cx="43" cy="1675.35" r="3.2" fill="#2563eb"/>
-<text x="54" y="1679.35" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Luce di cabina e allarme restano attivi. Al ritorno della rete la ricarica parte da sola.</text>
+<text x="54" y="1550.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Dato di prodotto (CP.TEC.025): 10 corse di emergenza garantite a batteria. Il manuale</text>
+<text x="54" y="1568.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">d&#x27;uso parla di «numero limitato di corse».</text>
+<circle cx="43" cy="1587.45" r="3.2" fill="#2563eb"/>
+<text x="54" y="1591.45" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Esempio peggiore: salita di 4,5 m con 200 kg, con contrappesi: circa 6,1 Wh dalla batteria</text>
+<text x="54" y="1609.675" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">per corsa, quindi 61 Wh per 10 corse (rendimento ipotizzato).</text>
+<circle cx="43" cy="1628.9" r="3.2" fill="#2563eb"/>
+<text x="54" y="1632.9" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Rispetto all&#x27;energia nominale sono il 11% se la batteria è 12 Ah (576 Wh) e il 17% se è</text>
+<text x="54" y="1651.125" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">7,5 Ah (360 Wh): la capacità reale è da confermare e cala con l&#x27;età.</text>
+<circle cx="43" cy="1670.3500000000001" r="3.2" fill="#2563eb"/>
+<text x="54" y="1674.3500000000001" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">A carica insufficiente l&#x27;impianto va fuori servizio e consente solo il completamento della</text>
+<text x="54" y="1692.575" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">corsa e l&#x27;apertura della porta (manuale d&#x27;uso 4.06).</text>
+<circle cx="43" cy="1711.8000000000002" r="3.2" fill="#2563eb"/>
+<text x="54" y="1715.8000000000002" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Luce di emergenza di cabina: almeno 5 lux per 1 ora (analisi dei rischi). Al ritorno della</text>
+<text x="54" y="1734.025" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">rete la ricarica parte da sola.</text>
 <rect x="813" y="1494" width="773" height="330" rx="10" fill="#fff" stroke="#2e8b57" stroke-width="2"/>
 <text x="831" y="1524" font-size="19" text-anchor="start" font-weight="bold" fill="#2e8b57">Una giornata tipica (esempio)</text>
 <rect x="831" y="1548" width="737" height="26" rx="4" fill="#e5e7eb"/>
@@ -240,17 +243,19 @@
 <text x="1383.75" y="1592" font-size="11" text-anchor="middle" font-weight="normal" fill="#4b5563">18</text>
 <text x="1568.0" y="1592" font-size="11" text-anchor="middle" font-weight="normal" fill="#4b5563">24</text>
 <circle cx="836" cy="1612" r="3.2" fill="#2e8b57"/>
-<text x="847" y="1616.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">10 corse al giorno: 5 salite e 5 discese, ciascuna di 3,0 m (barre arancioni).</text>
-<circle cx="836" cy="1635.225" r="3.2" fill="#2e8b57"/>
-<text x="847" y="1639.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Dopo ogni corsa il quadro riporta la macchina alla ricarica: pochi minuti di rabbocco.</text>
-<circle cx="836" cy="1658.4499999999998" r="3.2" fill="#2e8b57"/>
-<text x="847" y="1662.4499999999998" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Per il resto della giornata la macchina è ferma, con consumo in stand-by di 1 W (valore da</text>
-<text x="847" y="1680.6749999999997" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">certificare).</text>
-<circle cx="836" cy="1699.8999999999999" r="3.2" fill="#2e8b57"/>
-<text x="847" y="1703.8999999999999" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Energia di una salita con una persona: 2,4 Wh dalla batteria con i contrappesi, 3,2 Wh</text>
-<text x="847" y="1722.1249999999998" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">senza.</text>
+<text x="847" y="1616.0" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">10 corse al giorno (5 salite e 5 discese di 3,0 m, barre arancioni): circa 300 al mese,</text>
+<text x="847" y="1634.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">l&#x27;uso normale del manuale di manutenzione.</text>
+<circle cx="836" cy="1653.45" r="3.2" fill="#2e8b57"/>
+<text x="847" y="1657.45" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Il caricabatteria resta al minimo e interviene con un rabbocco solo quando la carica</text>
+<text x="847" y="1675.675" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">consumata supera circa 0,7 Ah.</text>
+<circle cx="836" cy="1694.9" r="3.2" fill="#2e8b57"/>
+<text x="847" y="1698.9" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Per il resto della giornata la macchina è ferma, con consumo in stand-by di 1 W (valore da</text>
+<text x="847" y="1717.125" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">certificare).</text>
+<circle cx="836" cy="1736.3500000000001" r="3.2" fill="#2e8b57"/>
+<text x="847" y="1740.3500000000001" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Energia di una salita con una persona: 2,4 Wh dalla batteria con i contrappesi, 3,2 Wh</text>
+<text x="847" y="1758.575" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">senza.</text>
 <rect x="1606" y="1494" width="773" height="330" rx="10" fill="#fff" stroke="#c27c0e" stroke-width="2"/>
-<text x="1624" y="1524" font-size="19" text-anchor="start" font-weight="bold" fill="#c27c0e">Costi di esercizio (esempio)</text>
+<text x="1624" y="1524" font-size="19" text-anchor="start" font-weight="bold" fill="#c27c0e">Costi di esercizio (esempio, limite inferiore)</text>
 <text x="1624" y="1556" font-size="13.5" text-anchor="start" font-weight="bold" fill="#4b5563"></text>
 <text x="2189" y="1556" font-size="13.5" text-anchor="end" font-weight="bold" fill="#2e8b57">con contrappesi</text>
 <text x="2355" y="1556" font-size="13.5" text-anchor="end" font-weight="normal" fill="#4b5563">senza contrappesi</text>
@@ -264,13 +269,14 @@
 <text x="2189" y="1634" font-size="13.5" text-anchor="end" font-weight="bold" fill="#2e8b57">3,55 €</text>
 <text x="2355" y="1634" font-size="13.5" text-anchor="end" font-weight="normal" fill="#4b5563">4,02 €</text>
 <circle cx="1629" cy="1668" r="3.2" fill="#c27c0e"/>
-<text x="1640" y="1672.0" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Il costo in bolletta è molto basso: circa 4 € all&#x27;anno nell&#x27;esempio.</text>
-<circle cx="1629" cy="1690.55" r="3.2" fill="#c27c0e"/>
-<text x="1640" y="1694.55" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Il risparmio dei contrappesi è di circa 1,9 kWh (0,47 € all&#x27;anno): la parte più grande del</text>
-<text x="1640" y="1712.1" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">consumo è lo stand-by, non la salita.</text>
-<circle cx="1629" cy="1730.6499999999999" r="3.2" fill="#c27c0e"/>
-<text x="1640" y="1734.6499999999999" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Il vantaggio dei contrappesi è soprattutto nella potenza richiesta e nell&#x27;autonomia, non nel</text>
-<text x="1640" y="1752.1999999999998" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">costo dell&#x27;energia.</text>
+<text x="1640" y="1672.0" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Calcolati con stand-by di 1 W (dato da certificare): ogni watt in più di consumo fisso</text>
+<text x="1640" y="1689.55" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">aggiunge circa 8,8 kWh e 2,2 € all&#x27;anno.</text>
+<circle cx="1629" cy="1708.1" r="3.2" fill="#c27c0e"/>
+<text x="1640" y="1712.1" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Non inclusi consumi di freno, azionamento, porte, luci e comunicazione: da misurare. Il valore</text>
+<text x="1640" y="1729.6499999999999" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">reale può essere più alto.</text>
+<circle cx="1629" cy="1748.1999999999998" r="3.2" fill="#c27c0e"/>
+<text x="1640" y="1752.1999999999998" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">Il risparmio dei contrappesi nell&#x27;esempio è circa 1,9 kWh (0,47 € all&#x27;anno): il vantaggio è</text>
+<text x="1640" y="1769.7499999999998" font-size="13" text-anchor="start" font-weight="normal" fill="#1f2937">soprattutto su potenza di picco e autonomia.</text>
 <rect x="20" y="1854" width="8" height="30" rx="3" fill="#2a3b55"/>
 <text x="40" y="1878" font-size="21" text-anchor="start" font-weight="bold" fill="#2a3b55">5 · Vita e manutenzione delle batterie, ipotesi dell&#x27;esempio</text>
 <rect x="20" y="1894" width="1170" height="230" rx="10" fill="#fff" stroke="#2e8b57" stroke-width="2"/>
@@ -280,11 +286,12 @@
 <circle cx="43" cy="1969.225" r="3.2" fill="#2e8b57"/>
 <text x="54" y="1973.225" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Batterie AGM sigillate senza manutenzione: nessuna perdita di elettrolita.</text>
 <circle cx="43" cy="1992.4499999999998" r="3.2" fill="#2e8b57"/>
-<text x="54" y="1996.4499999999998" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Con l&#x27;invecchiamento la capacità cala: la macchina si ferma al piano prima, e il quadro lo segnala come batteria scarica.</text>
-<circle cx="43" cy="2015.6749999999997" r="3.2" fill="#2e8b57"/>
-<text x="54" y="2019.6749999999997" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">La ricarica a due livelli e la carica completa periodica servono a prolungarne la vita.</text>
-<circle cx="43" cy="2038.8999999999996" r="3.2" fill="#2e8b57"/>
-<text x="54" y="2042.8999999999996" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Per lavorare in sicurezza si aprono entrambi i sezionatori; per mantenere la luce si può togliere solo il fusibile del motore.</text>
+<text x="54" y="1996.4499999999998" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Con l&#x27;invecchiamento la capacità cala e l&#x27;autonomia in blackout si riduce: il manuale di manutenzione prevede la verifica degli accumulatori</text>
+<text x="54" y="2014.6749999999997" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">e della discesa in emergenza.</text>
+<circle cx="43" cy="2033.8999999999999" r="3.2" fill="#2e8b57"/>
+<text x="54" y="2037.8999999999999" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">La carica completa periodica serve a ricalibrare il contatore di carica; l&#x27;effetto sulla vita utile non è dichiarato.</text>
+<circle cx="43" cy="2057.125" r="3.2" fill="#2e8b57"/>
+<text x="54" y="2061.125" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Per lavorare in sicurezza si aprono entrambi i sezionatori; per mantenere la luce si può togliere solo il fusibile del motore.</text>
 <rect x="1210" y="1894" width="1170" height="230" rx="10" fill="#fffaf0" stroke="#c27c0e" stroke-width="2"/>
 <text x="1228" y="1924" font-size="19" text-anchor="start" font-weight="bold" fill="#c27c0e">Ipotesi dell&#x27;esempio (da sostituire con misure)</text>
 <circle cx="1233" cy="1946" r="3.2" fill="#c27c0e"/>
@@ -294,8 +301,9 @@
 <circle cx="1233" cy="1992.4499999999998" r="3.2" fill="#c27c0e"/>
 <text x="1244" y="1996.4499999999998" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">5 salite e 5 discese al giorno; stand-by 1 W tutto il giorno (da certificare); energia a 0,25 €/kWh.</text>
 <circle cx="1233" cy="2015.6749999999997" r="3.2" fill="#c27c0e"/>
-<text x="1244" y="2019.6749999999997" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Capacità della batteria presa dai documenti (12 Ah × 48 V). Il recupero di energia in discesa non è considerato.</text>
-<circle cx="1233" cy="2038.8999999999996" r="3.2" fill="#c27c0e"/>
-<text x="1244" y="2042.8999999999996" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Le misure reali (Wh per corsa, corrente di batteria, stand-by) sostituiranno questi valori.</text>
+<text x="1244" y="2019.6749999999997" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Capacità batteria da confermare: 12 Ah nello schema elettrico, circa 7,5 Ah nelle costanti del firmware. Il recupero in discesa non è</text>
+<text x="1244" y="2037.8999999999996" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">considerato.</text>
+<circle cx="1233" cy="2057.1249999999995" r="3.2" fill="#c27c0e"/>
+<text x="1244" y="2061.1249999999995" font-size="13.5" text-anchor="start" font-weight="normal" fill="#1f2937">Le misure reali (Wh per corsa, stand-by, autonomia in blackout, tempi di ricarica) sostituiranno questi valori.</text>
 <text x="20" y="2142" font-size="12.5" text-anchor="start" font-weight="normal" fill="#4b5563">Per il diagramma complessivo vedere diagramma_funzionale_light; dettagli tecnici e stato delle correzioni in docs/registro_issue.md.</text>
 </svg>

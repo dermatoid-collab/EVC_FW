@@ -57,6 +57,7 @@
 | FW-29 | Monitoraggio software del freno e controllo esterno di velocità e corrente dichiarati nell'analisi ma assenti | Alta | Aperta | Firmware |
 | FW-30 | Encoder motore SIN/COS (7EBLR002) non letto dal firmware | Media | Da decidere | Firmware |
 | FW-31 | Rampe del firmware diverse dall'ipotesi della relazione di calcolo (0,125 m/s²) | Media | Da verificare | Firmware |
+| FW-32 | Commento di `battery_charge_wait_discharge` non coerente con le costanti | Bassa | Aperta | Firmware |
 | HW-01 | Spina X8: esclude quasi tutta la catena con un solo ingresso di rilevamento | Media | Da decidere | Hardware |
 | HW-02 | Bypass trap/tray comandati solo via software | Media | Chiarita | Hardware |
 | HW-03 | Relè K1…K4 non dichiarati a contatti guidati sugli schemi | Media | Da verificare | Hardware |
@@ -83,6 +84,7 @@
 | DOC-09 | Velocità lineare della cinghia nei calcoli Megadyne (0,2 m/s) contro 0,15 m/s di progetto | Bassa | Da verificare | Documentazione |
 | DOC-10 | Diagramma funzionale commerciale: voci da aggiornare quando cambiano le funzioni descritte | Bassa | Aperta | Documentazione |
 | DOC-11 | Diagramma energia e batterie: numeri di esempio da sostituire con misure | Bassa | Aperta | Documentazione |
+| DOC-12 | Capacità della batteria discordante: 12 Ah, 7,5 Ah, 7,2 Ah | Media | Da verificare | Documentazione |
 | PRV-01 | Precisione di fermata ±10 mm | Media | Da verificare | Prove |
 | PRV-02 | Velocità ≤ 0,15 m/s misurata e conversione giri → m/s | Bassa | Da verificare | Prove |
 | PRV-03 | Sblocco della serratura con cabina appena in oltrecorsa | Media | Da verificare | Prove |
@@ -385,6 +387,14 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 
 ## Hardware e architettura
 
+### FW-32 · Commento di `battery_charge_wait_discharge` non coerente con le costanti
+**Gravità:** Bassa · **Stato:** Aperta · **Fonte:** lettura di `battery.c` e `battery.h`
+- **Dove:** `battery.c` `battery_charge_wait_discharge` e `battery.h` `BAT_BOOST_START_CHARGE`.
+- **Problema:** il commento dice che si passa in carica completa sotto il 50% (3,6 Ah consumati), il codice usa -2,0 Ah. Un commento obsoleto o una soglia cambiata senza aggiornarlo.
+- **Proposta:** allineare il commento (nessuna modifica di comportamento) quando si toccherà il file; da decidere insieme a DOC-12.
+- **Chiusura:** commento e costante coerenti.
+- **Storia:** 2026-11-07 aperta.
+
 ### HW-01 · Spina X8: esclude quasi tutta la catena con un solo ingresso di rilevamento
 **Gravità:** Media · **Stato:** Da decidere · **Fonte:** analisi §3.3.1; CHI-04
 - **Dove:** spina X8 (pin 1–3 ponte, pin 2–4 verso `BYP-S14`, `PD8`); `Src/application.c:411`.
@@ -593,10 +603,18 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 ### DOC-11 · Diagramma energia e batterie: numeri di esempio da sostituire con misure
 **Gravità:** Bassa · **Stato:** Aperta · **Fonte:** richiesta del 2026-11-07
 - **Dove:** `docs/diagrammi/04.diagramma_energia_light.svg` e `.png`, generati da `docs/gen_diagramma_energia.py`.
-- **Problema:** il diagramma per il commerciale spiega ciclo della batteria, contrappesi, autonomia, giornata tipica e costi. I consumi sono un ESEMPIO calcolato dalle masse (cabina 160 kg, contrappesi 2×30 kg) con ipotesi dichiarate: corsa 3 m, 0,10 m/s, rendimenti 60% e 80%, 5 salite e 5 discese al giorno, stand-by 1 W, 0,25 €/kWh. Il recupero di energia in discesa è volutamente omesso. Dati da riconciliare: capacità batteria 12 Ah (documenti) contro `BATTERY_DISCHARGED_MAH` nel firmware; stand-by 1 W «da certificare»; tempi di ricarica «stima»; fusibile 100 A e sezionatori dallo schema da riverificare.
+- **Problema:** il diagramma per il commerciale spiega ciclo della batteria, contrappesi, autonomia, giornata tipica e costi. I consumi sono un ESEMPIO calcolato dalle masse (cabina 160 kg, contrappesi 2×30 kg) con ipotesi dichiarate: corsa 3 m, 0,10 m/s, rendimenti 60% e 80%, 5 salite e 5 discese al giorno, stand-by 1 W, 0,25 €/kWh. Il recupero di energia in discesa è volutamente omesso. Verifica del 2026-11-07: dati di prodotto (10 corse di emergenza, 230 V 2 A 0,5 kW, 0,10/0,15 m/s, 160 kg, 2×30 kg, 3 anni/6 mesi) confermati da CP.TEC.025 Rev.5 e ST.TEC.068. Incerti: stand-by 1 W «da certificare» (non include l'elettronica a batteria, comunicazione, luci); rendimenti 60% e 80% ipotizzati; consumi di freno, VFD, porte non inclusi (costi = limite inferiore); tempi di rabbocco e carica completa calcolati, non misurati; 10 corse di emergenza non verificate da prova (il manuale d'uso dice «numero limitato»); comportamento in discesa non valutato (i commenti del firmware prevedono assorbimento di energia rigenerata e c'è una protezione a 63 V). Rimossi dal diagramma il «fusibile 100 A» e la protezione da inversione di polarità, non trovati nei documenti.
 - **Proposta:** misurare Wh per corsa (salita/discesa, vuota/carico) e stand-by, verificare il tempo di rabbocco e di carica completa, confermare la capacità della batteria; poi sostituire gli esempi con misure, togliere le diciture «stima» e allinearlo al calcolo ufficiale di classe energetica se esiste. Rivedere con R&D prima di diffonderlo.
 - **Chiusura:** valori misurati e diagramma allineato; revisione R&D registrata.
 - **Storia:** 2026-11-07 aperta con la prima versione del diagramma.
+
+### DOC-12 · Capacità della batteria discordante: 12 Ah, 7,5 Ah, 7,2 Ah
+**Gravità:** Media · **Stato:** Da verificare · **Fonte:** schema `Schema Macchina/Cappello.kicad_sch`, `battery.h`, `battery.c`
+- **Dove:** schema elettrico, simbolo batteria «48V 12Ah»; `battery.h` `BATTERY_DISCHARGED_MAH = 7500` («capacità nominale»); commento in `battery.c` (`battery_charge_wait_discharge`): «sotto il 50% (3.6 Ah consumati)» che implica circa 7,2 Ah. Massa batterie 18 kg (ST.TEC.068). CP.TEC.025 non indica la capacità.
+- **Problema:** tre valori diversi. Se la capacità reale è 12 Ah il contatore viene azzerato su «scarica» a 7,5 Ah consumati (circa 62%), se è 7,5 Ah il margine è nullo. Cambia l'autonomia in blackout e le soglie di ricarica.
+- **Proposta:** leggere modello e capacità sulla batteria installata e sul datasheet; allineare schema, costante e commento; verificare l'autonomia con la prova delle 10 corse di emergenza.
+- **Chiusura:** capacità confermata e documenti allineati.
+- **Storia:** 2026-11-07 aperta durante la verifica dei dati del diagramma energia.
 
 ---
 
@@ -707,3 +725,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-07 | Aggiunta la versione «light» del diagramma funzionale per il dipartimento commerciale e la voce DOC-10 per tenerla allineata. Totale 74 voci. |
 | 2026-11-07 | Aggiunto il diagramma light su energia, batterie e contrappesi e la voce DOC-11 (numeri di esempio da misurare). Totale 75 voci. |
 | 2026-11-07 | Diagrammi spostati in `docs/diagrammi/` con numerazione 01-04 nel nome file. |
+| 2026-11-07 | Verifica dei dati del diagramma energia: corretti testi non supportati dai documenti; aggiunte DOC-12 (capacità batteria discordante) e FW-32 (commento obsoleto). Totale 77 voci. |

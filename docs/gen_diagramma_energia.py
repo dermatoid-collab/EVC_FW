@@ -6,7 +6,7 @@ Uso:  python3 docs/gen_diagramma_energia.py docs/diagrammi/04.diagramma_energia_
 Per il dipartimento commerciale: linguaggio semplice, nessun riferimento a codice o issue.
 Tutti i numeri di consumo sono un ESEMPIO con ipotesi dichiarate nel diagramma (non misure).
 Il recupero di energia in discesa non è dichiarato finché non è misurato (vedi DOC-11).
-Capacità della batteria: 12 Ah dai documenti, da riconciliare con il firmware (DOC-11).
+Capacità della batteria: 12 Ah nello schema, 7,5 Ah nel firmware: da riconciliare (DOC-12).
 Quando arrivano le misure sostituire gli esempi con i valori misurati (DOC-11).
 """
 import html
@@ -141,14 +141,14 @@ T(30, 46, 'ELEVANCE — Energia, batterie e contrappesi', 32, 'start', 'bold', '
 T(30, 78, 'Come la macchina si alimenta, si ricarica e risparmia energia · per il dipartimento commerciale', 17, 'start', 'normal', '#dbe4f0')
 T(W - 30, 46, 'Versione light · aggiornata al 07/11/2026', 16, 'end', 'bold', '#fff')
 T(W - 30, 72, 'Documento descrittivo, non contrattuale. I numeri di consumo sono un ESEMPIO con ipotesi dichiarate, non misure.', 14, 'end', 'normal', '#dbe4f0')
-T(W - 30, 92, 'Fonti: CP.TEC.025 Rev.5, ST.TEC.068, IM.TEC.158 e 161, analisi dei rischi Rev.7, firmware del quadro.', 12, 'end', 'normal', '#c3d0e2')
+T(W - 30, 92, 'Fonti: CP.TEC.025 Rev.5, ST.TEC.068, manuali IM.TEC, analisi dei rischi Rev.7, firmware. Dati di prodotto = documenti; «esempio» e «stima» = da confermare.', 12, 'end', 'normal', '#c3d0e2')
 
 # ------------------------------------------------------------------ 1. percorso dell'energia
 SECTION(124, '1 · Il percorso dell\'energia')
 flow = [
     ('Rete domestica', ORA, '#fff6ee', '230 V monofase, 2 A, 0,5 kW'),
     ('Caricabatteria', ORA, '#fff6ee', 'Ricarica la batteria solo a macchina ferma'),
-    ('Batteria 48 V', GRN, '#effaf3', '12 Ah, AGM sigillata, senza manutenzione'),
+    ('Batteria 48 V', GRN, '#effaf3', 'AGM sigillata, senza manutenzione (capacità da confermare)'),
     ('Quadro e azionamento', NAV, '#eef2f8', 'Decide e comanda il motore'),
     ('Motoriduttore', ORA, '#fff6ee', 'Brushless 48 V, con doppio freno a molle'),
     ('Cinghie dentate', GRY, '#f3f4f6', 'Due cinghie, una per ogni contrappeso'),
@@ -165,11 +165,11 @@ for i, (t, col, fill, d) in enumerate(flow):
         L(x + fw + 3, fy + 59, x + fw + fg - 3, fy + 59, NAV, 3.5, arrow=True)
 cards = [
     ('A macchina ferma', GRN,
-     'Il caricabatteria ricarica la batteria e alimenta il quadro, la luce e i servizi. Quando serve, la porta si apre e la macchina è pronta.'),
+     'La batteria alimenta l\'elettronica e il caricabatteria resta al minimo; quando la carica consumata supera una soglia, ricarica la batteria.'),
     ('In marcia', ORA,
      'Il caricabatteria è staccato e la macchina va solo a batteria. Dopo la corsa, entro circa 30 secondi, torna alla ricarica.'),
     ('Senza rete (blackout)', BLU,
-     'La batteria alimenta tutto: la macchina si muove, la luce e l\'allarme restano attivi. Alla ripresa della rete la batteria si ricarica da sola.'),
+     'La batteria alimenta la macchina per un numero limitato di corse; la luce di emergenza resta accesa. Alla ripresa della rete la batteria si ricarica da sola.'),
 ]
 cw3 = (W - 40 - 40) // 3
 for i, (t, col, d) in enumerate(cards):
@@ -193,7 +193,7 @@ PARA(56, 592, 'La macchina viaggia a batteria, il caricabatteria è staccato e i
 
 R(960, 510, 300, 150, '#eef5ff', BLU, 2.5)
 T(976, 538, 'Rabbocco (ricarica leggera)', 18, 'start', 'bold', BLU)
-PARA(976, 562, 'Ricarica a 54,0 V, circa 3 A, finché la carica consumata è recuperata. Dopo un uso normale richiede circa 15 minuti (stima).', 270, 13.5)
+PARA(976, 562, 'Ricarica a 54,0 V, circa 3 A, finché la carica consumata è recuperata: circa 15 minuti per 0,7 Ah (stima).', 270, 13.5)
 
 R(960, 740, 300, 190, '#eef5ff', BLU, 2.5)
 T(976, 768, 'Carica completa', 19, 'start', 'bold', BLU)
@@ -224,7 +224,7 @@ yy = 542
 for t in [
     'Misura continuamente tensione, corrente e carica consumata con un contatore che sopravvive anche ai riavvii del quadro.',
     'Ricarica a due livelli: rabbocco leggero a 54,0 V per le piccole scariche, carica completa a 58,0 V quando serve.',
-    'Ogni 10 rabbocchi esegue una carica completa, per ricalibrare il contatore e tenere sana la batteria.',
+    'Ogni 10 rabbocchi esegue una carica completa, per ricalibrare il contatore di carica.',
     'La corrente di ricarica è regolata attorno a 3 A, per non stressare la batteria.',
     'Se la batteria è molto scarica passa subito alla carica completa.',
     'Durante la marcia il caricabatteria resta al minimo e la ricarica riprende a macchina ferma.',
@@ -234,7 +234,7 @@ yy += 12
 T(1320, yy, 'Protezioni', 19, 'start', 'bold', RED)
 yy += 28
 for t in [
-    'Fusibile di sicurezza sul positivo della batteria (100 A) e protezione contro l\'inversione di polarità.',
+    'Fusibile di backup sulla batteria contro i cortocircuiti (dato dell\'analisi dei rischi).',
     'Soglia di tensione minima a 38,4 V: sotto questo valore la macchina si ferma al piano per non scaricare la batteria.',
     'Soglia di sovratensione a 63 V in marcia: apre l\'uscita del motore e blocca la macchina.',
     'Sezionatori separati per rete e batteria: la macchina è spenta del tutto solo con entrambi aperti.',
@@ -265,7 +265,7 @@ T(px, 1408, 'fra cabina e contrappesi.', 14, 'middle', 'normal', PUR)
 
 # tabella e barre
 tx = 520
-T(tx, 1058, f'Energia meccanica per una salita di {it(CORSA)} m (calcolo dalle masse)', 17, 'start', 'bold', PUR)
+T(tx, 1058, f'Energia meccanica per una salita di {it(CORSA)} m (calcolo dalle masse, senza perdite)', 17, 'start', 'bold', PUR)
 T(tx, 1080, 'Con i contrappesi (verde) e senza (grigio): stessa cabina, stesso carico.', 13, 'start', 'normal', SUB)
 maxw = 340.0
 maxv = max(r[3] for r in rows)
@@ -286,9 +286,9 @@ yy = 1088
 for t in [
     f'Meno energia per salire: nell\'esempio con una persona il motore deve sollevare {it(M_CAB + M_PERS - M_CW, 0)} kg invece di {it(M_CAB + M_PERS, 0)} kg (−{it(rows[1][4] * 100, 0)}%).',
     f'Meno potenza di picco: a 0,10 m/s la salita richiede circa {it(p_con, 0)} W meccanici invece di {it(p_sen, 0)} W, cioè circa {it(i_con, 1)} A dalla batteria invece di {it(i_sen, 1)} A (ipotesi di rendimento).',
-    f'Più salite con la stessa batteria: a parità di carica, con una persona si fanno circa {it(trips_ratio, 2)} volte le salite possibili senza contrappesi.',
-    'Motore, freno e batteria possono essere dimensionati più piccoli: è il vantaggio principale in termini di costo e di ingombro.',
-    'In discesa la cabina scende per gravità e il motore la trattiene: il consumo di trazione è minimo. Il recupero di energia verso la batteria non è dichiarato in questo documento.',
+    f'Contando solo il sollevamento, con una persona la stessa energia dà circa {it(trips_ratio, 2)} volte le salite possibili senza contrappesi (esclusi i consumi fissi di quadro, freno e porte).',
+    'A parità di prestazioni, meno energia e meno potenza di picco permettono in generale motore e batteria più piccoli (valutazione di progetto, non quantificata qui).',
+    'Il comportamento in discesa (consumo ed eventuale recupero) non è valutato in questo documento.',
 ]:
     yy = BUL(bx, yy, t, 1020, PUR)
 
@@ -301,11 +301,11 @@ R(x0, 1494, cwid, 330, '#fff', BLU, 2)
 T(x0 + 18, 1524, 'Senza rete: l\'autonomia', 19, 'start', 'bold', BLU)
 yy = 1550
 for t in [
-    'Dato di prodotto: 10 corse di emergenza garantite a batteria.',
-    f'Esempio peggiore: salita di 4,5 m con 200 kg, con contrappesi: circa {it(worst, 1)} Wh dalla batteria per corsa, quindi {it(worst * 10, 0)} Wh per 10 corse.',
-    f'Sono circa il {it(worst * 10 / BAT_WH * 100, 0)}% dell\'energia nominale della batteria ({BAT_WH} Wh = 12 Ah × 48 V): il valore dichiarato è prudenziale.',
-    'Prima di scaricarsi la macchina completa la corsa, riapre la porta e si ferma al piano.',
-    'Luce di cabina e allarme restano attivi. Al ritorno della rete la ricarica parte da sola.',
+    'Dato di prodotto (CP.TEC.025): 10 corse di emergenza garantite a batteria. Il manuale d\'uso parla di «numero limitato di corse».',
+    f'Esempio peggiore: salita di 4,5 m con 200 kg, con contrappesi: circa {it(worst, 1)} Wh dalla batteria per corsa, quindi {it(worst * 10, 0)} Wh per 10 corse (rendimento ipotizzato).',
+    f'Rispetto all\'energia nominale sono il {it(worst * 10 / BAT_WH * 100, 0)}% se la batteria è 12 Ah (576 Wh) e il {it(worst * 10 / (7.5 * 48) * 100, 0)}% se è 7,5 Ah (360 Wh): la capacità reale è da confermare e cala con l\'età.',
+    'A carica insufficiente l\'impianto va fuori servizio e consente solo il completamento della corsa e l\'apertura della porta (manuale d\'uso 4.06).',
+    'Luce di emergenza di cabina: almeno 5 lux per 1 ora (analisi dei rischi). Al ritorno della rete la ricarica parte da sola.',
 ]:
     yy = BUL(x0 + 18, yy, t, cwid - 40, BLU)
 
@@ -323,8 +323,8 @@ for h_ in (0, 6, 12, 18, 24):
     T(bx0 + bw0 * h_ / 24, 1592, f'{h_:02d}', 11, 'middle', 'normal', SUB)
 yy = 1616
 for t in [
-    f'10 corse al giorno: {SALITE_DIE} salite e {SALITE_DIE} discese, ciascuna di {it(CORSA)} m (barre arancioni).',
-    'Dopo ogni corsa il quadro riporta la macchina alla ricarica: pochi minuti di rabbocco.',
+    f'10 corse al giorno ({SALITE_DIE} salite e {SALITE_DIE} discese di {it(CORSA)} m, barre arancioni): circa 300 al mese, l\'uso normale del manuale di manutenzione.',
+    'Il caricabatteria resta al minimo e interviene con un rabbocco solo quando la carica consumata supera circa 0,7 Ah.',
     f'Per il resto della giornata la macchina è ferma, con consumo in stand-by di {it(STANDBY_W, 0)} W (valore da certificare).',
     f'Energia di una salita con una persona: {it(e_up_con, 1)} Wh dalla batteria con i contrappesi, {it(e_up_sen, 1)} Wh senza.',
 ]:
@@ -333,7 +333,7 @@ for t in [
 # 6. costi
 x2 = 20 + 2 * (cwid + 20)
 R(x2, 1494, cwid, 330, '#fff', AMB, 2)
-T(x2 + 18, 1524, 'Costi di esercizio (esempio)', 19, 'start', 'bold', AMB)
+T(x2 + 18, 1524, 'Costi di esercizio (esempio, limite inferiore)', 19, 'start', 'bold', AMB)
 tbl = [('', 'con contrappesi', 'senza contrappesi'),
        ('Energia al giorno dalla rete', f'{it(day_con, 1)} Wh', f'{it(day_sen, 1)} Wh'),
        ('Energia all\'anno', f'{it(year_con, 1)} kWh', f'{it(year_sen, 1)} kWh'),
@@ -345,9 +345,9 @@ for i, (a, b, c) in enumerate(tbl):
     T(x2 + cwid - 24, y, c, 13.5, 'end', 'normal', SUB)
 yy = 1672
 for t in [
-    f'Il costo in bolletta è molto basso: circa {it(year_con * PREZZO, 0)} € all\'anno nell\'esempio.',
-    f'Il risparmio dei contrappesi è di circa {it(year_sen - year_con, 1)} kWh ({it((year_sen - year_con) * PREZZO, 2)} € all\'anno): la parte più grande del consumo è lo stand-by, non la salita.',
-    'Il vantaggio dei contrappesi è soprattutto nella potenza richiesta e nell\'autonomia, non nel costo dell\'energia.',
+    f'Calcolati con stand-by di {it(STANDBY_W, 0)} W (dato da certificare): ogni watt in più di consumo fisso aggiunge circa 8,8 kWh e {it(8.76 * PREZZO, 1)} € all\'anno.',
+    'Non inclusi consumi di freno, azionamento, porte, luci e comunicazione: da misurare. Il valore reale può essere più alto.',
+    f'Il risparmio dei contrappesi nell\'esempio è circa {it(year_sen - year_con, 1)} kWh ({it((year_sen - year_con) * PREZZO, 2)} € all\'anno): il vantaggio è soprattutto su potenza di picco e autonomia.',
 ]:
     yy = BUL(x2 + 18, yy, t, cwid - 40, AMB, 13)
 
@@ -359,8 +359,8 @@ yy = 1950
 for t in [
     'Sostituzione consigliata ogni 3 anni; manutenzione della macchina ogni 6 mesi (configurazione di prodotto).',
     'Batterie AGM sigillate senza manutenzione: nessuna perdita di elettrolita.',
-    'Con l\'invecchiamento la capacità cala: la macchina si ferma al piano prima, e il quadro lo segnala come batteria scarica.',
-    'La ricarica a due livelli e la carica completa periodica servono a prolungarne la vita.',
+    'Con l\'invecchiamento la capacità cala e l\'autonomia in blackout si riduce: il manuale di manutenzione prevede la verifica degli accumulatori e della discesa in emergenza.',
+    'La carica completa periodica serve a ricalibrare il contatore di carica; l\'effetto sulla vita utile non è dichiarato.',
     'Per lavorare in sicurezza si aprono entrambi i sezionatori; per mantenere la luce si può togliere solo il fusibile del motore.',
 ]:
     yy = BUL(38, yy, t, 1130, GRN)
@@ -372,8 +372,8 @@ for t in [
     f'Corsa {it(CORSA)} m (la corsa va da 2,5 a 4,5 m), velocità 0,10 m/s, una persona da {it(M_PERS, 0)} kg, cabina {it(M_CAB, 0)} kg, contrappesi {it(M_CW, 0)} kg in tutto.',
     f'Rendimento complessivo batteria → cinghia {it(ETA_TRAZ * 100, 0)}% e rete → batteria {it(ETA_CARICA * 100, 0)}%; consumo di trazione in discesa trascurato.',
     f'{SALITE_DIE} salite e {SALITE_DIE} discese al giorno; stand-by {it(STANDBY_W, 0)} W tutto il giorno (da certificare); energia a {it(PREZZO, 2)} €/kWh.',
-    'Capacità della batteria presa dai documenti (12 Ah × 48 V). Il recupero di energia in discesa non è considerato.',
-    'Le misure reali (Wh per corsa, corrente di batteria, stand-by) sostituiranno questi valori.',
+    'Capacità batteria da confermare: 12 Ah nello schema elettrico, circa 7,5 Ah nelle costanti del firmware. Il recupero in discesa non è considerato.',
+    'Le misure reali (Wh per corsa, stand-by, autonomia in blackout, tempi di ricarica) sostituiranno questi valori.',
 ]:
     yy = BUL(1228, yy, t, 1130, AMB)
 
