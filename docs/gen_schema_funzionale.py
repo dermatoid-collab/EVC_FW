@@ -461,7 +461,7 @@ DOT(680, LY + 78, PUR); T(692, LY + 82, 'su UDEC.CX', 10.5)
 T(820, LY + 42, 'Incertezze:  S3B non letto da TTF · STO VFD sul nodo S4 (dal disegno) · percorso celle di carico → ftc3 ·', 10.5, fill='#7a4b00')
 T(820, LY + 58, 'relè K1/K2/K3/K4 non dichiarati a contatti guidati sugli schemi, la scheda Notion «Bypass trap/tray» dice di sì (HW-03) ·', 10.5, fill='#7a4b00')
 T(820, LY + 74, 'Bus CAN confermati dal codice: CAN250 = VFD e NPB; CAN125 = UDEC.C, UDEC.CX e operatori porta L2D. Issue: docs/registro_issue.md.', 10.5, fill='#7a4b00')
-T(820, LY + 90, 'Analisi dei rischi Rev.5 non letta (NOR-01).  Sorgente: docs/gen_schema_funzionale.py.', 10.5, fill='#7a4b00')
+T(820, LY + 90, 'Analisi dei rischi Rev.7 letta (voci nel registro).  Sorgente: docs/gen_schema_funzionale.py.', 10.5, fill='#7a4b00')
 
 o.append('</svg>')
 

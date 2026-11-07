@@ -92,7 +92,7 @@ for c in (RED, ORA, BLU, GRY, GRN, PUR, NAV):
 o.append('</defs>')
 o.append(f'<rect width="{W}" height="{H}" fill="#f6f7f9"/>')
 T(30, 34, 'ELEVANCE / TTF — Diagramma funzionale della macchina', 22, 'start', 'bold')
-T(30, 54, 'Ricostruito dal firmware TTF-Base e dai manuali IM.TEC.158–161. I riquadri rossi rimandano alle issue di '
+T(30, 54, 'Ricostruito dal firmware TTF-Base, dai manuali IM.TEC.158–161 e dall’Analisi dei rischi Rev.7. I riquadri rossi rimandano alle issue di '
           'docs/registro_issue.md. Stato del firmware: commit di import, nessuna correzione applicata.', 11.5, fill='#555')
 
 # =================================================================== PANNELLO 1
@@ -208,7 +208,7 @@ PTC = (45, 1230)
 STATE(*PCH, PW, PH, 'ST_CHARGER', ['K3/K4 diseccitati, NPB attivo', 'ricarica (§5)'], '#fff8f0', ORA)
 STATE(*PTD, PW, PH, 'ST_TO_DRIVE', ['K3/K4 eccitati', 'attende VFD pronto (≤ 5 s)'], '#fff8f0', ORA, tags=('FW-08',))
 STATE(*PDR, 235, PH, 'ST_DRIVE', ['VFD pronto (DC link > 38 V, OTR ok)', 'marcia consentita'], '#fff8f0', ORA)
-STATE(*PWC, 235, PH, 'ST_WAIT_TO_CHARGER', ['K3/K4 ancora eccitati: 30 s', 'dopo lo stop'], '#fff8f0', ORA, tags=('FW-14',))
+STATE(*PWC, 235, PH, 'ST_WAIT_TO_CHARGER', ['K3/K4 ancora eccitati: 30 s dopo lo', 'stop (rischio residuo accettato)'], '#fff8f0', ORA)
 STATE(*PTC, PW, PH, 'ST_TO_CHARGER', ['K3/K4 diseccitati', 'attende VFD fermo (≤ 5 s)'], '#fff8f0', ORA)
 PL([(235, 1126), (330, 1126)], ORA); T(244, 1119, 'marcia', 10, fill=ORA)
 PL([(520, 1126), (610, 1126)], ORA); T(525, 1119, 'VFD ok', 10, fill=ORA)
@@ -235,10 +235,10 @@ for i, s in enumerate(steps):
         PL([(sx + 112, 1455), (sx + 122, 1455)], ORA, 1.6)
     sx += 122
 TAG(430, 1424, 'FW-02')
-TAG(805, 1424, 'FW-14')
+TAG(525, 1424, 'FW-29')
+TAG(805, 1424, 'FW-31')
 T(45, 1506, 'Relè di uscita S22 e comandi VFD', 12, 'start', 'bold', ORA)
-TAG(300, 1506, 'HW-07')
-TAG(352, 1506, 'FW-04')
+TAG(300, 1506, 'FW-04')
 ML(45, 1524, ['S22 (OUT3_1): OPEN → CLOSING → CLOSED → OPENING, ~100 ms; si apre dopo ≥ 10 s da stop/fault;',
               'apertura immediata per sovratensione (latch fino al riavvio). Non fa parte della catena di sicurezza.',
               'VFD: RPDO1 (velocità, direzione, rampe), TPDO1-3 (stato, fault, posizione), heartbeat NMT 100 ms su entrambi i bus;',
@@ -318,13 +318,13 @@ ML(1700, 1490, ['• Il manuale IM.TEC.160 2.03.15 prevede il ripristino automat
 # =================================================================== PANNELLO 6: modi
 PANEL(1540, 540, 840, 490, '6 · Modi di funzionamento', NAV)
 modes = [
-    ('Normale', GRN, (), ['Comandi a uomo presente da cabina, piani, radiocomando.', 'Arresto automatico al piano (zona di sblocco).',
+    ('Normale', GRN, ('FW-28',), ['Comandi a uomo presente da cabina, piani, radiocomando.', 'Arresto automatico al piano (zona di sblocco).',
                       'Velocità 0,10 m/s, 0,05 m/s con magnete di piano.', 'Controlli di sicurezza attivi (check_safety).']),
-    ('Emergenza / spina X8', ORA, ('FW-09', 'HW-01'), ['Spina nel quadro: esclude catena tranne e-stop quadro.', 'Velocità 0,05 m/s, solo pulsanti del pannello (IM.158);',
+    ('Emergenza / spina X8', ORA, ('FW-09', 'HW-01', 'FW-26', 'FW-27'), ['Spina nel quadro: esclude catena tranne e-stop quadro.', 'Velocità 0,05 m/s, solo pulsanti del pannello (IM.158);',
                                    'nel firmware anche UDEC.C e radiocomando (FW-09).', 'Porte non comandate; paracadute ripristinabile.']),
     ('Collaudo paracadute', RED, ('FW-01',), ['Menu del quadro, a cabina al piano alto, a pieno carico.', 'Apre il freno a mano (tasto 2 / IN4), prova di caduta.',
                                   'Poi: sicurezze aperte, ripristino con spina X8 (SU).', 'Oggi parte da qualsiasi voce di menu (FW-01).']),
-    ('Manutenzione dal quadro', GRY, ('FW-12',), ['Prevista da IM.158/160 (solo al piano basso,', 'cicalino se fuori piano). Non implementata:', 'voce MANUALE del menu senza funzione (FW-12).']),
+    ('Manutenzione dal quadro', GRY, ('FW-12', 'FW-26'), ['Prevista da IM.158/160 (solo al piano basso,', 'cicalino se fuori piano). Non implementata:', 'voce MANUALE del menu senza funzione (FW-12).']),
     ('Batteria scarica / rete assente', BLU, (), ['Rete assente: va a batteria (10 corse di emergenza).', 'Batteria scarica: ferma al piano, solo riapertura porta.',
                                               'Ripresa a carica minima (I ≤ 2,8 A in boost).']),
 ]
@@ -389,7 +389,7 @@ TAG(1560 + 5.6 * 90 + 12, 1740, 'FW-23')
 T(1560, 1905, 'Legenda riquadri rossi', 11, 'start', 'bold')
 ML(1560, 1923, ['FW = firmware · HW = hardware/architettura · NOR = normativa/rischi · DOC = documentazione ·',
                 'PRV = verifica in prova. Dettagli, proposte e stato: docs/registro_issue.md.'], 10.5, 15)
-T(1560, 1975, 'Incertezze: punti marcati «(?)» negli schemi; Analisi dei rischi Rev.5 non letta (NOR-01).', 10.5, fill='#7a4b00')
+T(1560, 1975, 'Incertezze: punti marcati «(?)» negli schemi. Analisi dei rischi Rev.7 letta: le voci derivate sono nel registro.', 10.5, fill='#7a4b00')
 
 o.append('</svg>')
 out = sys.argv[1] if len(sys.argv) > 1 else 'diagramma_funzionale.svg'
