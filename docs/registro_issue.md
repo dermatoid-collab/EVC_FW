@@ -58,7 +58,8 @@
 | FW-30 | Encoder motore SIN/COS (7EBLR002) non letto dal firmware | Media | Da decidere | Firmware |
 | FW-31 | Rampe del firmware diverse dall'ipotesi della relazione di calcolo (0,125 m/s²) | Media | Da verificare | Firmware |
 | FW-32 | Commento di `battery_charge_wait_discharge` non coerente con le costanti | Bassa | Aperta | Firmware |
-| FW-33 | Nessun controllo che la carica residua basti per completare la corsa; soglia di avvio e di fuori servizio vicine | Media | Da verificare | Firmware |
+| FW-33 | Nessun controllo che la carica residua basti per completare la corsa; soglia di avvio e di fuori servizio vicine | Media | Da decidere | Firmware |
+| FW-34 | Avviso sonoro in cabina quando la macchina viaggia senza alimentazione esterna | Bassa | Da decidere | Firmware |
 | HW-01 | Spina X8: esclude quasi tutta la catena con un solo ingresso di rilevamento | Media | Da decidere | Hardware |
 | HW-02 | Bypass trap/tray comandati solo via software | Media | Chiarita | Hardware |
 | HW-03 | Relè K1…K4 non dichiarati a contatti guidati sugli schemi | Media | Da verificare | Hardware |
@@ -399,12 +400,27 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Storia:** 2026-11-07 aperta.
 
 ### FW-33 · Nessun controllo che la carica residua basti per completare la corsa; soglia di avvio e di fuori servizio vicine
-**Gravità:** Media · **Stato:** Da verificare · **Fonte:** lettura di `vfd.c`, `pmode.c`, `battery.c`, `run_mode.c`; domanda dell'utente del 2026-11-08
+**Gravità:** Media · **Stato:** Da decidere · **Fonte:** lettura di `vfd.c`, `pmode.c`, `battery.c`, `run_mode.c`; domanda dell'utente del 2026-11-08
 - **Dove:** `vfd.c:152-165` `vfd_is_ready` (DC link > `VFD_DCLINK_MIN` = 38 V), `pmode.c:121-135` (in DRIVE, se il VFD non è pronto torna a TO_DRIVE), `battery.c:256-262` (flag `low_battery` a 38,4 V sotto carico), `run_mode.c:524` (fuori servizio solo se la macchina è al piano).
 - **Verificato:** a batteria scarica la macchina non entra in movimento (DC link ≤ 38 V) e, se `low_battery` è attivo al piano, resta fuori servizio con la sola riapertura porta.
 - **Problema (dedotto, da verificare con prova):** la decisione di partire guarda solo la tensione istantanea, non la carica residua rispetto al tratto da percorrere (il contatore di carica serve solo alla ricarica). Una corsa iniziata con tensione appena sopra 38 V può, per la caduta sotto carico, far uscire il sistema da DRIVE a metà corsa e fermare la cabina fra i piani; la ripartenza dipende dal recupero della tensione a riposo. Le soglie di avvio (38 V) e di fuori servizio (38,4 V) sono quasi coincidenti. Non verificato il livello di sottotensione del VFD.
-- **Proposta:** prova con batteria scarica fino alla soglia (salita a pieno carico, 4,5 m); se la fermata a metà corsa è possibile, definire una soglia di avvio con margine (o un controllo sulla carica residua) e come si ritorna al piano. Nessuna modifica senza richiesta.
-- **Chiusura:** prova eseguita e comportamento a batteria scarica documentato nel fascicolo.
+- **Proposta (richiesta dell'utente del 2026-11-08, non applicata):** avviare una corsa solo se la carica misurata basta per almeno una corsa più l'apertura porte; sotto una soglia di riserva consentire un'ultima corsa, aprire le porte e restare fuori servizio al piano. Schema proposto, con tre livelli calcolati da `battery.charge` (Ah consumati dall'ultima carica completa; 12 Ah di capacità confermati) e dalla tensione:
+  - *Normale:* carica residua sopra la soglia S1. Comportamento attuale.
+  - *Riserva* (tra S2 e S1): accettare una sola chiamata; a fine corsa porte aperte (apriporta come oggi) e macchina fuori servizio fino alla ricarica. Si può riusare il percorso già esistente di `low_battery` in `run_mode.c:524`, aggiungendo un latch «ultima corsa consumata».
+  - *Esaurita* (sotto S2): non si parte; fuori servizio al piano con la sola riapertura porta, come oggi.
+  - *Come tarare S2 e S1:* S2 = carica in Ah per la peggiore corsa (4,5 m, 200 kg) più apertura porte più margine; S1 = S2 più una corsa di margine. Il dato va misurato in prova (la stima a tavolino è di circa 6 Wh per salita peggiore, cioè circa 0,13 Ah a 48 V, con rendimento ipotizzato). Ripristino: si esce dal fuori servizio con la logica già presente (`battery.c:189`, corrente di carica sotto 2,8 A in carica completa).
+  - *Limite del contatore:* `battery.charge` è relativo all'ultima carica completa e con batteria invecchiata sovrastima la carica disponibile. Affiancare un criterio sulla tensione: memorizzare la caduta massima della corsa precedente e non partire se la tensione a riposo meno quella caduta scende sotto `VFD_DCLINK_MIN` più un margine (da valutare).
+  - *Cosa non toccare:* catena di sicurezza e freno. La modifica è solo nella logica di abilitazione delle chiamate.
+  - *Richiede:* aggiornare l'analisi dei rischi (comportamento a batteria scarica) e provare: corsa peggiore a batteria quasi scarica, caduta di tensione e punto di intervento del VFD, ripristino dopo la ricarica.
+- **Chiusura:** soglie misurate, logica approvata, implementata e provata a batteria scarica; comportamento documentato nel fascicolo.
+- **Storia:** 2026-11-08 aperta. 2026-11-08 proposta di soluzione a tre livelli su richiesta dell'utente; in attesa di approvazione.
+
+### FW-34 · Avviso sonoro in cabina quando la macchina viaggia senza alimentazione esterna
+**Gravità:** Bassa · **Stato:** Da decidere · **Fonte:** richiesta dell'utente del 2026-11-08; lettura di `npb.c`, `npb.h`, `udec_c.h`
+- **Dove:** `npb.c` (`npb.online` va a falso se il caricabatteria non risponde, «probabilmente manca la tensione di rete»; il bit `NPB_FLT_AC_FAIL` è definito in `npb.h` ma non risulta usato), `udec_c.h` (uscite UDEC.C con `hl_buz` «Buzzer su scheda» mai scritto dal firmware della base), scheda `UDEC.CX/Audio.kicad_sch`.
+- **Problema:** oggi chi è in cabina non sa che la corsa avviene a batteria. L'utente propone un avviso sonoro durante la marcia senza rete.
+- **Proposta (non applicata):** definire «rete assente» come `npb.online` falso o `AC_FAIL` attivo per più di alcuni secondi (con ritardo di conferma per evitare falsi allarmi); durante la marcia, e con schema diverso nello stato di riserva di FW-33, comandare un bip intermittente. Sul mezzo da usare: verificare nel firmware di UDEC.C cosa fa il bit `hl_buz` e se il buzzer è montato, oppure usare l'audio di UDEC.CX; da verificare anche se il caricabatteria risponde ancora o segnala `AC_FAIL` quando manca la rete. Prove: staccare la rete e misurare il tempo di rilevamento; verifica acustica in cabina.
+- **Chiusura:** segnale definito, implementato e provato; descritto nel manuale d'uso.
 - **Storia:** 2026-11-08 aperta.
 
 ### HW-01 · Spina X8: esclude quasi tutta la catena con un solo ingresso di rilevamento
@@ -759,3 +775,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-07 | Aggiunta la versione sintetica e visuale del diagramma energia (05), in valutazione; DOC-11 aggiornata. |
 | 2026-11-08 | Registrati USP e brevetti in `docs/commerciale.md` e la voce DOC-13 (messaggi da allineare ai dati). Totale 78 voci. |
 | 2026-11-08 | Aggiunte FW-33 (nessun controllo della carica residua sulla corsa) e DOC-14 (manutenzione 3 contro 6 mesi); DOC-13 aggiornata. Totale 80 voci. |
+| 2026-11-08 | Proposta di correzione per FW-33 (tre livelli di carica) e nuova FW-34 (avviso sonoro senza rete); nessuna modifica al firmware. Totale 81 voci. |
