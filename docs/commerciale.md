@@ -22,6 +22,7 @@ La configurazione elenca: modello di utilità estetica e funzionalità cabina (r
 ## Punti da chiarire prima di usare le USP nei materiali
 
 - «Zero consumi»: il dato di prodotto è 1 W in stand-by «da certificare» e la ricarica assorbe fino a 0,5 kW. Formula possibile: «consumi minimi» o il valore certificato.
+- Significato inteso dall'utente (2026-11-08): nessuna parte di usura da sostituire oltre alle batterie ogni 3 anni; solo controlli periodici; pulegge lubrificate solo in caso di rumori anomali, perché i cuscinetti sono schermati e già ingrassati. Da dimostrare (DOC-23): suffisso dei cuscinetti, vita di cinghie, rotelle, cerniere e freni, manuale e garanzia allineati.
 - «Zero manutenzione / nessun consumabile»: la configurazione prevede manutenzione semestrale e sostituzione delle batterie ogni 3 anni.
 - «Zero intrappolamenti»: verificato che a batteria scarica la macchina non parte e al piano resta fuori servizio con la porta apribile; non verificato che una corsa già iniziata si completi sempre (FW-33), e l'analisi dei rischi elenca scenari residui di intrappolamento. Formula difendibile: «non parte con la batteria scarica».
 - Manutenzione: il manuale d'uso dice almeno ogni 3 mesi, la configurazione 6 mesi (DOC-14).
