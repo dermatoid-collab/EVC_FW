@@ -58,6 +58,7 @@
 | FW-30 | Encoder motore SIN/COS (7EBLR002) non letto dal firmware | Media | Da decidere | Firmware |
 | FW-31 | Rampe del firmware diverse dall'ipotesi della relazione di calcolo (0,125 m/s²) | Media | Da verificare | Firmware |
 | FW-32 | Commento di `battery_charge_wait_discharge` non coerente con le costanti | Bassa | Aperta | Firmware |
+| FW-33 | Nessun controllo che la carica residua basti per completare la corsa; soglia di avvio e di fuori servizio vicine | Media | Da verificare | Firmware |
 | HW-01 | Spina X8: esclude quasi tutta la catena con un solo ingresso di rilevamento | Media | Da decidere | Hardware |
 | HW-02 | Bypass trap/tray comandati solo via software | Media | Chiarita | Hardware |
 | HW-03 | Relè K1…K4 non dichiarati a contatti guidati sugli schemi | Media | Da verificare | Hardware |
@@ -86,6 +87,7 @@
 | DOC-11 | Diagramma energia e batterie: numeri di esempio da sostituire con misure | Bassa | Aperta | Documentazione |
 | DOC-12 | Capacità della batteria discordante: 12 Ah, 7,5 Ah, 7,2 Ah | Media | Chiarita | Documentazione |
 | DOC-13 | Messaggi commerciali (zero consumi, zero manutenzione, zero intrappolamenti) da allineare ai dati di prodotto | Media | Da verificare | Documentazione |
+| DOC-14 | Periodicità della manutenzione: 3 mesi (manuale d'uso) contro 6 mesi (CP.TEC.025 e manuale di manutenzione) | Bassa | Da verificare | Documentazione |
 | PRV-01 | Precisione di fermata ±10 mm | Media | Da verificare | Prove |
 | PRV-02 | Velocità ≤ 0,15 m/s misurata e conversione giri → m/s | Bassa | Da verificare | Prove |
 | PRV-03 | Sblocco della serratura con cabina appena in oltrecorsa | Media | Da verificare | Prove |
@@ -396,6 +398,15 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Chiusura:** commento e costante coerenti.
 - **Storia:** 2026-11-07 aperta.
 
+### FW-33 · Nessun controllo che la carica residua basti per completare la corsa; soglia di avvio e di fuori servizio vicine
+**Gravità:** Media · **Stato:** Da verificare · **Fonte:** lettura di `vfd.c`, `pmode.c`, `battery.c`, `run_mode.c`; domanda dell'utente del 2026-11-08
+- **Dove:** `vfd.c:152-165` `vfd_is_ready` (DC link > `VFD_DCLINK_MIN` = 38 V), `pmode.c:121-135` (in DRIVE, se il VFD non è pronto torna a TO_DRIVE), `battery.c:256-262` (flag `low_battery` a 38,4 V sotto carico), `run_mode.c:524` (fuori servizio solo se la macchina è al piano).
+- **Verificato:** a batteria scarica la macchina non entra in movimento (DC link ≤ 38 V) e, se `low_battery` è attivo al piano, resta fuori servizio con la sola riapertura porta.
+- **Problema (dedotto, da verificare con prova):** la decisione di partire guarda solo la tensione istantanea, non la carica residua rispetto al tratto da percorrere (il contatore di carica serve solo alla ricarica). Una corsa iniziata con tensione appena sopra 38 V può, per la caduta sotto carico, far uscire il sistema da DRIVE a metà corsa e fermare la cabina fra i piani; la ripartenza dipende dal recupero della tensione a riposo. Le soglie di avvio (38 V) e di fuori servizio (38,4 V) sono quasi coincidenti. Non verificato il livello di sottotensione del VFD.
+- **Proposta:** prova con batteria scarica fino alla soglia (salita a pieno carico, 4,5 m); se la fermata a metà corsa è possibile, definire una soglia di avvio con margine (o un controllo sulla carica residua) e come si ritorna al piano. Nessuna modifica senza richiesta.
+- **Chiusura:** prova eseguita e comportamento a batteria scarica documentato nel fascicolo.
+- **Storia:** 2026-11-08 aperta.
+
 ### HW-01 · Spina X8: esclude quasi tutta la catena con un solo ingresso di rilevamento
 **Gravità:** Media · **Stato:** Da decidere · **Fonte:** analisi §3.3.1; CHI-04
 - **Dove:** spina X8 (pin 1–3 ponte, pin 2–4 verso `BYP-S14`, `PD8`); `Src/application.c:411`.
@@ -620,9 +631,17 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 ### DOC-13 · Messaggi commerciali (zero consumi, zero manutenzione, zero intrappolamenti) da allineare ai dati di prodotto
 **Gravità:** Media · **Stato:** Da verificare · **Fonte:** indicazioni dell'utente del 2026-11-08; CP.TEC.025 Rev.5; manuale di manutenzione
 - **Dove:** appunti in `docs/commerciale.md` (USP e brevetti forniti dall'utente).
-- **Problema:** «zero consumi» contro 1 W di stand-by da certificare e 0,5 kW in ricarica; «zero manutenzione, nessun consumabile» contro manutenzione semestrale e batterie da sostituire ogni 3 anni; «zero intrappolamenti» dipende da autonomia e manovra di emergenza non ancora provate. L'elenco dei brevetti è diverso da quello di CP.TEC.025 (paracadute attivo dal 2021, modello estetico cabina registrato, modello azionamento contrappesi e batterie depositato).
+- **Problema:** «zero consumi» contro 1 W di stand-by da certificare e 0,5 kW in ricarica; «zero manutenzione, nessun consumabile» contro manutenzione semestrale e batterie da sostituire ogni 3 anni; «zero intrappolamenti» non è dimostrabile: l'Analisi dei rischi Rev.7 elenca scenari residui di intrappolamento (porte bloccate, guasto allo sblocco, comandi non coerenti, valutati remoti/occasionali) e a batteria scarica la corsa può fermarsi fra i piani (FW-33); è difendibile «non parte con la batteria scarica» (verificato) e «ritorno al piano a batteria in blackout» (dato di prodotto, da provare). L'elenco dei brevetti è diverso da quello di CP.TEC.025 (paracadute attivo dal 2021, modello estetico cabina registrato, modello azionamento contrappesi e batterie depositato).
 - **Proposta:** riformulare le USP con valori verificabili (consumo certificato, intervalli di controllo, numero di corse di emergenza provato) e riconciliare numeri e stato dei titoli di proprietà industriale con l'ufficio brevetti.
 - **Chiusura:** USP e titoli approvati dal commerciale e coerenti con i documenti di prodotto.
+- **Storia:** 2026-11-08 aperta.
+
+### DOC-14 · Periodicità della manutenzione: 3 mesi contro 6 mesi
+**Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** manuale d'uso IM.TEC (manutenzione «almeno ogni tre mesi»), CP.TEC.025 Rev.5 e manuale di manutenzione (semestrale)
+- **Dove:** manuale d'uso, paragrafo sulla manutenzione periodica; CP.TEC.025 §9b; manuale di manutenzione, tabella §9.06.
+- **Problema:** il manuale d'uso prescrive almeno ogni tre mesi, la configurazione di prodotto e il manuale di manutenzione sei mesi.
+- **Proposta:** decidere un solo intervallo e allineare i tre documenti prima di usarlo in comunicazioni commerciali.
+- **Chiusura:** intervallo unico nei documenti.
 - **Storia:** 2026-11-08 aperta.
 
 ---
@@ -739,3 +758,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-07 | Confermata la capacità della batteria a 12 Ah: DOC-12 chiarita, diagramma energia aggiornato. |
 | 2026-11-07 | Aggiunta la versione sintetica e visuale del diagramma energia (05), in valutazione; DOC-11 aggiornata. |
 | 2026-11-08 | Registrati USP e brevetti in `docs/commerciale.md` e la voce DOC-13 (messaggi da allineare ai dati). Totale 78 voci. |
+| 2026-11-08 | Aggiunte FW-33 (nessun controllo della carica residua sulla corsa) e DOC-14 (manutenzione 3 contro 6 mesi); DOC-13 aggiornata. Totale 80 voci. |

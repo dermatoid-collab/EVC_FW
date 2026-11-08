@@ -23,4 +23,5 @@ La configurazione elenca: modello di utilità estetica e funzionalità cabina (r
 
 - «Zero consumi»: il dato di prodotto è 1 W in stand-by «da certificare» e la ricarica assorbe fino a 0,5 kW. Formula possibile: «consumi minimi» o il valore certificato.
 - «Zero manutenzione / nessun consumabile»: la configurazione prevede manutenzione semestrale e sostituzione delle batterie ogni 3 anni.
-- «Zero intrappolamenti»: dipende dall'autonomia a batteria (10 corse di emergenza, da provare) e dalla manovra di emergenza descritta nei manuali.
+- «Zero intrappolamenti»: verificato che a batteria scarica la macchina non parte e al piano resta fuori servizio con la porta apribile; non verificato che una corsa già iniziata si completi sempre (FW-33), e l'analisi dei rischi elenca scenari residui di intrappolamento. Formula difendibile: «non parte con la batteria scarica».
+- Manutenzione: il manuale d'uso dice almeno ogni 3 mesi, la configurazione 6 mesi (DOC-14).
