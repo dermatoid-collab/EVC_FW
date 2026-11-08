@@ -36,6 +36,7 @@ Le modifiche recenti sono descritte in `TTF-Base/Firmware/TTF-Base/Changelog`.
 - `docs/diagrammi/04.diagramma_energia_light.svg` (e `.png`): diagramma per il commerciale su ciclo della batteria, contrappesi, autonomia e costi (numeri di esempio con ipotesi dichiarate). Si rigenera con `python3 docs/gen_diagramma_energia.py docs/diagrammi/04.diagramma_energia_light.svg`.
 - `docs/diagrammi/05.diagramma_energia_sintesi.svg` (e `.png`): versione sintetica e visuale del diagramma energia, in valutazione. Si rigenera con `python3 docs/gen_diagramma_energia_sintesi.py docs/diagrammi/05.diagramma_energia_sintesi.svg`.
 - `docs/diagrammi/01.schema_funzionale.svg` (e `.png`): schema funzionale elettrico con la catena delle sicurezze. Si rigenera con `python3 docs/gen_schema_funzionale.py docs/diagrammi/01.schema_funzionale.svg`.
+- `docs/revisione_ST.TEC.068.md`: revisione completa della relazione di calcolo ST.TEC.068 Rev.0 (verifiche ricalcolate, rilievi, domande al progettista).
 - `docs/proposte_firmware.md`: riassunto delle proposte FW-33 e FW-34 da sottoporre al tecnico del firmware (nessuna modifica applicata).
 - `docs/commerciale.md`: appunti sul posizionamento commerciale (USP, brevetti e modelli), da elaborare.
 - `CLAUDE.md`: regole di lavoro per questo repository.

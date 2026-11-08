@@ -91,6 +91,12 @@
 | DOC-14 | Periodicità della manutenzione: 3 mesi contro 6 mesi | Bassa | Da verificare | Documentazione |
 | DOC-15 | ST.TEC.068: massa lineare della cinghia (0,33 contro 3,3 kg/m) e corsa di riferimento | Media | Da verificare | Documentazione |
 | DOC-16 | ST.TEC.068: refusi nelle formule e decelerazione di arresto di emergenza da verificare | Bassa | Da verificare | Documentazione |
+| DOC-17 | ST.TEC.068 cap.12: taglio sulla guida di ingaggio del paracadute non riproducibile | Alta | Da verificare | Documentazione |
+| DOC-18 | ST.TEC.068: coppia frenante di emergenza 554 Nm contro 654 Nm e verifiche a valle (ingranaggio, linguetta) | Alta | Da verificare | Documentazione |
+| DOC-19 | ST.TEC.068 cap.4: frecce del coperchio interpiano non riproducibili | Media | Da verificare | Documentazione |
+| DOC-20 | ST.TEC.068: carichi su guide e trave superiore non tracciabili, carichi orizzontali non verificati | Media | Da verificare | Documentazione |
+| DOC-21 | ST.TEC.068 cap.8: coppie del motoriduttore non tracciabili e potenza a 0,15 m/s oltre la targa | Media | Da verificare | Documentazione |
+| DOC-22 | ST.TEC.068: metodo di calcolo della frenata, dei rinvii e della giunzione, refusi residui | Bassa | Da verificare | Documentazione |
 | PRV-01 | Precisione di fermata ±10 mm | Media | Da verificare | Prove |
 | PRV-02 | Velocità ≤ 0,15 m/s misurata e conversione giri → m/s | Bassa | Da verificare | Prove |
 | PRV-03 | Sblocco della serratura con cabina appena in oltrecorsa | Media | Da verificare | Prove |
@@ -678,6 +684,54 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Chiusura:** formule corrette, decelerazione motivata, revisione indipendente registrata.
 - **Storia:** 2026-11-08 aperta.
 
+### DOC-17 · ST.TEC.068 cap.12: taglio sulla guida di ingaggio del paracadute non riproducibile
+**Gravità:** Alta · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
+- **Dove:** ST.TEC.068 §12, verifica della guida di ingaggio per cabina e contrappeso.
+- **Problema:** il taglio è calcolato come 3T/(2bh) con b = 4 mm, h = 24 mm: con T = 9000 N dà 140,6 MPa (138 MPa con 8829 N; 69 MPa se la sezione è doppia), non 1,2 MPa. Per il contrappeso il valore riportato è 0,3 MPa con T = 9000 N (con 736 N sarebbe 11,5 MPa). Il limite di 235 MPa non è quello dell'alluminio EN AW-6060 T6 (Rp0,2 140 MPa, taglio al limite circa 81 MPa). Wx del perno è calcolato e non usato: manca la verifica a flessione. Nel contrappeso il testo dice «pedana».
+- **Proposta:** chiarire materiale e sezione della guida di ingaggio e rifare il capitolo; aggiungere la flessione del perno; allineare alla prova di tipo del paracadute.
+- **Chiusura:** verifica ricalcolata e coerente con la prova di tipo.
+- **Storia:** 2026-11-08 aperta.
+
+### DOC-18 · ST.TEC.068: coppia frenante di emergenza 554 Nm contro 654 Nm e verifiche a valle (ingranaggio, linguetta)
+**Gravità:** Alta · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
+- **Dove:** §5 e §10 (554 Nm = 25,3 × 0,92 × 28 × 0,85), §7 (T = 554 Nm), §8 (654,2 Nm = 2 × 14 × 0,85 × 25,3 / 0,92).
+- **Problema:** la stessa coppia è calcolata moltiplicando e dividendo per il rendimento del riduttore. Con 654 Nm: ΔT sul dente 6417 N (SF 8,8), giunzione piastra SF 5,1, vite M12 SF 8,4; ingranaggio Lewis SF 0,97 (da 1,14), linguetta a pressione SF 1,12 (da 1,33). Non è chiaro se l'ingranaggio di sincronismo trasmette tutta la coppia o la quota di una puleggia.
+- **Proposta:** adottare un solo valore (654 Nm è il massimo con rendimento a denominatore, come nel cap. 8) e rifare le verifiche a valle; chiarire la coppia che attraversa l'ingranaggio.
+- **Chiusura:** coppia unica e verifiche coerenti, con SF ≥ 1 per i denti.
+- **Storia:** 2026-11-08 aperta.
+
+### DOC-19 · ST.TEC.068 cap.4: frecce del coperchio interpiano non riproducibili
+**Gravità:** Media · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
+- **Dove:** §4 parte A (2,7 mm) e parte B (1,5-2 mm).
+- **Problema:** col modello scritto (trave appoggiata L = 1,10 m, E = 24.000 MPa, I = 120.000 mm⁴/m) le frecce sono 13,7 mm e 9,4 mm, oltre il limite L/200 = 5,5 mm. Un modello a piastra circolare dà circa 3,8 mm senza deformazione a taglio dell'anima, oltre il limite L/300 = 3,67 mm. Il limite 120 MPa non ha fonte.
+- **Proposta:** rifare con modello a piastra più taglio dell'anima, o citare la misura del rapporto di prova del pannello; indicare la fonte del limite.
+- **Chiusura:** freccia riproducibile o misurata, entro il limite scelto.
+- **Storia:** 2026-11-08 aperta.
+
+### DOC-20 · ST.TEC.068: carichi su guide e trave superiore non tracciabili, carichi orizzontali non verificati
+**Gravità:** Media · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
+- **Dove:** §1.1 («800 kg»), §3 («1015 kg»), §9.
+- **Problema:** la somma delle masse del §1.1 è 869 kg; le masse fuori da cabina e portata sono 509 kg, che danno 615 kg per guida a paracadute, non 580 (valore ripreso in CP.TEC.025). Il carico di 1015 kg ha un elenco che somma 590 kg; l'esito delle guide resta coperto (9,41 kN con WD/2 e peso proprio contro 10,53 kN usati). Non sono verificati: flessione e freccia delle guide per carichi orizzontali (dichiarati «trascurabili» per una cabina tonda con persone fuori asse), fissaggi delle guide. La trave superiore è verificata con soli 60 kg: mancano le reazioni delle pulegge (circa 4,1 kN statici) e la coppia di reazione del riduttore (554-654 Nm).
+- **Proposta:** rendere tracciabili i carichi, aggiungere flessione delle guide e reazioni della trave, motivare i carichi orizzontali.
+- **Chiusura:** carichi tracciabili e verifiche complete.
+- **Storia:** 2026-11-08 aperta.
+
+### DOC-21 · ST.TEC.068 cap.8: coppie del motoriduttore non tracciabili e potenza a 0,15 m/s oltre la targa
+**Gravità:** Media · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
+- **Dove:** §8 (tabella 222/260/147/195 Nm; targa 600 W a 30 rpm; cuscinetti statici s0 = 1,15).
+- **Problema:** le coppie non sono ricavabili dai carichi (teorica in salita con 275 kg: 187 Nm). A 222 Nm e 28,1 rpm la potenza meccanica è 654 W (766 W allo spunto), oltre i 600 W di targa; a 0,10 m/s sono 436 W. La tabella SKF per s0 non è riportata e il valore richiesto non è scritto.
+- **Proposta:** documentare la derivazione delle coppie, chiarire il servizio intermittente della targa a 0,15 m/s con tensione batteria ridotta, riportare il valore richiesto di s0.
+- **Chiusura:** derivazione scritta e margini verificati con la tensione minima di batteria.
+- **Storia:** 2026-11-08 aperta.
+
+### DOC-22 · ST.TEC.068: metodo di calcolo della frenata, dei rinvii e della giunzione, refusi residui
+**Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
+- **Dove:** §5, §10, §11, Tab.2.
+- **Problema:** con a = 14,5 m/s² maggiore di g il ramo scarico della cinghia si allenta: il modello rigido non è coerente (il carico è limitato dal freno, ΔT = 5431 N, che per il ramo cabina equivale a 20 m/s²); le viti M12 con 5431 N hanno SF 9,9. Il dente a frenata nominale confronta ΔTstd totale con la capacità di una sola cinghia (SF 1,2 contro 2,4, con 21 denti 4,2). Il carico radiale dei rinvii è la somma delle tensioni dei rami, non ΔT. La piastra di giunzione usa «9 × 4700 = 32.900 N» (è 7 × 4700) e solo la resistenza di emergenza del dente, senza il carico d'esercizio. Refusi: QC 315 contro 325 kg (e 3,01 kN), «250 kg/m» senza ², «30 × 0,46 = 16,1 N» (35 mm), EN 81-41:2024 e :2025 alternate; redattore e approvatore coincidono.
+- **Proposta:** correggere alla Rev.1, usare ΔT di freno come carico sul ramo cabina, calcolare i rinvii con la somma vettoriale, aggiungere la giunzione con carico continuo e una revisione indipendente.
+- **Chiusura:** Rev.1 emessa.
+- **Storia:** 2026-11-08 aperta.
+
 ---
 
 ## Prove da eseguire
@@ -795,3 +849,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-08 | Aggiunte FW-33 (nessun controllo della carica residua sulla corsa) e DOC-14 (manutenzione 3 contro 6 mesi); DOC-13 aggiornata. Totale 80 voci. |
 | 2026-11-08 | Proposta di correzione per FW-33 (tre livelli di carica) e nuova FW-34 (avviso sonoro senza rete); nessuna modifica al firmware. Totale 81 voci. |
 | 2026-11-08 | Revisione di ST.TEC.068: aggiunte DOC-15 (massa lineare cinghia e corsa di riferimento) e DOC-16 (refusi e decelerazione di emergenza). Totale 83 voci. |
+| 2026-11-08 | Revisione completa di ST.TEC.068 su richiesta del progettista: aggiunte DOC-17…DOC-22 e il report `docs/revisione_ST.TEC.068.md`. Totale 89 voci. |
