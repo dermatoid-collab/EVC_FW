@@ -85,6 +85,7 @@
 | DOC-10 | Diagramma funzionale commerciale: voci da aggiornare quando cambiano le funzioni descritte | Bassa | Aperta | Documentazione |
 | DOC-11 | Diagramma energia e batterie: numeri di esempio da sostituire con misure | Bassa | Aperta | Documentazione |
 | DOC-12 | Capacità della batteria discordante: 12 Ah, 7,5 Ah, 7,2 Ah | Media | Chiarita | Documentazione |
+| DOC-13 | Messaggi commerciali (zero consumi, zero manutenzione, zero intrappolamenti) da allineare ai dati di prodotto | Media | Da verificare | Documentazione |
 | PRV-01 | Precisione di fermata ±10 mm | Media | Da verificare | Prove |
 | PRV-02 | Velocità ≤ 0,15 m/s misurata e conversione giri → m/s | Bassa | Da verificare | Prove |
 | PRV-03 | Sblocco della serratura con cabina appena in oltrecorsa | Media | Da verificare | Prove |
@@ -616,6 +617,14 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Chiusura:** capacità confermata e documenti allineati.
 - **Storia:** 2026-11-07 aperta durante la verifica dei dati del diagramma energia. 2026-11-07 chiarita: l'utente conferma 12 Ah (valore dello schema). Restano da allineare `BATTERY_DISCHARGED_MAH = 7500` (è circa il 62% di 12 Ah: verificare che sia la scelta voluta per il reset del contatore a batteria scarica) e il commento obsoleto (FW-32); nessuna modifica al firmware senza richiesta.
 
+### DOC-13 · Messaggi commerciali (zero consumi, zero manutenzione, zero intrappolamenti) da allineare ai dati di prodotto
+**Gravità:** Media · **Stato:** Da verificare · **Fonte:** indicazioni dell'utente del 2026-11-08; CP.TEC.025 Rev.5; manuale di manutenzione
+- **Dove:** appunti in `docs/commerciale.md` (USP e brevetti forniti dall'utente).
+- **Problema:** «zero consumi» contro 1 W di stand-by da certificare e 0,5 kW in ricarica; «zero manutenzione, nessun consumabile» contro manutenzione semestrale e batterie da sostituire ogni 3 anni; «zero intrappolamenti» dipende da autonomia e manovra di emergenza non ancora provate. L'elenco dei brevetti è diverso da quello di CP.TEC.025 (paracadute attivo dal 2021, modello estetico cabina registrato, modello azionamento contrappesi e batterie depositato).
+- **Proposta:** riformulare le USP con valori verificabili (consumo certificato, intervalli di controllo, numero di corse di emergenza provato) e riconciliare numeri e stato dei titoli di proprietà industriale con l'ufficio brevetti.
+- **Chiusura:** USP e titoli approvati dal commerciale e coerenti con i documenti di prodotto.
+- **Storia:** 2026-11-08 aperta.
+
 ---
 
 ## Prove da eseguire
@@ -729,3 +738,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-07 | Corretto DOC-08: la portata 200 kg su cabina Ø1000 mm (0,785 m²) rispetta 250 kg/m² di EN 81-41; nessuna deroga. |
 | 2026-11-07 | Confermata la capacità della batteria a 12 Ah: DOC-12 chiarita, diagramma energia aggiornato. |
 | 2026-11-07 | Aggiunta la versione sintetica e visuale del diagramma energia (05), in valutazione; DOC-11 aggiornata. |
+| 2026-11-08 | Registrati USP e brevetti in `docs/commerciale.md` e la voce DOC-13 (messaggi da allineare ai dati). Totale 78 voci. |
