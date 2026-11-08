@@ -75,6 +75,7 @@
 | NOR-04 | Giustificazione nell'analisi dei rischi del contatto paracadute e del suo bypass | Bassa | Da verificare | Normativa |
 | NOR-05 | Qualificazione di K3 e K4 come «contattori» ai fini di EN 81-41 | Media | Da verificare | Normativa |
 | NOR-06 | Ipotesi di 60 arresti dinamici del freno nella vita contro gli eventi che aprono la catena in marcia | Media | Da verificare | Normativa |
+| NOR-07 | Obbligo di manutenzione semestrale: fonte normativa e applicabilità a Elevance (DPR 162/1999, Regolamento 2023/1230, EN 81-41) | Media | Da verificare | Normativa |
 | DOC-01 | Precisione di fermata: ±20 mm (IM.159) contro ±10 mm (IM.160) | Bassa | Aperta | Documentazione |
 | DOC-02 | IM.160 e IM.159: prove duplicate e refusi su fondo e tetto sensibili | Bassa | Aperta | Documentazione |
 | DOC-03 | IM.159 §9: porte «chiuse e sbloccate» prima della messa fuori servizio | Bassa | Aperta | Documentazione |
@@ -557,6 +558,19 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Chiusura:** stima documentata; eventuale revisione dei calcoli.
 - **Storia:** 2026-11-07 aperta.
 
+### NOR-07 · Obbligo di manutenzione semestrale: fonte normativa e applicabilità a Elevance (DPR 162/1999, Regolamento 2023/1230, EN 81-41)
+**Gravità:** Media · **Stato:** Da verificare · **Fonte:** domanda dell'utente del 2026-11-08; ricerca su Normattiva (DPR 162/1999 art. 1, 12, 15), EUR-Lex (Regolamento (UE) 2023/1230), CP.TEC.025 Rev.5, IM.TEC.159
+- **Dove:** claim «manutenzione obbligatoria, verifica semestrale in Europa»; IM.TEC.159 §10.06 («periodicità consigliata»); CP.TEC.025 §9b (semestrale).
+- **Verificato (letture parziali, vedi limiti):**
+  - Il Regolamento (UE) 2023/1230 (Macchine, sostituisce la direttiva 2006/42/CE dal gennaio 2027) è una norma di prodotto: obbliga il fabbricante a fornire istruzioni con tipi e frequenze di ispezioni e manutenzioni necessarie per la sicurezza (Allegato III, 1.3.2 e 1.7.4.2). Nelle parti lette non impone ispezioni periodiche a proprietario o utilizzatore.
+  - La EN 81-41 (edizione 2024 in vigore) è una norma tecnica armonizzata: non crea un obbligo di legge di manutenzione per il proprietario.
+  - Il DPR 162/1999 art. 15 (Italia) impone al proprietario di affidare la manutenzione a persona abilitata o ditta specializzata, con controlli di sicurezza almeno ogni sei mesi per gli ascensori (comma 4). L'art. 1 comma 3 lett. a) esclude dal regolamento di prodotto gli apparecchi con velocità non superiore a 0,15 m/s, ma gli art. 12 e 15 citano espressamente gli «apparecchi di sollevamento rispondenti alla definizione di ascensore la cui velocità di spostamento non supera 0,15 m/s». Il DPR prevede inoltre verifiche periodiche biennali (art. 13, secondo fonti secondarie).
+- **Non verificato:** se Elevance rientra nella «definizione di ascensore» (art. 2 DPR 162/1999) e quindi negli obblighi di manutenzione semestrale e di verifica biennale; le norme degli altri Paesi europei (non esiste un obbligo semestrale unico UE: l'esercizio è materia nazionale); il testo integrale degli articoli e degli allegati (letture automatiche di Normattiva e EUR-Lex, parziali); la data esatta di applicazione del Regolamento 2023/1230 (fonti EU-OSHA e tekom: 20 gennaio 2027; la lettura automatica di EUR-Lex ha dato 14 gennaio 2027).
+- **Problema:** il messaggio «zero manutenzione» va formulato tenendo conto che, se il DPR 162/1999 si applica, la manutenzione periodica a cura di ditta abilitata è obbligatoria; la periodicità di 6 mesi in CP.TEC.025 e IM.TEC.159 («consigliata») andrebbe presentata come obbligo dove applicabile; il manuale d'uso dice almeno 3 mesi (DOC-14).
+- **Proposta:** far confermare da un organismo notificato, dall'ASL o da un consulente legale l'applicabilità del DPR 162/1999 a Elevance e le regole dei mercati di vendita previsti (UK, Francia, Benelux, Svizzera, Iberica, Far East, Australia); riportare nei manuali la base normativa della periodicità.
+- **Chiusura:** parere scritto sull'applicabilità e manuali allineati.
+- **Storia:** 2026-11-08 aperta.
+
 ---
 
 ## Documentazione
@@ -877,3 +891,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-08 | Letto il manuale di manutenzione IM.TEC.159 per il claim sulla manutenzione: aggiunta DOC-23. Totale 90 voci. |
 | 2026-11-08 | Aggiunta DOC-24 (residui da altri prodotti e refusi nei manuali e nei cartelli); corretta DOC-23 (AREALIFTING è un marchio di LiftingItalia, non un residuo). Totale 91 voci. |
 | 2026-11-08 | DOC-23: registrato il significato inteso del claim «zero manutenzione» e le verifiche necessarie per sostenerlo. |
+| 2026-11-08 | Aggiunta NOR-07 (fonte e applicabilità dell'obbligo di manutenzione semestrale). Totale 92 voci. |

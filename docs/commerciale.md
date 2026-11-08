@@ -26,3 +26,7 @@ La configurazione elenca: modello di utilità estetica e funzionalità cabina (r
 - «Zero manutenzione / nessun consumabile»: la configurazione prevede manutenzione semestrale e sostituzione delle batterie ogni 3 anni.
 - «Zero intrappolamenti»: verificato che a batteria scarica la macchina non parte e al piano resta fuori servizio con la porta apribile; non verificato che una corsa già iniziata si completi sempre (FW-33), e l'analisi dei rischi elenca scenari residui di intrappolamento. Formula difendibile: «non parte con la batteria scarica».
 - Manutenzione: il manuale d'uso dice almeno ogni 3 mesi, la configurazione 6 mesi (DOC-14).
+
+## Manutenzione: obbligo normativo (NOR-07)
+
+Il Regolamento (UE) 2023/1230 e la EN 81-41 non impongono al proprietario una verifica semestrale: richiedono al fabbricante istruzioni con tipi e frequenze delle manutenzioni. In Italia l'obbligo di manutenzione da parte di ditta abilitata, con controlli almeno semestrali, viene dal DPR 162/1999 art. 15, che richiama anche gli apparecchi di sollevamento con velocità non superiore a 0,15 m/s rispondenti alla definizione di ascensore. Applicabilità a Elevance, regole degli altri Paesi e testi integrali da confermare con un organismo competente.
