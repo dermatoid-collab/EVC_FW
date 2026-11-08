@@ -30,3 +30,11 @@ La configurazione elenca: modello di utilità estetica e funzionalità cabina (r
 ## Manutenzione: obbligo normativo (NOR-07)
 
 Il Regolamento (UE) 2023/1230 e la EN 81-41 non impongono al proprietario una verifica semestrale: richiedono al fabbricante istruzioni con tipi e frequenze delle manutenzioni. In Italia l'obbligo di manutenzione da parte di ditta abilitata, con controlli almeno semestrali, viene dal DPR 162/1999 art. 15, che richiama anche gli apparecchi di sollevamento con velocità non superiore a 0,15 m/s rispondenti alla definizione di ascensore. Applicabilità a Elevance, regole degli altri Paesi e testi integrali da confermare con un organismo competente.
+
+## Formulazioni proposte per il claim sulla manutenzione (2026-11-08)
+
+Da non usare: «zero manutenzione», «nessuna manutenzione», «nessun consumabile», «a vita». Motivo: il manuale prevede controlli semestrali, in Italia la manutenzione periodica può essere obbligatoria (NOR-07), le batterie si sostituiscono ogni 3 anni.
+
+1. Titolo: «Manutenzione minima». Sottotitolo: «Un controllo semestrale programmato e nessuna parte di usura da sostituire, a parte le batterie ogni 3 anni (uso residenziale, circa 300 corse al mese).» Da sostenere con: vita attesa di cinghie, rotelle, cerniere e freni (ipotesi dichiarata), manuale e garanzia allineati (DOC-23).
+2. Versione già sostenibile con i documenti attuali: «Controllo semestrale programmato. Batterie sigillate senza manutenzione, da sostituire ogni 3 anni. Cuscinetti schermati (2Z) e pre-ingrassati.»
+3. Sempre abbinare «controllo a cura di personale abilitato» dove la normativa lo richiede (NOR-07).
