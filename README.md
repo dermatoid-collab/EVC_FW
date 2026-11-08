@@ -37,6 +37,7 @@ Le modifiche recenti sono descritte in `TTF-Base/Firmware/TTF-Base/Changelog`.
 - `docs/diagrammi/05.diagramma_energia_sintesi.svg` (e `.png`): versione sintetica e visuale del diagramma energia, in valutazione. Si rigenera con `python3 docs/gen_diagramma_energia_sintesi.py docs/diagrammi/05.diagramma_energia_sintesi.svg`.
 - `docs/diagrammi/01.schema_funzionale.svg` (e `.png`): schema funzionale elettrico con la catena delle sicurezze. Si rigenera con `python3 docs/gen_schema_funzionale.py docs/diagrammi/01.schema_funzionale.svg`.
 - `docs/revisione_ST.TEC.068.md`: revisione completa della relazione di calcolo ST.TEC.068 Rev.0 (verifiche ricalcolate, rilievi, domande al progettista).
+- `docs/richiesta_correzione_refusi.md`: richiesta di correzione di residui da altri prodotti e refusi nei manuali (DOC-24).
 - `docs/proposta_sincronizzazione.md`: proposta di sincronizzazione TortoiseGit → GitHub per il periodo di test (nulla è attivato).
 - `docs/proposte_firmware.md`: riassunto delle proposte FW-33 e FW-34 da sottoporre al tecnico del firmware (nessuna modifica applicata).
 - `docs/commerciale.md`: appunti sul posizionamento commerciale (USP, brevetti e modelli), da elaborare.
