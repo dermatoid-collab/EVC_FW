@@ -89,6 +89,8 @@
 | DOC-12 | Capacità della batteria discordante: 12 Ah, 7,5 Ah, 7,2 Ah | Media | Chiarita | Documentazione |
 | DOC-13 | Messaggi commerciali (zero consumi, zero manutenzione, zero intrappolamenti) da allineare ai dati di prodotto | Media | Da verificare | Documentazione |
 | DOC-14 | Periodicità della manutenzione: 3 mesi contro 6 mesi | Bassa | Da verificare | Documentazione |
+| DOC-15 | ST.TEC.068: massa lineare della cinghia (0,33 contro 3,3 kg/m) e corsa di riferimento | Media | Da verificare | Documentazione |
+| DOC-16 | ST.TEC.068: refusi nelle formule e decelerazione di arresto di emergenza da verificare | Bassa | Da verificare | Documentazione |
 | PRV-01 | Precisione di fermata ±10 mm | Media | Da verificare | Prove |
 | PRV-02 | Velocità ≤ 0,15 m/s misurata e conversione giri → m/s | Bassa | Da verificare | Prove |
 | PRV-03 | Sblocco della serratura con cabina appena in oltrecorsa | Media | Da verificare | Prove |
@@ -660,6 +662,22 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Chiusura:** intervallo unico nei documenti.
 - **Storia:** 2026-11-08 aperta.
 
+### DOC-15 · ST.TEC.068: massa lineare della cinghia (0,33 contro 3,3 kg/m) e corsa di riferimento
+**Gravità:** Media · **Stato:** Da verificare · **Fonte:** ST.TEC.068 Rev.0 (pagine 22-28), revisione del 2026-11-08
+- **Dove:** specifica cinghia «Massa = 0.33 kg/m» e nota di esclusione («m_b ≤ 3,3 kg per linea, meno dell'1,5%»); verifica allentamento cinghie «Massa lineare (Megalinear RPP8 50) = 3.3 kg/m, 6 m = ~20 kg»; elenco masse «Massa cinghie = 50 kg» (e «35 kg cinghie» nella verifica guide); Tab.1 «Corsa 3000 mm» con la nota «parametri massimi accettabili» (corsa massima 4500 mm).
+- **Problema:** i due valori di massa lineare differiscono di un fattore 10. Con 3,3 kg/m i 50 kg totali di cinghie sono coerenti, ma la massa di una linea sarebbe ben oltre il 1,5% e non trascurabile; inoltre lo squilibrio di massa fra ramo cabina e ramo contrappeso varierebbe con la posizione (ordine di ±15 kg per linea sulla corsa massima) e andrebbe considerato nelle verifiche e nei consumi. Anche 50 e 35 kg non coincidono. La corsa di riferimento è 3000 mm, non la massima.
+- **Proposta:** confermare la massa lineare dalla scheda tecnica Megadyne; correggere il valore errato e rivedere la nota di esclusione e le verifiche che ne dipendono; esplicitare quali verifiche dipendono dalla corsa e per quali si è assunta la corsa massima.
+- **Chiusura:** valori coerenti in tutto il documento e verifiche riviste se serve.
+- **Storia:** 2026-11-08 aperta.
+
+### DOC-16 · ST.TEC.068: refusi nelle formule e decelerazione di arresto di emergenza da verificare
+**Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** ST.TEC.068 Rev.0 (pagina 26-27), revisione del 2026-11-08
+- **Dove:** «Sstop = V²/2·Amax = 0.15/14.5 = 0.77 mm» (la formula scritta dà un altro risultato, il valore 0,77 mm è invece corretto come V²/(2·Amax)); «Cs = g·(Qsl + P − Mcwt) + Rp» con valori calcolati su «2·30» e moltiplicati per Rp (il «+» è un «·»); Amax = 14,5 m/s² (circa 1,5 g) in frenata di emergenza con i due freni a coppia massima.
+- **Problema:** i risultati numerici controllati (SF 15,7; 10,4; 3,8; 1,4; 554 Nm; 180 Nm; 14,5 m/s²) sono corretti, ma le formule stampate hanno refusi. Non è stato verificato se la norma pone un limite alla decelerazione di arresto di emergenza; la relazione non lo discute. Redatto e approvato dalla stessa persona.
+- **Proposta:** correggere i refusi alla prossima revisione; chiedere al progettista se la decelerazione di 14,5 m/s² è coerente con i requisiti della norma e con il comfort/sicurezza dei passeggeri; prevedere una revisione indipendente.
+- **Chiusura:** formule corrette, decelerazione motivata, revisione indipendente registrata.
+- **Storia:** 2026-11-08 aperta.
+
 ---
 
 ## Prove da eseguire
@@ -776,3 +794,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-08 | Registrati USP e brevetti in `docs/commerciale.md` e la voce DOC-13 (messaggi da allineare ai dati). Totale 78 voci. |
 | 2026-11-08 | Aggiunte FW-33 (nessun controllo della carica residua sulla corsa) e DOC-14 (manutenzione 3 contro 6 mesi); DOC-13 aggiornata. Totale 80 voci. |
 | 2026-11-08 | Proposta di correzione per FW-33 (tre livelli di carica) e nuova FW-34 (avviso sonoro senza rete); nessuna modifica al firmware. Totale 81 voci. |
+| 2026-11-08 | Revisione di ST.TEC.068: aggiunte DOC-15 (massa lineare cinghia e corsa di riferimento) e DOC-16 (refusi e decelerazione di emergenza). Totale 83 voci. |
