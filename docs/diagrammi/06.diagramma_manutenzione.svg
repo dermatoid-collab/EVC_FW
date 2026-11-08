@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1150" viewBox="0 0 2000 1150" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">
+<rect width="2000" height="1150" fill="#f7f8fa"/>
+<rect x="0" y="0" width="2000" height="92" rx="0" fill="#2a3b55" stroke="#2a3b55" stroke-width="0"/>
+<text x="30" y="44" font-size="32" text-anchor="start" font-weight="bold" fill="#fff">ELEVANCE — Manutenzione programmata</text>
+<text x="30" y="72" font-size="17" text-anchor="start" font-weight="normal" fill="#dbe4f0">Cosa si fa, ogni quanto e dove · scheda per il commerciale</text>
+<text x="1970" y="40" font-size="16" text-anchor="end" font-weight="bold" fill="#fff">Aggiornata al 08/11/2026 · non contrattuale</text>
+<text x="1970" y="66" font-size="14" text-anchor="end" font-weight="normal" fill="#dbe4f0">Intervalli e obblighi di manutenzione possono variare secondo le norme di ciascun Paese.</text>
+<circle cx="46" cy="130" r="20" fill="#2a3b55"/>
+<text x="46" y="137" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">1</text>
+<text x="78" y="138" font-size="24" text-anchor="start" font-weight="bold" fill="#2a3b55">Tre punti fermi</text>
+<rect x="30" y="160" width="630" height="200" rx="14" fill="#fff" stroke="#2e8b57" stroke-width="3"/>
+<text x="60" y="222" font-size="40" text-anchor="start" font-weight="bold" fill="#2e8b57">Ogni 6 mesi</text>
+<text x="60" y="262" font-size="22" text-anchor="start" font-weight="bold" fill="#1f2937">Controllo programmato</text>
+<text x="60" y="298" font-size="15" text-anchor="start" font-weight="normal" fill="#4b5563">Una visita semestrale a cura di personale</text>
+<text x="60" y="322" font-size="15" text-anchor="start" font-weight="normal" fill="#4b5563">qualificato, secondo il piano di controllo.</text>
+<rect x="685" y="160" width="630" height="200" rx="14" fill="#fff" stroke="#d35400" stroke-width="3"/>
+<text x="715" y="222" font-size="40" text-anchor="start" font-weight="bold" fill="#d35400">Ogni 3 anni</text>
+<text x="715" y="262" font-size="22" text-anchor="start" font-weight="bold" fill="#1f2937">Sostituzione delle batterie</text>
+<text x="715" y="298" font-size="15" text-anchor="start" font-weight="normal" fill="#4b5563">Batterie AGM sigillate, senza manutenzione</text>
+<text x="715" y="322" font-size="15" text-anchor="start" font-weight="normal" fill="#4b5563">ordinaria: si sostituiscono ogni 3 anni.</text>
+<rect x="1340" y="160" width="630" height="200" rx="14" fill="#fff" stroke="#7b3fa0" stroke-width="3"/>
+<text x="1370" y="222" font-size="40" text-anchor="start" font-weight="bold" fill="#7b3fa0">Cuscinetti 2Z</text>
+<text x="1370" y="262" font-size="22" text-anchor="start" font-weight="bold" fill="#1f2937">Schermati e già ingrassati</text>
+<text x="1370" y="298" font-size="15" text-anchor="start" font-weight="normal" fill="#4b5563">I cuscinetti delle pulegge sono schermati e</text>
+<text x="1370" y="322" font-size="15" text-anchor="start" font-weight="normal" fill="#4b5563">pre-ingrassati.</text>
+<circle cx="46" cy="412" r="20" fill="#2e8b57"/>
+<text x="46" y="419" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">2</text>
+<text x="78" y="420" font-size="24" text-anchor="start" font-weight="bold" fill="#2e8b57">I primi tre anni: controlli e batterie</text>
+<rect x="30" y="440" width="1940" height="190" rx="14" fill="#fff" stroke="#d5dbe3" stroke-width="1.5"/>
+<line x1="130" y1="535" x2="1830" y2="535" stroke="#6b7280" stroke-width="6"/>
+<circle cx="130.0" cy="535" r="16" fill="#2a3b55"/>
+<text x="130.0" y="541" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="130.0" y="585" font-size="15" text-anchor="middle" font-weight="bold" fill="#2a3b55">Messa in servizio</text>
+<text x="130.0" y="605" font-size="13" text-anchor="middle" font-weight="normal" fill="#4b5563">con i controlli iniziali</text>
+<circle cx="413.3333333333333" cy="535" r="16" fill="#2e8b57"/>
+<text x="413.3333333333333" y="541" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="413.3333333333333" y="585" font-size="15" text-anchor="middle" font-weight="bold" fill="#2e8b57">6 mesi</text>
+<text x="413.3333333333333" y="605" font-size="13" text-anchor="middle" font-weight="normal" fill="#4b5563">controllo</text>
+<circle cx="696.6666666666666" cy="535" r="16" fill="#2e8b57"/>
+<text x="696.6666666666666" y="541" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="696.6666666666666" y="585" font-size="15" text-anchor="middle" font-weight="bold" fill="#2e8b57">12 mesi</text>
+<text x="696.6666666666666" y="605" font-size="13" text-anchor="middle" font-weight="normal" fill="#4b5563">controllo</text>
+<circle cx="980.0" cy="535" r="16" fill="#2e8b57"/>
+<text x="980.0" y="541" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="980.0" y="585" font-size="15" text-anchor="middle" font-weight="bold" fill="#2e8b57">18 mesi</text>
+<text x="980.0" y="605" font-size="13" text-anchor="middle" font-weight="normal" fill="#4b5563">controllo</text>
+<circle cx="1263.3333333333333" cy="535" r="16" fill="#2e8b57"/>
+<text x="1263.3333333333333" y="541" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="1263.3333333333333" y="585" font-size="15" text-anchor="middle" font-weight="bold" fill="#2e8b57">24 mesi</text>
+<text x="1263.3333333333333" y="605" font-size="13" text-anchor="middle" font-weight="normal" fill="#4b5563">controllo</text>
+<circle cx="1546.6666666666667" cy="535" r="16" fill="#2e8b57"/>
+<text x="1546.6666666666667" y="541" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="1546.6666666666667" y="585" font-size="15" text-anchor="middle" font-weight="bold" fill="#2e8b57">30 mesi</text>
+<text x="1546.6666666666667" y="605" font-size="13" text-anchor="middle" font-weight="normal" fill="#4b5563">controllo</text>
+<circle cx="1830.0" cy="535" r="16" fill="#2e8b57"/>
+<text x="1830.0" y="541" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="1830.0" y="585" font-size="15" text-anchor="middle" font-weight="bold" fill="#2e8b57">36 mesi</text>
+<text x="1830.0" y="605" font-size="13" text-anchor="middle" font-weight="normal" fill="#4b5563">controllo</text>
+<rect x="1800" y="445" width="120" height="44" rx="10" fill="#fff6ee" stroke="#d35400" stroke-width="3"/>
+<text x="1860" y="473" font-size="17" text-anchor="middle" font-weight="bold" fill="#d35400">Batterie</text>
+<line x1="1830" y1="489" x2="1830" y2="517" stroke="#d35400" stroke-width="3"/>
+<circle cx="46" cy="682" r="20" fill="#2563eb"/>
+<text x="46" y="689" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">3</text>
+<text x="78" y="690" font-size="24" text-anchor="start" font-weight="bold" fill="#2563eb">Cosa comprende il piano di controllo</text>
+<rect x="30" y="712" width="470" height="54" rx="10" fill="#fff" stroke="#c7d6ee" stroke-width="2"/>
+<circle cx="58" cy="739.0" r="11" fill="#2563eb"/>
+<text x="58" y="744.0" font-size="15" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="82" y="744.0" font-size="15.5" text-anchor="start" font-weight="normal" fill="#1f2937">Movimento e fermate ai piani</text>
+<rect x="520" y="712" width="470" height="54" rx="10" fill="#fff" stroke="#c7d6ee" stroke-width="2"/>
+<circle cx="548" cy="739.0" r="11" fill="#2563eb"/>
+<text x="548" y="744.0" font-size="15" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="572" y="744.0" font-size="15.5" text-anchor="start" font-weight="normal" fill="#1f2937">Alimentazione di emergenza: luce, allarme, discesa</text>
+<rect x="1010" y="712" width="470" height="54" rx="10" fill="#fff" stroke="#c7d6ee" stroke-width="2"/>
+<circle cx="1038" cy="739.0" r="11" fill="#2563eb"/>
+<text x="1038" y="744.0" font-size="15" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="1062" y="744.0" font-size="15.5" text-anchor="start" font-weight="normal" fill="#1f2937">Fondo sensibile e tetto sensibile</text>
+<rect x="1500" y="712" width="470" height="54" rx="10" fill="#fff" stroke="#c7d6ee" stroke-width="2"/>
+<circle cx="1528" cy="739.0" r="11" fill="#2563eb"/>
+<text x="1528" y="744.0" font-size="15" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="1552" y="744.0" font-size="15.5" text-anchor="start" font-weight="normal" fill="#1f2937">Serrature delle porte</text>
+<rect x="30" y="778" width="470" height="54" rx="10" fill="#fff" stroke="#c7d6ee" stroke-width="2"/>
+<circle cx="58" cy="805.0" r="11" fill="#2563eb"/>
+<text x="58" y="810.0" font-size="15" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="82" y="810.0" font-size="15.5" text-anchor="start" font-weight="normal" fill="#1f2937">Finecorsa e sensori di allentamento cinghie</text>
+<rect x="520" y="778" width="470" height="54" rx="10" fill="#fff" stroke="#c7d6ee" stroke-width="2"/>
+<circle cx="548" cy="805.0" r="11" fill="#2563eb"/>
+<text x="548" y="810.0" font-size="15" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="572" y="810.0" font-size="15.5" text-anchor="start" font-weight="normal" fill="#1f2937">Messa a terra e linee elettriche</text>
+<rect x="1010" y="778" width="470" height="54" rx="10" fill="#fff" stroke="#c7d6ee" stroke-width="2"/>
+<circle cx="1038" cy="805.0" r="11" fill="#2563eb"/>
+<text x="1038" y="810.0" font-size="15" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="1062" y="810.0" font-size="15.5" text-anchor="start" font-weight="normal" fill="#1f2937">Illuminazione di cabina</text>
+<rect x="1500" y="778" width="470" height="54" rx="10" fill="#fff" stroke="#c7d6ee" stroke-width="2"/>
+<circle cx="1528" cy="805.0" r="11" fill="#2563eb"/>
+<text x="1528" y="810.0" font-size="15" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="1552" y="810.0" font-size="15.5" text-anchor="start" font-weight="normal" fill="#1f2937">Dispositivo di sovraccarico</text>
+<rect x="30" y="844" width="470" height="54" rx="10" fill="#fff" stroke="#c7d6ee" stroke-width="2"/>
+<circle cx="58" cy="871.0" r="11" fill="#2563eb"/>
+<text x="58" y="876.0" font-size="15" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="82" y="876.0" font-size="15.5" text-anchor="start" font-weight="normal" fill="#1f2937">Velocità di accelerazione e decelerazione</text>
+<rect x="520" y="844" width="470" height="54" rx="10" fill="#fff" stroke="#c7d6ee" stroke-width="2"/>
+<circle cx="548" cy="871.0" r="11" fill="#2563eb"/>
+<text x="548" y="876.0" font-size="15" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="572" y="876.0" font-size="15.5" text-anchor="start" font-weight="normal" fill="#1f2937">Paracadute di cabina e contrappesi</text>
+<rect x="1010" y="844" width="470" height="54" rx="10" fill="#fff" stroke="#c7d6ee" stroke-width="2"/>
+<circle cx="1038" cy="871.0" r="11" fill="#2563eb"/>
+<text x="1038" y="876.0" font-size="15" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="1062" y="876.0" font-size="15.5" text-anchor="start" font-weight="normal" fill="#1f2937">Cinghie, capocinghia e pulegge di trazione</text>
+<rect x="1500" y="844" width="470" height="54" rx="10" fill="#fff" stroke="#c7d6ee" stroke-width="2"/>
+<circle cx="1528" cy="871.0" r="11" fill="#2563eb"/>
+<text x="1528" y="876.0" font-size="15" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="1552" y="876.0" font-size="15.5" text-anchor="start" font-weight="normal" fill="#1f2937">Rotelle di scorrimento e guide</text>
+<rect x="30" y="910" width="470" height="54" rx="10" fill="#fff" stroke="#c7d6ee" stroke-width="2"/>
+<circle cx="58" cy="937.0" r="11" fill="#2563eb"/>
+<text x="58" y="942.0" font-size="15" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="82" y="942.0" font-size="15.5" text-anchor="start" font-weight="normal" fill="#1f2937">Batterie</text>
+<rect x="520" y="910" width="470" height="54" rx="10" fill="#fff" stroke="#c7d6ee" stroke-width="2"/>
+<circle cx="548" cy="937.0" r="11" fill="#2563eb"/>
+<text x="548" y="942.0" font-size="15" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
+<text x="572" y="942.0" font-size="15.5" text-anchor="start" font-weight="normal" fill="#1f2937">Segnaletica di sicurezza</text>
+<circle cx="46" cy="1000" r="20" fill="#7b3fa0"/>
+<text x="46" y="1007" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">4</text>
+<text x="78" y="1008" font-size="24" text-anchor="start" font-weight="bold" fill="#7b3fa0">Dove e chi</text>
+<rect x="30" y="1028" width="950" height="90" rx="14" fill="#fff" stroke="#7b3fa0" stroke-width="2.5"/>
+<text x="55" y="1062" font-size="19" text-anchor="start" font-weight="bold" fill="#7b3fa0">Aree di intervento</text>
+<text x="55" y="1090" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">Il vano motore in testata e la zona sopra la pedana di carico, con la cabina al piano 0.</text>
+<rect x="1000" y="1028" width="970" height="90" rx="14" fill="#fff" stroke="#7b3fa0" stroke-width="2.5"/>
+<text x="1025" y="1062" font-size="19" text-anchor="start" font-weight="bold" fill="#7b3fa0">A cura di personale qualificato</text>
+<text x="1025" y="1090" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">Con ricambi originali. Il manuale d&#x27;uso indica anche i semplici controlli a cura dell&#x27;utente.</text>
+<text x="30" y="1140" font-size="12.5" text-anchor="start" font-weight="normal" fill="#4b5563">Fonti: CP.TEC.025 Rev.5, istruzioni di manutenzione IM.TEC.159, analisi dei rischi Rev.7, ufficio tecnico LiftingItalia (cuscinetti).</text>
+</svg>

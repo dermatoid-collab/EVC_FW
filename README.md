@@ -30,11 +30,12 @@ Le modifiche recenti sono descritte in `TTF-Base/Firmware/TTF-Base/Changelog`.
 
 - **`docs/registro_issue.md`: documento base del lavoro.** Tutte le osservazioni, le proposte di correzione, le verifiche e il loro stato. Si aggiorna a ogni issue risolta; il controllo di coerenza è `python3 docs/check_registro.py`.
 - `docs/analisi.md`: analisi di partenza (panoramica, revisione del codice di sicurezza, catena delle sicurezze, confronto con i manuali).
-- I diagrammi stanno in `docs/diagrammi/`, numerati 01-05; gli script che li generano restano in `docs/`.
+- I diagrammi stanno in `docs/diagrammi/`, numerati 01-06; gli script che li generano restano in `docs/`.
 - `docs/diagrammi/02.diagramma_funzionale.svg` (e `.png`): diagramma funzionale della macchina (stati del movimento, ciclo porta, alimentazione, batteria, sicurezze, comunicazioni), con i riquadri rossi che rimandano agli ID del registro. Si rigenera con `python3 docs/gen_diagramma_funzionale.py docs/diagrammi/02.diagramma_funzionale.svg`.
 - `docs/diagrammi/03.diagramma_funzionale_light.svg` (e `.png`): versione del diagramma funzionale per il dipartimento commerciale (blocchi, una corsa passo per passo, stati, sicurezze, dati di prodotto). Si rigenera con `python3 docs/gen_diagramma_light.py docs/diagrammi/03.diagramma_funzionale_light.svg`.
 - `docs/diagrammi/04.diagramma_energia_light.svg` (e `.png`): diagramma per il commerciale su ciclo della batteria, contrappesi, autonomia e costi (numeri di esempio con ipotesi dichiarate). Si rigenera con `python3 docs/gen_diagramma_energia.py docs/diagrammi/04.diagramma_energia_light.svg`.
 - `docs/diagrammi/05.diagramma_energia_sintesi.svg` (e `.png`): versione sintetica e visuale del diagramma energia, in valutazione. Si rigenera con `python3 docs/gen_diagramma_energia_sintesi.py docs/diagrammi/05.diagramma_energia_sintesi.svg`.
+- `docs/diagrammi/06.diagramma_manutenzione.svg` (e `.png`): scheda commerciale sulla manutenzione, con le sole affermazioni confermate. Si rigenera con `python3 docs/gen_diagramma_manutenzione.py docs/diagrammi/06.diagramma_manutenzione.svg`.
 - `docs/diagrammi/01.schema_funzionale.svg` (e `.png`): schema funzionale elettrico con la catena delle sicurezze. Si rigenera con `python3 docs/gen_schema_funzionale.py docs/diagrammi/01.schema_funzionale.svg`.
 - `docs/revisione_ST.TEC.068.md`: revisione completa della relazione di calcolo ST.TEC.068 Rev.0 (verifiche ricalcolate, rilievi, domande al progettista).
 - `docs/richiesta_correzione_refusi.md`: richiesta di correzione di residui da altri prodotti e refusi nei manuali (DOC-24).
