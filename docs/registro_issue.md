@@ -87,7 +87,7 @@
 | DOC-11 | Diagramma energia e batterie: numeri di esempio da sostituire con misure | Bassa | Aperta | Documentazione |
 | DOC-12 | Capacità della batteria discordante: 12 Ah, 7,5 Ah, 7,2 Ah | Media | Chiarita | Documentazione |
 | DOC-13 | Messaggi commerciali (zero consumi, zero manutenzione, zero intrappolamenti) da allineare ai dati di prodotto | Media | Da verificare | Documentazione |
-| DOC-14 | Periodicità della manutenzione: 3 mesi (manuale d'uso) contro 6 mesi (CP.TEC.025 e manuale di manutenzione) | Bassa | Da verificare | Documentazione |
+| DOC-14 | Periodicità della manutenzione: 3 mesi contro 6 mesi | Bassa | Da verificare | Documentazione |
 | PRV-01 | Precisione di fermata ±10 mm | Media | Da verificare | Prove |
 | PRV-02 | Velocità ≤ 0,15 m/s misurata e conversione giri → m/s | Bassa | Da verificare | Prove |
 | PRV-03 | Sblocco della serratura con cabina appena in oltrecorsa | Media | Da verificare | Prove |
