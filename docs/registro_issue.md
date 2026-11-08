@@ -100,6 +100,7 @@
 | DOC-22 | ST.TEC.068: metodo di calcolo della frenata, dei rinvii e della giunzione, refusi residui | Bassa | Da verificare | Documentazione |
 | DOC-23 | Manuale di manutenzione IM.TEC.159: lubrificazione e parti di usura in contrasto con «zero manutenzione» | Media | Da verificare | Documentazione |
 | DOC-24 | Manuali IM.TEC.159 e 161 e cartelli: residui da altri prodotti, refusi e rimandi errati | Bassa | Da verificare | Documentazione |
+| DOC-25 | Certificato IMQ DR 637 DM Rev.0: incoerenze interne e dati da allineare | Bassa | Da verificare | Documentazione |
 | PRV-01 | Precisione di fermata ±10 mm | Media | Da verificare | Prove |
 | PRV-02 | Velocità ≤ 0,15 m/s misurata e conversione giri → m/s | Bassa | Da verificare | Prove |
 | PRV-03 | Sblocco della serratura con cabina appena in oltrecorsa | Media | Da verificare | Prove |
@@ -565,6 +566,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
   - Il Regolamento (UE) 2023/1230 (Macchine, sostituisce la direttiva 2006/42/CE dal gennaio 2027) è una norma di prodotto: obbliga il fabbricante a fornire istruzioni con tipi e frequenze di ispezioni e manutenzioni necessarie per la sicurezza (Allegato III, 1.3.2 e 1.7.4.2). Nelle parti lette non impone ispezioni periodiche a proprietario o utilizzatore.
   - La EN 81-41 (edizione 2024 in vigore) è una norma tecnica armonizzata: non crea un obbligo di legge di manutenzione per il proprietario.
   - Il DPR 162/1999 art. 15 (Italia) impone al proprietario di affidare la manutenzione a persona abilitata o ditta specializzata, con controlli di sicurezza almeno ogni sei mesi per gli ascensori (comma 4). L'art. 1 comma 3 lett. a) esclude dal regolamento di prodotto gli apparecchi con velocità non superiore a 0,15 m/s, ma gli art. 12 e 15 citano espressamente gli «apparecchi di sollevamento rispondenti alla definizione di ascensore la cui velocità di spostamento non supera 0,15 m/s». Il DPR prevede inoltre verifiche periodiche biennali (art. 13, secondo fonti secondarie).
+- **Certificato IMQ (2026-11-08):** certificato di esame CE del tipo n. IMQ DR 637 DM Rev.0, Allegato IX della direttiva 2006/42/CE, organismo notificato 0051, emesso il 2026-07-15 e valido fino al 2031-07-14, per «piattaforma elevatrice» LiftingItalia Elevance, luogo di installazione «edifici privati». Questa classificazione riguarda la messa sul mercato del prodotto (direttiva macchine) e non esenta da sola dagli obblighi di esercizio nazionali: il DPR 162/1999 art. 12 e 15 citano espressamente gli apparecchi di sollevamento rispondenti alla definizione di ascensore con velocità non superiore a 0,15 m/s; una nota ANCE elenca come eccezioni miniere, navi, corsa inferiore a 2 m, azionamento manuale e installazioni non stabili (Elevance ha corsa da 2,5 a 4,5 m). Il Ministero ha chiarito (lettera circolare MiSE 17595/08, secondo ATS Brianza) che gli organismi notificati possono fare le verifiche biennali anche su piattaforme per disabili, che seguono la circolare MICA 157296/1997.
 - **Non verificato:** se Elevance rientra nella «definizione di ascensore» (art. 2 DPR 162/1999) e quindi negli obblighi di manutenzione semestrale e di verifica biennale; le norme degli altri Paesi europei (non esiste un obbligo semestrale unico UE: l'esercizio è materia nazionale); il testo integrale degli articoli e degli allegati (letture automatiche di Normattiva e EUR-Lex, parziali); la data esatta di applicazione del Regolamento 2023/1230 (fonti EU-OSHA e tekom: 20 gennaio 2027; la lettura automatica di EUR-Lex ha dato 14 gennaio 2027).
 - **Problema:** il messaggio «zero manutenzione» va formulato tenendo conto che, se il DPR 162/1999 si applica, la manutenzione periodica a cura di ditta abilitata è obbligatoria; la periodicità di 6 mesi in CP.TEC.025 e IM.TEC.159 («consigliata») andrebbe presentata come obbligo dove applicabile; il manuale d'uso dice almeno 3 mesi (DOC-14).
 - **Proposta:** far confermare da un organismo notificato, dall'ASL o da un consulente legale l'applicabilità del DPR 162/1999 a Elevance e le regole dei mercati di vendita previsti (UK, Francia, Benelux, Svizzera, Iberica, Far East, Australia); riportare nei manuali la base normativa della periodicità.
@@ -755,6 +757,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Proposta:** decidere un messaggio commerciale coerente con il manuale (per esempio «controllo semestrale programmato, nessun intervento di ingrassaggio sul motoriduttore» solo se verificato) e ripulire il testo della garanzia dalle voci non pertinenti; chiarire cosa prevede la colonna «ogni 5/10 anni» e l'intervallo di sostituzione di cinghie e freni.
 - **Chiusura:** manuale e messaggi commerciali coerenti.
 - **Storia:** 2026-11-08 aperta. 2026-11-08 chiarito il significato che l'utente dà al claim: nessuna parte di usura da sostituire oltre alle batterie ogni 3 anni, solo controlli periodici; lubrificazione delle pulegge solo in caso di rumori anomali, perché i cuscinetti sono schermati e già ingrassati. Da verificare per sostenerlo: suffisso di schermatura dei cuscinetti SKF 6007 e 6006 (la relazione ST.TEC.068 non lo indica); vita attesa di cinghie, rotelle di scorrimento, cerniere porta, freni, pulsanti e strip led (il manuale prevede ispezioni di usura su cinghie, rotelle, guide e cerniere); correggere la voce 22 del §10.06 («pulire e lubrificare le pulegge») e la clausola di garanzia sull'usura in modo coerente.
+  2026-11-08 risposte dell'utente: cuscinetti con schermi 2Z (da riportare nella distinta e nella relazione); le vite attese dei componenti di usura saranno stimate dall'utente con ipotesi ottimistica (da dichiarare come ipotesi, non come garanzia, e da motivare); riferimento d'uso residenziale (circa 300 corse al mese).
 
 ### DOC-24 · Manuali IM.TEC.159 e 161 e cartelli: residui da altri prodotti, refusi e rimandi errati
 **Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** lettura di IM.TEC.159.IT rev.0 (06.2026), IM.TEC.161.IT rev.0 (06.2026) e dei cartelli «pericolo di schiacciamento»; richiesta dell'utente del 2026-11-08
@@ -768,6 +771,15 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Nota:** «AREALIFTING» è un marchio di LiftingItalia S.r.l. (dichiarato nei manuali): non è un residuo.
 - **Proposta:** inviare la richiesta di correzione a chi redige i manuali (testo in `docs/richiesta_correzione_refusi.md`); scegliere un solo termine per il prodotto coerente con la classificazione.
 - **Chiusura:** manuali e cartelli corretti e ripubblicati con nuova revisione.
+- **Storia:** 2026-11-08 aperta.
+
+### DOC-25 · Certificato IMQ DR 637 DM Rev.0: incoerenze interne e dati da allineare
+**Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** certificato IMQ DR 637 DM Rev.0 (Notion, «Certificato IMQ»), letto il 2026-11-08
+- **Dove:** pagina 1 e allegato, sezione 4 «Informazioni sulle norme di riferimento»; intestazione.
+- **Problema:** il testo italiano cita la norma EN 81-41:2024, il testo inglese EN 81-41:2010 (ritirata), insieme a BS 5900:2012. L'intestazione dice «5 pagine comprendenti 1 allegato» mentre le pagine sono numerate 1/4-4/4. Il certificato è rilasciato ai sensi della direttiva 2006/42/CE, abrogata dal gennaio 2027 dal Regolamento (UE) 2023/1230: validità del certificato dopo tale data e passaggio al regolamento da verificare (art. 52). Il documento afferma inoltre che non esistono norme armonizzate pienamente applicabili.
+- **Coerenza con la relazione ST.TEC.068 (verificata):** portata 200 kg, cabina Ø1000 mm e 0,785 m², massa sospesa massima 485 kg (WC), 0,15 m/s, corsa 4500 mm, motore 600 W con rapporto 25,3:1, cinghie Megalinear 50 RPP8 con carico di rottura 32.300 N, guide in alluminio EN AW 6060 T6, serratura MD2 certificata CA50.00808 rev.0; interasse degli ancoraggi guide 4500 mm.
+- **Proposta:** chiedere a IMQ la correzione del riferimento normativo nel testo inglese e del conteggio pagine; pianificare l'aggiornamento al Regolamento 2023/1230 prima della scadenza di applicazione.
+- **Chiusura:** certificato corretto e strategia di passaggio al regolamento definita.
 - **Storia:** 2026-11-08 aperta.
 
 ---
@@ -892,3 +904,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-08 | Aggiunta DOC-24 (residui da altri prodotti e refusi nei manuali e nei cartelli); corretta DOC-23 (AREALIFTING è un marchio di LiftingItalia, non un residuo). Totale 91 voci. |
 | 2026-11-08 | DOC-23: registrato il significato inteso del claim «zero manutenzione» e le verifiche necessarie per sostenerlo. |
 | 2026-11-08 | Aggiunta NOR-07 (fonte e applicabilità dell'obbligo di manutenzione semestrale). Totale 92 voci. |
+| 2026-11-08 | Letto il certificato IMQ DR 637 DM Rev.0: aggiornata NOR-07 e aggiunta DOC-25. Totale 93 voci. |
