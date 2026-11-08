@@ -97,6 +97,7 @@
 | DOC-20 | ST.TEC.068: carichi su guide e trave superiore non tracciabili, carichi orizzontali non verificati | Media | Da verificare | Documentazione |
 | DOC-21 | ST.TEC.068 cap.8: coppie del motoriduttore non tracciabili e potenza a 0,15 m/s oltre la targa | Media | Da verificare | Documentazione |
 | DOC-22 | ST.TEC.068: metodo di calcolo della frenata, dei rinvii e della giunzione, refusi residui | Bassa | Da verificare | Documentazione |
+| DOC-23 | Manuale di manutenzione IM.TEC.159: lubrificazione e parti di usura in contrasto con «zero manutenzione»; garanzia con voci idrauliche | Media | Da verificare | Documentazione |
 | PRV-01 | Precisione di fermata ±10 mm | Media | Da verificare | Prove |
 | PRV-02 | Velocità ≤ 0,15 m/s misurata e conversione giri → m/s | Bassa | Da verificare | Prove |
 | PRV-03 | Sblocco della serratura con cabina appena in oltrecorsa | Media | Da verificare | Prove |
@@ -732,6 +733,14 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Chiusura:** Rev.1 emessa.
 - **Storia:** 2026-11-08 aperta.
 
+### DOC-23 · Manuale di manutenzione IM.TEC.159: lubrificazione e parti di usura in contrasto con «zero manutenzione»; garanzia con voci idrauliche
+**Gravità:** Media · **Stato:** Da verificare · **Fonte:** IM.TEC.159.IT rev.0 (06.2026), §10.06 e clausola di garanzia; richiesta dell'utente del 2026-11-08
+- **Dove:** manuale di manutenzione, tabella delle procedure al §10.06 (controlli 1-22 a messa in servizio, ogni 6 mesi, ogni 1/3 anni, ogni 5/10 anni) e clausola di garanzia.
+- **Problema:** la tabella prevede, fra l'altro, prove di emergenza e di sovraccarico, smontaggio e controllo dei due paracadute (voce 15), controllo di cinghie, capocinghia, rotelle e guide, «pulire e lubrificare le pulegge» (voce 22) e manutenzione delle batterie al massimo ogni 3 anni (voce 21). La clausola di garanzia elenca come normale usura cinghie di trasmissione, freni, batterie, lampade, strip led, cuscinetti, pulegge di rinvio, pulsanti, oli e lubrificanti. Non è coerente con «zero manutenzione, nessun consumabile» (DOC-13). La stessa clausola cita anche guarnizioni del cilindro oleodinamico e del gruppo valvole, voci di un prodotto idraulico che Elevance non ha, e nomina AreaLifting accanto a LiftingItalia. La periodicità del manuale d'uso (3 mesi) contraddice questa (6 mesi): DOC-14.
+- **Proposta:** decidere un messaggio commerciale coerente con il manuale (per esempio «controllo semestrale programmato, nessun intervento di ingrassaggio sul motoriduttore» solo se verificato) e ripulire il testo della garanzia dalle voci non pertinenti; chiarire cosa prevede la colonna «ogni 5/10 anni» e l'intervallo di sostituzione di cinghie e freni.
+- **Chiusura:** manuale e messaggi commerciali coerenti.
+- **Storia:** 2026-11-08 aperta.
+
 ---
 
 ## Prove da eseguire
@@ -850,3 +859,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-08 | Proposta di correzione per FW-33 (tre livelli di carica) e nuova FW-34 (avviso sonoro senza rete); nessuna modifica al firmware. Totale 81 voci. |
 | 2026-11-08 | Revisione di ST.TEC.068: aggiunte DOC-15 (massa lineare cinghia e corsa di riferimento) e DOC-16 (refusi e decelerazione di emergenza). Totale 83 voci. |
 | 2026-11-08 | Revisione completa di ST.TEC.068 su richiesta del progettista: aggiunte DOC-17…DOC-22 e il report `docs/revisione_ST.TEC.068.md`. Totale 89 voci. |
+| 2026-11-08 | Letto il manuale di manutenzione IM.TEC.159 per il claim sulla manutenzione: aggiunta DOC-23. Totale 90 voci. |
