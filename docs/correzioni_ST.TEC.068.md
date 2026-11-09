@@ -264,7 +264,14 @@ Il §10 usa Fr = ΔT = 0,5 · Cp / Rp = 5431 N (6417 N con Cp = 654 Nm) come car
 
 Limite superiore (θ = 180°): Fr = 12.834 N, per cuscinetto 6417 N: 6006 s0 = 8300 / 6417 = **1,29**; con θ = 90°: Fr = 9075 N, per cuscinetto 4538 N, s0 = **1,83**. Per la puleggia di trazione: Fr = T1 + T2 con θ ≈ 190°, cioè circa 6417 N con ramo contrappeso allentato (3208 N per cuscinetto, s0 6007 = 3,2); in esercizio statico T1 + T2 = 2134 + 294 = 2428 N.
 
-Da completare con l'angolo di avvolgimento e la tensione di ogni rinvio (geometria delle pulegge di rinvio e del tratto inferiore).
+Con l'angolo dichiarato dal progettista (θ ≈ 100°, 2026-11-09), sin 50° = 0,766:
+
+| Caso | T nel ramo | Fr = 2·T·sin 50° | Per cuscinetto | 6006 (C0 8300 N, C 13800 N) |
+|---|---|---|---|---|
+| Emergenza, discesa con 275 kg | 6417 N | 9831 N | 4916 N | s0 = **1,69**; C/P = 2,8 |
+| Esercizio, ramo cabina (Qwl) | 2134 N | 3270 N | 1635 N | s0 = **5,1**; L10h ≈ 334.000 h a 30 giri/min |
+
+Entrambi i casi sono verificati. Il valore usato oggi dalla relazione per i rinvii (P0 = 2715 N per cuscinetto) è inferiore al caso di emergenza corretto (4916 N): da sostituire. Testo proposto: «Carico radiale sul rinvio = 2·T·sin(θ/2) con θ = 100°; in emergenza T = 6417 N, Fr = 9831 N, per cuscinetto 4916 N, s0 = 1,69 > 1». Resta da stabilire quale ramo (cabina o contrappeso) passa su ciascun rinvio: il caso con T = 6417 N vale per i rinvii sul ramo cabina; per quelli sul ramo contrappeso la tensione è molto minore (294 N statici).
 
 ### 7d. §5 Strappo del dente a frenata nominale
 
