@@ -101,6 +101,7 @@
 | DOC-23 | Manuale di manutenzione IM.TEC.159: lubrificazione e parti di usura in contrasto con «zero manutenzione» | Media | Da verificare | Documentazione |
 | DOC-24 | Manuali IM.TEC.159 e 161 e cartelli: residui da altri prodotti, refusi e rimandi errati | Bassa | Da verificare | Documentazione |
 | DOC-25 | Certificato IMQ DR 637 DM Rev.0: incoerenze interne e dati da allineare | Bassa | Da verificare | Documentazione |
+| DOC-26 | Serratura MD2 LOCK: certificato per porte di piano, impiegata come serratura della porta di cabina | Media | Da verificare | Documentazione |
 | PRV-01 | Precisione di fermata ±10 mm | Media | Da verificare | Prove |
 | PRV-02 | Velocità ≤ 0,15 m/s misurata e conversione giri → m/s | Bassa | Da verificare | Prove |
 | PRV-03 | Sblocco della serratura con cabina appena in oltrecorsa | Media | Da verificare | Prove |
@@ -783,6 +784,14 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Chiusura:** certificato corretto e strategia di passaggio al regolamento definita.
 - **Storia:** 2026-11-08 aperta.
 
+### DOC-26 · Serratura MD2 LOCK: certificato per porte di piano, impiegata come serratura della porta di cabina
+**Gravità:** Media · **Stato:** Da verificare · **Fonte:** certificato IMQ CA50.00808 Rev.0 (2025-06-27), certificato IMQ DR 637 DM Rev.0, IM.TEC.159, IM.TEC.160, IM.TEC.161; richiesta dell'utente del 2026-11-08
+- **Dove:** CA50.00808: «dispositivi di blocco per porte di piano a doppio battente», modello MD2 LOCK, esame UE del tipo ai sensi della direttiva 2014/33/UE (Allegato IV), norme EN 81-20:2020 e EN 81-50:2020, disegno F353.02.0080. IMQ DR 637 DM: «dispositivi di blocco porte di cabina automatiche a due battenti», stesso certificato richiamato. IM.TEC.160 e IM.TEC.159 parlano di «serratura della porta di cabina»; l'elenco dei componenti di sicurezza di IM.TEC.161 dice «serratura delle porte di piano».
+- **Problema:** lo stesso dispositivo è chiamato porta di piano e porta di cabina nei documenti. In Elevance la porta è sulla cabina, mentre il certificato descrive una serratura per porte di piano. Va confermato che l'ambito del certificato copre l'uso come serratura di cabina e allineato il termine in tutti i documenti.
+- **Proposta:** chiedere a IMQ conferma scritta dell'ambito d'uso e correggere le denominazioni nei manuali e nel certificato IMQ DR 637.
+- **Chiusura:** ambito confermato e terminologia unica.
+- **Storia:** 2026-11-08 aperta.
+
 ---
 
 ## Prove da eseguire
@@ -909,3 +918,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-08 | Aggiunto il diagramma commerciale sulla manutenzione (06), con le sole affermazioni confermate; DOC-23 aggiornata. |
 | 2026-11-08 | Aggiunta la versione sintetica del diagramma sulla manutenzione (07) con il riquadro «≈ 0 €» come stima del costruttore; DOC-23 aggiornata. |
 | 2026-11-08 | Diagramma 07: aggiunti garanzia estesa, 22 procedure, ricambi originali e diagnosi guidata; tolti i cuscinetti 2Z (restano nel 06). |
+| 2026-11-08 | Descrizione della serratura della porta di cabina: aggiunta DOC-26 (certificato per porte di piano, uso come porta di cabina). Totale 94 voci. |
