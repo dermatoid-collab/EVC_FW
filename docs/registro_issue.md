@@ -107,6 +107,7 @@
 | DOC-27 | Disegni della serratura MD2 con revisioni posteriori al certificato IMQ CA50.00808 | Media | Da verificare | Documentazione |
 | DOC-28 | ST.TEC.068 cap.8: documenti Amer non citati, mozzo e linguetta a carico del cliente, tenuta del freno senza rendimento del riduttore | Bassa | Da verificare | Documentazione |
 | DOC-29 | Frenature dinamiche del motoriduttore: 60 in 5 anni contro le prove previste dai manuali | Bassa | Da verificare | Documentazione |
+| DOC-30 | Cinghie: deformazione plastica in emergenza con margine 1,26 sul valore medio e limite di 50 eventi di emergenza | Bassa | Da verificare | Documentazione |
 | PRV-01 | Precisione di fermata ±10 mm | Media | Da verificare | Prove |
 | PRV-02 | Velocità ≤ 0,15 m/s misurata e conversione giri → m/s | Bassa | Da verificare | Prove |
 | PRV-03 | Sblocco della serratura con cabina appena in oltrecorsa | Media | Da verificare | Prove |
@@ -796,6 +797,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Proposta:** correggere alla Rev.1, usare ΔT di freno come carico sul ramo cabina, calcolare i rinvii con la somma vettoriale, aggiungere la giunzione con carico continuo e una revisione indipendente.
 - **Chiusura:** Rev.1 emessa.
 - **Storia:** 2026-11-08 aperta.
+  2026-11-09 preparati i testi in `docs/correzioni_ST.TEC.068.md` §7: carico di ramo limitato dalla coppia del freno (ΔT = 6417 N con Cp = 654 Nm, caso peggiore discesa con 275 kg, equivalente a 19,7 m/s²: Tstop 7,6 ms, Sstop 0,57 mm; il modello rigido darebbe 18,5 m/s² > g); verifiche a valle con 6417 N: dente 8,8, rottura 4,8, giunzione 5,1, M12 8,4, M10 del contrappeso 5,8 (non 50,9); carico radiale dei rinvii 2·T·sin(θ/2) (6006: s0 da 1,29 con θ = 180° a 1,83 con θ = 90°, in attesa degli angoli); dente nominale per cinghia 2,4 (12 denti) o 4,2 (21 denti); giunzione 7 × 4700 = 32.900 N (refuso «9»), carico d'esercizio da chiedere a Megadyne (con 76 N/cm e 7 denti sarebbe SF 1,25). Restano i refusi del punto 8.
 
 ### DOC-23 · Manuale di manutenzione IM.TEC.159: lubrificazione e parti di usura in contrasto con «zero manutenzione»
 **Gravità:** Media · **Stato:** Da verificare · **Fonte:** IM.TEC.159.IT rev.0 (06.2026), §10.06 e clausola di garanzia; richiesta dell'utente del 2026-11-08
@@ -862,6 +864,15 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Problema:** i manuali prevedono prove con la cabina in movimento (controllo semestrale del tecnico, controlli periodici a carico dell'utente, anche della discesa di emergenza). Se ogni prova o emergenza fa intervenire i freni sull'albero in movimento, il numero in 5 anni può superare 60 (dedotto, da verificare). Sensibilità bassa: i coefficienti statici non dipendono dal numero di eventi e la fatica degli ingranaggi ha margine (1E6 h).
 - **Proposta:** contare gli interventi attesi (emergenze, prove, mancanza di rete) e, se superano 60, far confermare l'esito ad Amer.
 - **Chiusura:** conteggio scritto nella relazione e confermato dal costruttore.
+- **Storia:** 2026-11-09 aperta.
+  2026-11-09 collegamento con DOC-30: il rapporto Megadyne RI 007-26 ammette al massimo 50 eventi di emergenza nella vita della cinghia, contro 60 frenature dinamiche in 5 anni di Amer e le prove periodiche dei manuali: la cinghia (sostituzione ogni 3 anni?) può superare il limite (dedotto).
+
+### DOC-30 · Cinghie: deformazione plastica in emergenza con margine 1,26 sul valore medio e limite di 50 eventi di emergenza
+**Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** ST.TEC.068 §5, calcolo Megadyne MFC 20260211-1 Rev0 (13/02/2026), rapporto Megadyne RI 007-26 (23/02/2026)
+- **Dove:** §5 (verifica «max carico di trazione», solo a 2134 N) e sezione dati della cinghia («max 50 volte nella vita cinghia»).
+- **Problema:** il carico di deformazione plastica di 8075 N è un valore medio (MFC) e non è confrontato con il carico di emergenza: con ΔT = 6417 N il rapporto è 1,26 (il calcolo Megadyne dà 1,6 con 13,7 m/s²). Il rapporto RI 007-26 limita a 50 eventi di emergenza la vita del dente; non è documentato che le prove periodiche e le emergenze reali rimangano sotto questo numero.
+- **Proposta:** chiedere a Megadyne il valore minimo del carico di plasticizzazione e il significato del limite di 50 eventi; scrivere nella relazione il controllo della cinghia dopo ogni intervento in emergenza; contare gli eventi attesi (DOC-29).
+- **Chiusura:** dati Megadyne e conteggio degli eventi scritti nella relazione.
 - **Storia:** 2026-11-09 aperta.
 
 ---
@@ -1013,6 +1024,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-09 | DOC-19 chiarita: verifica del coperchio eseguita dal fornitore, da citare nella relazione; gravità Bassa. |
 | 2026-11-09 | DOC-20: valori corretti dei carichi su guide e trave (4a, 4b chiusi); resta il momento di coppia sulla trave (4c). |
 | 2026-11-09 | DOC-20 chiarita: trave verificata a flessione con la coppia (coefficiente 1,7), corretto il limite del DC01 (140 MPa). |
+| 2026-11-09 | DOC-22: testi del metodo di frenata, rinvii, dente nominale e giunzione; aggiunta DOC-30 (deformazione plastica e limite di 50 eventi). Totale 101 voci. |
 | 2026-11-09 | DOC-15: massa lineare della cinghia 0,33 kg/m (3,3 è un refuso), masse totali 50/35 kg da ricalcolare, Tab.1 con corsa massima 4500 mm. |
 | 2026-11-09 | DOC-28: confermati mozzo C45 e prove di validazione eseguite (verbali da citare). |
 | 2026-11-09 | Letti rapporto e disegno Amer del motoriduttore: DOC-21 aggiornata (origine delle coppie, potenza da confermare, gravità Bassa), aggiunte DOC-28 e DOC-29, FW-30 aggiornata. Totale 100 voci. |

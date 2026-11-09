@@ -218,3 +218,67 @@ La Tab.1 dichiara «Corsa 3000 mm (corsa massima = 4500 mm)» e «tutti i parame
 > **TM** Corsa massima verificata: 4500 mm (la macchina di riferimento VR260038 ha corsa 3000 mm; le verifiche delle guide, delle cinghie e dei rinvii sono eseguite con la corsa massima).
 
 Il calcolo MFC 20260211-1 di Megadyne non dipende dalla corsa. Le verifiche che ne dipendono sono: masse e instabilità delle guide, lunghezza e massa delle cinghie, velocità e tempi di corsa.
+
+## 7. Metodo di calcolo: frenata di emergenza, rinvii, dente nominale, giunzione (DOC-22, DOC-30)
+
+### 7a. §5 Frenata di emergenza: carico limitato dalla coppia del freno
+
+Il §5 ricava Amax = −14,5 m/s² da un modello rigido con entrambi i rami in tensione. Con Cp = 654 Nm (DOC-18) il modello darebbe 18,5 m/s², cioè più di g: in quelle condizioni il ramo meno carico si allenta (la cinghia non può spingere), quindi il modello non è coerente. Quello che conta per le verifiche non è l'accelerazione ma il carico massimo sul ramo, che è limitato dalla coppia del freno.
+
+Testo proposto:
+
+> In frenata di emergenza il carico massimo su ogni cinghia è limitato dalla coppia del freno: ΔT = 0,5 · Cp / Rp = 0,5 · 654 / 0,051 = **6417 N**. Il caso peggiore è la discesa con Qwl = 275 kg: il ramo contrappeso si allenta e il ramo cabina porta tutto il carico, T = 217,5 · (g + a) = 6417 N, cioè a = 19,7 m/s² (circa 2 g) come decelerazione equivalente. Il valore è un limite superiore di un modello rigido: non tiene conto dell'inerzia del rotore (riflessa sulla puleggia, molto grande per il rapporto 25,3:1) né dell'elasticità della cinghia. Tempo e spazio di arresto: Tstop = V / a = 0,15 / 19,7 = 7,6 ms; Sstop = V² / (2a) = 0,57 mm.
+
+Con ΔT = 6417 N le verifiche a valle diventano (SF = capacità / 6417 N):
+
+| Verifica | Capacità | SF |
+|---|---|---|
+| Strappo dente, emergenza | 56.400 N | **8,8** |
+| Rottura cinghia | 30.685 N (MFC) | **4,8** |
+| Deformazione plastica (nuova, vedi 7b) | 8075 N (valore medio, MFC) | **1,26** |
+| Giunzione a piastra (7 denti) | 32.900 N | **5,1** |
+| Vite M12 attacco cabina | — | **8,4** |
+| Vite M10 attacco contrappeso | σ = 6417 / 58 = 111 MPa contro Re 640 | **5,8** (non 50,9: il §11 usa solo 729 N con a = 14,5 m/s²) |
+
+Il refuso della formula di Sstop e le altre formule del §5 vanno nel punto 8.
+
+### 7b. §5 Deformazione plastica in emergenza (nuova verifica, DOC-30)
+
+Il §5 confronta Tmax = 8075 N (carico di deformazione plastica) solo con il carico nominale 2134 N (SF 3,8). Il calcolo Megadyne MFC 20260211-1 riporta 8075 N come valore **medio** e, in emergenza con 13,7 m/s², dà SF a deformazione 1,6 (5109 N) e SF dente 0,9 sulla capacità continuativa. Con il carico di freno corretto, 6417 N, il rapporto è 1,26. Una deformazione plastica dopo una frenata di emergenza significherebbe allungamento permanente della cinghia.
+
+Testo proposto:
+
+> In frenata di emergenza il carico sulla cinghia (6417 N) è 1,26 volte inferiore al carico di deformazione plastica medio (8075 N): non si prevedono deformazioni permanenti, ma il margine è ridotto. Dopo ogni intervento dei freni in emergenza si controlla la tensione e l'allungamento delle cinghie.
+
+Da chiedere a Megadyne: valore minimo (non medio) del carico di deformazione plastica della 50 RPP8, e numero di eventi di emergenza ammessi (il rapporto RI 007-26 indica «max 50 volte nella vita della cinghia»; vedi DOC-29).
+
+### 7c. §10 Carico radiale di pulegge e rinvii
+
+Il §10 usa Fr = ΔT = 0,5 · Cp / Rp = 5431 N (6417 N con Cp = 654 Nm) come carico radiale e lo divide per i due cuscinetti. È corretto solo per la puleggia di trazione nel caso in cui il ramo contrappeso sia allentato, perché lì la risultante è circa uguale al ramo carico. Per i **rinvii** il carico radiale non è ΔT, che su una puleggia folle è nullo: è la somma vettoriale delle tensioni dei due rami. Con la stessa tensione T sui due rami e angolo di avvolgimento θ:
+
+> Fr = 2 · T · sin(θ / 2), con T = 6417 N nel ramo cabina in emergenza.
+
+Limite superiore (θ = 180°): Fr = 12.834 N, per cuscinetto 6417 N: 6006 s0 = 8300 / 6417 = **1,29**; con θ = 90°: Fr = 9075 N, per cuscinetto 4538 N, s0 = **1,83**. Per la puleggia di trazione: Fr = T1 + T2 con θ ≈ 190°, cioè circa 6417 N con ramo contrappeso allentato (3208 N per cuscinetto, s0 6007 = 3,2); in esercizio statico T1 + T2 = 2134 + 294 = 2428 N.
+
+Da completare con l'angolo di avvolgimento e la tensione di ogni rinvio (geometria delle pulegge di rinvio e del tratto inferiore).
+
+### 7d. §5 Strappo del dente a frenata nominale
+
+Il §5 confronta ΔTstd = 3730 N (somma delle due cinghie) con la capacità di **una** cinghia (4470 N): SF 1,2. Per cinghia il carico è 3730 / 2 = 1865 N:
+
+> SFstd = 4470 / 1865 = **2,4** con 12 denti (numero minimo in presa); con i 21 denti effettivamente in presa la capacità è 21 · 74,5 · 5 = 7823 N e SFstd = **4,2**.
+
+(Il valore 3730 N con g = 9,81 è 3741 N; differenza dello 0,3%, da uniformare.) Correggere la riga «Strappo dente (frenata nominale)» della tabella riassuntiva.
+
+### 7e. §11 Piastra di giunzione
+
+> Resistenza del dente 4700 N; numero di denti in presa nella piastra PB8M050 = 7 (minimo suggerito dal catalogo Megalinear RPP8 per il moto lineare). Carico massimo sopportabile = **7** × 4700 = 32.900 N.
+
+Il testo attuale dice «9 × 4700 = 32900 N»: 9 denti darebbero 42.300 N, il valore usato (32.900 N) corrisponde a 7 denti. Per il carico di esercizio, la piastra è verificata solo con la resistenza di emergenza del dente. Da aggiungere con i dati del fornitore: carico continuativo ammesso per la piastra (Megadyne) contro il carico di esercizio di 2134 N (Qwl) per cinghia. Con la capacità statica specifica Megadyne di 76 N/cm (380 N per dente) e 7 denti si avrebbe 2660 N: sarebbe un SF di 1,25 sul carico di esercizio, quindi il dato va chiesto al fornitore prima di scriverlo.
+
+### Dati da avere per chiudere il §7
+
+1. Angolo di avvolgimento e tensione dei rinvii (§10).
+2. Valore minimo del carico di deformazione plastica e numero di eventi di emergenza ammessi (Megadyne).
+3. Carico continuativo ammesso per la piastra PB8M050 (Megadyne).
+4. Decelerazione e spazio di arresto misurati nella prova di frenatura di emergenza (confronto con 19,7 m/s² e 0,57 mm).
