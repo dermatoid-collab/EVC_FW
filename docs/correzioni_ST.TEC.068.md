@@ -293,3 +293,62 @@ Il testo attuale dice «9 × 4700 = 32900 N»: 9 denti darebbero 42.300 N, il va
 2. Valore minimo del carico di deformazione plastica e numero di eventi di emergenza ammessi (Megadyne).
 3. Carico continuativo ammesso per la piastra PB8M050 (Megadyne).
 4. Decelerazione e spazio di arresto misurati nella prova di frenatura di emergenza (confronto con 19,7 m/s² e 0,57 mm).
+
+## 8. Refusi, formule e riferimenti (DOC-16, DOC-22)
+
+Verificati i numeri con g = 9,81 m/s². I risultati finali del §5 (SF 15,7; 10,4; 3,8; 1,4; 180 Nm) sono corretti: gli errori sono nella scrittura delle formule e nei riferimenti.
+
+### 8a. Formule da riscrivere
+
+| Dove | Testo attuale | Testo corretto |
+|---|---|---|
+| §5, spazio di arresto | «Sstop = V² / 2*Amax = 0.15 / 14.5 = 0.77 mm» | «Sstop = V² / (2·Amax) = 0,15² / (2 · 14,5) = 0,78 mm» (con i valori di 7a: 0,57 mm) |
+| §5, tempo di arresto | «Tstop = V / Amax = 0.15 / 14.5 = 0.01 s» | invariato (0,010 s); con 7a: 7,6 ms |
+| §5, stazionamento | «Cs = g * (Qsl + P − Mcwt) + Rp = 9.81 * (260 + 160 − 2*30) *0.051 = 180 Nm» | «Cs = g · (Qsl + P − 2·Mcwt) · Rp = 9,81 · (260 + 160 − 2 · 30) · 0,051 = 180 Nm» (il «+ Rp» è un «·» e Mcwt va moltiplicato per 2) |
+| §6, molle | «Carico … pre-compressione di 35 mm = 30 * 0.46 = 16.1 N» | «35 · 0,46 = 16,1 N» (30 · 0,46 = 13,8 N: il risultato 16,1 è giusto, la scrittura no) |
+| §5 e §10, simbolo Rp | «Rp = Diametro primitivo puleggia di trazione = Dp/2 = ~0.051 m» | «Rp = raggio primitivo = Dp / 2 = 101,86 / 2 = 50,9 mm ≈ 0,051 m» |
+| §11, giunzione | «9 * 4700 = 32900 N» | «7 · 4700 = 32.900 N» (9 denti darebbero 42.300 N) |
+| §10, Fr dei rinvii | Fr = ΔT = 5431 N | vedi §7c (2·T·sin(θ/2), Cp = 654 Nm) |
+
+### 8b. Tab.2 e testo del §0
+
+| Voce | Attuale | Corretto |
+|---|---|---|
+| QC (tabella) | 315 kg → 3,01 kN | **325 kg → 3,19 kN** (1,25 · 260 = 325, come nel testo e come WC = 160 + 325 = 485 kg) |
+| QWL | 275 kg → 2,67 kN | 275 kg → **2,70 kN** |
+| Q | 200 kg → 1,97 kN | 200 kg → 1,96 kN |
+| W | 360 kg → 3,54 kN | 360 kg → 3,53 kN |
+| Edificio, WD | 720 kg → 7,1 kN | 720 kg → 7,06 kN (7,1 va bene se arrotondato a una cifra) |
+
+Le altre righe (P 1,57; QSL 2,55; WC 4,76; WD guide 17,65 kN) sono corrette. Nel §0.a «250 kg/m» deve essere «250 kg/m²» (area utile 0,785 m² → 196 kg ≤ 200 kg).
+
+### 8c. Riferimenti normativi e di documento
+
+- **Edizioni della EN 81-41:** il testo usa «EN 81-41:2025» (definizioni, Tab.3, 3.25, freccia del pannello) e «EN 81-41:2024» (5.4.5, 5.4.2, F.1). Scegliere **una** edizione e riportarla in tutto il documento; i numeri di paragrafo (5.4.2.1, 5.4.5.2.5, F.1, 5.3.1.5, 3.25, Tab.3) vanno ricontrollati sull'edizione scelta. Non ho potuto verificarli perché la norma non è fra i documenti letti.
+- **Data della Rev.0:** il frontespizio dice 12/01/2026, ma il testo cita documenti successivi: calcolo Megadyne MFC 20260211-1 (13/02/2026), rapporto Megadyne RI 007-26 (23/02/2026), rapporto Amer aggiornato (03/03/2026). La Rev.1 deve portare la data di emissione e l'elenco dei documenti di riferimento con data e revisione.
+- **Redazione e approvazione:** «Redatto da: R. Mattioli, Approvato da: R. Mattioli». Per una relazione di calcolo di una macchina con paracadute è opportuno un controllo di un secondo tecnico (o di un organismo esterno) con il campo «Verificato da».
+- **Riepilogo delle verifiche:** aggiungere in fondo alla relazione la tabella dei coefficienti di sicurezza con i valori corretti dei punti 1-7 (vedi sezione seguente).
+
+### 8d. Decelerazione di arresto di emergenza (DOC-16)
+
+La relazione non discute se la decelerazione equivalente (19,7 m/s², circa 2 g, 0,57 mm di arresto in 7,6 ms) sia ammessa per le persone a bordo né da quale norma sia limitata. Non ho verificato che una norma pona un limite. Da chiedere: la misura reale nella prova di frenatura di emergenza (decelerazione e spazio di arresto) e il criterio accettato (per esempio massimo ritenuto sicuro per i passeggeri, o motivazione dell'esclusione).
+
+## Tabella riassuntiva dei coefficienti di sicurezza corretti (per la Rev.1)
+
+| Verifica | Relazione Rev.0 | Corretto |
+|---|---|---|
+| Rottura cinghia (statica) | 15,7 | 15,7 |
+| Dente, frenata di emergenza (ΔT = 6417 N, 940 N/cm) | 10,4 | **8,8** (8,5 con il minimo 910 N/cm; 7,1 con il catalogo 760) |
+| Dente, frenata nominale (per cinghia) | 1,2 | **2,4** (12 denti) o **4,2** (21 denti) |
+| Dente, statica | 2,2 | 2,2 |
+| Carico massimo di trazione (nominale) | 3,8 | 3,8 |
+| Deformazione plastica in emergenza (nuova) | — | **1,26** (valore medio) |
+| Rottura in emergenza (nuova) | — | **4,8** |
+| Stazionamento freno (un freno, con rendimento) | 1,4 | **1,3** (due freni 2,6) |
+| Ingranaggio (Lewis, 327 Nm) | 0,97 | **1,9** |
+| Giunzione a piastra | 6 | **5,1** |
+| Vite M10 contrappeso | 50,9 | **5,8** |
+| Cuscinetti rinvio 6006 (emergenza, θ = 100°) | 3,06 | **1,69** |
+| Trave superiore (flessione con coppia) | 18,5 | **1,7** |
+| Guide, Eulero caso A | 2,06 | **1,93** |
+| Paracadute, taglio barra | 3 | **1,4** e **2,1** (due piani) |
