@@ -529,6 +529,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Storia:** 2026-11-08 aperta.
   2026-11-08 ulteriori risposte dell'utente: nessun ronzio; il rumore è uno schianto all'arrivo in battuta, praticamente identico in apertura e in chiusura; ridurre le tensioni o il modo di azionamento rischia di compromettere il funzionamento. Direzione: smorzamento meccanico delle due battute (elastomero, bussole, massa mobile ridotta, supporti elastici del corpo serratura) preservando traferro, forza di attrazione e profondità di ingaggio del catenaccio; eventuale prova elettrica solo con margini misurati (tensione minima, bobina calda). Ogni modifica alla MD2 LOCK da concordare con IMQ.
   2026-11-08 risposte dell'utente: attuatore a solenoide senza molla di ritorno (le molle sono nella serratura) e rumore presente anche a banco, quindi la sorgente è interna alla serratura e non dipende dalla porta. Il pilotaggio nel firmware di UDEC.CX è riportato in FW-35.
+  2026-11-08 domanda dell'utente sull'uso di un motore al posto del solenoide, con il vincolo che a bobina diseccitata la serratura deve chiudersi da sola con le molle: valutato come possibile ma non come prima scelta. Servirebbe un meccanismo che scolleghi il motore dal catenaccio a motore spento (motore retro-azionabile o frizione), la corrente di mantenimento in sblocco sarebbe a motore bloccato, e cambierebbe il tipo certificato: nuovo esame IMQ (EN 81-20:2020 ed EN 81-50:2020, da leggere sui testi). Prima via: smorzamento meccanico delle battute.
 
 ---
 
