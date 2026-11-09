@@ -729,6 +729,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Proposta:** confermare la massa lineare dalla scheda tecnica Megadyne; correggere il valore errato e rivedere la nota di esclusione e le verifiche che ne dipendono; esplicitare quali verifiche dipendono dalla corsa e per quali si è assunta la corsa massima.
 - **Chiusura:** valori coerenti in tutto il documento e verifiche riviste se serve.
 - **Storia:** 2026-11-08 aperta.
+  2026-11-09 verifica geometrica (dedotta; la scheda Megadyne non è nei documenti letti né sul web): una cinghia da 50 mm di sezione circa 275 mm² pesa circa 0,33 kg/m; 3,3 kg/m richiederebbe una sezione dieci volte maggiore. Il valore giusto è quindi 0,33 kg/m (specifica e nota di esclusione), e «3.3 kg/m, 6 × 3,3 = 20 kg» è un refuso (2 kg). Le masse totali di 50 e 35 kg negli elenchi non sono coerenti con 0,33 kg/m (corrisponderebbero a 150 e 106 m di cinghia): da ricalcolare dallo sviluppo reale; i carichi sotto le guide con 35 kg restano a favore di sicurezza. Tab.1: le verifiche usano la corsa massima 4500 mm, quindi la tabella deve dichiararla. Testi in `docs/correzioni_ST.TEC.068.md` §6. Da confermare: scheda Megadyne (o pesata di uno spezzone) e sviluppo reale delle cinghie. Il progettista aveva chiesto di partire da 3,3 kg/m; il controllo geometrico lo smentisce.
 
 ### DOC-16 · ST.TEC.068: refusi nelle formule e decelerazione di arresto di emergenza da verificare
 **Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** ST.TEC.068 Rev.0 (pagina 26-27), revisione del 2026-11-08
@@ -1010,5 +1011,6 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-09 | DOC-19 chiarita: verifica del coperchio eseguita dal fornitore, da citare nella relazione; gravità Bassa. |
 | 2026-11-09 | DOC-20: valori corretti dei carichi su guide e trave (4a, 4b chiusi); resta il momento di coppia sulla trave (4c). |
 | 2026-11-09 | DOC-20 chiarita: trave verificata a flessione con la coppia (coefficiente 1,7), corretto il limite del DC01 (140 MPa). |
+| 2026-11-09 | DOC-15: massa lineare della cinghia 0,33 kg/m (3,3 è un refuso), masse totali 50/35 kg da ricalcolare, Tab.1 con corsa massima 4500 mm. |
 | 2026-11-09 | DOC-28: confermati mozzo C45 e prove di validazione eseguite (verbali da citare). |
 | 2026-11-09 | Letti rapporto e disegno Amer del motoriduttore: DOC-21 aggiornata (origine delle coppie, potenza da confermare, gravità Bassa), aggiunte DOC-28 e DOC-29, FW-30 aggiornata. Totale 100 voci. |

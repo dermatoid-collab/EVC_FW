@@ -184,3 +184,32 @@ Il rapporto Amer ipotizza 60 frenature dinamiche in 5 anni (1 al mese). I manual
 3. Scelta 50/50 o 60/40 per la ripartizione del carico sugli ingranaggi (§7).
 4. Dal costruttore del motoriduttore: servizio nominale dei 600 W, curva a bus ridotto, derivazione di 260/147/195 Nm (§8).
 5. Numero e data dei verbali delle tre prove di validazione, corrente misurata a 275 kg e valori a bus ridotto; conteggio delle frenature dinamiche (§8). Mozzo in C45 e linguetta 10×8×35 confermati dal progettista il 2026-11-09. Linguetta in C45 (confermato).
+
+## 6. Cinghie: massa lineare e corsa di riferimento (DOC-15)
+
+Scheda tecnica Megadyne con la massa lineare non trovata: né il calcolo MFC 20260211-1 né il rapporto RI 007-26 la riportano, e la ricerca sul web non ha dato un valore per la Megalinear 50 RPP8 con anima in acciaio. Il controllo che segue è quindi geometrico (dedotto), da confermare con la scheda Megadyne o pesando uno spezzone.
+
+### 6a. Massa lineare: il valore plausibile è 0,33 kg/m
+
+Sezione di una cinghia 50 mm con passo 8 mm: circa 50 × 5,5 mm = 275 mm². Con poliuretano a 1,2 g/cm³ (i cavi d'acciaio sono pochi e piccoli) si ottengono circa **0,33 kg/m**. Per avere 3,3 kg/m servirebbe una sezione di 2750 mm², dieci volte più grande: impossibile per una cinghia da 50 mm.
+
+La relazione ha quindi un solo valore sbagliato:
+
+- «Massa = 0.33 kg/m» e la nota di esclusione («μ = 0,33 kg/m, L ≤ 10 m ⇒ m_b ≤ 3,3 kg per linea», meno dell'1,5% di circa 250 kg): coerenti tra loro.
+- «Massa lineare (Megalinear RPP8 50) = 3.3 kg/m» e «6 × 3,3 = ~20 kg» (verifica dell'allentamento delle cinghie): refuso, da correggere in **0,33 kg/m** e **6 × 0,33 = ~2 kg**.
+
+Testo proposto per quel passaggio:
+
+> Massa lineare (Megalinear RPP8 50, dato Megadyne) = 0,33 kg/m. Massa cinghia libera max = 6 × 0,33 ≈ 2 kg.
+
+### 6b. Massa totale delle cinghie negli elenchi (50 kg e 35 kg)
+
+Con 0,33 kg/m, 35 kg corrisponderebbero a circa 106 m di cinghia, e 50 kg a circa 150 m. Le masse degli elenchi (§1.1 «50 kg», verifica guide «35 kg») non sono coerenti con il valore corretto. La massa totale va ricalcolata dallo sviluppo reale delle due cinghie (somma dei rami fra capocinghia, pulegge e contrappesi, compreso il gruppo di attacco da 1 kg) e riportata in un solo punto. Con 0,33 kg/m è dell'ordine di pochi chilogrammi. Conseguenza sulla relazione, se confermato: i carichi sotto le guide (DOC-20, §4a e 4b) usano 35 kg e restano **a favore di sicurezza**; ricalcolarli con la massa reale abbassa il carico di circa 13 kg per guida. Lo squilibrio di massa fra ramo cabina e ramo contrappeso lungo la corsa è di pochi chilogrammi: trascurabile.
+
+### 6c. Tab.1: corsa di riferimento
+
+La Tab.1 dichiara «Corsa 3000 mm (corsa massima = 4500 mm)» e «tutti i parametri sono quelli massimi accettabili». I calcoli usano invece la corsa massima: guide 60 + 60 kg «corsa max 4,5 m», lunghezza di libera inflessione di 7 m, cinghia libera massima 6 m. Testo proposto:
+
+> **TM** Corsa massima verificata: 4500 mm (la macchina di riferimento VR260038 ha corsa 3000 mm; le verifiche delle guide, delle cinghie e dei rinvii sono eseguite con la corsa massima).
+
+Il calcolo MFC 20260211-1 di Megadyne non dipende dalla corsa. Le verifiche che ne dipendono sono: masse e instabilità delle guide, lunghezza e massa delle cinghie, velocità e tempi di corsa.
