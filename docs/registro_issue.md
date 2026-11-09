@@ -742,6 +742,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Proposta:** chiarire materiale e sezione della guida di ingaggio e rifare il capitolo; aggiungere la flessione del perno; allineare alla prova di tipo del paracadute.
 - **Chiusura:** verifica ricalcolata e coerente con la prova di tipo.
 - **Storia:** 2026-11-08 aperta.
+  2026-11-09 il progettista precisa che il paracadute agisce su una barra asolata e non direttamente sulla guida. Disegni letti: F500.05.5001 rev. B (barra: lamiera DD11 EN 10111, 4 mm, 600 × 36,5 mm, 10 finestre 36 × 13 mm allargate da 12 a 13 mm, feritoie 30,2 × 4,2 mm, ligamento sotto la finestra 6 mm, massa 0,50 kg, serie EasyPlat) e F500.04.0001 rev. A (assieme saldato barra F500.05.5001 più guida F500.05.5002, cordoni z2 10-60, 0,75 kg). Correzione a quanto scritto sopra: l'ingaggio non è su alluminio ma su acciaio DD11, quindi il confronto con 81 MPa era sbagliato; il limite plausibile è circa 98 MPa a taglio (ReH min circa 170 MPa, da certificato). Con b = 4 mm e h = 5,3 + 13 + 6 = 24,3 mm e T = 8829 N: 138 MPa. Mancano: geometria del perno F500.05.6001 a contatto con la finestra, numero di finestre e cordoni che portano il carico, fissaggio della guida F500.05.5002 al profilo, eventuale rapporto di prova del paracadute con forza e deformazione misurate.
 
 ### DOC-18 · ST.TEC.068: coppia frenante di emergenza 554 Nm contro 654 Nm e verifiche a valle (ingranaggio, linguetta)
 **Gravità:** Alta · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
@@ -973,3 +974,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-09 | Letti i disegni della serratura MD2: aggiornata HW-10, aggiunta DOC-27. Totale 97 voci. |
 | 2026-11-09 | Risposta del tecnico del firmware ai quesiti su FW-33 e FW-34: FW-33 chiusa come Chiarita (proposta non fattibile), FW-34 corretta (buzzer già usato, rete dagli ausiliari), DOC-12 e DOC-11 aggiornate, aggiunta PRV-11. Totale 98 voci. |
 | 2026-11-09 | PRV-11: aggiunto il punto sulla fine carica (errore, posizione della cabina, riavvio automatico del VFD). |
+| 2026-11-09 | DOC-17: letti i disegni della barra paracadute; corretta l'ipotesi del materiale di ingaggio (acciaio DD11, non alluminio). |
