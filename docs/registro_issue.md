@@ -61,6 +61,7 @@
 | FW-33 | Carica residua prima della corsa: la proposta a tre livelli non è fattibile con il metodo di carica attuale | Bassa | Chiarita | Firmware |
 | FW-34 | Avviso sonoro in cabina quando la macchina viaggia senza alimentazione esterna | Bassa | Da decidere | Firmware |
 | FW-35 | Pilotaggio serratura (UDEC.CX): PWM a circa 1,2 kHz udibile, eccitazione a gradino al 100% e diseccitazione istantanea | Bassa | Da verificare | Firmware |
+| FW-36 | Criterio di partenza basato solo sulla tensione a riposo e sulla caduta della corsa precedente | Bassa | Da decidere | Firmware |
 | HW-01 | Spina X8: esclude quasi tutta la catena con un solo ingresso di rilevamento | Media | Da decidere | Hardware |
 | HW-02 | Bypass trap/tray comandati solo via software | Media | Chiarita | Hardware |
 | HW-03 | Relè K1…K4 non dichiarati a contatti guidati sugli schemi | Media | Da verificare | Hardware |
@@ -445,6 +446,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Chiusura:** segnale definito, implementato e provato; descritto nel manuale d'uso.
 - **Storia:** 2026-11-08 aperta.
   2026-11-09 risposta del tecnico: «può avere senso, è un perfezionamento»; per specifica la macchina deve fare 10 corse senza alimentazione (verificato, circa una giornata intera di prove prima di andare in errore). Correzioni alle mie ipotesi: il caricabatteria a rete mancante si spegne del tutto e `AC_FAIL` dura troppo poco per essere rilevato; la rete assente si riconosce dalla presenza degli ausiliari (punto del codice da indicare); il bit `hl_buz` è già usato dal firmware: `overload_lamp()` in `udec_c_inl.h` lo attiva insieme alla lampada di sovraccarico (mia affermazione «mai usato» sbagliata, la ricerca non aveva incluso gli header). Basta quindi comandare `hl_buz` con uno schema a impulsi durante la marcia senza rete.
+  2026-11-09 dal tecnico: il rilevamento della mancanza rete richiede circa 100-200 ms (non misurato con precisione e dipendente dal consumo della macchina): il ritardo di conferma dell'avviso va scelto sopra questo valore.
 
 ### FW-35 · Pilotaggio serratura (UDEC.CX): PWM a circa 1,2 kHz udibile, eccitazione a gradino al 100% e diseccitazione istantanea
 **Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** lettura di `UDEC.CX/CubeMX/Core/Src/application.c` e `main.c`; segnalazione di rumorosità dell'utente (HW-10)
@@ -455,6 +457,14 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Chiusura:** misure di rumore prima e dopo, mantenimento verificato, nessuna modifica alla funzione di blocco.
 - **Storia:** 2026-11-08 aperta.
   2026-11-08 l'utente esclude il ronzio (il rumore è uno schianto in battuta, identico in apertura e in chiusura) e segnala che ridurre tensioni o modo di azionamento rischia di non far funzionare la serratura: gravità abbassata a Bassa; la causa principale è meccanica (HW-10).
+
+### FW-36 · Criterio di partenza basato solo sulla tensione a riposo e sulla caduta della corsa precedente
+**Gravità:** Bassa · **Stato:** Da decidere · **Fonte:** risposta del tecnico del firmware del 2026-11-09 a FW-33; lettura di `vfd.c` e `battery.c`
+- **Dove:** `vfd.c:152-165` (`vfd_is_ready`, DC link > 38 V), `battery.c` (flag `low_battery`).
+- **Problema:** il tecnico respinge i livelli basati sul contatore di carica, che non è affidabile. Non ha commentato la parte basata solo sulla tensione della mia proposta (non partire se la tensione a riposo meno la caduta massima della corsa precedente scende sotto la soglia del VFD più un margine). Questo criterio non usa mAh e potrebbe ridurre le fermate a metà corsa; per il tecnico la caduta sotto carico è già il parametro con cui si giudica una batteria (stima 6-7 V). Non è detto che sia compatibile con il requisito «anche a batteria scarica la corsa si completa».
+- **Proposta (non applicata):** chiedere al tecnico se il criterio basato solo sulla tensione è utilizzabile, con quale margine e con quale comportamento al piano (per esempio fuori servizio con riapertura porte, come con `low_battery`). Da decidere dopo i dati di PRV-11.
+- **Chiusura:** decisione presa con i dati misurati e, se approvata, implementata e provata.
+- **Storia:** 2026-11-09 aperta.
 
 ### HW-01 · Spina X8: esclude quasi tutta la catena con un solo ingresso di rilevamento
 **Gravità:** Media · **Stato:** Da decidere · **Fonte:** analisi §3.3.1; CHI-04
@@ -944,6 +954,8 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Punto da chiarire sulla fine carica:** nelle prove del tecnico la macchina ha fatto circa una giornata di corse «prima di andare in errore»: serve sapere quale errore, in che condizione di tensione e dove si trovava la cabina (al piano o fra i piani). Nel codice un fault di sottotensione del VFD è uno «pseudo-fault» (`vfd_in_pseudofault`): non fa scattare un trip, il VFD si ferma da solo, il firmware lo riavvia (`vfd_reboot`) e rientra in DRIVE quando `vfd_is_ready` torna vero. Una sosta a metà corsa con ripartenza automatica quando la tensione recupera è quindi possibile in teoria; con batteria molto scarica potrebbe non recuperare. Non dimostrato né escluso: da provare portando la batteria a esaurimento con la corsa peggiore.
 - **Perché:** definisce il margine reale fra la tensione di lavoro e la soglia di partenza di 38 V, e il criterio di sostituzione delle batterie.
 - **Storia:** 2026-11-09 aperta.
+  2026-11-09 riletta per intero la risposta del tecnico. Dati nuovi: per specifica la macchina deve fare 10 corse senza alimentazione, verificate una sola volta con i valori nominali (circa una giornata di prove prima dell'errore); rilevamento mancanza rete circa 100-200 ms, non misurato con precisione (si riconosce dalla presenza degli ausiliari); ricarica rapida iniziale fino a un valore «utilizzabile» in circa 10-15 minuti (non misurati), carica completa teorica 4-8 ore; caduta da 48 V a vuoto di circa 6-7 V a pieno carico. Dedotto da me: con 38 V di soglia e 6-7 V di caduta, una batteria con tensione a riposo sotto circa 44-45 V può portare il bus sotto 38 V durante la corsa (da provare).
+  **Punto «blocco a metà corsa», cosa resta aperto:** (1) quale errore è comparso alla fine della giornata di prove e dove si trovava la cabina; (2) il livello di sottotensione del VFD (la domanda 1 non ha avuto un valore: risposta «dipende da cablaggio e salute della batteria»); (3) se dopo l'arresto per sottotensione la cabina riparte da sola quando il bus recupera (`vfd_reboot`, ritorno in DRIVE) o resta ferma, e in quali condizioni; (4) misura della caduta di bus nella corsa peggiore con batteria quasi scarica e invecchiata (non ancora fatta); (5) che cosa prevede la procedura di soccorso se la cabina resta fra i piani (non verificato), e se l'analisi dei rischi descrive il comportamento a batteria scarica; (6) il caso più probabile resta una fermata temporanea, non provata né esclusa.
 
 ---
 
@@ -1034,6 +1046,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-09 | DOC-20 chiarita: trave verificata a flessione con la coppia (coefficiente 1,7), corretto il limite del DC01 (140 MPa). |
 | 2026-11-09 | DOC-22: testi del metodo di frenata, rinvii, dente nominale e giunzione; aggiunta DOC-30 (deformazione plastica e limite di 50 eventi). Totale 101 voci. |
 | 2026-11-09 | DOC-30: riletto il rapporto Megadyne RI 007-26: non contiene il limite di 50 eventi attribuitogli dalla relazione; media 940, minimo 910, catalogo 760 N/cm. |
+| 2026-11-09 | PRV-11 e FW-34 aggiornate con i dati della risposta del tecnico e con l'elenco di ciò che resta aperto sul blocco a metà corsa; aggiunta FW-36. Totale 102 voci. |
 | 2026-11-09 | Chiuso il lavoro su ST.TEC.068: DOC-15, DOC-16, DOC-22 Chiarite; DOC-21, 28, 29, 30 restano aperte per dati esterni. |
 | 2026-11-09 | DOC-16 e DOC-22 In corso: testi corretti dei refusi, di Tab.2 e dei riferimenti (§8 di `correzioni_ST.TEC.068.md`) e tabella riassuntiva dei coefficienti. |
 | 2026-11-09 | DOC-15: massa lineare della cinghia 0,33 kg/m (3,3 è un refuso), masse totali 50/35 kg da ricalcolare, Tab.1 con corsa massima 4500 mm. |
