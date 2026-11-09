@@ -130,8 +130,8 @@ T(cx, cy - 6, 'A riposo', 21, 'middle', 'bold', GRN)
 T(cx, cy + 20, 'il quadro conta', 14, 'middle', 'normal', SUB)
 T(cx, cy + 38, 'la carica usata', 14, 'middle', 'normal', SUB)
 sats = [(180, 560, 'In uso', 'scarica: va a batteria,\ncaricabatteria staccato', ORA, '#fff6ee'),
-        (880, 540, 'Rabbocco', '54 V · circa 3 A\ncirca 15 min (stima)', BLU, '#eef5ff'),
-        (700, 805, 'Carica completa', '58 V fino a corrente < 1,2 A\n1 ora o più (stima)', BLU, '#eef5ff')]
+        (880, 540, 'Rabbocco', '54 V · circa 3 A\n10-15 min (stima)', BLU, '#eef5ff'),
+        (700, 805, 'Carica completa', '58 V fino a corrente < 1,2 A\n4-8 ore (stima)', BLU, '#eef5ff')]
 for sx, sy, t, d, c, f in sats:
     R(sx - 140, sy - 52, 280, 104, f, c, 3)
     T(sx, sy - 14, t, 21, 'middle', 'bold', c)
@@ -203,9 +203,9 @@ o.append(f'<rect x="1260" y="1030" width="400" height="70" rx="10" fill="#fff" s
 o.append(f'<rect x="1660" y="1051" width="14" height="28" rx="3" fill="{GRN}"/>')
 fw = 392 * worst10 / BAT_WH
 o.append(f'<rect x="1264" y="1034" width="{fw:.0f}" height="62" rx="6" fill="{ORA}"/>')
-T(1260 + 200, 1070, '576 Wh = 12 Ah × 48 V', 17, 'middle', 'bold', TXT)
+T(1260 + 200, 1070, '576 Wh nominali (12 Ah × 48 V)', 17, 'middle', 'bold', TXT)
 T(1700, 1062, f'{it(worst10 / BAT_WH * 100, 0)}%', 36, 'start', 'bold', ORA)
-T(1700, 1086, 'ESEMPIO', 13, 'start', 'bold', ORA)
+T(1700, 1086, 'ESEMPIO (sul nominale)', 13, 'start', 'bold', ORA)
 T(1250, 1128, f'Caso peggiore (4,5 m, 200 kg): circa {it(worst10, 0)} Wh per 10 corse (rendimento ipotizzato).', 15, 'start', 'normal', TXT)
 T(1250, 1152, 'A carica insufficiente: fuori servizio, solo fine corsa e apertura porta.', 15, 'start', 'normal', TXT)
 T(1250, 1176, 'Luce di emergenza: almeno 5 lux per 1 ora (analisi dei rischi).', 15, 'start', 'normal', TXT)

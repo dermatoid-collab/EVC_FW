@@ -58,7 +58,7 @@
 | FW-30 | Encoder motore SIN/COS (7EBLR002) non letto dal firmware | Media | Da decidere | Firmware |
 | FW-31 | Rampe del firmware diverse dall'ipotesi della relazione di calcolo (0,125 m/s²) | Media | Da verificare | Firmware |
 | FW-32 | Commento di `battery_charge_wait_discharge` non coerente con le costanti | Bassa | Aperta | Firmware |
-| FW-33 | Nessun controllo che la carica residua basti per completare la corsa; soglia di avvio e di fuori servizio vicine | Media | Da decidere | Firmware |
+| FW-33 | Carica residua prima della corsa: la proposta a tre livelli non è fattibile con il metodo di carica attuale | Bassa | Chiarita | Firmware |
 | FW-34 | Avviso sonoro in cabina quando la macchina viaggia senza alimentazione esterna | Bassa | Da decidere | Firmware |
 | FW-35 | Pilotaggio serratura (UDEC.CX): PWM a circa 1,2 kHz udibile, eccitazione a gradino al 100% e diseccitazione istantanea | Bassa | Da verificare | Firmware |
 | HW-01 | Spina X8: esclude quasi tutta la catena con un solo ingresso di rilevamento | Media | Da decidere | Hardware |
@@ -115,6 +115,7 @@
 | PRV-08 | Arresto per perdita del segnale del radiocomando oltre 500 ms | Media | Da verificare | Prove |
 | PRV-09 | Verifica «categoria 2» dei bypass trap e tray a ogni cambio di direzione | Media | Da verificare | Prove |
 | PRV-10 | Consumo in stand-by di 1 W dichiarato | Bassa | Da verificare | Prove |
+| PRV-11 | Caduta di tensione del bus in corsa peggiore con batteria scarica e invecchiata | Media | Da verificare | Prove |
 | CHI-01 | Velocità in bypass scritta come 5 rpm nell'analisi | Media | Risolta | Chiarimenti |
 | CHI-02 | Nomi dei trip S2/S3 contro commenti di `read_inputs` | Bassa | Chiarita | Chiarimenti |
 | CHI-03 | Rete S5 dello schema e ingresso «S8» del firmware | Bassa | Chiarita | Chiarimenti |
@@ -415,8 +416,8 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Chiusura:** commento e costante coerenti.
 - **Storia:** 2026-11-07 aperta.
 
-### FW-33 · Nessun controllo che la carica residua basti per completare la corsa; soglia di avvio e di fuori servizio vicine
-**Gravità:** Media · **Stato:** Da decidere · **Fonte:** lettura di `vfd.c`, `pmode.c`, `battery.c`, `run_mode.c`; domanda dell'utente del 2026-11-08
+### FW-33 · Carica residua prima della corsa: la proposta a tre livelli non è fattibile con il metodo di carica attuale
+**Gravità:** Bassa · **Stato:** Chiarita · **Fonte:** lettura di `vfd.c`, `pmode.c`, `battery.c`, `run_mode.c`; risposta del tecnico del firmware del 2026-11-09
 - **Dove:** `vfd.c:152-165` `vfd_is_ready` (DC link > `VFD_DCLINK_MIN` = 38 V), `pmode.c:121-135` (in DRIVE, se il VFD non è pronto torna a TO_DRIVE), `battery.c:256-262` (flag `low_battery` a 38,4 V sotto carico), `run_mode.c:524` (fuori servizio solo se la macchina è al piano).
 - **Verificato:** a batteria scarica la macchina non entra in movimento (DC link ≤ 38 V) e, se `low_battery` è attivo al piano, resta fuori servizio con la sola riapertura porta.
 - **Problema (dedotto, da verificare con prova):** la decisione di partire guarda solo la tensione istantanea, non la carica residua rispetto al tratto da percorrere (il contatore di carica serve solo alla ricarica). Una corsa iniziata con tensione appena sopra 38 V può, per la caduta sotto carico, far uscire il sistema da DRIVE a metà corsa e fermare la cabina fra i piani; la ripartenza dipende dal recupero della tensione a riposo. Le soglie di avvio (38 V) e di fuori servizio (38,4 V) sono quasi coincidenti. Non verificato il livello di sottotensione del VFD.
@@ -430,6 +431,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
   - *Richiede:* aggiornare l'analisi dei rischi (comportamento a batteria scarica) e provare: corsa peggiore a batteria quasi scarica, caduta di tensione e punto di intervento del VFD, ripristino dopo la ricarica.
 - **Chiusura:** soglie misurate, logica approvata, implementata e provata a batteria scarica; comportamento documentato nel fascicolo.
 - **Storia:** 2026-11-08 aperta. 2026-11-08 proposta di soluzione a tre livelli su richiesta dell'utente; in attesa di approvazione.
+  2026-11-09 risposta del tecnico (L. Marcantonio): la proposta a tre livelli è **non fattibile** perché (1) la carica necessaria dipende anche dal carico di cabina; (2) una batteria al piombo si considera scarica sulla tensione, non sui mAh stimati; (3) al collegamento della batteria il power meter indica «carica completa» anche se è vuota, e c'è una deriva del 10% o più a ogni ciclo di rabbocco; (4) `battery.charge` non è significativo se il caricabatteria non è calibrato. Il metodo di carica oggi parte sul livello di carica e termina sulla corrente assorbita, con carica completa rapida solo ogni 10 scariche maggiori del 10% e terminata poco sopra il nominale (metodo a oscillazione, lo stesso degli UPS OVA/Aros). Il requisito funzionale è che anche a batteria scarica la corsa si completi; i 38 V sono la soglia assoluta di partenza per non degradare la batteria. Correzioni alle mie deduzioni: lo stato `TO_DRIVE` è lo stato di riabilitazione del VFD e serve a recuperare da altre anomalie di `vfd_is_ready` (fra cui il fault 8), non a fermare la cabina fra i piani; 38 V (tensione vista dal VFD, troncata a intero) e 38,4 V (power meter) sono misure diverse con tolleranze grandi, quindi non «quasi coincidenti». Nessuna modifica proposta.
 
 ### FW-34 · Avviso sonoro in cabina quando la macchina viaggia senza alimentazione esterna
 **Gravità:** Bassa · **Stato:** Da decidere · **Fonte:** richiesta dell'utente del 2026-11-08; lettura di `npb.c`, `npb.h`, `udec_c.h`
@@ -438,6 +440,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Proposta (non applicata):** definire «rete assente» come `npb.online` falso o `AC_FAIL` attivo per più di alcuni secondi (con ritardo di conferma per evitare falsi allarmi); durante la marcia, e con schema diverso nello stato di riserva di FW-33, comandare un bip intermittente. Sul mezzo da usare: verificare nel firmware di UDEC.C cosa fa il bit `hl_buz` e se il buzzer è montato, oppure usare l'audio di UDEC.CX; da verificare anche se il caricabatteria risponde ancora o segnala `AC_FAIL` quando manca la rete. Prove: staccare la rete e misurare il tempo di rilevamento; verifica acustica in cabina.
 - **Chiusura:** segnale definito, implementato e provato; descritto nel manuale d'uso.
 - **Storia:** 2026-11-08 aperta.
+  2026-11-09 risposta del tecnico: «può avere senso, è un perfezionamento»; per specifica la macchina deve fare 10 corse senza alimentazione (verificato, circa una giornata intera di prove prima di andare in errore). Correzioni alle mie ipotesi: il caricabatteria a rete mancante si spegne del tutto e `AC_FAIL` dura troppo poco per essere rilevato; la rete assente si riconosce dalla presenza degli ausiliari (punto del codice da indicare); il bit `hl_buz` è già usato dal firmware: `overload_lamp()` in `udec_c_inl.h` lo attiva insieme alla lampada di sovraccarico (mia affermazione «mai usato» sbagliata, la ricerca non aveva incluso gli header). Basta quindi comandare `hl_buz` con uno schema a impulsi durante la marcia senza rete.
 
 ### FW-35 · Pilotaggio serratura (UDEC.CX): PWM a circa 1,2 kHz udibile, eccitazione a gradino al 100% e diseccitazione istantanea
 **Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** lettura di `UDEC.CX/CubeMX/Core/Src/application.c` e `main.c`; segnalazione di rumorosità dell'utente (HW-10)
@@ -689,6 +692,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Proposta:** misurare Wh per corsa (salita/discesa, vuota/carico) e stand-by, verificare il tempo di rabbocco e di carica completa, confermare la capacità della batteria; poi sostituire gli esempi con misure, togliere le diciture «stima» e allinearlo al calcolo ufficiale di classe energetica se esiste. Rivedere con R&D prima di diffonderlo.
 - **Chiusura:** valori misurati e diagramma allineato; revisione R&D registrata.
 - **Storia:** 2026-11-07 aperta con la prima versione del diagramma.
+  2026-11-09 dal tecnico del firmware: le 10 corse senza rete sono state provate (circa una giornata di prove prima dell'errore, una sola volta, senza misure); la capacità disponibile a scarica rapida è circa 7,5 Ah (360 Wh) contro 12 Ah (576 Wh) a scarica lenta; tempi di ricarica indicati dal tecnico: 10-15 minuti per tornare «utilizzabile», 4-8 ore teorici per la completa, non misurati. Diagrammi 04 e 05 allineati.
 
 ### DOC-12 · Capacità della batteria discordante: 12 Ah, 7,5 Ah, 7,2 Ah
 **Gravità:** Media · **Stato:** Chiarita · **Fonte:** schema `Schema Macchina/Cappello.kicad_sch`, `battery.h`, `battery.c`
@@ -697,6 +701,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Proposta:** leggere modello e capacità sulla batteria installata e sul datasheet; allineare schema, costante e commento; verificare l'autonomia con la prova delle 10 corse di emergenza.
 - **Chiusura:** capacità confermata e documenti allineati.
 - **Storia:** 2026-11-07 aperta durante la verifica dei dati del diagramma energia. 2026-11-07 chiarita: l'utente conferma 12 Ah (valore dello schema). Restano da allineare `BATTERY_DISCHARGED_MAH = 7500` (è circa il 62% di 12 Ah: verificare che sia la scelta voluta per il reset del contatore a batteria scarica) e il commento obsoleto (FW-32); nessuna modifica al firmware senza richiesta.
+  2026-11-09 risposta del tecnico: `BATTERY_DISCHARGED_MAH` = 7500 è la capacità nominale a scarica rapida (C/1); i 12 Ah sono il nominale a scarica lenta (C/20): tutti valori indicativi. Il conteggio del 62% che avevo ricavato non è quindi un'incoerenza ma due condizioni di scarica diverse; resta il commento obsoleto in `battery.c` (FW-32).
 
 ### DOC-13 · Messaggi commerciali (zero consumi, zero manutenzione, zero intrappolamenti) da allineare ai dati di prodotto
 **Gravità:** Media · **Stato:** Da verificare · **Fonte:** indicazioni dell'utente del 2026-11-08; CP.TEC.025 Rev.5; manuale di manutenzione
@@ -881,6 +886,13 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Prova:** misura del consumo a macchina ferma con batteria carica; il firmware non ha modalità di risparmio (display, LED, CAN e NPB sempre attivi).
 - **Storia:** 2026-11-07 aperta.
 
+### PRV-11 · Caduta di tensione del bus in corsa peggiore con batteria scarica e invecchiata
+**Gravità:** Media · **Stato:** Da verificare · **Fonte:** risposta del tecnico del firmware del 2026-11-09
+- **Prova:** misurare tensione di bus (power meter e VFD), corrente e Ah consumati nella corsa peggiore (4,5 m, 200 kg) a batteria scarica e con batterie di età diversa, e la lunghezza del cablaggio batteria-VFD; registrare in quali condizioni compare il fault 8 del VFD.
+- **Stima del tecnico:** da 48 V a vuoto la tensione cala di 6-7 V a pieno carico, in dipendenza dalla salute della batteria e dalla lunghezza del cablaggio; è «uno dei problemi con Italsea». La caduta sotto carico è il parametro che dice quando sostituire la batteria.
+- **Perché:** definisce il margine reale fra la tensione di lavoro e la soglia di partenza di 38 V, e il criterio di sostituzione delle batterie.
+- **Storia:** 2026-11-09 aperta.
+
 ---
 
 ## Chiarimenti e correzioni al lavoro già fatto
@@ -958,3 +970,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-08 | Serratura MD2 LOCK: letto il pilotaggio nel firmware di UDEC.CX; aggiunta FW-35 e aggiornata HW-10. Totale 96 voci. |
 | 2026-11-08 | HW-10 e FW-35 aggiornate: rumore da urto in battuta, non da PWM; FW-35 scende a Bassa. |
 | 2026-11-09 | Letti i disegni della serratura MD2: aggiornata HW-10, aggiunta DOC-27. Totale 97 voci. |
+| 2026-11-09 | Risposta del tecnico del firmware ai quesiti su FW-33 e FW-34: FW-33 chiusa come Chiarita (proposta non fattibile), FW-34 corretta (buzzer già usato, rete dagli ausiliari), DOC-12 e DOC-11 aggiornate, aggiunta PRV-11. Totale 98 voci. |

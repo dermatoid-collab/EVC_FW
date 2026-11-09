@@ -80,11 +80,11 @@
 <rect x="740" y="488" width="280" height="104" rx="14" fill="#eef5ff" stroke="#2563eb" stroke-width="3"/>
 <text x="880" y="526" font-size="21" text-anchor="middle" font-weight="bold" fill="#2563eb">Rabbocco</text>
 <text x="880" y="554" font-size="14" text-anchor="middle" font-weight="normal" fill="#1f2937">54 V · circa 3 A</text>
-<text x="880" y="575" font-size="14" text-anchor="middle" font-weight="normal" fill="#1f2937">circa 15 min (stima)</text>
+<text x="880" y="575" font-size="14" text-anchor="middle" font-weight="normal" fill="#1f2937">10-15 min (stima)</text>
 <rect x="560" y="753" width="280" height="104" rx="14" fill="#eef5ff" stroke="#2563eb" stroke-width="3"/>
 <text x="700" y="791" font-size="21" text-anchor="middle" font-weight="bold" fill="#2563eb">Carica completa</text>
 <text x="700" y="819" font-size="14" text-anchor="middle" font-weight="normal" fill="#1f2937">58 V fino a corrente &lt; 1,2 A</text>
-<text x="700" y="840" font-size="14" text-anchor="middle" font-weight="normal" fill="#1f2937">1 ora o più (stima)</text>
+<text x="700" y="840" font-size="14" text-anchor="middle" font-weight="normal" fill="#1f2937">4-8 ore (stima)</text>
 <line x1="470" y1="610" x2="324" y2="585" stroke="#d35400" stroke-width="4" marker-start="url(#sd35400)" marker-end="url(#ad35400)"/>
 <line x1="640" y1="580" x2="745" y2="570" stroke="#2563eb" stroke-width="4" marker-start="url(#s2563eb)" marker-end="url(#a2563eb)"/>
 <line x1="590" y1="706" x2="650" y2="752" stroke="#2563eb" stroke-width="4" marker-start="url(#s2563eb)" marker-end="url(#a2563eb)"/>
@@ -154,9 +154,9 @@
 <rect x="1260" y="1030" width="400" height="70" rx="10" fill="#fff" stroke="#2e8b57" stroke-width="5"/>
 <rect x="1660" y="1051" width="14" height="28" rx="3" fill="#2e8b57"/>
 <rect x="1264" y="1034" width="42" height="62" rx="6" fill="#d35400"/>
-<text x="1460" y="1070" font-size="17" text-anchor="middle" font-weight="bold" fill="#1f2937">576 Wh = 12 Ah × 48 V</text>
+<text x="1460" y="1070" font-size="17" text-anchor="middle" font-weight="bold" fill="#1f2937">576 Wh nominali (12 Ah × 48 V)</text>
 <text x="1700" y="1062" font-size="36" text-anchor="start" font-weight="bold" fill="#d35400">11%</text>
-<text x="1700" y="1086" font-size="13" text-anchor="start" font-weight="bold" fill="#d35400">ESEMPIO</text>
+<text x="1700" y="1086" font-size="13" text-anchor="start" font-weight="bold" fill="#d35400">ESEMPIO (sul nominale)</text>
 <text x="1250" y="1128" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">Caso peggiore (4,5 m, 200 kg): circa 61 Wh per 10 corse (rendimento ipotizzato).</text>
 <text x="1250" y="1152" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">A carica insufficiente: fuori servizio, solo fine corsa e apertura porta.</text>
 <text x="1250" y="1176" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">Luce di emergenza: almeno 5 lux per 1 ora (analisi dei rischi).</text>

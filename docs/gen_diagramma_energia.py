@@ -193,11 +193,11 @@ PARA(56, 592, 'La macchina viaggia a batteria, il caricabatteria è staccato e i
 
 R(960, 510, 300, 150, '#eef5ff', BLU, 2.5)
 T(976, 538, 'Rabbocco (ricarica leggera)', 18, 'start', 'bold', BLU)
-PARA(976, 562, 'Ricarica a 54,0 V, circa 3 A, finché la carica consumata è recuperata: circa 15 minuti per 0,7 Ah (stima).', 270, 13.5)
+PARA(976, 562, 'Ricarica a 54,0 V, circa 3 A, finché la carica consumata è recuperata: circa 10-15 minuti (stima, non misurata).', 270, 13.5)
 
 R(960, 740, 300, 190, '#eef5ff', BLU, 2.5)
 T(976, 768, 'Carica completa', 19, 'start', 'bold', BLU)
-PARA(976, 792, '58,0 V fino a quando la corrente scende sotto 1,2 A: la batteria è piena e il contatore si ricalibra. Da circa un\'ora a qualche ora, secondo quanto era scarica (stima).', 270, 13.5)
+PARA(976, 792, '58,0 V fino a quando la corrente scende sotto 1,2 A: la batteria è piena e il contatore si ricalibra. Teoricamente 4-8 ore, secondo lo stato delle batterie (stima, non misurata).', 270, 13.5)
 
 # frecce con condizioni
 L(292, 640, 418, 676, ORA, 3.5, arrow=True)
@@ -303,7 +303,7 @@ yy = 1550
 for t in [
     'Dato di prodotto (CP.TEC.025): 10 corse di emergenza garantite a batteria. Il manuale d\'uso parla di «numero limitato di corse».',
     f'Esempio peggiore: salita di 4,5 m con 200 kg, con contrappesi: circa {it(worst, 1)} Wh dalla batteria per corsa, quindi {it(worst * 10, 0)} Wh per 10 corse (rendimento ipotizzato).',
-    f'Rispetto all\'energia nominale della batteria (576 Wh = 12 Ah × 48 V) sono circa il {it(worst * 10 / BAT_WH * 100, 0)}%; la capacità utile cala con l\'età.',
+    f'Rispetto all\'energia nominale della batteria (576 Wh = 12 Ah × 48 V) sono circa l\'11% a scarica lenta e il {it(worst * 10 / (7.5 * 48) * 100, 0)}% a scarica rapida (circa 7,5 Ah): la capacità utile cala con l\'età.',
     'A carica insufficiente l\'impianto va fuori servizio e consente solo il completamento della corsa e l\'apertura della porta (manuale d\'uso 4.06).',
     'Luce di emergenza di cabina: almeno 5 lux per 1 ora (analisi dei rischi). Al ritorno della rete la ricarica parte da sola.',
 ]:
@@ -372,7 +372,7 @@ for t in [
     f'Corsa {it(CORSA)} m (la corsa va da 2,5 a 4,5 m), velocità 0,10 m/s, una persona da {it(M_PERS, 0)} kg, cabina {it(M_CAB, 0)} kg, contrappesi {it(M_CW, 0)} kg in tutto.',
     f'Rendimento complessivo batteria → cinghia {it(ETA_TRAZ * 100, 0)}% e rete → batteria {it(ETA_CARICA * 100, 0)}%; consumo di trazione in discesa trascurato.',
     f'{SALITE_DIE} salite e {SALITE_DIE} discese al giorno; stand-by {it(STANDBY_W, 0)} W tutto il giorno (da certificare); energia a {it(PREZZO, 2)} €/kWh.',
-    'Capacità batteria 12 Ah × 48 V = 576 Wh nominali (confermata). Il recupero in discesa non è considerato.',
+    'Batteria: 12 Ah a scarica lenta (576 Wh), circa 7,5 Ah a scarica rapida (360 Wh). Il recupero in discesa non è considerato.',
     'Le misure reali (Wh per corsa, stand-by, autonomia in blackout, tempi di ricarica) sostituiranno questi valori.',
 ]:
     yy = BUL(1228, yy, t, 1130, AMB)

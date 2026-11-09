@@ -49,3 +49,10 @@ Avviare una corsa solo se la carica basta per una corsa più l'apertura porte. T
 - Corsa peggiore a batteria quasi scarica, con misura di Ah consumati e caduta di tensione.
 - Stacco della rete, con misura del tempo di rilevamento.
 - Ripristino dopo la ricarica.
+
+## Risposta del tecnico (2026-11-09)
+
+- **Proposta 1 (soglie di carica):** non fattibile. La carica necessaria dipende dal carico di cabina; la batteria al piombo si considera scarica sulla tensione e non sui mAh stimati; al collegamento il power meter indica «carica completa» anche se la batteria è vuota, con deriva del 10% o più a ogni ciclo di rabbocco. Il requisito funzionale è che anche a batteria scarica la corsa si completi. Chiusa come «Chiarita» (FW-33).
+- **Correzioni alle premesse:** lo stato `TO_DRIVE` è lo stato di riabilitazione del VFD (recupero da altre anomalie di `vfd_is_ready`, fra cui il fault 8); 38 V (VFD, troncata a intero) e 38,4 V (power meter) sono misure diverse, con tolleranze grandi.
+- **Proposta 2 (avviso sonoro):** può avere senso, è un perfezionamento. Per specifica la macchina deve fare 10 corse senza alimentazione (verificato). Il caricabatteria si spegne del tutto a rete mancante e `AC_FAIL` non è rilevabile; la rete assente si riconosce dalla presenza degli ausiliari. Il bit `hl_buz` è già usato (`overload_lamp()` in `udec_c_inl.h`).
+- **Domande:** il punto di sottotensione del VFD e il calo di bus dipendono da cablaggio e salute della batteria (circa 6-7 V da 48 V a vuoto a pieno carico; è uno dei problemi con Italsea); 7500 mAh è la capacità a C/1, 12 Ah quella a C/20; stacco rete rilevato in circa 100-200 ms; ricarica rapida «utilizzabile» in 10-15 minuti, completa 4-8 ore (stime, non misurate).
