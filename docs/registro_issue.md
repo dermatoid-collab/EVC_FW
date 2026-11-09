@@ -964,6 +964,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Perché:** definisce il margine reale fra la tensione di lavoro e la soglia di partenza di 38 V, e il criterio di sostituzione delle batterie.
 - **Storia:** 2026-11-09 aperta.
   2026-11-09 riletta per intero la risposta del tecnico. Dati nuovi: per specifica la macchina deve fare 10 corse senza alimentazione, verificate una sola volta con i valori nominali (circa una giornata di prove prima dell'errore); rilevamento mancanza rete circa 100-200 ms, non misurato con precisione (si riconosce dalla presenza degli ausiliari); ricarica rapida iniziale fino a un valore «utilizzabile» in circa 10-15 minuti (non misurati), carica completa teorica 4-8 ore; caduta da 48 V a vuoto di circa 6-7 V a pieno carico. Dedotto da me: con 38 V di soglia e 6-7 V di caduta, una batteria con tensione a riposo sotto circa 44-45 V può portare il bus sotto 38 V durante la corsa (da provare).
+  2026-11-09 l'utente chiude per ora il punto «blocco a metà corsa»: non si invia la mail al tecnico; le domande sotto restano documentate e la prova resta da fare quando sarà possibile.
   **Punto «blocco a metà corsa», cosa resta aperto:** (1) quale errore è comparso alla fine della giornata di prove e dove si trovava la cabina; (2) il livello di sottotensione del VFD (la domanda 1 non ha avuto un valore: risposta «dipende da cablaggio e salute della batteria»); (3) se dopo l'arresto per sottotensione la cabina riparte da sola quando il bus recupera (`vfd_reboot`, ritorno in DRIVE) o resta ferma, e in quali condizioni; (4) misura della caduta di bus nella corsa peggiore con batteria quasi scarica e invecchiata (non ancora fatta); (5) che cosa prevede la procedura di soccorso se la cabina resta fra i piani (non verificato), e se l'analisi dei rischi descrive il comportamento a batteria scarica; (6) il caso più probabile resta una fermata temporanea, non provata né esclusa.
 
 ---
@@ -1055,6 +1056,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-09 | DOC-20 chiarita: trave verificata a flessione con la coppia (coefficiente 1,7), corretto il limite del DC01 (140 MPa). |
 | 2026-11-09 | DOC-22: testi del metodo di frenata, rinvii, dente nominale e giunzione; aggiunta DOC-30 (deformazione plastica e limite di 50 eventi). Totale 101 voci. |
 | 2026-11-09 | DOC-30: riletto il rapporto Megadyne RI 007-26: non contiene il limite di 50 eventi attribuitogli dalla relazione; media 940, minimo 910, catalogo 760 N/cm. |
+| 2026-11-09 | Punto «blocco a metà corsa» chiuso per ora dall'utente (nessuna mail al tecnico; PRV-11 resta da fare). |
 | 2026-11-09 | Aggiunta FW-37 e chiusa come Chiarita: con la cabina ferma a metà corsa la carica parte dopo il rilascio del tasto (corse a uomo presente). Totale 103 voci. |
 | 2026-11-09 | PRV-11 e FW-34 aggiornate con i dati della risposta del tecnico e con l'elenco di ciò che resta aperto sul blocco a metà corsa; aggiunta FW-36. Totale 102 voci. |
 | 2026-11-09 | Chiuso il lavoro su ST.TEC.068: DOC-15, DOC-16, DOC-22 Chiarite; DOC-21, 28, 29, 30 restano aperte per dati esterni. |
