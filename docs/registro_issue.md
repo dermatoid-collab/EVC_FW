@@ -62,6 +62,7 @@
 | FW-34 | Avviso sonoro in cabina quando la macchina viaggia senza alimentazione esterna | Bassa | Da decidere | Firmware |
 | FW-35 | Pilotaggio serratura (UDEC.CX): PWM a circa 1,2 kHz udibile, eccitazione a gradino al 100% e diseccitazione istantanea | Bassa | Da verificare | Firmware |
 | FW-36 | Criterio di partenza basato solo sulla tensione a riposo e sulla caduta della corsa precedente | Bassa | Da decidere | Firmware |
+| FW-37 | Macchina ferma a metà corsa per bus basso: il caricabatteria resta a potenza minima finché la richiesta di marcia non cade | Media | Da verificare | Firmware |
 | HW-01 | Spina X8: esclude quasi tutta la catena con un solo ingresso di rilevamento | Media | Da decidere | Hardware |
 | HW-02 | Bypass trap/tray comandati solo via software | Media | Chiarita | Hardware |
 | HW-03 | Relè K1…K4 non dichiarati a contatti guidati sugli schemi | Media | Da verificare | Hardware |
@@ -464,6 +465,15 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Problema:** il tecnico respinge i livelli basati sul contatore di carica, che non è affidabile. Non ha commentato la parte basata solo sulla tensione della mia proposta (non partire se la tensione a riposo meno la caduta massima della corsa precedente scende sotto la soglia del VFD più un margine). Questo criterio non usa mAh e potrebbe ridurre le fermate a metà corsa; per il tecnico la caduta sotto carico è già il parametro con cui si giudica una batteria (stima 6-7 V). Non è detto che sia compatibile con il requisito «anche a batteria scarica la corsa si completa».
 - **Proposta (non applicata):** chiedere al tecnico se il criterio basato solo sulla tensione è utilizzabile, con quale margine e con quale comportamento al piano (per esempio fuori servizio con riapertura porte, come con `low_battery`). Da decidere dopo i dati di PRV-11.
 - **Chiusura:** decisione presa con i dati misurati e, se approvata, implementata e provata.
+- **Storia:** 2026-11-09 aperta.
+
+### FW-37 · Macchina ferma a metà corsa per bus basso: il caricabatteria resta a potenza minima finché la richiesta di marcia non cade
+**Gravità:** Media · **Stato:** Da verificare · **Fonte:** lettura di `battery.c`, `pmode.c`, `vfd.c`, `run_mode.c`, `battery.h`; domanda dell'utente del 2026-11-09
+- **Dove:** `battery.c:216-264` (`battery_charge`), `battery.h` (`NPB_MIN_VOLTAGE` 420 e `NPB_MIN_CURRENT` 150: «al di sotto di questi valori il caricabatteria non accetta il comando»), `pmode.c:77-95` (`pmode_scan_to_drive`), `vfd.c:395-430` (scelta fra `PMODE_REQ_CHARGER` e `PMODE_REQ_DRIVE`), `run_mode.c:524-527`.
+- **Verificato nel codice:** il ciclo di carica (attesa, boost, float) viene eseguito solo in `PMODE_ST_CHARGER`. In tutti gli altri stati, compresi DRIVE e TO_DRIVE, `battery_charge` chiama `npb_chrg_minimum_power()`: tensione e corrente impostate al minimo accettato dal caricabatteria (commento nel codice: «l'idea è di non caricare la batteria») e, se il bus scende a 38,4 V o meno, imposta `low_battery`. Il passaggio a CHARGER avviene quando il VFD non ha più comandi di marcia (`vfd.c:408-422`) o per `TRIP_SAFETY`/doppio timeout di stop (`PMODE_REQ_CHARGER_NOW`). Se il VFD si ferma per bus basso con la richiesta di marcia ancora attiva, `pmode_scan_drive` riporta lo stato a TO_DRIVE (relè sempre inserito) e `pmode_scan_to_drive` attende la ripartenza del VFD (`vfd_reboot` su pseudo-fault).
+- **Problema (dedotto, da provare):** con batterie a terra, rete assente e cabina ferma a metà corsa, quando la rete torna il caricabatteria riprende ad alimentare gli ausiliari ma non carica la batteria se lo stato resta DRIVE/TO_DRIVE. Il bus si risolleva solo per la caduta di tensione che cessa (scarica a riposo) e non per la carica; il VFD può ripartire per breve tempo e fermarsi di nuovo. Il ciclo di carica parte solo se la richiesta di marcia cade (tasto rilasciato, chiamata annullata, timeout o trip). Non è chiaro dal codice se le chiamate sono a uomo presente (se sì, il rilascio del tasto riporta in CHARGER) né cosa accada alle chiamate automatiche in corso. Il timeout di `pmode_scan_to_drive` asserisce `TRIP_PMODE_TO_CHARGER_TOUT` invece di un trip di avvio (collegato a FW-08).
+- **Proposta (non applicata):** chiedere al tecnico: (1) cosa annulla una richiesta di marcia quando il VFD non riparte; (2) se in TO_DRIVE prolungato con rete presente è previsto il passaggio a CHARGER (per esempio dopo un tempo) per avviare la carica; (3) cosa succede in prova se si stacca la rete a metà corsa e la si riattacca. Provare a banco: batteria a terra, rete assente, arresto a metà corsa, rientro della rete, osservando corrente di carica e stato `pmode`.
+- **Chiusura:** comportamento descritto e provato; se serve, rientro in CHARGER dopo un tempo definito.
 - **Storia:** 2026-11-09 aperta.
 
 ### HW-01 · Spina X8: esclude quasi tutta la catena con un solo ingresso di rilevamento
@@ -1046,6 +1056,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-09 | DOC-20 chiarita: trave verificata a flessione con la coppia (coefficiente 1,7), corretto il limite del DC01 (140 MPa). |
 | 2026-11-09 | DOC-22: testi del metodo di frenata, rinvii, dente nominale e giunzione; aggiunta DOC-30 (deformazione plastica e limite di 50 eventi). Totale 101 voci. |
 | 2026-11-09 | DOC-30: riletto il rapporto Megadyne RI 007-26: non contiene il limite di 50 eventi attribuitogli dalla relazione; media 940, minimo 910, catalogo 760 N/cm. |
+| 2026-11-09 | Aggiunta FW-37 (con la rete di ritorno e la cabina ferma a metà corsa il caricabatteria resta a potenza minima finché la richiesta di marcia non cade). Totale 103 voci. |
 | 2026-11-09 | PRV-11 e FW-34 aggiornate con i dati della risposta del tecnico e con l'elenco di ciò che resta aperto sul blocco a metà corsa; aggiunta FW-36. Totale 102 voci. |
 | 2026-11-09 | Chiuso il lavoro su ST.TEC.068: DOC-15, DOC-16, DOC-22 Chiarite; DOC-21, 28, 29, 30 restano aperte per dati esterni. |
 | 2026-11-09 | DOC-16 e DOC-22 In corso: testi corretti dei refusi, di Tab.2 e dei riferimenti (§8 di `correzioni_ST.TEC.068.md`) e tabella riassuntiva dei coefficienti. |
