@@ -13,7 +13,7 @@ Data della revisione: 2026-11-08 · Destinatario: il progettista della relazione
 
 | Priorità | Rilievo | Capitolo | Voce |
 |---|---|---|---|
-| **Alta** | Taglio sulla guida di ingaggio del paracadute: ricalcolo 138-141 MPa contro 1,2 MPa riportati; limite 235 MPa non è quello dell'alluminio | 12 | DOC-17 |
+| Bassa | Taglio sulla barra di ingaggio del paracadute: la formula ha un fattore 3 in più (138-141 MPa contro 46 MPa medio e 69 MPa di picco corretti); il valore stampato 1,2 MPa non è riproducibile; la verifica regge con i valori normativi del DD11 | 12 | DOC-17 |
 | **Alta** | Coppia frenante di emergenza: 554 Nm (η moltiplicato) nei capitoli 5, 7 e 10 contro 654 Nm (η a denominatore) nel capitolo 8; a 654 Nm il dente dell'ingranaggio scende a SF 0,97 | 5, 7, 8, 10 | DOC-18 |
 | Media | Coperchio interpiano: frecce riportate non riproducibili col modello scritto (13,7 mm e 9,4 mm contro 2,7 mm e 1,5-2 mm) | 4 | DOC-19 |
 | Media | Carichi sulle guide non riproducibili (1015 kg; 800 kg contro 869 kg) e carichi orizzontali dichiarati «trascurabili» senza dimostrazione | 1.1, 3 | DOC-20 |
@@ -127,12 +127,12 @@ I numeri tornano (C/P = 6,18 e 5,08; L10h = 131.555 h e 72.800 h). **Metodo:** p
 |---|---|---|
 | Perno Ø14: area, Wx | 154 mm², 269 mm³ | 153,9 mm², 269,4 mm³ |
 | Taglio perno cabina | 77 MPa | 76,4 MPa (corretto) |
-| **Taglio guida di ingaggio cabina** | **1,2 MPa** | **τ = 3T/(2bh) con T = 9000 N: 140,6 MPa; con T = 8829 N: 138,0 MPa; se la sezione è «doppia rettangolare» (area 2bh): 69,0 MPa** |
-| Limite usato | τP(0,2) = 235 MPa | l'ingaggio avviene su una barra in lamiera DD11 EN 10111 spessa 4 mm (disegno F500.05.5001), non su alluminio né su S235: del DD11 si garantisce un ReH minimo di circa 170 MPa (da confermare sul certificato), cioè un taglio al limite di circa 98 MPa |
+| **Taglio sulla barra di ingaggio, cabina** | **1,2 MPa** | **La parte resistente è la linguetta di lamiera da 4 mm fra due finestre consecutive (60 − 36 = 24 mm), sfilata lungo due piani di taglio lunghi 24 mm: A = 2 · 4 · 24 = 192 mm². Taglio medio T/A = 8829/192 = 46 MPa; con picco 1,5 · T/A = 69 MPa. La formula scritta, 3T/(2bh), dà 138-141 MPa perché ha un fattore 3 in più** |
+| Limite usato | τP(0,2) = 235 MPa | la barra è lamiera DD11 EN 10111 da 4 mm (F500.05.5001), non S235: ReH minimo garantito circa 170 MPa, cioè taglio al limite circa 98 MPa; coefficienti 2,1 (taglio medio) e 1,4 (picco): verificata anche con i soli valori normativi |
 | Taglio perno contrappeso | 7 MPa | 6,4 MPa (corretto, arrotondato per eccesso) |
-| **Taglio guida di ingaggio contrappeso** | **0,3 MPa**, calcolato «con 9000 N» | con 9000 N: 140,6 MPa; con 736 N: 11,5 MPa |
+| **Taglio sulla barra di ingaggio, contrappeso** | **0,3 MPa**, calcolato «con 9000 N» | con T = 736 N: 3,8 MPa medio, 5,8 MPa a picco; il 9000 N è copiato dalla cabina |
 
-- I due valori di taglio non sono riproducibili. Il disegno F500.05.5001 mostra una barra DD11 di 4 mm, larga 36,5 mm e lunga 600 mm, con 10 finestre da 36 × 13 mm e feritoie da 30,2 × 4,2 mm, saldata con cordoni z2 10-60 alla guida F500.05.5002: la verifica va rifatta su questa geometria (taglio del ligamento di 6 mm sotto la finestra, pressione sul bordo della finestra, cordoni di saldatura, fissaggio al profilo). Con b = 4 mm e h ≈ 24 mm (5,3 + 13 + 6 = 24,3) e T = 8829 N il taglio vale 138 MPa, contro circa 98 MPa del DD11. (Nella prima stesura avevo ipotizzato un ingaggio sull'alluminio: non è così.)
+- Il valore stampato (1,2 MPa) non è riproducibile, ma la verifica regge: modellando la barra come due piani di taglio da 4 × 24 mm (come nella figura del progettista) si ottengono 46 MPa di taglio medio e 69 MPa di picco con 8829 N, contro circa 98 MPa del DD11 minimo garantito. L'errore della relazione è il fattore 3 nella formula. Restano da citare: pressione sul bordo della finestra (13 × 4 mm = 52 mm², circa 170 MPa, uguale al ReH minimo: schiacciamento locale ammissibile, da riportare), cordoni z2 10-60 e fissaggio al profilo, coperti dalla prova di tipo. (Nelle prime stesure avevo letto b × h come sezione unica e ipotizzato un ingaggio sull'alluminio: entrambi errori miei.)
 - Wx è calcolato e **non usato**: manca la verifica a flessione del perno, che porta il carico tramite bilanciere con braccio.
 - Nel paracadute del contrappeso il testo dice «sostiene la pedana» (refuso per «contrappeso»).
 - Il paracadute è un componente di sicurezza con esame di tipo: la relazione è complementare alle prove di tipo, che hanno la priorità; ma la relazione non deve contenere valori in contraddizione con esse.
