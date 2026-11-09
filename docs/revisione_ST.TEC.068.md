@@ -121,6 +121,8 @@ I numeri tornano (C/P = 6,18 e 5,08; L10h = 131.555 h e 72.800 h). **Metodo:** p
 
 ### Cap. 12 · Paracadute
 
+*Esito del 2026-11-09: verifica considerata approvata dal progettista, testo invariato.*
+
 | Verifica | Relazione | Ricalcolo |
 |---|---|---|
 | Perno Ø14: area, Wx | 154 mm², 269 mm³ | 153,9 mm², 269,4 mm³ |

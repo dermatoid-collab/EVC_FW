@@ -94,7 +94,7 @@
 | DOC-14 | Periodicità della manutenzione: 3 mesi contro 6 mesi | Bassa | Da verificare | Documentazione |
 | DOC-15 | ST.TEC.068: massa lineare della cinghia (0,33 contro 3,3 kg/m) e corsa di riferimento | Media | Da verificare | Documentazione |
 | DOC-16 | ST.TEC.068: refusi nelle formule e decelerazione di arresto di emergenza da verificare | Bassa | Da verificare | Documentazione |
-| DOC-17 | ST.TEC.068 cap.12: taglio sulla guida di ingaggio del paracadute non riproducibile | Alta | Da verificare | Documentazione |
+| DOC-17 | ST.TEC.068 cap.12: taglio sulla guida di ingaggio del paracadute non riproducibile | Alta | Chiarita | Documentazione |
 | DOC-18 | ST.TEC.068: coppia frenante di emergenza 554 Nm contro 654 Nm e verifiche a valle (ingranaggio, linguetta) | Alta | Da verificare | Documentazione |
 | DOC-19 | ST.TEC.068 cap.4: frecce del coperchio interpiano non riproducibili | Media | Da verificare | Documentazione |
 | DOC-20 | ST.TEC.068: carichi su guide e trave superiore non tracciabili, carichi orizzontali non verificati | Media | Da verificare | Documentazione |
@@ -736,13 +736,14 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Storia:** 2026-11-08 aperta.
 
 ### DOC-17 · ST.TEC.068 cap.12: taglio sulla guida di ingaggio del paracadute non riproducibile
-**Gravità:** Alta · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
+**Gravità:** Alta · **Stato:** Chiarita · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
 - **Dove:** ST.TEC.068 §12, verifica della guida di ingaggio per cabina e contrappeso.
 - **Problema:** il taglio è calcolato come 3T/(2bh) con b = 4 mm, h = 24 mm: con T = 9000 N dà 140,6 MPa (138 MPa con 8829 N; 69 MPa se la sezione è doppia), non 1,2 MPa. Per il contrappeso il valore riportato è 0,3 MPa con T = 9000 N (con 736 N sarebbe 11,5 MPa). Il limite di 235 MPa non è quello dell'alluminio EN AW-6060 T6 (Rp0,2 140 MPa, taglio al limite circa 81 MPa). Wx del perno è calcolato e non usato: manca la verifica a flessione. Nel contrappeso il testo dice «pedana».
 - **Proposta:** chiarire materiale e sezione della guida di ingaggio e rifare il capitolo; aggiungere la flessione del perno; allineare alla prova di tipo del paracadute.
 - **Chiusura:** verifica ricalcolata e coerente con la prova di tipo.
 - **Storia:** 2026-11-08 aperta.
   2026-11-09 il progettista precisa che il paracadute agisce su una barra asolata e non direttamente sulla guida. Disegni letti: F500.05.5001 rev. B (barra: lamiera DD11 EN 10111, 4 mm, 600 × 36,5 mm, 10 finestre 36 × 13 mm allargate da 12 a 13 mm, feritoie 30,2 × 4,2 mm, ligamento sotto la finestra 6 mm, massa 0,50 kg, serie EasyPlat) e F500.04.0001 rev. A (assieme saldato barra F500.05.5001 più guida F500.05.5002, cordoni z2 10-60, 0,75 kg). Correzione a quanto scritto sopra: l'ingaggio non è su alluminio ma su acciaio DD11, quindi il confronto con 81 MPa era sbagliato; il limite plausibile è circa 98 MPa a taglio (ReH min circa 170 MPa, da certificato). Con b = 4 mm e h = 5,3 + 13 + 6 = 24,3 mm e T = 8829 N: 138 MPa. Mancano: geometria del perno F500.05.6001 a contatto con la finestra, numero di finestre e cordoni che portano il carico, fissaggio della guida F500.05.5002 al profilo, eventuale rapporto di prova del paracadute con forza e deformazione misurate.
+  2026-11-09 il progettista considera approvata la verifica del paracadute (§12): nessuna modifica al testo della relazione; resta nel fascicolo il valore 1,2 MPa non riproducibile dal calcolo scritto, che la Rev.1 potrebbe allineare o riferire al rapporto di prova.
 
 ### DOC-18 · ST.TEC.068: coppia frenante di emergenza 554 Nm contro 654 Nm e verifiche a valle (ingranaggio, linguetta)
 **Gravità:** Alta · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
@@ -975,3 +976,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-09 | Risposta del tecnico del firmware ai quesiti su FW-33 e FW-34: FW-33 chiusa come Chiarita (proposta non fattibile), FW-34 corretta (buzzer già usato, rete dagli ausiliari), DOC-12 e DOC-11 aggiornate, aggiunta PRV-11. Totale 98 voci. |
 | 2026-11-09 | PRV-11: aggiunto il punto sulla fine carica (errore, posizione della cabina, riavvio automatico del VFD). |
 | 2026-11-09 | DOC-17: letti i disegni della barra paracadute; corretta l'ipotesi del materiale di ingaggio (acciaio DD11, non alluminio). |
+| 2026-11-09 | DOC-17 chiarita: verifica del paracadute considerata approvata dal progettista (testo del §12 invariato). |
