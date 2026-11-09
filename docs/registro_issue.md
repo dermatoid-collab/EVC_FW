@@ -92,14 +92,14 @@
 | DOC-12 | Capacità della batteria discordante: 12 Ah, 7,5 Ah, 7,2 Ah | Media | Chiarita | Documentazione |
 | DOC-13 | Messaggi commerciali (zero consumi, zero manutenzione, zero intrappolamenti) da allineare ai dati di prodotto | Media | Da verificare | Documentazione |
 | DOC-14 | Periodicità della manutenzione: 3 mesi contro 6 mesi | Bassa | Da verificare | Documentazione |
-| DOC-15 | ST.TEC.068: massa lineare della cinghia (0,33 contro 3,3 kg/m) e corsa di riferimento | Media | Da verificare | Documentazione |
-| DOC-16 | ST.TEC.068: refusi nelle formule e decelerazione di arresto di emergenza da verificare | Bassa | In corso | Documentazione |
+| DOC-15 | ST.TEC.068: massa lineare della cinghia (0,33 contro 3,3 kg/m) e corsa di riferimento | Media | Chiarita | Documentazione |
+| DOC-16 | ST.TEC.068: refusi nelle formule e decelerazione di arresto di emergenza da verificare | Bassa | Chiarita | Documentazione |
 | DOC-17 | ST.TEC.068 cap.12: taglio sulla guida di ingaggio del paracadute non riproducibile | Bassa | Chiarita | Documentazione |
 | DOC-18 | ST.TEC.068: coppia frenante di emergenza 554 Nm contro 654 Nm e verifiche a valle (ingranaggio, linguetta) | Alta | Chiarita | Documentazione |
 | DOC-19 | ST.TEC.068 cap.4: frecce del coperchio interpiano non riproducibili | Bassa | Chiarita | Documentazione |
 | DOC-20 | ST.TEC.068: carichi su guide e trave superiore non tracciabili, carichi orizzontali non verificati | Bassa | Chiarita | Documentazione |
 | DOC-21 | ST.TEC.068 cap.8: origine delle coppie da citare e potenza a 0,15 m/s oltre la targa da confermare con Amer | Bassa | Da verificare | Documentazione |
-| DOC-22 | ST.TEC.068: metodo di calcolo della frenata, dei rinvii e della giunzione, refusi residui | Bassa | In corso | Documentazione |
+| DOC-22 | ST.TEC.068: metodo di calcolo della frenata, dei rinvii e della giunzione, refusi residui | Bassa | Chiarita | Documentazione |
 | DOC-23 | Manuale di manutenzione IM.TEC.159: lubrificazione e parti di usura in contrasto con «zero manutenzione» | Media | Da verificare | Documentazione |
 | DOC-24 | Manuali IM.TEC.159 e 161 e cartelli: residui da altri prodotti, refusi e rimandi errati | Bassa | Da verificare | Documentazione |
 | DOC-25 | Certificato IMQ DR 637 DM Rev.0: incoerenze interne e dati da allineare | Bassa | Da verificare | Documentazione |
@@ -724,7 +724,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Storia:** 2026-11-08 aperta.
 
 ### DOC-15 · ST.TEC.068: massa lineare della cinghia (0,33 contro 3,3 kg/m) e corsa di riferimento
-**Gravità:** Media · **Stato:** Da verificare · **Fonte:** ST.TEC.068 Rev.0 (pagine 22-28), revisione del 2026-11-08
+**Gravità:** Media · **Stato:** Chiarita · **Fonte:** ST.TEC.068 Rev.0 (pagine 22-28), revisione del 2026-11-08
 - **Dove:** specifica cinghia «Massa = 0.33 kg/m» e nota di esclusione («m_b ≤ 3,3 kg per linea, meno dell'1,5%»); verifica allentamento cinghie «Massa lineare (Megalinear RPP8 50) = 3.3 kg/m, 6 m = ~20 kg»; elenco masse «Massa cinghie = 50 kg» (e «35 kg cinghie» nella verifica guide); Tab.1 «Corsa 3000 mm» con la nota «parametri massimi accettabili» (corsa massima 4500 mm).
 - **Problema:** i due valori di massa lineare differiscono di un fattore 10. Con 3,3 kg/m i 50 kg totali di cinghie sono coerenti, ma la massa di una linea sarebbe ben oltre il 1,5% e non trascurabile; inoltre lo squilibrio di massa fra ramo cabina e ramo contrappeso varierebbe con la posizione (ordine di ±15 kg per linea sulla corsa massima) e andrebbe considerato nelle verifiche e nei consumi. Anche 50 e 35 kg non coincidono. La corsa di riferimento è 3000 mm, non la massima.
 - **Proposta:** confermare la massa lineare dalla scheda tecnica Megadyne; correggere il valore errato e rivedere la nota di esclusione e le verifiche che ne dipendono; esplicitare quali verifiche dipendono dalla corsa e per quali si è assunta la corsa massima.
@@ -732,15 +732,17 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Storia:** 2026-11-08 aperta.
   2026-11-09 verifica geometrica (dedotta; la scheda Megadyne non è nei documenti letti né sul web): una cinghia da 50 mm di sezione circa 275 mm² pesa circa 0,33 kg/m; 3,3 kg/m richiederebbe una sezione dieci volte maggiore. Il valore giusto è quindi 0,33 kg/m (specifica e nota di esclusione), e «3.3 kg/m, 6 × 3,3 = 20 kg» è un refuso (2 kg). Le masse totali di 50 e 35 kg negli elenchi non sono coerenti con 0,33 kg/m (corrisponderebbero a 150 e 106 m di cinghia): da ricalcolare dallo sviluppo reale; i carichi sotto le guide con 35 kg restano a favore di sicurezza. Tab.1: le verifiche usano la corsa massima 4500 mm, quindi la tabella deve dichiararla. Testi in `docs/correzioni_ST.TEC.068.md` §6. Da confermare: scheda Megadyne (o pesata di uno spezzone) e sviluppo reale delle cinghie. Il progettista aveva chiesto di partire da 3,3 kg/m; il controllo geometrico lo smentisce.
   2026-11-09 il progettista conferma 0,33 kg/m. Resta da fornire lo sviluppo reale delle due cinghie per ricalcolare la massa totale (§1.1).
+  2026-11-09 chiusa dal progettista: correzioni alla relazione applicate a sua discrezione, secondo l'elenco `docs/elenco_correzioni_ST.TEC.068.md`; i dati ancora mancanti restano segnaposto per la Rev.1.
 
 ### DOC-16 · ST.TEC.068: refusi nelle formule e decelerazione di arresto di emergenza da verificare
-**Gravità:** Bassa · **Stato:** In corso · **Fonte:** ST.TEC.068 Rev.0 (pagina 26-27), revisione del 2026-11-08
+**Gravità:** Bassa · **Stato:** Chiarita · **Fonte:** ST.TEC.068 Rev.0 (pagina 26-27), revisione del 2026-11-08
 - **Dove:** «Sstop = V²/2·Amax = 0.15/14.5 = 0.77 mm» (la formula scritta dà un altro risultato, il valore 0,77 mm è invece corretto come V²/(2·Amax)); «Cs = g·(Qsl + P − Mcwt) + Rp» con valori calcolati su «2·30» e moltiplicati per Rp (il «+» è un «·»); Amax = 14,5 m/s² (circa 1,5 g) in frenata di emergenza con i due freni a coppia massima.
 - **Problema:** i risultati numerici controllati (SF 15,7; 10,4; 3,8; 1,4; 554 Nm; 180 Nm; 14,5 m/s²) sono corretti, ma le formule stampate hanno refusi. Non è stato verificato se la norma pone un limite alla decelerazione di arresto di emergenza; la relazione non lo discute. Redatto e approvato dalla stessa persona.
 - **Proposta:** correggere i refusi alla prossima revisione; chiedere al progettista se la decelerazione di 14,5 m/s² è coerente con i requisiti della norma e con il comfort/sicurezza dei passeggeri; prevedere una revisione indipendente.
 - **Chiusura:** formule corrette, decelerazione motivata, revisione indipendente registrata.
 - **Storia:** 2026-11-08 aperta.
   2026-11-09 testi corretti pronti in `docs/correzioni_ST.TEC.068.md` §8: formule di Sstop, Cs, molla (35 · 0,46), simbolo Rp (raggio, non diametro), giunzione 7 · 4700; Tab.2: QC 325 kg → 3,19 kN (non 315 → 3,01), QWL 2,70 kN (non 2,67), Q 1,96, W 3,53; «250 kg/m²»; una sola edizione della EN 81-41 (i paragrafi citati non sono stati ricontrollati sulla norma); la data 12/01/2026 della Rev.0 precede i documenti citati (MFC 13/02/2026, RI 007-26 23/02/2026, rapporto Amer 03/03/2026); redattore e approvatore coincidono. Resta aperta la decelerazione di arresto (19,7 m/s² equivalenti): misura nella prova di frenatura e criterio accettato. Stato: In corso, fino all'emissione della Rev.1.
+  2026-11-09 chiusa dal progettista: correzioni alla relazione applicate a sua discrezione, secondo l'elenco `docs/elenco_correzioni_ST.TEC.068.md`; i dati ancora mancanti restano segnaposto per la Rev.1.
 
 ### DOC-17 · ST.TEC.068 cap.12: taglio sulla guida di ingaggio del paracadute non riproducibile
 **Gravità:** Bassa · **Stato:** Chiarita · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
@@ -790,15 +792,17 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Chiusura:** derivazione scritta e margini verificati con la tensione minima di batteria.
 - **Storia:** 2026-11-08 aperta.
   2026-11-09 letti il rapporto Amer «DCM-6329 Rev.3: verifica statica e a fatica», il disegno DCM-6329 Rev.3 e i dati del freno (e-mail Amer del 03/03/2026): le coppie 222/260/147/195 Nm sono di Amer (prove di settembre 2025: 204,6 Nm per 330 kg a 0,10 m/s con MRP11, scalati a 340 kg a 0,15 m/s e portati a 222 Nm), non un calcolo della relazione, che riporta il testo senza citarlo. Confronto con i carichi dell'Elevance: coppia teorica 150 Nm (Q = 200), 180 Nm (Qsl = 260), 187 Nm (Qwl = 275), coperti da 222 Nm con margine 19%. Resta da confermare con Amer il servizio dei 600 W: la salita a 222 Nm e 28,1 giri/min richiede 654 W (+9%), lo spunto 766 W (+28%), con Q = 200 circa 530 W. La tabella SKF è riportata nel rapporto Amer: s0 = 1,15 a 654 Nm soddisfa il valore ≥ 1 per movimento poco frequente; in esercizio continuo s0 stimato 2,9-3,4 (scala lineare, dedotto). Testi in `docs/correzioni_ST.TEC.068.md` §5. Gravità scesa a Bassa.
+  2026-11-09 il progettista chiude il lavoro sulla relazione ST.TEC.068: la voce resta aperta per i dati esterni non ancora ricevuti (Amer, Megadyne, verbali delle prove), indipendenti dalla relazione.
 
 ### DOC-22 · ST.TEC.068: metodo di calcolo della frenata, dei rinvii e della giunzione, refusi residui
-**Gravità:** Bassa · **Stato:** In corso · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
+**Gravità:** Bassa · **Stato:** Chiarita · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
 - **Dove:** §5, §10, §11, Tab.2.
 - **Problema:** con a = 14,5 m/s² maggiore di g il ramo scarico della cinghia si allenta: il modello rigido non è coerente (il carico è limitato dal freno, ΔT = 5431 N, che per il ramo cabina equivale a 20 m/s²); le viti M12 con 5431 N hanno SF 9,9. Il dente a frenata nominale confronta ΔTstd totale con la capacità di una sola cinghia (SF 1,2 contro 2,4, con 21 denti 4,2). Il carico radiale dei rinvii è la somma delle tensioni dei rami, non ΔT. La piastra di giunzione usa «9 × 4700 = 32.900 N» (è 7 × 4700) e solo la resistenza di emergenza del dente, senza il carico d'esercizio. Refusi: QC 315 contro 325 kg (e 3,01 kN), «250 kg/m» senza ², «30 × 0,46 = 16,1 N» (35 mm), EN 81-41:2024 e :2025 alternate; redattore e approvatore coincidono.
 - **Proposta:** correggere alla Rev.1, usare ΔT di freno come carico sul ramo cabina, calcolare i rinvii con la somma vettoriale, aggiungere la giunzione con carico continuo e una revisione indipendente.
 - **Chiusura:** Rev.1 emessa.
 - **Storia:** 2026-11-08 aperta.
   2026-11-09 stato In corso: testi pronti in `docs/correzioni_ST.TEC.068.md` §7 e tabella riassuntiva dei coefficienti corretti in fondo al file. Dettagli §7: carico di ramo limitato dalla coppia del freno (ΔT = 6417 N con Cp = 654 Nm, caso peggiore discesa con 275 kg, equivalente a 19,7 m/s²: Tstop 7,6 ms, Sstop 0,57 mm; il modello rigido darebbe 18,5 m/s² > g); verifiche a valle con 6417 N: dente 8,8, rottura 4,8, giunzione 5,1, M12 8,4, M10 del contrappeso 5,8 (non 50,9); carico radiale dei rinvii 2·T·sin(θ/2) (6006: s0 da 1,29 con θ = 180° a 1,83 con θ = 90°, in attesa degli angoli); dente nominale per cinghia 2,4 (12 denti) o 4,2 (21 denti); giunzione 7 × 4700 = 32.900 N (refuso «9»), carico d'esercizio da chiedere a Megadyne (con 76 N/cm e 7 denti sarebbe SF 1,25). Restano i refusi del punto 8.
+  2026-11-09 chiusa dal progettista: correzioni alla relazione applicate a sua discrezione, secondo l'elenco `docs/elenco_correzioni_ST.TEC.068.md`; i dati ancora mancanti restano segnaposto per la Rev.1.
 
 ### DOC-23 · Manuale di manutenzione IM.TEC.159: lubrificazione e parti di usura in contrasto con «zero manutenzione»
 **Gravità:** Media · **Stato:** Da verificare · **Fonte:** IM.TEC.159.IT rev.0 (06.2026), §10.06 e clausola di garanzia; richiesta dell'utente del 2026-11-08
@@ -858,6 +862,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Storia:** 2026-11-09 aperta; testi in `docs/correzioni_ST.TEC.068.md` §5a, §5e, §5f.
   2026-11-09 correzione mia: la verifica di tenuta esiste già nel §5 (avevo cercato solo «Cmin»); il rilievo resta solo sul rendimento non applicato.
   2026-11-09 il progettista conferma mozzo dell'ingranaggio in C45 con linguetta 10×8×35 e che le tre prove di validazione (carico a 275 kg con corrente, batteria scarica, frenatura di emergenza) sono state eseguite sulla macchina pilota. Mancano numero e data dei verbali e i valori misurati, da citare nel §8; la corrente misurata a 275 kg dirà se i 654 W di DOC-21 sono reali. Linguetta confermata in C45. Verbali e misure non disponibili al momento: da recuperare prima della Rev.1.
+  2026-11-09 il progettista chiude il lavoro sulla relazione ST.TEC.068: la voce resta aperta per i dati esterni non ancora ricevuti (Amer, Megadyne, verbali delle prove), indipendenti dalla relazione.
 
 ### DOC-29 · Frenature dinamiche del motoriduttore: 60 in 5 anni contro le prove previste dai manuali
 **Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** rapporto Amer (ipotesi 3), ST.TEC.068 §8, IM.TEC.159 §10.06, IM.TEC.161
@@ -867,6 +872,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Chiusura:** conteggio scritto nella relazione e confermato dal costruttore.
 - **Storia:** 2026-11-09 aperta.
   2026-11-09 collegamento con DOC-30: la relazione attribuisce al rapporto Megadyne un limite di 50 eventi di emergenza nella vita della cinghia, ma il rapporto non lo contiene (vedi DOC-30).
+  2026-11-09 il progettista chiude il lavoro sulla relazione ST.TEC.068: la voce resta aperta per i dati esterni non ancora ricevuti (Amer, Megadyne, verbali delle prove), indipendenti dalla relazione.
 
 ### DOC-30 · Cinghie: deformazione plastica in emergenza con margine 1,26 sul valore medio e limite di 50 eventi senza fonte
 **Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** ST.TEC.068 §5, calcolo Megadyne MFC 20260211-1 Rev0 (13/02/2026), rapporto Megadyne RI 007-26 (23/02/2026)
@@ -879,6 +885,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 ---
 
 ## Prove da eseguire
+  2026-11-09 il progettista chiude il lavoro sulla relazione ST.TEC.068: la voce resta aperta per i dati esterni non ancora ricevuti (Amer, Megadyne, verbali delle prove), indipendenti dalla relazione.
 
 ### PRV-01 · Precisione di fermata ±10 mm
 **Gravità:** Media · **Stato:** Da verificare · **Fonte:** confronto manuali §4.2; DOC-01
@@ -1027,6 +1034,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-09 | DOC-20 chiarita: trave verificata a flessione con la coppia (coefficiente 1,7), corretto il limite del DC01 (140 MPa). |
 | 2026-11-09 | DOC-22: testi del metodo di frenata, rinvii, dente nominale e giunzione; aggiunta DOC-30 (deformazione plastica e limite di 50 eventi). Totale 101 voci. |
 | 2026-11-09 | DOC-30: riletto il rapporto Megadyne RI 007-26: non contiene il limite di 50 eventi attribuitogli dalla relazione; media 940, minimo 910, catalogo 760 N/cm. |
+| 2026-11-09 | Chiuso il lavoro su ST.TEC.068: DOC-15, DOC-16, DOC-22 Chiarite; DOC-21, 28, 29, 30 restano aperte per dati esterni. |
 | 2026-11-09 | DOC-16 e DOC-22 In corso: testi corretti dei refusi, di Tab.2 e dei riferimenti (§8 di `correzioni_ST.TEC.068.md`) e tabella riassuntiva dei coefficienti. |
 | 2026-11-09 | DOC-15: massa lineare della cinghia 0,33 kg/m (3,3 è un refuso), masse totali 50/35 kg da ricalcolare, Tab.1 con corsa massima 4500 mm. |
 | 2026-11-09 | DOC-28: confermati mozzo C45 e prove di validazione eseguite (verbali da citare). |
