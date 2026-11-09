@@ -105,7 +105,7 @@
 | DOC-25 | Certificato IMQ DR 637 DM Rev.0: incoerenze interne e dati da allineare | Bassa | Da verificare | Documentazione |
 | DOC-26 | Serratura MD2 LOCK: certificato per porte di piano, impiegata come serratura della porta di cabina | Media | Da verificare | Documentazione |
 | DOC-27 | Disegni della serratura MD2 con revisioni posteriori al certificato IMQ CA50.00808 | Media | Da verificare | Documentazione |
-| DOC-28 | ST.TEC.068 cap.8: documenti Amer non citati, mozzo e linguetta a carico del cliente, tenuta del freno a coppia minima non verificata | Bassa | Da verificare | Documentazione |
+| DOC-28 | ST.TEC.068 cap.8: documenti Amer non citati, mozzo e linguetta a carico del cliente, tenuta del freno senza rendimento del riduttore | Bassa | Da verificare | Documentazione |
 | DOC-29 | Frenature dinamiche del motoriduttore: 60 in 5 anni contro le prove previste dai manuali | Bassa | Da verificare | Documentazione |
 | PRV-01 | Precisione di fermata ±10 mm | Media | Da verificare | Prove |
 | PRV-02 | Velocità ≤ 0,15 m/s misurata e conversione giri → m/s | Bassa | Da verificare | Prove |
@@ -730,6 +730,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Chiusura:** valori coerenti in tutto il documento e verifiche riviste se serve.
 - **Storia:** 2026-11-08 aperta.
   2026-11-09 verifica geometrica (dedotta; la scheda Megadyne non è nei documenti letti né sul web): una cinghia da 50 mm di sezione circa 275 mm² pesa circa 0,33 kg/m; 3,3 kg/m richiederebbe una sezione dieci volte maggiore. Il valore giusto è quindi 0,33 kg/m (specifica e nota di esclusione), e «3.3 kg/m, 6 × 3,3 = 20 kg» è un refuso (2 kg). Le masse totali di 50 e 35 kg negli elenchi non sono coerenti con 0,33 kg/m (corrisponderebbero a 150 e 106 m di cinghia): da ricalcolare dallo sviluppo reale; i carichi sotto le guide con 35 kg restano a favore di sicurezza. Tab.1: le verifiche usano la corsa massima 4500 mm, quindi la tabella deve dichiararla. Testi in `docs/correzioni_ST.TEC.068.md` §6. Da confermare: scheda Megadyne (o pesata di uno spezzone) e sviluppo reale delle cinghie. Il progettista aveva chiesto di partire da 3,3 kg/m; il controllo geometrico lo smentisce.
+  2026-11-09 il progettista conferma 0,33 kg/m. Resta da fornire lo sviluppo reale delle due cinghie per ricalcolare la massa totale (§1.1).
 
 ### DOC-16 · ST.TEC.068: refusi nelle formule e decelerazione di arresto di emergenza da verificare
 **Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** ST.TEC.068 Rev.0 (pagina 26-27), revisione del 2026-11-08
@@ -845,13 +846,14 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Chiusura:** corrispondenza fra disegni correnti e tipo certificato registrata.
 - **Storia:** 2026-11-09 aperta.
 
-### DOC-28 · ST.TEC.068 cap.8: documenti Amer non citati, mozzo e linguetta a carico del cliente, tenuta del freno a coppia minima non verificata
+### DOC-28 · ST.TEC.068 cap.8: documenti Amer non citati, mozzo e linguetta a carico del cliente, tenuta del freno senza rendimento del riduttore
 **Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** confronto di ST.TEC.068 Rev.0 con il rapporto Amer «DCM-6329 Rev.3: verifica statica e a fatica», il disegno DCM-6329 Rev.3 e la e-mail Amer del 03/03/2026
 - **Dove:** §2 (specifiche del motoriduttore), §5 e §8.
-- **Problema:** (1) il §8 copia il rapporto Amer senza titolo, revisione e data; la relazione Rev.0 è del 12/01/2026, la e-mail con il rapporto aggiornato del 03/03/2026 e il disegno è stato modificato l'11/02/2026 (il testo del §8 coincide con quello del rapporto); la targa è riportata come «600 W @ 30 RPM» senza i 34 Vac. (2) Amer dichiara che mozzo e linguetta sono del cliente e dà i coefficienti 1,48 (linguetta) e 1,52 (mozzo) solo per C45; il materiale del mozzo dell'ingranaggio non è dichiarato nella relazione. (3) Cmin = 10 + 10 Nm è definito ma non usato: la tenuta del freno con il carico statico massimo (EN 81-41, 5.4.2.1, citata nel §5) non è verificata; calcolo proposto: 2 × 10 × 25,3 × 0,92 = 465 Nm contro 187 Nm (Qwl), coefficiente 2,5. (4) Amer precisa che il rapporto vale solo per gli input indicati, che richiede prove di validazione e che le norme di settore sono a cura del cliente: la relazione non indica né la prova né il criterio.
-- **Proposta:** citare i documenti Amer con revisione e data e riportare 34 Vac; dichiarare materiale di mozzo e linguetta; aggiungere la verifica di tenuta alla coppia minima; indicare la prova di validazione e i criteri accettati per i coefficienti statici (1,23 calettamento, 1,48, 1,52).
-- **Chiusura:** Rev.1 con i riferimenti, il materiale del mozzo e la verifica di tenuta.
+- **Problema:** (1) il §8 copia il rapporto Amer senza titolo, revisione e data; la relazione Rev.0 è del 12/01/2026, la e-mail con il rapporto aggiornato del 03/03/2026 e il disegno è stato modificato l'11/02/2026 (il testo del §8 coincide con quello del rapporto); la targa è riportata come «600 W @ 30 RPM» senza i 34 Vac. (2) Amer dichiara che mozzo e linguetta sono del cliente e dà i coefficienti 1,48 (linguetta) e 1,52 (mozzo) solo per C45; il materiale del mozzo dell'ingranaggio non è dichiarato nella relazione. (3) la verifica di stazionamento del §5 (un freno, coppia minima, Cd = 10 × 25,3 = 253 Nm contro 180 Nm, SF 1,4) non applica il rendimento del riduttore: con η = 0,92 diventa 233 Nm, SF 1,3 (con i due freni 465 Nm, SF 2,6). (4) Amer precisa che il rapporto vale solo per gli input indicati, che richiede prove di validazione e che le norme di settore sono a cura del cliente: la relazione non indica né la prova né il criterio.
+- **Proposta:** citare i documenti Amer con revisione e data e riportare 34 Vac; dichiarare materiale di mozzo e linguetta; correggere la verifica di tenuta con il rendimento e aggiungere il caso a due freni; indicare la prova di validazione e i criteri accettati per i coefficienti statici (1,23 calettamento, 1,48, 1,52).
+- **Chiusura:** Rev.1 con i riferimenti, il materiale del mozzo e la verifica di tenuta corretta.
 - **Storia:** 2026-11-09 aperta; testi in `docs/correzioni_ST.TEC.068.md` §5a, §5e, §5f.
+  2026-11-09 correzione mia: la verifica di tenuta esiste già nel §5 (avevo cercato solo «Cmin»); il rilievo resta solo sul rendimento non applicato.
   2026-11-09 il progettista conferma mozzo dell'ingranaggio in C45 con linguetta 10×8×35 e che le tre prove di validazione (carico a 275 kg con corrente, batteria scarica, frenatura di emergenza) sono state eseguite sulla macchina pilota. Mancano numero e data dei verbali e i valori misurati, da citare nel §8; la corrente misurata a 275 kg dirà se i 654 W di DOC-21 sono reali. Linguetta confermata in C45. Verbali e misure non disponibili al momento: da recuperare prima della Rev.1.
 
 ### DOC-29 · Frenature dinamiche del motoriduttore: 60 in 5 anni contro le prove previste dai manuali

@@ -157,13 +157,18 @@ Il rapporto Amer dà s0 = 1,15 alla coppia di frenatura massima (654 Nm) e riman
 
 Il calcolo con 654/260 è una scala lineare mia (dedotto): confermarla con Amer. Vita dei cuscinetti: Lnmh = 6680 h contro 5000 h richieste (rapporto 1,34). Le 5000 h valgono 167 anni di uso a 300 corse al mese (2,5 h/mese): la vita richiesta non limita il progetto. Per i cuscinetti 6007 e 6006 delle pulegge (cap. 6 della relazione) il suffisso 2Z va aggiunto alla distinta e alla relazione (risposta del progettista, DOC-23).
 
-### 5e. §2 e §8 Tenuta del freno alla coppia minima (nuova verifica, DOC-28)
+### 5e. §5 Tenuta del freno: la verifica esiste, con due note (DOC-28)
 
-La relazione definisce Cmin = 10 + 10 Nm ma non la usa. La norma citata nel §5 (EN 81-41, 5.4.2.1) richiede che il freno tenga la cabina con il carico statico massimo. Proposta di verifica a favore di sicurezza (rendimento applicato come perdita):
+Correzione a un mio errore (2026-11-09): avevo scritto che Cmin non fosse usato. La verifica di stazionamento è nel §5 («Verifica di stazionamento col freno»): un solo freno a coppia minima, Cs = 180 Nm con Qsl = 260 kg, Cd = 10 × 25,3 = 253 Nm, SFb = 1,4. Il mio controllo grep cercava «Cmin» e non trovava «10 * 25.3».
 
-> Coppia di tenuta minima all'uscita = n° freni × Cmin × RR × η = 2 × 10 × 25,3 × 0,92 = **465 Nm**. Carico statico massimo (Qwl = 275 kg): 187 Nm. Coefficiente di sicurezza = 465 / 187 = **2,5** (2,6 con Qsl = 260 kg).
+Due note sul metodo:
 
-Dedotto: il fattore richiesto dalla norma per la tenuta non è stato verificato da me; indicare nella relazione il criterio adottato.
+- Il rendimento del riduttore non è applicato in Cd. Con η = 0,92 come perdita (a favore di sicurezza): 10 × 25,3 × 0,92 = 233 Nm, SFb = 233 / 180 = **1,3**.
+- Con entrambi i freni (funzionamento normale): 2 × 10 × 25,3 × 0,92 = 465 Nm, SFb = **2,6**. Conviene dirlo nel testo, perché i freni sono due e indipendenti.
+
+Testo proposto, in aggiunta alla verifica esistente:
+
+> Con un solo freno e coppia minima, applicando il rendimento del riduttore a favore di sicurezza, Cd = 10 × 25,3 × 0,92 = 233 Nm, SFb = 1,3. Con i due freni, Cd = 465 Nm, SFb = 2,6.
 
 ### 5f. §8 Mozzo, linguetta, norme e prova di validazione (DOC-28)
 
@@ -187,7 +192,7 @@ Il rapporto Amer ipotizza 60 frenature dinamiche in 5 anni (1 al mese). I manual
 
 ## 6. Cinghie: massa lineare e corsa di riferimento (DOC-15)
 
-Scheda tecnica Megadyne con la massa lineare non trovata: né il calcolo MFC 20260211-1 né il rapporto RI 007-26 la riportano, e la ricerca sul web non ha dato un valore per la Megalinear 50 RPP8 con anima in acciaio. Il controllo che segue è quindi geometrico (dedotto), da confermare con la scheda Megadyne o pesando uno spezzone.
+Confermato dal progettista (2026-11-09): 0,33 kg/m. Scheda tecnica Megadyne con la massa lineare non trovata: né il calcolo MFC 20260211-1 né il rapporto RI 007-26 la riportano, e la ricerca sul web non ha dato un valore per la Megalinear 50 RPP8 con anima in acciaio. Il controllo che segue è quindi geometrico (dedotto), da confermare con la scheda Megadyne o pesando uno spezzone.
 
 ### 6a. Massa lineare: il valore plausibile è 0,33 kg/m
 
