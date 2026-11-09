@@ -101,4 +101,10 @@ Sostituire «m = 1015 kg» con:
 
 > Le pulegge di trazione sono coassiali alle guide: i carichi verticali delle cinghie (4,1 kN in statico) si scaricano direttamente sulle guide e non sollecitano la trave a flessione. La trave porta le masse proprie dell'apparecchiatura (motoriduttore 21 kg, batterie 18 kg, rinvio e accessori 21 kg, totale 60 kg), verificate a mezzeria.
 
-**Da completare (aperto):** con le pulegge coassiali alle guide, la differenza di tensione fra i due rami di ciascuna cinghia (fino a Cp/2 = 327 Nm per puleggia in frenata di emergenza, rami a ±51 mm dall'asse) è un momento che la trave deve trasmettere alle guide, in flessione o in torsione secondo l'orientamento degli alberi rispetto all'asse della trave. A 327 Nm la flessione dà circa 34 MPa nella fibra più sollecitata (coefficiente 8), mentre un'eventuale torsione della sezione aperta a C sarebbe molto più gravosa e richiede di sapere come la sezione è chiusa da carter e piastre. Serve l'orientamento degli alberi.
+> **Momento di coppia sulla trave.** Gli alberi delle pulegge sono perpendicolari all'asse della trave: la differenza di tensione fra i due rami di ogni cinghia (fino a Cp/2 = 327 Nm per puleggia in frenata di emergenza) è un momento flettente nel piano verticale della trave, trasmesso alle guide. A favore di sicurezza si assume come momento massimo l'intera coppia Cp = 654 Nm, sommata al momento dei 60 kg a mezzeria (147 Nm): Mtot = 801 Nm. La sezione è chiusa da carter e piastre, che non sono considerati nel calcolo. σ = Mtot / Winf = 801.000 / 9741 = 82 MPa.
+>
+> Per il DC01 si adotta Rp0,2 = 140 MPa (valore cautelativo, come nel §2.4: il 280 MPa è il massimo ammesso dalla norma e non un minimo garantito). Coefficiente di sicurezza = 140 / 82 = **1,7**. Nessun momento torcente: la verifica a torsione resta non rilevante.
+
+Correggere nella verifica a flessione già presente: σ = 15,1 MPa (60 kg a mezzeria) con Rp0,2 = 140 MPa dà coefficiente 9,3 (non 18,5 come con 280 MPa); la verifica combinata Von Mises coincide.
+
+**Nota sul materiale (Tab.3 e §9):** i valori del DC01 riportati in Tab.3 (Rm 410, Rp0,2 280 MPa) sono i valori massimi di norma. Per le verifiche usare quelli minimi cautelativi (Rm 270, Rp0,2 140 MPa), come già nel §2.4, e riportare la dicitura nella tabella.

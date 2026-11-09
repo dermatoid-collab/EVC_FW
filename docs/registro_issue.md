@@ -97,7 +97,7 @@
 | DOC-17 | ST.TEC.068 cap.12: taglio sulla guida di ingaggio del paracadute non riproducibile | Bassa | Chiarita | Documentazione |
 | DOC-18 | ST.TEC.068: coppia frenante di emergenza 554 Nm contro 654 Nm e verifiche a valle (ingranaggio, linguetta) | Alta | Chiarita | Documentazione |
 | DOC-19 | ST.TEC.068 cap.4: frecce del coperchio interpiano non riproducibili | Bassa | Chiarita | Documentazione |
-| DOC-20 | ST.TEC.068: carichi su guide e trave superiore non tracciabili, carichi orizzontali non verificati | Media | Da verificare | Documentazione |
+| DOC-20 | ST.TEC.068: carichi su guide e trave superiore non tracciabili, carichi orizzontali non verificati | Bassa | Chiarita | Documentazione |
 | DOC-21 | ST.TEC.068 cap.8: coppie del motoriduttore non tracciabili e potenza a 0,15 m/s oltre la targa | Media | Da verificare | Documentazione |
 | DOC-22 | ST.TEC.068: metodo di calcolo della frenata, dei rinvii e della giunzione, refusi residui | Bassa | Da verificare | Documentazione |
 | DOC-23 | Manuale di manutenzione IM.TEC.159: lubrificazione e parti di usura in contrasto con «zero manutenzione» | Media | Da verificare | Documentazione |
@@ -766,13 +766,14 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
   2026-11-09 il progettista precisa che la verifica del pannello è stata eseguita dal fornitore (CEL): i valori 2,7 e 1,5-2 mm sono del fornitore. La relazione deve citare il rapporto e non ricalcolare le frecce; testo proposto in `docs/correzioni_ST.TEC.068.md`. Da completare: numero e data del rapporto, fonte del limite L/200 e dell'ammissibile 120 MPa.
 
 ### DOC-20 · ST.TEC.068: carichi su guide e trave superiore non tracciabili, carichi orizzontali non verificati
-**Gravità:** Media · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
+**Gravità:** Bassa · **Stato:** Chiarita · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
 - **Dove:** §1.1 («800 kg»), §3 («1015 kg»), §9.
 - **Problema:** la somma delle masse del §1.1 è 869 kg; le masse fuori da cabina e portata sono 509 kg, che danno 615 kg per guida a paracadute, non 580 (valore ripreso in CP.TEC.025). Il carico di 1015 kg ha un elenco che somma 590 kg; l'esito delle guide resta coperto (9,41 kN con WD/2 e peso proprio contro 10,53 kN usati). Non sono verificati: flessione e freccia delle guide per carichi orizzontali (dichiarati «trascurabili» per una cabina tonda con persone fuori asse), fissaggi delle guide. La trave superiore è verificata con soli 60 kg: mancano le reazioni delle pulegge (circa 4,1 kN statici) e la coppia di reazione del riduttore (554-654 Nm).
 - **Proposta:** rendere tracciabili i carichi, aggiungere flessione delle guide e reazioni della trave, motivare i carichi orizzontali.
 - **Chiusura:** carichi tracciabili e verifiche complete.
 - **Storia:** 2026-11-08 aperta.
   2026-11-09 chiarite con il progettista: cinghie 35 kg; masse della struttura in testa confermate; pulegge coassiali alle guide; CP.TEC.025 invariata per scelta (580 daN contro 607). Nuovi valori: normale 427 kg per guida, paracadute 607 kg; carico di compressione per guida 11,24 kN con SF di Eulero 1,93 (caso A) e 15,8 (caso B); testi in `docs/correzioni_ST.TEC.068.md`. Resta aperto un solo punto: il momento di coppia (fino a 327 Nm per puleggia in frenata di emergenza) che la trave trasmette alle guide, in flessione o torsione secondo l'orientamento degli alberi.
+  2026-11-09 chiuso anche il punto sulla trave: alberi perpendicolari all'asse e trave chiusa da carter e piastre, quindi il momento di coppia (stimato a favore di sicurezza con l'intera Cp = 654 Nm più i 147 Nm dei 60 kg) è una flessione: Mtot = 801 Nm, σ = 82 MPa, coefficiente 1,7 con Rp0,2 = 140 MPa. Trovata un'incoerenza nel materiale: il §9 usa 280 MPa per il DC01, che è il massimo di norma (il §2.4 usa 140 MPa); con 140 MPa la verifica originale a 60 kg dà coefficiente 9,3 e non 18,5. Testo in `docs/correzioni_ST.TEC.068.md`.
 
 ### DOC-21 · ST.TEC.068 cap.8: coppie del motoriduttore non tracciabili e potenza a 0,15 m/s oltre la targa
 **Gravità:** Media · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
@@ -987,3 +988,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-09 | DOC-18 chiarita: coppia unica 654 Nm, l'ingranaggio trasmette 327 Nm, tutte le verifiche a valle sono soddisfatte. |
 | 2026-11-09 | DOC-19 chiarita: verifica del coperchio eseguita dal fornitore, da citare nella relazione; gravità Bassa. |
 | 2026-11-09 | DOC-20: valori corretti dei carichi su guide e trave (4a, 4b chiusi); resta il momento di coppia sulla trave (4c). |
+| 2026-11-09 | DOC-20 chiarita: trave verificata a flessione con la coppia (coefficiente 1,7), corretto il limite del DC01 (140 MPa). |
