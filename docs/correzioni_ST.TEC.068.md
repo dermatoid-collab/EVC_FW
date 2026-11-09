@@ -72,3 +72,33 @@ La verifica del pannello è stata eseguita dal fornitore. La relazione deve cita
 1. Il rapporto copre i due casi di carico (200 kg distribuiti e 100 kg su 100 × 100 mm) con la stessa luce e lo stesso vincolo del montaggio.
 2. Il limite di freccia L/200 e il valore ammissibile di 120 MPa hanno una fonte scritta (norma o scheda tecnica).
 3. Se il calcolo della striscia (M = 312 Nm, σ = 32,5 MPa) resta nella relazione, indicarlo come stima prudente delle sole tensioni e togliere le frecce che ne derivano.
+
+## 4. Carichi su guide e trave superiore (DOC-20)
+
+Scelte del progettista (2026-11-09): cinghie 35 kg; masse della struttura in testa confermate (trave 210, parti elettriche 30, motoriduttore 21, batterie 18); pulegge di trazione coassiali alle guide; CP.TEC.025 non aggiornata per ora.
+
+### 4a. §1.1 Masse e carichi sotto le guide
+
+Elenco unico delle masse: guide 120, trave superiore 210, parti elettriche 30, motoriduttore 21, batterie 18, contrappesi 60, **cinghie 35**, cabina 160, portata 200. Somma 854 kg; masse fisse (senza cabina e portata) 494 kg.
+
+> Carico sotto ogni guida in funzionamento normale = 854 / 2 = **427 kg**.
+> Carico sotto ogni guida in intervento paracadute = ((854 − 200 − 160) + 720) / 2 = (494 + 720) / 2 = **607 kg**.
+
+La relazione scrive 800 / 2 = 400 kg e 580 kg. Il valore di CP.TEC.025 («580 daN sotto ogni colonna») resta invariato per scelta; la differenza con 607 è del 4,7%.
+
+### 4b. §3 Guide: carico di compressione per guida
+
+Sostituire «m = 1015 kg» con:
+
+> Carico verticale su ogni guida in intervento paracadute: struttura in testa (210 + 30 + 21 + 18) / 2 = 139,5 kg; contrappesi e cinghie appesi (60 + 35) / 2 = 47,5 kg; reazione del paracadute WD / 2 = 900 kg (k1 = 5 su cabina e portata); totale 1087 kg, cioè 10,66 kN. Peso proprio della guida 0,58 kN. Ntot = 11,24 kN.
+
+| Caso | Ncr | SF (relazione) | SF corretto |
+|---|---|---|---|
+| A, incastro-libero (L efficace 14 m) | 21,74 kN | 2,06 | **1,93** |
+| B, incastro-carrello (L efficace 4,9 m) | 177,5 kN | 16,85 | **15,8** |
+
+### 4c. §9 Trave superiore
+
+> Le pulegge di trazione sono coassiali alle guide: i carichi verticali delle cinghie (4,1 kN in statico) si scaricano direttamente sulle guide e non sollecitano la trave a flessione. La trave porta le masse proprie dell'apparecchiatura (motoriduttore 21 kg, batterie 18 kg, rinvio e accessori 21 kg, totale 60 kg), verificate a mezzeria.
+
+**Da completare (aperto):** con le pulegge coassiali alle guide, la differenza di tensione fra i due rami di ciascuna cinghia (fino a Cp/2 = 327 Nm per puleggia in frenata di emergenza, rami a ±51 mm dall'asse) è un momento che la trave deve trasmettere alle guide, in flessione o in torsione secondo l'orientamento degli alberi rispetto all'asse della trave. A 327 Nm la flessione dà circa 34 MPa nella fibra più sollecitata (coefficiente 8), mentre un'eventuale torsione della sezione aperta a C sarebbe molto più gravosa e richiede di sapere come la sezione è chiusa da carter e piastre. Serve l'orientamento degli alberi.

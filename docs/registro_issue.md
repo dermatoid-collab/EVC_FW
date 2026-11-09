@@ -772,6 +772,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Proposta:** rendere tracciabili i carichi, aggiungere flessione delle guide e reazioni della trave, motivare i carichi orizzontali.
 - **Chiusura:** carichi tracciabili e verifiche complete.
 - **Storia:** 2026-11-08 aperta.
+  2026-11-09 chiarite con il progettista: cinghie 35 kg; masse della struttura in testa confermate; pulegge coassiali alle guide; CP.TEC.025 invariata per scelta (580 daN contro 607). Nuovi valori: normale 427 kg per guida, paracadute 607 kg; carico di compressione per guida 11,24 kN con SF di Eulero 1,93 (caso A) e 15,8 (caso B); testi in `docs/correzioni_ST.TEC.068.md`. Resta aperto un solo punto: il momento di coppia (fino a 327 Nm per puleggia in frenata di emergenza) che la trave trasmette alle guide, in flessione o torsione secondo l'orientamento degli alberi.
 
 ### DOC-21 · ST.TEC.068 cap.8: coppie del motoriduttore non tracciabili e potenza a 0,15 m/s oltre la targa
 **Gravità:** Media · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
@@ -985,3 +986,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-09 | DOC-17: corretto il modello (due piani di taglio da 24 mm, A = 192 mm²): verifica soddisfatta, errore di forma nella formula (fattore 3); gravità abbassata a Bassa. |
 | 2026-11-09 | DOC-18 chiarita: coppia unica 654 Nm, l'ingranaggio trasmette 327 Nm, tutte le verifiche a valle sono soddisfatte. |
 | 2026-11-09 | DOC-19 chiarita: verifica del coperchio eseguita dal fornitore, da citare nella relazione; gravità Bassa. |
+| 2026-11-09 | DOC-20: valori corretti dei carichi su guide e trave (4a, 4b chiusi); resta il momento di coppia sulla trave (4c). |
