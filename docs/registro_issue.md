@@ -69,6 +69,7 @@
 | HW-07 | Contattore di uscita motore S22 fuori dalla catena | Media | Chiarita | Hardware |
 | HW-08 | Nomenclatura incoerente fra schemi e manuali (K3A/K5A, F1/F7, Q15B/Q16A) | Bassa | Aperta | Hardware |
 | HW-09 | Punti da confermare sugli schemi: ponticelli TC/FT, STO sul nodo S4, percorso del pesacarico | Bassa | Da verificare | Hardware |
+| HW-10 | Serratura MD2 LOCK molto rumorosa nel sollevamento e nell'abbassamento del catenaccio | Media | Aperta | Hardware |
 | NOR-01 | Analisi dei rischi Rev.7: lettura e confronto con il firmware | Alta | Risolta | Normativa |
 | NOR-02 | EN 81-41 5.5.7.3: alimentazione di motore e freno da interrompere alla fine del comando | Media | Chiarita | Normativa |
 | NOR-03 | Freno sul lato motore con trasmissione a cinghie e monitoraggio della cinghia | Media | Da verificare | Normativa |
@@ -508,6 +509,14 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Chiusura:** conferma registrata.
 - **Storia:** 2026-11-07 aperta.
 
+### HW-10 · Serratura MD2 LOCK molto rumorosa nel sollevamento e nell'abbassamento del catenaccio
+**Gravità:** Media · **Stato:** Aperta · **Fonte:** segnalazione dell'utente del 2026-11-08; certificato IMQ CA50.00808 Rev.0; `door.c`
+- **Dove:** serratura MD2 LOCK (disegno F353.02.0080), bobina a 24 V c.c., 1,9 A, comandata dall'uscita `ELT` (`udec_cx.out.elt`); ciclo porta in `door.c` (bobina eccitata = sbloccata, diseccitata = bloccata dalla molla).
+- **Problema:** rumore forte a ogni sollevamento e abbassamento del catenaccio (segnalato dall'utente; non misurato e non analizzato nel progetto). Il prodotto è residenziale e ha un obiettivo di silenziosità dichiarato per la sala macchine (CP.TEC.025, non superiore a 40 dB): per la serratura non c'è un obiettivo scritto. Ipotesi, non verificate: urto del nucleo mobile a fine corsa a ogni eccitazione, caduta del catenaccio sotto la molla senza smorzamento alla diseccitazione, urto del catenaccio nel foro del battente, risonanza del telaio della porta.
+- **Proposta:** misurare il rumore (dB(A) a 1 m, registrazione) e isolare la sorgente con prove a banco e montata; poi valutare, in ordine, rimedi meccanici (battute elastiche, bussole smorzanti, molla più dolce, corsa ridotta, lubrificazione), elettrici (eccitazione progressiva e corrente di mantenimento ridotta, diseccitazione graduale, da verificare sullo schema di UDEC.C/UDEC.CX) e di sequenza nel firmware. Ogni modifica a un componente di sicurezza certificato va concordata con IMQ; nessuna modifica senza richiesta.
+- **Chiusura:** obiettivo di rumorosità fissato, rimedio provato e misurato, ammissibilità verificata con IMQ.
+- **Storia:** 2026-11-08 aperta.
+
 ---
 
 ## Normativa e analisi dei rischi
@@ -919,3 +928,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-08 | Aggiunta la versione sintetica del diagramma sulla manutenzione (07) con il riquadro «≈ 0 €» come stima del costruttore; DOC-23 aggiornata. |
 | 2026-11-08 | Diagramma 07: aggiunti garanzia estesa, 22 procedure, ricambi originali e diagnosi guidata; tolti i cuscinetti 2Z (restano nel 06). |
 | 2026-11-08 | Descrizione della serratura della porta di cabina: aggiunta DOC-26 (certificato per porte di piano, uso come porta di cabina). Totale 94 voci. |
+| 2026-11-08 | Segnalata la rumorosità della serratura MD2 LOCK: aggiunta HW-10. Totale 95 voci. |
