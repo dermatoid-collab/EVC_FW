@@ -104,6 +104,7 @@
 | DOC-24 | Manuali IM.TEC.159 e 161 e cartelli: residui da altri prodotti, refusi e rimandi errati | Bassa | Da verificare | Documentazione |
 | DOC-25 | Certificato IMQ DR 637 DM Rev.0: incoerenze interne e dati da allineare | Bassa | Da verificare | Documentazione |
 | DOC-26 | Serratura MD2 LOCK: certificato per porte di piano, impiegata come serratura della porta di cabina | Media | Da verificare | Documentazione |
+| DOC-27 | Disegni della serratura MD2 con revisioni posteriori al certificato IMQ CA50.00808 | Media | Da verificare | Documentazione |
 | PRV-01 | Precisione di fermata ±10 mm | Media | Da verificare | Prove |
 | PRV-02 | Velocità ≤ 0,15 m/s misurata e conversione giri → m/s | Bassa | Da verificare | Prove |
 | PRV-03 | Sblocco della serratura con cabina appena in oltrecorsa | Media | Da verificare | Prove |
@@ -532,6 +533,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
   2026-11-08 domanda dell'utente sull'uso di un motore al posto del solenoide, con il vincolo che a bobina diseccitata la serratura deve chiudersi da sola con le molle: valutato come possibile ma non come prima scelta. Servirebbe un meccanismo che scolleghi il motore dal catenaccio a motore spento (motore retro-azionabile o frizione), la corrente di mantenimento in sblocco sarebbe a motore bloccato, e cambierebbe il tipo certificato: nuovo esame IMQ (EN 81-20:2020 ed EN 81-50:2020, da leggere sui testi). Prima via: smorzamento meccanico delle battute.
   2026-11-08 proposta dell'utente: micro motore con rotazione di un quarto di giro e camma che non supera il punto morto (nessuna posizione bistabile), con ritorno a molla. Valutata come promettente se: il motore è retro-azionabile (rapporto basso o accoppiamento che si stacca a motore spento), la camma resta sotto il punto morto, lo sblocco è tenuto con corrente a motore fermo (PWM ridotta), l'arrivo in battuta in sblocco è a velocità controllata e il ritorno a molla può essere frenato in corto circuito sugli avvolgimenti (smorzamento proporzionale alla velocità, non necessario per la sicurezza). Alternativa di serie da considerare: attuatore rotativo a 90° con ritorno a molla. Resta da vedere con IMQ se è una modifica o un nuovo tipo.
   2026-11-08 ricerca di opzioni in commercio (fonti secondarie, schede non verificate): attuatori rotativi monostabili con ritorno a molla a 24 V e rotazione di 45° o 95° (famiglia Kendrion/Kuhnke D, coppie piccole da verificare; il Kendrion CDR a 90° è bistabile e quindi non adatto); serrature per porte di piano con attuazione a motore e molla di ritorno nel catenaccio (cataloghi Kronenberg serie MO; interblocchi Schmersal AV e Pizzato FG certificati EN 81-20/-50); micro motoriduttori di catalogo (non cercati modelli); articoli di settore su serrature silenziose con smorzatore o senza solenoide. Nessuna fonte letta conferma il testo esatto della norma sul ritorno a molla a diseccitazione: da leggere in EN 81-20:2020 ed EN 81-50.
+  2026-11-09 letti i disegni dell'assieme F353.02.0080 e dei componenti (11 PDF su Notion). Meccanismo: solenoide Landa SQ1250L-24A16 (scheda non trovata) azionato sul bilanciere F353.05.5285, che solleva la staffa perni con due perni Ø18/Ø15 da 0,10 kg ciascuno contro due molle a compressione (filo 0,9 mm, Dint 17,1, lunghezza libera 35, 4 spire, 0,28-0,37 N/mm circa ciascuna; stima da verificare). Dal disegno: corsa stimata circa 20 mm, molle compresse a circa 12 mm nello stato sbloccato (circa 13-17 N in totale) e quasi libere nello stato bloccato, massa mobile circa 0,3 kg, energia delle molle circa 0,15 J e velocità d'urto stimata attorno a 1 m/s (ipotesi, da misurare). Sono già presenti due piedini PVC da 2 mm (Essentra 50493) come battute e lo sblocco finisce sull'arresto interno del solenoide; il corpo è in lamiera zincata sottile. Attuatori rotativi di catalogo trovati sono troppo deboli per questa forza (coppia richiesta circa 0,15-0,3 N·m); un motore dovrebbe essere un motoriduttore e difficilmente retro-azionabile dalle molle: da ridurre prima la forza delle molle. Non copiati disegni nel repository.
 
 ---
 
@@ -817,6 +819,14 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Chiusura:** ambito confermato e terminologia unica.
 - **Storia:** 2026-11-08 aperta.
 
+### DOC-27 · Disegni della serratura MD2 con revisioni posteriori al certificato IMQ CA50.00808
+**Gravità:** Media · **Stato:** Da verificare · **Fonte:** disegni della serratura su Notion (Fascicolo tecnico, Cap.6, «Serratura MD2LOCK»), certificato IMQ CA50.00808 Rev.0 del 2025-06-27; letti il 2026-11-09
+- **Dove:** assieme F353.02.0080 rev. A (2025-04-08, modificata viteria pos. 31-32); componenti: F353.05.5281 rev. C del 2025-11-11 («ridotta piega», «aumentato foro a Ø5,2», «aumentata piega»), F353.05.5282 rev. B del 2025-11-07 («aumentato foro A a Ø5 e D a Ø13»), F353.05.5284 rev. B del 2025-11-11 («modificata geometria»). Il certificato riporta il disegno F353.02.0080 con data 2024-11-28.
+- **Problema:** tre disegni di componenti della serratura (staffa ponte, piastra, guida perni) hanno revisioni successive alla data del certificato. Non è documentato se la serratura certificata corrisponda a queste revisioni né se le modifiche (pieghe, fori, geometria) siano state comunicate a IMQ. La staffa ponte porta il contatto, quindi una variazione di piega può spostare il punto in cui il contatto chiude rispetto all'impegno minimo di 7 mm.
+- **Proposta:** confrontare le revisioni con l'insieme di disegni depositato presso IMQ e, se serve, comunicare le modifiche; allineare l'assieme alle revisioni correnti dei componenti.
+- **Chiusura:** corrispondenza fra disegni correnti e tipo certificato registrata.
+- **Storia:** 2026-11-09 aperta.
+
 ---
 
 ## Prove da eseguire
@@ -947,3 +957,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-08 | Segnalata la rumorosità della serratura MD2 LOCK: aggiunta HW-10. Totale 95 voci. |
 | 2026-11-08 | Serratura MD2 LOCK: letto il pilotaggio nel firmware di UDEC.CX; aggiunta FW-35 e aggiornata HW-10. Totale 96 voci. |
 | 2026-11-08 | HW-10 e FW-35 aggiornate: rumore da urto in battuta, non da PWM; FW-35 scende a Bassa. |
+| 2026-11-09 | Letti i disegni della serratura MD2: aggiornata HW-10, aggiunta DOC-27. Totale 97 voci. |
