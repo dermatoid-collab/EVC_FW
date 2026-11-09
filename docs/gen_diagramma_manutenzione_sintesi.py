@@ -3,14 +3,14 @@
 
 Uso:  python3 docs/gen_diagramma_manutenzione_sintesi.py docs/diagrammi/07.diagramma_manutenzione_sintesi.svg
 
-Come il 06, con in più, su richiesta dell'utente (2026-11-08), il riquadro «costo delle parti di consumo
+Come il 06 (senza i cuscinetti 2Z; con in più garanzia estesa, 22 procedure, ricambi originali e diagnosi guidata), con in più, su richiesta dell'utente (2026-11-08), il riquadro «costo delle parti di consumo
 approssimativamente zero, escluse le batterie ogni 3 anni», presentato come STIMA DEL COSTRUTTORE per uso
 residenziale (circa 300 corse al mese). Non è ancora documentato da dati di vita dei componenti: vedi DOC-23.
 """
 import html
 import sys
 
-W, H = 2000, 980
+W, H = 2000, 1030
 TXT, SUB = '#1f2937', '#4b5563'
 GRN, AMB, RED, BLU, GRY, NAV, PUR, ORA = ('#2e8b57', '#c27c0e', '#c0392b', '#2563eb',
                                           '#6b7280', '#2a3b55', '#7b3fa0', '#d35400')
@@ -50,7 +50,7 @@ T(W - 30, 66, 'Intervalli e obblighi di manutenzione possono variare secondo le 
 SEC(130, 1, 'In quattro numeri', NAV)
 tiles = [('6 mesi', 'controllo programmato', 'a cura di personale qualificato', GRN),
          ('3 anni', 'sostituzione batterie', 'AGM sigillate, senza manutenzione ordinaria', ORA),
-         ('2Z', 'cuscinetti schermati', 'delle pulegge, già ingrassati', PUR),
+         ('5 anni', 'garanzia estesa†', '12 mesi di legge più 4 anni di estensione', PUR),
          ('≈ 0 €', 'costo delle parti di consumo*', 'escluse le batterie ogni 3 anni', BLU)]
 tw = 465
 for i, (big, mid, small, c) in enumerate(tiles):
@@ -76,7 +76,7 @@ T(x1 + 30, yl - 36, 'Batterie', 17, 'middle', 'bold', ORA)
 o.append(f'<line x1="{x1}" y1="{yl-24}" x2="{x1}" y2="{yl-16}" stroke="{ORA}" stroke-width="3"/>')
 
 # 3. cosa si controlla
-SEC(630, 3, 'Cosa si controlla', BLU)
+SEC(630, 3, 'Cosa si controlla: 22 procedure nel piano di controllo', BLU)
 groups = [('Movimento', 'fermate, velocità, sovraccarico'), ('Porte e cabina', 'serrature, luci, bordi sensibili, segnaletica'),
           ('Emergenza', 'alimentazione di emergenza, batterie'), ('Sicurezze', 'paracadute, finecorsa, sensori cinghie'),
           ('Trazione', 'cinghie, pulegge, rotelle, guide'), ('Impianto elettrico', 'messa a terra e linee')]
@@ -89,13 +89,18 @@ for k, (t, d) in enumerate(groups):
     T(x + 66, y + 38, t, 20, 'start', 'bold', TXT)
     T(x + 66, y + 66, d, 15, 'start', 'normal', SUB)
 
-# 4. dove e chi
-R(30, 880, 950, 46, '#fff', PUR, 2.5, 10)
-T(52, 910, 'Aree di intervento: vano motore in testata e sopra la pedana di carico (cabina al piano 0).', 15, 'start', 'normal', TXT)
-R(1000, 880, 970, 46, '#fff', PUR, 2.5, 10)
-T(1022, 910, 'Personale qualificato e ricambi originali; controlli semplici a cura dell\'utente nel manuale d\'uso.', 15, 'start', 'normal', TXT)
-T(30, 950, '* Stima del costruttore per uso residenziale (circa 300 corse al mese).', 13.5, 'start', 'bold', SUB)
-T(30, 968, 'Fonti: CP.TEC.025 Rev.5, istruzioni di manutenzione IM.TEC.159, analisi dei rischi Rev.7, ufficio tecnico LiftingItalia.', 12.5, 'start', 'normal', SUB)
+# 4. dove, chi, diagnosi
+boxes = [('Aree di intervento', 'Vano motore in testata e sopra la pedana di carico (cabina al piano 0).'),
+         ('Personale qualificato e ricambi originali', 'Controlli semplici a cura dell\'utente: vedi manuale d\'uso.'),
+         ('Diagnosi guidata', 'Il quadro memorizza gli eventi e li mostra sul display.')]
+for k, (t, d) in enumerate(boxes):
+    x = 30 + k * 657
+    R(x, 880, 625, 70, '#fff', PUR, 2.5, 10)
+    T(x + 22, 906, t, 17, 'start', 'bold', PUR)
+    T(x + 22, 932, d, 14.5, 'start', 'normal', TXT)
+T(30, 982, '* Stima del costruttore per uso residenziale (circa 300 corse al mese).', 13.5, 'start', 'bold', SUB)
+T(30, 1002, '† Garanzia estesa alle condizioni e con le esclusioni previste dal manuale di manutenzione.', 13.5, 'start', 'bold', SUB)
+T(30, 1020, 'Fonti: CP.TEC.025 Rev.5, istruzioni di manutenzione IM.TEC.159, analisi dei rischi Rev.7, ufficio tecnico LiftingItalia.', 12.5, 'start', 'normal', SUB)
 
 o.append('</svg>')
 out = sys.argv[1] if len(sys.argv) > 1 else 'docs/diagrammi/07.diagramma_manutenzione_sintesi.svg'

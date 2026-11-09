@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="980" viewBox="0 0 2000 980" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">
-<rect width="2000" height="980" fill="#f7f8fa"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1030" viewBox="0 0 2000 1030" font-family="DejaVu Sans, Arial, Helvetica, sans-serif">
+<rect width="2000" height="1030" fill="#f7f8fa"/>
 <rect x="0" y="0" width="2000" height="92" rx="0" fill="#2a3b55" stroke="#2a3b55" stroke-width="0"/>
 <text x="30" y="44" font-size="32" text-anchor="start" font-weight="bold" fill="#fff">ELEVANCE — Manutenzione in una pagina</text>
 <text x="30" y="72" font-size="17" text-anchor="start" font-weight="normal" fill="#dbe4f0">Controlli programmati, batterie ogni 3 anni · sintesi visuale per il commerciale</text>
@@ -17,9 +17,9 @@
 <text x="754.5" y="278" font-size="21" text-anchor="middle" font-weight="bold" fill="#1f2937">sostituzione batterie</text>
 <text x="754.5" y="312" font-size="15" text-anchor="middle" font-weight="normal" fill="#4b5563">AGM sigillate, senza manutenzione ordinaria</text>
 <rect x="1014" y="160" width="465" height="190" rx="14" fill="#fff" stroke="#7b3fa0" stroke-width="3"/>
-<text x="1246.5" y="235" font-size="56" text-anchor="middle" font-weight="bold" fill="#7b3fa0">2Z</text>
-<text x="1246.5" y="278" font-size="21" text-anchor="middle" font-weight="bold" fill="#1f2937">cuscinetti schermati</text>
-<text x="1246.5" y="312" font-size="15" text-anchor="middle" font-weight="normal" fill="#4b5563">delle pulegge, già ingrassati</text>
+<text x="1246.5" y="235" font-size="56" text-anchor="middle" font-weight="bold" fill="#7b3fa0">5 anni</text>
+<text x="1246.5" y="278" font-size="21" text-anchor="middle" font-weight="bold" fill="#1f2937">garanzia estesa†</text>
+<text x="1246.5" y="312" font-size="15" text-anchor="middle" font-weight="normal" fill="#4b5563">12 mesi di legge più 4 anni di estensione</text>
 <rect x="1506" y="160" width="465" height="190" rx="14" fill="#fff" stroke="#2563eb" stroke-width="3"/>
 <text x="1738.5" y="235" font-size="56" text-anchor="middle" font-weight="bold" fill="#2563eb">≈ 0 €</text>
 <text x="1738.5" y="278" font-size="21" text-anchor="middle" font-weight="bold" fill="#1f2937">costo delle parti di consumo*</text>
@@ -55,7 +55,7 @@
 <line x1="1830" y1="471" x2="1830" y2="479" stroke="#d35400" stroke-width="3"/>
 <circle cx="46" cy="630" r="20" fill="#2563eb"/>
 <text x="46" y="637" font-size="20" text-anchor="middle" font-weight="bold" fill="#fff">3</text>
-<text x="78" y="638" font-size="24" text-anchor="start" font-weight="bold" fill="#2563eb">Cosa si controlla</text>
+<text x="78" y="638" font-size="24" text-anchor="start" font-weight="bold" fill="#2563eb">Cosa si controlla: 22 procedure nel piano di controllo</text>
 <rect x="30" y="660" width="625" height="90" rx="12" fill="#fff" stroke="#c7d6ee" stroke-width="2"/>
 <circle cx="64" cy="705.0" r="15" fill="#2563eb"/>
 <text x="64" y="711.0" font-size="18" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
@@ -86,10 +86,16 @@
 <text x="1378" y="815.0" font-size="18" text-anchor="middle" font-weight="bold" fill="#fff">✓</text>
 <text x="1410" y="802" font-size="20" text-anchor="start" font-weight="bold" fill="#1f2937">Impianto elettrico</text>
 <text x="1410" y="830" font-size="15" text-anchor="start" font-weight="normal" fill="#4b5563">messa a terra e linee</text>
-<rect x="30" y="880" width="950" height="46" rx="10" fill="#fff" stroke="#7b3fa0" stroke-width="2.5"/>
-<text x="52" y="910" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">Aree di intervento: vano motore in testata e sopra la pedana di carico (cabina al piano 0).</text>
-<rect x="1000" y="880" width="970" height="46" rx="10" fill="#fff" stroke="#7b3fa0" stroke-width="2.5"/>
-<text x="1022" y="910" font-size="15" text-anchor="start" font-weight="normal" fill="#1f2937">Personale qualificato e ricambi originali; controlli semplici a cura dell&#x27;utente nel manuale d&#x27;uso.</text>
-<text x="30" y="950" font-size="13.5" text-anchor="start" font-weight="bold" fill="#4b5563">* Stima del costruttore per uso residenziale (circa 300 corse al mese).</text>
-<text x="30" y="968" font-size="12.5" text-anchor="start" font-weight="normal" fill="#4b5563">Fonti: CP.TEC.025 Rev.5, istruzioni di manutenzione IM.TEC.159, analisi dei rischi Rev.7, ufficio tecnico LiftingItalia.</text>
+<rect x="30" y="880" width="625" height="70" rx="10" fill="#fff" stroke="#7b3fa0" stroke-width="2.5"/>
+<text x="52" y="906" font-size="17" text-anchor="start" font-weight="bold" fill="#7b3fa0">Aree di intervento</text>
+<text x="52" y="932" font-size="14.5" text-anchor="start" font-weight="normal" fill="#1f2937">Vano motore in testata e sopra la pedana di carico (cabina al piano 0).</text>
+<rect x="687" y="880" width="625" height="70" rx="10" fill="#fff" stroke="#7b3fa0" stroke-width="2.5"/>
+<text x="709" y="906" font-size="17" text-anchor="start" font-weight="bold" fill="#7b3fa0">Personale qualificato e ricambi originali</text>
+<text x="709" y="932" font-size="14.5" text-anchor="start" font-weight="normal" fill="#1f2937">Controlli semplici a cura dell&#x27;utente: vedi manuale d&#x27;uso.</text>
+<rect x="1344" y="880" width="625" height="70" rx="10" fill="#fff" stroke="#7b3fa0" stroke-width="2.5"/>
+<text x="1366" y="906" font-size="17" text-anchor="start" font-weight="bold" fill="#7b3fa0">Diagnosi guidata</text>
+<text x="1366" y="932" font-size="14.5" text-anchor="start" font-weight="normal" fill="#1f2937">Il quadro memorizza gli eventi e li mostra sul display.</text>
+<text x="30" y="982" font-size="13.5" text-anchor="start" font-weight="bold" fill="#4b5563">* Stima del costruttore per uso residenziale (circa 300 corse al mese).</text>
+<text x="30" y="1002" font-size="13.5" text-anchor="start" font-weight="bold" fill="#4b5563">† Garanzia estesa alle condizioni e con le esclusioni previste dal manuale di manutenzione.</text>
+<text x="30" y="1020" font-size="12.5" text-anchor="start" font-weight="normal" fill="#4b5563">Fonti: CP.TEC.025 Rev.5, istruzioni di manutenzione IM.TEC.159, analisi dei rischi Rev.7, ufficio tecnico LiftingItalia.</text>
 </svg>
