@@ -96,7 +96,7 @@
 | DOC-16 | ST.TEC.068: refusi nelle formule e decelerazione di arresto di emergenza da verificare | Bassa | Da verificare | Documentazione |
 | DOC-17 | ST.TEC.068 cap.12: taglio sulla guida di ingaggio del paracadute non riproducibile | Bassa | Chiarita | Documentazione |
 | DOC-18 | ST.TEC.068: coppia frenante di emergenza 554 Nm contro 654 Nm e verifiche a valle (ingranaggio, linguetta) | Alta | Chiarita | Documentazione |
-| DOC-19 | ST.TEC.068 cap.4: frecce del coperchio interpiano non riproducibili | Media | Da verificare | Documentazione |
+| DOC-19 | ST.TEC.068 cap.4: frecce del coperchio interpiano non riproducibili | Bassa | Chiarita | Documentazione |
 | DOC-20 | ST.TEC.068: carichi su guide e trave superiore non tracciabili, carichi orizzontali non verificati | Media | Da verificare | Documentazione |
 | DOC-21 | ST.TEC.068 cap.8: coppie del motoriduttore non tracciabili e potenza a 0,15 m/s oltre la targa | Media | Da verificare | Documentazione |
 | DOC-22 | ST.TEC.068: metodo di calcolo della frenata, dei rinvii e della giunzione, refusi residui | Bassa | Da verificare | Documentazione |
@@ -757,12 +757,13 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
   2026-11-09 chiarita con il progettista: la coppia sulle due pulegge è uguale (ripartizione 50 e 50), quindi l'ingranaggio di sincronismo trasmette Cp/2 = 327 Nm e non 654 Nm. Con Cp = 654 Nm (rendimento a denominatore, come nel §8): dente della cinghia SF 8,8; ingranaggio SF 1,9 (non 0,97); linguetta SF 3,2 e 2,2; albero SF 2,2 sul tratto fra riduttore e ingranaggio; giunzione a piastra SF 5,1; vite M12 SF 8,4; cuscinetti s0 3,2 e 2,6. Testi corretti in `docs/correzioni_ST.TEC.068.md`.
 
 ### DOC-19 · ST.TEC.068 cap.4: frecce del coperchio interpiano non riproducibili
-**Gravità:** Media · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
+**Gravità:** Bassa · **Stato:** Chiarita · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
 - **Dove:** §4 parte A (2,7 mm) e parte B (1,5-2 mm).
 - **Problema:** col modello scritto (trave appoggiata L = 1,10 m, E = 24.000 MPa, I = 120.000 mm⁴/m) le frecce sono 13,7 mm e 9,4 mm, oltre il limite L/200 = 5,5 mm. Un modello a piastra circolare dà circa 3,8 mm senza deformazione a taglio dell'anima, oltre il limite L/300 = 3,67 mm. Il limite 120 MPa non ha fonte.
 - **Proposta:** rifare con modello a piastra più taglio dell'anima, o citare la misura del rapporto di prova del pannello; indicare la fonte del limite.
 - **Chiusura:** freccia riproducibile o misurata, entro il limite scelto.
 - **Storia:** 2026-11-08 aperta.
+  2026-11-09 il progettista precisa che la verifica del pannello è stata eseguita dal fornitore (CEL): i valori 2,7 e 1,5-2 mm sono del fornitore. La relazione deve citare il rapporto e non ricalcolare le frecce; testo proposto in `docs/correzioni_ST.TEC.068.md`. Da completare: numero e data del rapporto, fonte del limite L/200 e dell'ammissibile 120 MPa.
 
 ### DOC-20 · ST.TEC.068: carichi su guide e trave superiore non tracciabili, carichi orizzontali non verificati
 **Gravità:** Media · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
@@ -983,3 +984,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-09 | DOC-17: aggiunti i valori normativi del DD11 e la conseguenza sulla verifica del taglio. |
 | 2026-11-09 | DOC-17: corretto il modello (due piani di taglio da 24 mm, A = 192 mm²): verifica soddisfatta, errore di forma nella formula (fattore 3); gravità abbassata a Bassa. |
 | 2026-11-09 | DOC-18 chiarita: coppia unica 654 Nm, l'ingranaggio trasmette 327 Nm, tutte le verifiche a valle sono soddisfatte. |
+| 2026-11-09 | DOC-19 chiarita: verifica del coperchio eseguita dal fornitore, da citare nella relazione; gravità Bassa. |

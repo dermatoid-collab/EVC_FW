@@ -58,3 +58,17 @@ Sensibilità: se la ripartizione fra le due cinghie fosse 60 e 40, la coppia sul
 
 - Quale ripartizione assumere per l'ingranaggio (50 e 50 come ora, oppure 60 e 40 come prudenza).
 - Se nel §7 indicare il tratto d'albero dove si verifica la torsione (fra riduttore e ingranaggio, a 654 Nm).
+
+## 3. §4 Coperchio interpiano (DOC-19, chiarita)
+
+La verifica del pannello è stata eseguita dal fornitore. La relazione deve citarla, non ricalcolarla: il calcolo interno delle frecce (modello a striscia) dà 13,7 e 9,4 mm e non è coerente con i 2,7 e 1,5-2 mm riportati, che sono i valori del fornitore.
+
+### Testo proposto (sostituisce il calcolo delle frecce nel §4)
+
+> La verifica del coperchio interpiano è stata eseguita dal fornitore del pannello (CEL, pannello sandwich POLISTEP da 25 mm, pelli in vetro/epossidica, anima in polipropilene alveolare), rapporto n. … del … . Condizioni verificate: carico distribuito di 200 kg sul foro libero Ø1100 mm, pannello Ø1200 mm appoggiato sul bordo su guarnizione morbida; carico concentrato di 100 kg su 100 × 100 mm. Esito del fornitore: tensione di flessione 32,5 MPa (ammissibile …, fonte …); taglio nell'anima 45 kPa (ammissibile 500 kPa); freccia 2,7 mm con carico distribuito e 1,5-2 mm con carico concentrato, contro un limite di L/200 = 5,5 mm (criterio: …). Le condizioni al contorno del rapporto corrispondono a quelle di montaggio. I valori sono quelli del rapporto del fornitore e non sono ricalcolati nella presente relazione.
+
+### Controlli prima di citare il rapporto
+
+1. Il rapporto copre i due casi di carico (200 kg distribuiti e 100 kg su 100 × 100 mm) con la stessa luce e lo stesso vincolo del montaggio.
+2. Il limite di freccia L/200 e il valore ammissibile di 120 MPa hanno una fonte scritta (norma o scheda tecnica).
+3. Se il calcolo della striscia (M = 312 Nm, σ = 32,5 MPa) resta nella relazione, indicarlo come stima prudente delle sole tensioni e togliere le frecce che ne derivano.
