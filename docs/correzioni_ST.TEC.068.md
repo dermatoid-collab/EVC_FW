@@ -250,7 +250,11 @@ Testo proposto:
 
 > In frenata di emergenza il carico sulla cinghia (6417 N) è 1,26 volte inferiore al carico di deformazione plastica medio (8075 N): non si prevedono deformazioni permanenti, ma il margine è ridotto. Dopo ogni intervento dei freni in emergenza si controlla la tensione e l'allungamento delle cinghie.
 
-Da chiedere a Megadyne: valore minimo (non medio) del carico di deformazione plastica della 50 RPP8, e numero di eventi di emergenza ammessi (il rapporto RI 007-26 indica «max 50 volte nella vita della cinghia»; vedi DOC-29).
+**Fonte dei 940 N/cm e limite di 50 eventi (rapporto Megadyne RI 007-26, riletto il 2026-11-09).** Il rapporto è una prova statica di taglio del dente secondo ISO 12046 su 4 campioni di Megalinear 50 RPP8 Steel standard: 960, 940, 910 e 950 N/cm sulla larghezza di 50 mm, media 940 N/cm; Megadyne annota che il valore supera i 760 N/cm dichiarati nel catalogo. **Il rapporto non contiene alcun limite di «50 volte nella vita della cinghia»** né prove di fatica: la frase del §5 («max 50 volte nella vita cinghia, da test report») non ha riscontro nel documento. Va indicata la vera fonte oppure tolta.
+
+Metodo: la relazione usa la media (940 N/cm). Il minimo dei 4 campioni è 910 N/cm; il catalogo dichiara 760 N/cm. Con ΔT = 6417 N e 12 denti: 940 → SF 8,8; 910 → 8,5; 760 → 7,1. Proposta: citare il valore minimo misurato (910 N/cm) oppure il valore di catalogo, e scrivere che i 12 denti in presa sono un'ipotesi di ripartizione del carico (effettivi 21).
+
+Da chiedere a Megadyne: valore minimo (non medio) del carico di deformazione plastica della 50 RPP8, e se esiste un limite agli eventi di emergenza (vedi DOC-29, DOC-30).
 
 ### 7c. §10 Carico radiale di pulegge e rinvii
 
