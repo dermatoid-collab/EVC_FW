@@ -93,7 +93,7 @@
 | DOC-11 | Diagramma energia e batterie: numeri di esempio da sostituire con misure | Bassa | Aperta | Documentazione |
 | DOC-12 | Capacità della batteria discordante: 12 Ah, 7,5 Ah, 7,2 Ah | Media | Chiarita | Documentazione |
 | DOC-13 | Messaggi commerciali (zero consumi, zero manutenzione, zero intrappolamenti) da allineare ai dati di prodotto | Media | Da verificare | Documentazione |
-| DOC-14 | Periodicità della manutenzione: 3 mesi contro 6 mesi | Bassa | Da verificare | Documentazione |
+| DOC-14 | Periodicità della manutenzione: 3 mesi contro 6 mesi | Bassa | Chiarita | Documentazione |
 | DOC-15 | ST.TEC.068: massa lineare della cinghia (0,33 contro 3,3 kg/m) e corsa di riferimento | Media | Chiarita | Documentazione |
 | DOC-16 | ST.TEC.068: refusi nelle formule e decelerazione di arresto di emergenza da verificare | Bassa | Chiarita | Documentazione |
 | DOC-17 | ST.TEC.068 cap.12: taglio sulla guida di ingaggio del paracadute non riproducibile | Bassa | Chiarita | Documentazione |
@@ -626,6 +626,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Proposta:** far confermare da un organismo notificato, dall'ASL o da un consulente legale l'applicabilità del DPR 162/1999 a Elevance e le regole dei mercati di vendita previsti (UK, Francia, Benelux, Svizzera, Iberica, Far East, Australia); riportare nei manuali la base normativa della periodicità.
 - **Chiusura:** parere scritto sull'applicabilità e manuali allineati.
 - **Storia:** 2026-11-08 aperta.
+  2026-11-09 decisione aziendale: periodicità di manutenzione fissata a 6 mesi in tutti i documenti (DOC-14). Non risolve l'applicabilità del DPR 162/1999: resta da confermare con un parere.
 
 ---
 
@@ -735,12 +736,13 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Storia:** 2026-11-08 aperta.
 
 ### DOC-14 · Periodicità della manutenzione: 3 mesi contro 6 mesi
-**Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** manuale d'uso IM.TEC (manutenzione «almeno ogni tre mesi»), CP.TEC.025 Rev.5 e manuale di manutenzione (semestrale)
+**Gravità:** Bassa · **Stato:** Chiarita · **Fonte:** manuale d'uso IM.TEC (manutenzione «almeno ogni tre mesi»), CP.TEC.025 Rev.5 e manuale di manutenzione (semestrale)
 - **Dove:** manuale d'uso, paragrafo sulla manutenzione periodica; CP.TEC.025 §9b; manuale di manutenzione, tabella al §10.06 (nel testo richiamata come «§ 9.06»).
 - **Problema:** il manuale d'uso prescrive almeno ogni tre mesi, la configurazione di prodotto e il manuale di manutenzione sei mesi.
 - **Proposta:** decidere un solo intervallo e allineare i tre documenti prima di usarlo in comunicazioni commerciali.
 - **Chiusura:** intervallo unico nei documenti.
 - **Storia:** 2026-11-08 aperta.
+  2026-11-09 l'utente conferma che tutti i documenti sono stati corretti con manutenzione a 6 mesi (intervallo unico). Dichiarazione dell'utente: i manuali (IM.TEC.161, IM.TEC.159, CP.TEC.025) non sono nel repository e non ho riletto le versioni corrette. Resta aperta NOR-07 (se l'obbligo semestrale di legge si applichi all'Elevance).
 
 ### DOC-15 · ST.TEC.068: massa lineare della cinghia (0,33 contro 3,3 kg/m) e corsa di riferimento
 **Gravità:** Media · **Stato:** Chiarita · **Fonte:** ST.TEC.068 Rev.0 (pagine 22-28), revisione del 2026-11-08
@@ -1056,6 +1058,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-09 | DOC-20 chiarita: trave verificata a flessione con la coppia (coefficiente 1,7), corretto il limite del DC01 (140 MPa). |
 | 2026-11-09 | DOC-22: testi del metodo di frenata, rinvii, dente nominale e giunzione; aggiunta DOC-30 (deformazione plastica e limite di 50 eventi). Totale 101 voci. |
 | 2026-11-09 | DOC-30: riletto il rapporto Megadyne RI 007-26: non contiene il limite di 50 eventi attribuitogli dalla relazione; media 940, minimo 910, catalogo 760 N/cm. |
+| 2026-11-09 | DOC-14 chiarita: l'utente conferma manutenzione a 6 mesi in tutti i documenti (non riletti da me); NOR-07 resta aperta. |
 | 2026-11-09 | Punto «blocco a metà corsa» chiuso per ora dall'utente (nessuna mail al tecnico; PRV-11 resta da fare). |
 | 2026-11-09 | Aggiunta FW-37 e chiusa come Chiarita: con la cabina ferma a metà corsa la carica parte dopo il rilascio del tasto (corse a uomo presente). Totale 103 voci. |
 | 2026-11-09 | PRV-11 e FW-34 aggiornate con i dati della risposta del tecnico e con l'elenco di ciò che resta aperto sul blocco a metà corsa; aggiunta FW-36. Totale 102 voci. |
