@@ -890,6 +890,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 **Gravità:** Media · **Stato:** Da verificare · **Fonte:** risposta del tecnico del firmware del 2026-11-09
 - **Prova:** misurare tensione di bus (power meter e VFD), corrente e Ah consumati nella corsa peggiore (4,5 m, 200 kg) a batteria scarica e con batterie di età diversa, e la lunghezza del cablaggio batteria-VFD; registrare in quali condizioni compare il fault 8 del VFD.
 - **Stima del tecnico:** da 48 V a vuoto la tensione cala di 6-7 V a pieno carico, in dipendenza dalla salute della batteria e dalla lunghezza del cablaggio; è «uno dei problemi con Italsea». La caduta sotto carico è il parametro che dice quando sostituire la batteria.
+- **Punto da chiarire sulla fine carica:** nelle prove del tecnico la macchina ha fatto circa una giornata di corse «prima di andare in errore»: serve sapere quale errore, in che condizione di tensione e dove si trovava la cabina (al piano o fra i piani). Nel codice un fault di sottotensione del VFD è uno «pseudo-fault» (`vfd_in_pseudofault`): non fa scattare un trip, il VFD si ferma da solo, il firmware lo riavvia (`vfd_reboot`) e rientra in DRIVE quando `vfd_is_ready` torna vero. Una sosta a metà corsa con ripartenza automatica quando la tensione recupera è quindi possibile in teoria; con batteria molto scarica potrebbe non recuperare. Non dimostrato né escluso: da provare portando la batteria a esaurimento con la corsa peggiore.
 - **Perché:** definisce il margine reale fra la tensione di lavoro e la soglia di partenza di 38 V, e il criterio di sostituzione delle batterie.
 - **Storia:** 2026-11-09 aperta.
 
@@ -971,3 +972,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-08 | HW-10 e FW-35 aggiornate: rumore da urto in battuta, non da PWM; FW-35 scende a Bassa. |
 | 2026-11-09 | Letti i disegni della serratura MD2: aggiornata HW-10, aggiunta DOC-27. Totale 97 voci. |
 | 2026-11-09 | Risposta del tecnico del firmware ai quesiti su FW-33 e FW-34: FW-33 chiusa come Chiarita (proposta non fattibile), FW-34 corretta (buzzer già usato, rete dagli ausiliari), DOC-12 e DOC-11 aggiornate, aggiunta PRV-11. Totale 98 voci. |
+| 2026-11-09 | PRV-11: aggiunto il punto sulla fine carica (errore, posizione della cabina, riavvio automatico del VFD). |
