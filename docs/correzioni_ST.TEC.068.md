@@ -28,3 +28,33 @@ Il perno (taglio 4T/(3A) = 76,4 MPa) è corretto. Il calcolo sulla barra va sost
 2. Nel contrappeso il 9000 N era il valore della cabina: usare 736 N.
 3. Limite del perno: «adottato τ = 235 MPa (cautelativo rispetto a 540 / √3 = 312 MPa)»; togliere il riferimento al limite della guida.
 4. Contrappeso: «sostiene la pedana» → «sostiene il contrappeso»; perno 6,4 MPa invece di 7; togliere Wx = 269 mm³ non usato, o aggiungere la verifica a flessione.
+
+## 2. Coppia frenante di emergenza e verifiche a valle (DOC-18, chiarita)
+
+Il riduttore trasmette una coppia totale massima Cp, che si ripartisce in parti uguali fra le due pulegge (carico 50 e 50 fra le due cinghie, come assunto nella relazione). L'ingranaggio di sincronismo trasmette solo la coppia della puleggia che comanda, cioè Cp/2.
+
+### Definizione unica (§5, da richiamare in §7, §8, §10, §11)
+
+> In frenata dinamica, con il carico che trascina il riduttore e il freno sull'albero motore, la coppia massima alla puleggia di trazione è Cp = 2 · Cmax · Ebr · RR / Erid = 2 · 14 · 0,85 · 25,3 / 0,92 = **654 Nm** (coppia totale; 327 Nm per ciascuna delle due pulegge).
+
+Il valore 554 Nm (rendimento moltiplicato) vale quando è il motore a muovere il carico e va eliminato dai §5, §7 e §10.
+
+### Valori da riportare
+
+| Verifica | Valore corretto con Cp = 654 Nm |
+|---|---|
+| §5 dente della cinghia, ΔT = 0,5 · Cp / Rp | 6417 N; SF = 56.400 / 6417 = **8,8** |
+| §7 ingranaggio, coppia 327 Nm: Ft = 5454 N, Lewis σ = 155 MPa | SF = 300 / 155 = **1,9** |
+| §7 linguetta, F = 18,7 kN: taglio 53 MPa, pressione 134 MPa | SF **3,2** e **2,2** |
+| §7 albero Ø35, torsione sul tratto fra riduttore e ingranaggio (654 Nm): 77,7 MPa | SF **2,2**; sul tratto di una sola puleggia (327 Nm): SF 4,4 |
+| §10 cuscinetti, P0 = 6417 / 2 = 3208 N | 6007: s0 **3,2**, L10h 79.800 h; 6006: s0 **2,6**, L10h 44.200 h (i rinvii vanno ricalcolati col metodo del punto 7) |
+| §11 giunzione a piastra (7 denti): 32.900 / 6417 | SF **5,1** |
+| §11 vite M12 cabina con 6417 N | SF **8,4** |
+| §11 piastra alternativa con 6417 N | SF **15,7** |
+
+Sensibilità: se la ripartizione fra le due cinghie fosse 60 e 40, la coppia sull'ingranaggio sarebbe 393 Nm: SF denti 1,6, linguetta a pressione 1,9. Resta sopra 1.
+
+### Da decidere
+
+- Quale ripartizione assumere per l'ingranaggio (50 e 50 come ora, oppure 60 e 40 come prudenza).
+- Se nel §7 indicare il tratto d'albero dove si verifica la torsione (fra riduttore e ingranaggio, a 654 Nm).

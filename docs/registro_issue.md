@@ -95,7 +95,7 @@
 | DOC-15 | ST.TEC.068: massa lineare della cinghia (0,33 contro 3,3 kg/m) e corsa di riferimento | Media | Da verificare | Documentazione |
 | DOC-16 | ST.TEC.068: refusi nelle formule e decelerazione di arresto di emergenza da verificare | Bassa | Da verificare | Documentazione |
 | DOC-17 | ST.TEC.068 cap.12: taglio sulla guida di ingaggio del paracadute non riproducibile | Bassa | Chiarita | Documentazione |
-| DOC-18 | ST.TEC.068: coppia frenante di emergenza 554 Nm contro 654 Nm e verifiche a valle (ingranaggio, linguetta) | Alta | Da verificare | Documentazione |
+| DOC-18 | ST.TEC.068: coppia frenante di emergenza 554 Nm contro 654 Nm e verifiche a valle (ingranaggio, linguetta) | Alta | Chiarita | Documentazione |
 | DOC-19 | ST.TEC.068 cap.4: frecce del coperchio interpiano non riproducibili | Media | Da verificare | Documentazione |
 | DOC-20 | ST.TEC.068: carichi su guide e trave superiore non tracciabili, carichi orizzontali non verificati | Media | Da verificare | Documentazione |
 | DOC-21 | ST.TEC.068 cap.8: coppie del motoriduttore non tracciabili e potenza a 0,15 m/s oltre la targa | Media | Da verificare | Documentazione |
@@ -748,12 +748,13 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
   2026-11-09 correzione alle mie letture precedenti (il progettista ha mostrato la parte resistente): la barra F500.05.5001 lavora come linguetta di lamiera da 4 mm fra due finestre consecutive (passo 60 mm meno finestra 36 mm = 24 mm), sfilata lungo due piani di taglio da 24 mm: A = 2·4·24 = 192 mm². Con T = 8829 N: taglio medio 46 MPa e di picco (fattore 1,5) 69 MPa; per il contrappeso (736 N) 3,8 e 5,8 MPa. La relazione scrive 3T/(2bh) = 138-141 MPa: il fattore 3 è in più; il valore stampato 1,2 MPa resta non riproducibile. Contro 98 MPa (taglio al limite del DD11 minimo garantito) i coefficienti sono 2,1 e 1,4: verifica soddisfatta anche con i soli valori normativi. Ritirati i rilievi precedenti sul limite insufficiente (solo l'uso di 235 MPa come limite resta improprio) e sull'alluminio. Resta da riportare la pressione sul bordo della finestra: 8829 N su 13 × 4 mm = circa 170 MPa, pari al ReH minimo.
 
 ### DOC-18 · ST.TEC.068: coppia frenante di emergenza 554 Nm contro 654 Nm e verifiche a valle (ingranaggio, linguetta)
-**Gravità:** Alta · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
+**Gravità:** Alta · **Stato:** Chiarita · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
 - **Dove:** §5 e §10 (554 Nm = 25,3 × 0,92 × 28 × 0,85), §7 (T = 554 Nm), §8 (654,2 Nm = 2 × 14 × 0,85 × 25,3 / 0,92).
 - **Problema:** la stessa coppia è calcolata moltiplicando e dividendo per il rendimento del riduttore. Con 654 Nm: ΔT sul dente 6417 N (SF 8,8), giunzione piastra SF 5,1, vite M12 SF 8,4; ingranaggio Lewis SF 0,97 (da 1,14), linguetta a pressione SF 1,12 (da 1,33). Non è chiaro se l'ingranaggio di sincronismo trasmette tutta la coppia o la quota di una puleggia.
 - **Proposta:** adottare un solo valore (654 Nm è il massimo con rendimento a denominatore, come nel cap. 8) e rifare le verifiche a valle; chiarire la coppia che attraversa l'ingranaggio.
 - **Chiusura:** coppia unica e verifiche coerenti, con SF ≥ 1 per i denti.
 - **Storia:** 2026-11-08 aperta.
+  2026-11-09 chiarita con il progettista: la coppia sulle due pulegge è uguale (ripartizione 50 e 50), quindi l'ingranaggio di sincronismo trasmette Cp/2 = 327 Nm e non 654 Nm. Con Cp = 654 Nm (rendimento a denominatore, come nel §8): dente della cinghia SF 8,8; ingranaggio SF 1,9 (non 0,97); linguetta SF 3,2 e 2,2; albero SF 2,2 sul tratto fra riduttore e ingranaggio; giunzione a piastra SF 5,1; vite M12 SF 8,4; cuscinetti s0 3,2 e 2,6. Testi corretti in `docs/correzioni_ST.TEC.068.md`.
 
 ### DOC-19 · ST.TEC.068 cap.4: frecce del coperchio interpiano non riproducibili
 **Gravità:** Media · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
@@ -981,3 +982,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-09 | DOC-17 chiarita: verifica del paracadute considerata approvata dal progettista (testo del §12 invariato). |
 | 2026-11-09 | DOC-17: aggiunti i valori normativi del DD11 e la conseguenza sulla verifica del taglio. |
 | 2026-11-09 | DOC-17: corretto il modello (due piani di taglio da 24 mm, A = 192 mm²): verifica soddisfatta, errore di forma nella formula (fattore 3); gravità abbassata a Bassa. |
+| 2026-11-09 | DOC-18 chiarita: coppia unica 654 Nm, l'ingranaggio trasmette 327 Nm, tutte le verifiche a valle sono soddisfatte. |
