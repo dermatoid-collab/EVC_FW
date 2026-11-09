@@ -851,6 +851,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Proposta:** citare i documenti Amer con revisione e data e riportare 34 Vac; dichiarare materiale di mozzo e linguetta; aggiungere la verifica di tenuta alla coppia minima; indicare la prova di validazione e i criteri accettati per i coefficienti statici (1,23 calettamento, 1,48, 1,52).
 - **Chiusura:** Rev.1 con i riferimenti, il materiale del mozzo e la verifica di tenuta.
 - **Storia:** 2026-11-09 aperta; testi in `docs/correzioni_ST.TEC.068.md` §5a, §5e, §5f.
+  2026-11-09 il progettista conferma mozzo dell'ingranaggio in C45 con linguetta 10×8×35 e che le tre prove di validazione (carico a 275 kg con corrente, batteria scarica, frenatura di emergenza) sono state eseguite sulla macchina pilota. Mancano numero e data dei verbali e i valori misurati, da citare nel §8; la corrente misurata a 275 kg dirà se i 654 W di DOC-21 sono reali.
 
 ### DOC-29 · Frenature dinamiche del motoriduttore: 60 in 5 anni contro le prove previste dai manuali
 **Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** rapporto Amer (ipotesi 3), ST.TEC.068 §8, IM.TEC.159 §10.06, IM.TEC.161
@@ -1009,4 +1010,5 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-09 | DOC-19 chiarita: verifica del coperchio eseguita dal fornitore, da citare nella relazione; gravità Bassa. |
 | 2026-11-09 | DOC-20: valori corretti dei carichi su guide e trave (4a, 4b chiusi); resta il momento di coppia sulla trave (4c). |
 | 2026-11-09 | DOC-20 chiarita: trave verificata a flessione con la coppia (coefficiente 1,7), corretto il limite del DC01 (140 MPa). |
+| 2026-11-09 | DOC-28: confermati mozzo C45 e prove di validazione eseguite (verbali da citare). |
 | 2026-11-09 | Letti rapporto e disegno Amer del motoriduttore: DOC-21 aggiornata (origine delle coppie, potenza da confermare, gravità Bassa), aggiunte DOC-28 e DOC-29, FW-30 aggiornata. Totale 100 voci. |
