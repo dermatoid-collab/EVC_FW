@@ -108,3 +108,79 @@ Sostituire «m = 1015 kg» con:
 Correggere nella verifica a flessione già presente: σ = 15,1 MPa (60 kg a mezzeria) con Rp0,2 = 140 MPa dà coefficiente 9,3 (non 18,5 come con 280 MPa); la verifica combinata Von Mises coincide.
 
 **Nota sul materiale (Tab.3 e §9):** i valori del DC01 riportati in Tab.3 (Rm 410, Rp0,2 280 MPa) sono i valori massimi di norma. Per le verifiche usare quelli minimi cautelativi (Rm 270, Rp0,2 140 MPa), come già nel §2.4, e riportare la dicitura nella tabella.
+
+## 5. §8 Verifica motoriduttore (DOC-21, DOC-28, DOC-29)
+
+Fonti lette il 2026-11-09: Amer, «DCM-6329 Rev.3: verifica statica e a fatica» (allegato alla e-mail di F. Baldisserotto del 03/03/2026), disegno DCM-6329 Rev.3 (03/12/2025, modificato 11/02/2026), dati di targa del freno 48 Vdc 10 Nm (stessa e-mail), scheda sensore 7EBLR002 Rev.2.0. Il §8 della relazione riporta il testo del rapporto Amer senza citarlo e senza le sue premesse.
+
+### 5a. §2 Dati del motoriduttore: da completare
+
+> Dati di targa (Amer, DCM-6329 Rev.3): MRP19BL, **34 Vac, 600 W, 30 giri/min**; rapporto di riduzione 25,3:1; rendimento del riduttore 0,92; albero di uscita Ø35 h7 con linguetta 10×8×35. Freno doppio 48 Vdc, 10 Nm statici nominali (14 Nm massimi) ciascuno, 24 W, 0,50 A, attrazione ≤ 35 V, rilascio ≥ 1 V.
+
+La relazione indica oggi solo «600 W @ 30 RPM». Aggiungere la tensione (34 Vac, cioè il bus a 48 Vdc) e citare il documento Amer con titolo, revisione e data: il rapporto è dell'e-mail del 03/03/2026 e il disegno è stato modificato l'11/02/2026, mentre la relazione Rev.0 porta la data 12/01/2026. Confermare che il testo del §8 coincide con la versione aggiornata (nel confronto fatto il 2026-11-09 coincide).
+
+### 5b. §8 Origine delle coppie di tabella
+
+Sostituire la frase che introduce la tabella con:
+
+> Le coppie in uscita al riduttore sono quelle del rapporto Amer «DCM-6329 Rev.3: verifica statica e a fatica». Origine (dal rapporto): nelle prove di settembre 2025 un motoriduttore MRP11 (26,8:1, η 0,92) ha sollevato 330 kg a 0,10 m/s con 204,6 Nm in uscita, ricavati dalla curva motore a 10,3 Aac; per la specifica 340 kg a 0,15 m/s la coppia è 210,8 Nm, aumentata in modo cautelativo a 222 Nm. Le coppie di spunto e di discesa (260, 147, 195 Nm) sono stime di Amer.
+>
+> Confronto con i carichi dell'Elevance (raggio primitivo Rp = 0,0509 m, massa non bilanciata = cabina 160 kg + carico − contrappesi 60 kg): coppia teorica in salita 150 Nm con Q = 200 kg, 180 Nm con Qsl = 260 kg, **187 Nm con Qwl = 275 kg**. La coppia di 222 Nm copre il caso peggiore con un margine del 19% per attriti e accelerazione; 260 Nm copre lo spunto con il 39%.
+
+Valori verificati dal rapporto Amer e dalle masse e dal raggio della relazione: 150, 180, 187 Nm (calcolo: g · (100 + Q) · Rp). Dedotto da me e da confermare con Amer: la coppia ideale implicita nella coppia salita/discesa di tabella è (222 + 147) / 2 = 184,5 Nm, cioè il caso Qwl = 275 kg (187 Nm) con perdite costanti di ±37,5 Nm (circa 20%). Il rapporto non spiega 260, 147 e 195 Nm.
+
+### 5c. §8 Potenza e servizio
+
+Il rapporto Amer usa 30 giri/min in uscita; a 0,15 m/s con Rp = 0,0509 m servono **28,1 giri/min** (a 0,10 m/s: 18,7), quindi la scelta dei 30 giri/min è cautelativa per la fatica.
+
+| Coppia in uscita | Potenza a 0,15 m/s (28,1 giri/min) | Potenza a 0,10 m/s |
+|---|---|---|
+| 147 Nm (discesa) | 433 W | 289 W |
+| 222 Nm (salita) | **654 W** | 436 W |
+| 260 Nm (spunto) | 766 W | 510 W |
+
+La targa di 600 W a 30 giri/min corrisponde a 191 Nm (204 Nm a 28,1 giri/min). Quindi la salita al carico di 275 kg a 0,15 m/s supera la targa del 9%, lo spunto del 28%. Con Q = 200 kg la coppia stimata (150 Nm teorici + perdite del 20% = 180 Nm) dà circa 530 W, sotto la targa.
+
+Testo da inserire:
+
+> Il servizio è intermittente: una corsa di 4,5 m a 0,15 m/s dura 30 s. Con 300 corse al mese (riferimento d'uso residenziale) il motore lavora 2,5 h al mese. Il costruttore (Amer) conferma che la potenza di 600 W è ammessa [in servizio S1 / S3 …, **da confermare**] e che la corrente a 222 Nm (circa 11,2 A, con 10,3 A a 204,6 Nm misurati) e a 260 Nm (circa 13 A, stima proporzionale) è ammissibile per i tempi indicati.
+
+Dedotto: 11,2 A e 13 A sono proporzionali alla coppia (10,3 A × 222/204,6 e × 260/204,6); la curva di Amer può dare valori diversi. **Da chiedere ad Amer**: servizio nominale della targa (S1 o altro), curva coppia/corrente a 34 Vac e a tensione di bus ridotta (batteria a 38-42 V), conferma di 30 giri/min a bus basso con 222 Nm. Collegato a PRV-11.
+
+### 5d. §8 Cuscinetti: confronto con la tabella SKF
+
+Il rapporto Amer dà s0 = 1,15 alla coppia di frenatura massima (654 Nm) e rimanda alla Tab.7 del catalogo SKF, che la relazione non riporta. Riportarla e aggiungere:
+
+> La Tab.7 SKF (cuscinetti a sfere, carichi continui o occasionali) prescrive per movimento poco frequente con deformazione permanente accettabile s0 ≥ 0,4 (elevata certezza del carico) o ≥ 1 (bassa certezza, carichi di picco). La frenatura dinamica a 654 Nm avviene al massimo 60 volte nella vita: s0 = 1,15 ≥ 1, verificato.
+>
+> In esercizio continuo il carico è proporzionale alla coppia: con 260 Nm (spunto) s0 ≈ 1,15 × 654 / 260 = 2,9 e con 222 Nm s0 ≈ 3,4, entrambi maggiori di 2, il valore massimo della tabella (movimento continuo, nessuna deformazione accettabile).
+
+Il calcolo con 654/260 è una scala lineare mia (dedotto): confermarla con Amer. Vita dei cuscinetti: Lnmh = 6680 h contro 5000 h richieste (rapporto 1,34). Le 5000 h valgono 167 anni di uso a 300 corse al mese (2,5 h/mese): la vita richiesta non limita il progetto. Per i cuscinetti 6007 e 6006 delle pulegge (cap. 6 della relazione) il suffisso 2Z va aggiunto alla distinta e alla relazione (risposta del progettista, DOC-23).
+
+### 5e. §2 e §8 Tenuta del freno alla coppia minima (nuova verifica, DOC-28)
+
+La relazione definisce Cmin = 10 + 10 Nm ma non la usa. La norma citata nel §5 (EN 81-41, 5.4.2.1) richiede che il freno tenga la cabina con il carico statico massimo. Proposta di verifica a favore di sicurezza (rendimento applicato come perdita):
+
+> Coppia di tenuta minima all'uscita = n° freni × Cmin × RR × η = 2 × 10 × 25,3 × 0,92 = **465 Nm**. Carico statico massimo (Qwl = 275 kg): 187 Nm. Coefficiente di sicurezza = 465 / 187 = **2,5** (2,6 con Qsl = 260 kg).
+
+Dedotto: il fattore richiesto dalla norma per la tenuta non è stato verificato da me; indicare nella relazione il criterio adottato.
+
+### 5f. §8 Mozzo, linguetta, norme e prova di validazione (DOC-28)
+
+Il rapporto Amer dice che «mozzo e linguetta sono componenti definiti e montati dal cliente» e dà i coefficienti sulla chiavetta con mozzo e linguetta in C45 (1,48 e 1,52 a 654 Nm); il calettamento dà 1,23. Aggiungere:
+
+> I coefficienti di sicurezza della linguetta 10×8×35 (1,48) e del mozzo (1,52) sono validi per mozzo e linguetta in C45 o migliore. Il mozzo dell'ingranaggio di ingresso (z = 40, m = 3) è in C45 [**da confermare in disegno**]; la linguetta è [C45 …]. Il rapporto Amer è valido solo per i dati di input indicati e deve essere seguito da prove di validazione: [indicare la prova eseguita o prevista, per esempio la prova di carico di cabina con 275 kg e la prova di frenatura di emergenza].
+
+Amer non ha applicato norme di settore («da indicare a cura del cliente»): la relazione deve dire quali criteri accetta per i coefficienti di sicurezza statici del motoriduttore (1,23 calettamento, 1,48 e 1,52 linguetta e mozzo).
+
+### 5g. §8 Numero di frenature dinamiche (DOC-29)
+
+Il rapporto Amer ipotizza 60 frenature dinamiche in 5 anni (1 al mese). I manuali prevedono prove periodiche con la cabina in movimento (controllo semestrale del tecnico, prove a carico dell'utente anche della discesa di emergenza: IM.TEC.159 e 161). Aggiungere nella relazione il conteggio degli interventi attesi (emergenze, prove, mancanza di rete) e, se supera 60, chiedere ad Amer di confermare l'esito. Sensibilità: i coefficienti statici non dipendono dal numero di eventi; la fatica degli ingranaggi (1E6 h) ha un margine enorme.
+
+## Riepilogo dei dati da completare prima della Rev.1
+
+1. Numero del rapporto di prova di tipo del paracadute (§12).
+2. Numero e data del rapporto CEL sul coperchio; fonte di L/200 e 120 MPa (§4).
+3. Scelta 50/50 o 60/40 per la ripartizione del carico sugli ingranaggi (§7).
+4. Dal costruttore del motoriduttore: servizio nominale dei 600 W, curva a bus ridotto, derivazione di 260/147/195 Nm (§8).
+5. Materiali di mozzo e linguetta, prova di validazione e conteggio delle frenature dinamiche (§8).

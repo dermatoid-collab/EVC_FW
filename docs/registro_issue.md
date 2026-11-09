@@ -98,13 +98,15 @@
 | DOC-18 | ST.TEC.068: coppia frenante di emergenza 554 Nm contro 654 Nm e verifiche a valle (ingranaggio, linguetta) | Alta | Chiarita | Documentazione |
 | DOC-19 | ST.TEC.068 cap.4: frecce del coperchio interpiano non riproducibili | Bassa | Chiarita | Documentazione |
 | DOC-20 | ST.TEC.068: carichi su guide e trave superiore non tracciabili, carichi orizzontali non verificati | Bassa | Chiarita | Documentazione |
-| DOC-21 | ST.TEC.068 cap.8: coppie del motoriduttore non tracciabili e potenza a 0,15 m/s oltre la targa | Media | Da verificare | Documentazione |
+| DOC-21 | ST.TEC.068 cap.8: origine delle coppie da citare e potenza a 0,15 m/s oltre la targa da confermare con Amer | Bassa | Da verificare | Documentazione |
 | DOC-22 | ST.TEC.068: metodo di calcolo della frenata, dei rinvii e della giunzione, refusi residui | Bassa | Da verificare | Documentazione |
 | DOC-23 | Manuale di manutenzione IM.TEC.159: lubrificazione e parti di usura in contrasto con «zero manutenzione» | Media | Da verificare | Documentazione |
 | DOC-24 | Manuali IM.TEC.159 e 161 e cartelli: residui da altri prodotti, refusi e rimandi errati | Bassa | Da verificare | Documentazione |
 | DOC-25 | Certificato IMQ DR 637 DM Rev.0: incoerenze interne e dati da allineare | Bassa | Da verificare | Documentazione |
 | DOC-26 | Serratura MD2 LOCK: certificato per porte di piano, impiegata come serratura della porta di cabina | Media | Da verificare | Documentazione |
 | DOC-27 | Disegni della serratura MD2 con revisioni posteriori al certificato IMQ CA50.00808 | Media | Da verificare | Documentazione |
+| DOC-28 | ST.TEC.068 cap.8: documenti Amer non citati, mozzo e linguetta a carico del cliente, tenuta del freno a coppia minima non verificata | Bassa | Da verificare | Documentazione |
+| DOC-29 | Frenature dinamiche del motoriduttore: 60 in 5 anni contro le prove previste dai manuali | Bassa | Da verificare | Documentazione |
 | PRV-01 | Precisione di fermata ±10 mm | Media | Da verificare | Prove |
 | PRV-02 | Velocità ≤ 0,15 m/s misurata e conversione giri → m/s | Bassa | Da verificare | Prove |
 | PRV-03 | Sblocco della serratura con cabina appena in oltrecorsa | Media | Da verificare | Prove |
@@ -137,7 +139,7 @@
 | IM.TEC.158, 159, 160, 161 | Notion, Cap.4 (158 come pagina; 159-161 come PDF) | letti |
 | Note di progetto e di collaudo Elevance, pagine sulla base di conoscenza | Notion | lette (elenco in `analisi.md` §4) |
 | Cap.6: nota Amer sul freno, scheda sensore 7EBLR002, calcolo cinghia Megadyne MFC 20260211-1, rapporto Megadyne RI 007-26, certificato IMQ del blocco porte MD2 | Notion, Cap.6 | letti; il rapporto Megadyne dice 940 N/cm contro 760 N/cm dichiarati (nessuna issue) |
-| DCM-6329 Rev.3 (motoriduttore), verifica statica e a fatica, F353.01.0029 | Notion, Cap.6 | non letti |
+| DCM-6329 Rev.3 (disegno), rapporto Amer «verifica statica e a fatica» e dati del freno 10 Nm (e-mail Amer 03/03/2026), scheda 7EBLR002 Rev.2.0 | caricati nella conversazione | letti (2026-11-09); F353.01.0029 non letto |
 | IM.TEC.157 (montaggio), 162, 163, 164 (GAD), TARGA, cartellonistica | Notion, Cap.3 e Cap.4 | non letti |
 | Segnalazioni macchine pilota, punti aperti tecnico-commerciali | Notion, «Da fare» | solo i titoli (le pagine sono vuote); la segnalazione «Riprogettazione sistema contatti in testata: consenso porte e extracorsa» (2026-11-05) riguarda la catena e va seguita |
 
@@ -395,6 +397,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Proposta:** decidere se rimuoverlo dal progetto o usarlo (direzione, velocità, controllo di movimento non comandato); se resta, aggiornare IM.158.
 - **Chiusura:** decisione e allineamento di schede e manuali.
 - **Storia:** 2026-11-07 aperta.
+  2026-11-09 dal disegno DCM-6329 Rev.3 e dalla scheda 7EBLR002 Rev.2.0 (18/03/2025): connettore Molex Mini-Fit a 8 poli, pin 1 5 V, 3 COS+, 5 0 V, 6 SIN+, 7 SIN−, 8 COS−. Dedotto: 4 periodi per giro motore × 25,3 = 101,2 periodi per giro di uscita, cioè 3,16 mm di cabina per periodo; a 0,15 m/s (28,1 giri/min in uscita, 712 giri/min al motore) la frequenza elettrica è 47 Hz.
 
 ### FW-31 · Rampe del firmware diverse dall'ipotesi della relazione di calcolo (0,125 m/s²)
 **Gravità:** Media · **Stato:** Da verificare · **Fonte:** ST.TEC.068 §5
@@ -775,13 +778,14 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
   2026-11-09 chiarite con il progettista: cinghie 35 kg; masse della struttura in testa confermate; pulegge coassiali alle guide; CP.TEC.025 invariata per scelta (580 daN contro 607). Nuovi valori: normale 427 kg per guida, paracadute 607 kg; carico di compressione per guida 11,24 kN con SF di Eulero 1,93 (caso A) e 15,8 (caso B); testi in `docs/correzioni_ST.TEC.068.md`. Resta aperto un solo punto: il momento di coppia (fino a 327 Nm per puleggia in frenata di emergenza) che la trave trasmette alle guide, in flessione o torsione secondo l'orientamento degli alberi.
   2026-11-09 chiuso anche il punto sulla trave: alberi perpendicolari all'asse e trave chiusa da carter e piastre, quindi il momento di coppia (stimato a favore di sicurezza con l'intera Cp = 654 Nm più i 147 Nm dei 60 kg) è una flessione: Mtot = 801 Nm, σ = 82 MPa, coefficiente 1,7 con Rp0,2 = 140 MPa. Trovata un'incoerenza nel materiale: il §9 usa 280 MPa per il DC01, che è il massimo di norma (il §2.4 usa 140 MPa); con 140 MPa la verifica originale a 60 kg dà coefficiente 9,3 e non 18,5. Testo in `docs/correzioni_ST.TEC.068.md`.
 
-### DOC-21 · ST.TEC.068 cap.8: coppie del motoriduttore non tracciabili e potenza a 0,15 m/s oltre la targa
-**Gravità:** Media · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
+### DOC-21 · ST.TEC.068 cap.8: origine delle coppie da citare e potenza a 0,15 m/s oltre la targa da confermare con Amer
+**Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
 - **Dove:** §8 (tabella 222/260/147/195 Nm; targa 600 W a 30 rpm; cuscinetti statici s0 = 1,15).
 - **Problema:** le coppie non sono ricavabili dai carichi (teorica in salita con 275 kg: 187 Nm). A 222 Nm e 28,1 rpm la potenza meccanica è 654 W (766 W allo spunto), oltre i 600 W di targa; a 0,10 m/s sono 436 W. La tabella SKF per s0 non è riportata e il valore richiesto non è scritto.
 - **Proposta:** documentare la derivazione delle coppie, chiarire il servizio intermittente della targa a 0,15 m/s con tensione batteria ridotta, riportare il valore richiesto di s0.
 - **Chiusura:** derivazione scritta e margini verificati con la tensione minima di batteria.
 - **Storia:** 2026-11-08 aperta.
+  2026-11-09 letti il rapporto Amer «DCM-6329 Rev.3: verifica statica e a fatica», il disegno DCM-6329 Rev.3 e i dati del freno (e-mail Amer del 03/03/2026): le coppie 222/260/147/195 Nm sono di Amer (prove di settembre 2025: 204,6 Nm per 330 kg a 0,10 m/s con MRP11, scalati a 340 kg a 0,15 m/s e portati a 222 Nm), non un calcolo della relazione, che riporta il testo senza citarlo. Confronto con i carichi dell'Elevance: coppia teorica 150 Nm (Q = 200), 180 Nm (Qsl = 260), 187 Nm (Qwl = 275), coperti da 222 Nm con margine 19%. Resta da confermare con Amer il servizio dei 600 W: la salita a 222 Nm e 28,1 giri/min richiede 654 W (+9%), lo spunto 766 W (+28%), con Q = 200 circa 530 W. La tabella SKF è riportata nel rapporto Amer: s0 = 1,15 a 654 Nm soddisfa il valore ≥ 1 per movimento poco frequente; in esercizio continuo s0 stimato 2,9-3,4 (scala lineare, dedotto). Testi in `docs/correzioni_ST.TEC.068.md` §5. Gravità scesa a Bassa.
 
 ### DOC-22 · ST.TEC.068: metodo di calcolo della frenata, dei rinvii e della giunzione, refusi residui
 **Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** revisione di ST.TEC.068 Rev.0 del 2026-11-08 (`docs/revisione_ST.TEC.068.md`)
@@ -838,6 +842,22 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Problema:** tre disegni di componenti della serratura (staffa ponte, piastra, guida perni) hanno revisioni successive alla data del certificato. Non è documentato se la serratura certificata corrisponda a queste revisioni né se le modifiche (pieghe, fori, geometria) siano state comunicate a IMQ. La staffa ponte porta il contatto, quindi una variazione di piega può spostare il punto in cui il contatto chiude rispetto all'impegno minimo di 7 mm.
 - **Proposta:** confrontare le revisioni con l'insieme di disegni depositato presso IMQ e, se serve, comunicare le modifiche; allineare l'assieme alle revisioni correnti dei componenti.
 - **Chiusura:** corrispondenza fra disegni correnti e tipo certificato registrata.
+- **Storia:** 2026-11-09 aperta.
+
+### DOC-28 · ST.TEC.068 cap.8: documenti Amer non citati, mozzo e linguetta a carico del cliente, tenuta del freno a coppia minima non verificata
+**Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** confronto di ST.TEC.068 Rev.0 con il rapporto Amer «DCM-6329 Rev.3: verifica statica e a fatica», il disegno DCM-6329 Rev.3 e la e-mail Amer del 03/03/2026
+- **Dove:** §2 (specifiche del motoriduttore), §5 e §8.
+- **Problema:** (1) il §8 copia il rapporto Amer senza titolo, revisione e data; la relazione Rev.0 è del 12/01/2026, la e-mail con il rapporto aggiornato del 03/03/2026 e il disegno è stato modificato l'11/02/2026 (il testo del §8 coincide con quello del rapporto); la targa è riportata come «600 W @ 30 RPM» senza i 34 Vac. (2) Amer dichiara che mozzo e linguetta sono del cliente e dà i coefficienti 1,48 (linguetta) e 1,52 (mozzo) solo per C45; il materiale del mozzo dell'ingranaggio non è dichiarato nella relazione. (3) Cmin = 10 + 10 Nm è definito ma non usato: la tenuta del freno con il carico statico massimo (EN 81-41, 5.4.2.1, citata nel §5) non è verificata; calcolo proposto: 2 × 10 × 25,3 × 0,92 = 465 Nm contro 187 Nm (Qwl), coefficiente 2,5. (4) Amer precisa che il rapporto vale solo per gli input indicati, che richiede prove di validazione e che le norme di settore sono a cura del cliente: la relazione non indica né la prova né il criterio.
+- **Proposta:** citare i documenti Amer con revisione e data e riportare 34 Vac; dichiarare materiale di mozzo e linguetta; aggiungere la verifica di tenuta alla coppia minima; indicare la prova di validazione e i criteri accettati per i coefficienti statici (1,23 calettamento, 1,48, 1,52).
+- **Chiusura:** Rev.1 con i riferimenti, il materiale del mozzo e la verifica di tenuta.
+- **Storia:** 2026-11-09 aperta; testi in `docs/correzioni_ST.TEC.068.md` §5a, §5e, §5f.
+
+### DOC-29 · Frenature dinamiche del motoriduttore: 60 in 5 anni contro le prove previste dai manuali
+**Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** rapporto Amer (ipotesi 3), ST.TEC.068 §8, IM.TEC.159 §10.06, IM.TEC.161
+- **Dove:** §8 («60 volte nella vita del motoriduttore, 1 intervento al mese per 5 anni»).
+- **Problema:** i manuali prevedono prove con la cabina in movimento (controllo semestrale del tecnico, controlli periodici a carico dell'utente, anche della discesa di emergenza). Se ogni prova o emergenza fa intervenire i freni sull'albero in movimento, il numero in 5 anni può superare 60 (dedotto, da verificare). Sensibilità bassa: i coefficienti statici non dipendono dal numero di eventi e la fatica degli ingranaggi ha margine (1E6 h).
+- **Proposta:** contare gli interventi attesi (emergenze, prove, mancanza di rete) e, se superano 60, far confermare l'esito ad Amer.
+- **Chiusura:** conteggio scritto nella relazione e confermato dal costruttore.
 - **Storia:** 2026-11-09 aperta.
 
 ---
@@ -989,3 +1009,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-09 | DOC-19 chiarita: verifica del coperchio eseguita dal fornitore, da citare nella relazione; gravità Bassa. |
 | 2026-11-09 | DOC-20: valori corretti dei carichi su guide e trave (4a, 4b chiusi); resta il momento di coppia sulla trave (4c). |
 | 2026-11-09 | DOC-20 chiarita: trave verificata a flessione con la coppia (coefficiente 1,7), corretto il limite del DC01 (140 MPa). |
+| 2026-11-09 | Letti rapporto e disegno Amer del motoriduttore: DOC-21 aggiornata (origine delle coppie, potenza da confermare, gravità Bassa), aggiunte DOC-28 e DOC-29, FW-30 aggiornata. Totale 100 voci. |
