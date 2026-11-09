@@ -60,7 +60,7 @@
 | FW-32 | Commento di `battery_charge_wait_discharge` non coerente con le costanti | Bassa | Aperta | Firmware |
 | FW-33 | Nessun controllo che la carica residua basti per completare la corsa; soglia di avvio e di fuori servizio vicine | Media | Da decidere | Firmware |
 | FW-34 | Avviso sonoro in cabina quando la macchina viaggia senza alimentazione esterna | Bassa | Da decidere | Firmware |
-| FW-35 | Pilotaggio serratura (UDEC.CX): PWM a circa 1,2 kHz udibile, eccitazione a gradino al 100% e diseccitazione istantanea | Media | Da verificare | Firmware |
+| FW-35 | Pilotaggio serratura (UDEC.CX): PWM a circa 1,2 kHz udibile, eccitazione a gradino al 100% e diseccitazione istantanea | Bassa | Da verificare | Firmware |
 | HW-01 | Spina X8: esclude quasi tutta la catena con un solo ingresso di rilevamento | Media | Da decidere | Hardware |
 | HW-02 | Bypass trap/tray comandati solo via software | Media | Chiarita | Hardware |
 | HW-03 | Relè K1…K4 non dichiarati a contatti guidati sugli schemi | Media | Da verificare | Hardware |
@@ -439,13 +439,14 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Storia:** 2026-11-08 aperta.
 
 ### FW-35 · Pilotaggio serratura (UDEC.CX): PWM a circa 1,2 kHz udibile, eccitazione a gradino al 100% e diseccitazione istantanea
-**Gravità:** Media · **Stato:** Da verificare · **Fonte:** lettura di `UDEC.CX/CubeMX/Core/Src/application.c` e `main.c`; segnalazione di rumorosità dell'utente (HW-10)
+**Gravità:** Bassa · **Stato:** Da verificare · **Fonte:** lettura di `UDEC.CX/CubeMX/Core/Src/application.c` e `main.c`; segnalazione di rumorosità dell'utente (HW-10)
 - **Dove:** `UDEC.CX/CubeMX/Core/Src/application.c:153-188` (`outputs_scan`, gestione elettroserratura), `main.c:172` (timer 100 ms `TMR_ID_ELT_PWM`), `main.c:717-722` e `UDEC.CX.ioc` (TIM4: prescaler 0, periodo 65535, clock timer 80 MHz).
 - **Verificato nel codice:** quando `elt` è attivo e la scheda base è online, la bobina riceve il 100% di duty per i primi 100 ms (sblocco), poi il 30% circa (`0x4CC2`, mantenimento); quando `elt` è disattivo il duty va a 0 subito. Il commento nel codice dice «da calcolare Hz effettivi»: con questi parametri la frequenza di PWM è 80 MHz / 65536, cioè circa 1,22 kHz, in banda udibile.
 - **Problema (dedotto, da provare):** il passo di tensione al 100% sul solenoide può far battere il nucleo a fine corsa; la diseccitazione istantanea lascia alle molle della serratura tutta la spinta; il PWM a 1,2 kHz può produrre un ronzio in mantenimento. Il duty di mantenimento del 30% non è verificato con margine alle vibrazioni.
 - **Proposta (non applicata):** a banco, misurare corrente e rumore (sale o scende, ON o OFF); poi valutare nel firmware di UDEC.CX: PWM a 20 kHz o più (per esempio periodo 3999 con prescaler 0, ricalcolando i duty), eccitazione progressiva invece del gradino, rampa di diseccitazione dal mantenimento a zero in poche decine di millisecondi, e verifica del mantenimento al 30% con margine. Il blocco in assenza di alimentazione resta garantito dalle molle e non dipende dal firmware.
 - **Chiusura:** misure di rumore prima e dopo, mantenimento verificato, nessuna modifica alla funzione di blocco.
 - **Storia:** 2026-11-08 aperta.
+  2026-11-08 l'utente esclude il ronzio (il rumore è uno schianto in battuta, identico in apertura e in chiusura) e segnala che ridurre tensioni o modo di azionamento rischia di non far funzionare la serratura: gravità abbassata a Bassa; la causa principale è meccanica (HW-10).
 
 ### HW-01 · Spina X8: esclude quasi tutta la catena con un solo ingresso di rilevamento
 **Gravità:** Media · **Stato:** Da decidere · **Fonte:** analisi §3.3.1; CHI-04
@@ -526,6 +527,7 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 - **Proposta:** misurare il rumore (dB(A) a 1 m, registrazione) e isolare la sorgente con prove a banco e montata; poi valutare, in ordine, rimedi meccanici (battute elastiche, bussole smorzanti, molla più dolce, corsa ridotta, lubrificazione), elettrici (eccitazione progressiva e corrente di mantenimento ridotta, diseccitazione graduale, da verificare sullo schema di UDEC.C/UDEC.CX) e di sequenza nel firmware. Ogni modifica a un componente di sicurezza certificato va concordata con IMQ; nessuna modifica senza richiesta.
 - **Chiusura:** obiettivo di rumorosità fissato, rimedio provato e misurato, ammissibilità verificata con IMQ.
 - **Storia:** 2026-11-08 aperta.
+  2026-11-08 ulteriori risposte dell'utente: nessun ronzio; il rumore è uno schianto all'arrivo in battuta, praticamente identico in apertura e in chiusura; ridurre le tensioni o il modo di azionamento rischia di compromettere il funzionamento. Direzione: smorzamento meccanico delle due battute (elastomero, bussole, massa mobile ridotta, supporti elastici del corpo serratura) preservando traferro, forza di attrazione e profondità di ingaggio del catenaccio; eventuale prova elettrica solo con margini misurati (tensione minima, bobina calda). Ogni modifica alla MD2 LOCK da concordare con IMQ.
   2026-11-08 risposte dell'utente: attuatore a solenoide senza molla di ritorno (le molle sono nella serratura) e rumore presente anche a banco, quindi la sorgente è interna alla serratura e non dipende dalla porta. Il pilotaggio nel firmware di UDEC.CX è riportato in FW-35.
 
 ---
@@ -941,3 +943,4 @@ Percorsi dei file firmware: `TTF-Base/Firmware/TTF-Base/Core/` (per brevità `Sr
 | 2026-11-08 | Descrizione della serratura della porta di cabina: aggiunta DOC-26 (certificato per porte di piano, uso come porta di cabina). Totale 94 voci. |
 | 2026-11-08 | Segnalata la rumorosità della serratura MD2 LOCK: aggiunta HW-10. Totale 95 voci. |
 | 2026-11-08 | Serratura MD2 LOCK: letto il pilotaggio nel firmware di UDEC.CX; aggiunta FW-35 e aggiornata HW-10. Totale 96 voci. |
+| 2026-11-08 | HW-10 e FW-35 aggiornate: rumore da urto in battuta, non da PWM; FW-35 scende a Bassa. |
